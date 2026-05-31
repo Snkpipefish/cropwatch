@@ -141,6 +141,52 @@ def heat_stress(weather, heat_temp_c: float, window_days: int = 30) -> dict:
             "threshold_c": heat_temp_c, "status": status}
 
 
+def cycle_position(phases, today: date | None = None) -> dict:
+    """Finner hvor i vekstsyklusen vi er nå.
+
+    `phases` er en liste av objekter med .name, .months (liste av 1-12) og .color.
+    Returnerer en 12-måneders tidslinje + hvilken fase i dag faller i.
+    """
+    today = today or date.today()
+    # Måned → fase-oppslag.
+    month_phase: dict[int, object] = {}
+    for ph in phases:
+        for m in ph.months:
+            month_phase[m] = ph
+
+    timeline = []
+    for m in range(1, 13):
+        ph = month_phase.get(m)
+        timeline.append({
+            "month": m,
+            "phase": ph.name if ph else "—",
+            "color": ph.color if ph else "#334155",
+        })
+
+    current_phase = month_phase.get(today.month)
+    current = None
+    if current_phase is not None:
+        idx = current_phase.months.index(today.month)
+        current = {
+            "phase": current_phase.name,
+            "color": current_phase.color,
+            "month_in_phase": idx + 1,
+            "phase_length": len(current_phase.months),
+        }
+
+    from calendar import monthrange
+    days_in_month = monthrange(today.year, today.month)[1]
+    today_fraction = ((today.month - 1) + (today.day - 1) / days_in_month) / 12
+
+    return {
+        "timeline": timeline,
+        "current": current,
+        "today_month": today.month,
+        "today_fraction": round(today_fraction, 4),
+        "phases": [{"name": p.name, "color": p.color} for p in phases],
+    }
+
+
 def drought_stress(weather, window_days: int = 30, dry_threshold_mm: float = 1.0) -> dict:
     """Lengste rekke med tørre dager (nedbør under terskel), siste 30 dager."""
     recent = sorted(weather, key=lambda x: x.date)[-window_days:]

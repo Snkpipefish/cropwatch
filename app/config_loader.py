@@ -30,12 +30,20 @@ class Growing:
 
 
 @dataclass(frozen=True)
+class Phase:
+    name: str
+    months: list[int]
+    color: str
+
+
+@dataclass(frozen=True)
 class Region:
     id: str
     name: str
     commodity: str
     sources: dict[str, str]
     growing: Growing
+    cycle: list[Phase] = field(default_factory=list)
     areas: list[Area] = field(default_factory=list)
 
     def area(self, area_id: str) -> Area | None:
@@ -58,12 +66,17 @@ def _parse(path: Path) -> Region:
         Area(id=a["id"], name=a["name"], lat=float(a["lat"]), lon=float(a["lon"]))
         for a in raw["areas"]
     ]
+    cycle = [
+        Phase(name=p["name"], months=[int(m) for m in p["months"]], color=p.get("color", "#64748b"))
+        for p in raw.get("cycle", {}).get("phases", [])
+    ]
     return Region(
         id=raw["id"],
         name=raw["name"],
         commodity=raw["commodity"],
         sources=dict(raw["sources"]),
         growing=growing,
+        cycle=cycle,
         areas=areas,
     )
 

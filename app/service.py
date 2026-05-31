@@ -7,10 +7,25 @@ from __future__ import annotations
 from datetime import date, timedelta
 
 from .config_loader import Region, get_region, load_regions
+from .connectors import enso
 from .connectors.ndvi import get_ndvi_connector
 from .connectors.weather import get_weather_connector
 from .indicators import compute
 from .storage import db
+
+# ENSO er global og endrer seg sakte – hentes én gang per prosess.
+_enso_cache: dict | None = None
+
+
+def _get_enso() -> dict:
+    global _enso_cache
+    if _enso_cache is None:
+        try:
+            _enso_cache = enso.fetch_oni(months_back=36)
+        except Exception:
+            _enso_cache = {"series": [], "latest_oni": None, "state": "Ukjent",
+                           "strength": "", "trend": "stabil"}
+    return _enso_cache
 
 # Hvor mange år historikk vi henter første gang (for et solid normalgrunnlag).
 HISTORY_YEARS = 8
@@ -100,6 +115,8 @@ def region_status(region_id: str) -> dict:
     areas = {a.id: area_status(region, a.id) for a in region.areas}
     return {
         "region": {"id": region.id, "name": region.name, "commodity": region.commodity},
+        "enso": _get_enso(),
+        "cycle": compute.cycle_position(region.cycle),
         "areas": areas,
         "last_run": {
             "ndvi": _iso(db.get_last_run(region.id, "ndvi")),

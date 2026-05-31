@@ -27,6 +27,21 @@ growing:
   base_temp_c: 18
   heat_stress_temp_c: 35     # over dette regnes som varmestress
 
+# Vekstsyklusen gjennom året. Hver fase lister månedene den dekker (1=jan).
+# Dashbordet viser hvor i syklusen vi er nå. (Sukkerrør i Sør-Brasil:
+# regn/vekst nov–mar, modning apr, høsting/safra mai–okt.)
+cycle:
+  phases:
+    - name: "Vekst (regnsesong)"
+      months: [11, 12, 1, 2, 3]
+      color: "#22c55e"
+    - name: "Modning"
+      months: [4]
+      color: "#eab308"
+    - name: "Høsting (safra)"
+      months: [5, 6, 7, 8, 9, 10]
+      color: "#f59e0b"
+
 # Dyrkingsområder i regionen. Hvert område har et senterpunkt (lat/lon)
 # som brukes til å hente NDVI og vær. Legg til så mange du vil.
 areas:

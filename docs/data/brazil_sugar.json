@@ -4,6 +4,244 @@
     "name": "Brasil – sukkerrør",
     "commodity": "sukker"
   },
+  "enso": {
+    "series": [
+      {
+        "date": "2023-04-01",
+        "oni": 0.27
+      },
+      {
+        "date": "2023-05-01",
+        "oni": 0.57
+      },
+      {
+        "date": "2023-06-01",
+        "oni": 0.84
+      },
+      {
+        "date": "2023-07-01",
+        "oni": 1.12
+      },
+      {
+        "date": "2023-08-01",
+        "oni": 1.37
+      },
+      {
+        "date": "2023-09-01",
+        "oni": 1.6
+      },
+      {
+        "date": "2023-10-01",
+        "oni": 1.83
+      },
+      {
+        "date": "2023-11-01",
+        "oni": 1.99
+      },
+      {
+        "date": "2023-12-01",
+        "oni": 2.06
+      },
+      {
+        "date": "2024-01-01",
+        "oni": 1.92
+      },
+      {
+        "date": "2024-02-01",
+        "oni": 1.62
+      },
+      {
+        "date": "2024-03-01",
+        "oni": 1.26
+      },
+      {
+        "date": "2024-04-01",
+        "oni": 0.82
+      },
+      {
+        "date": "2024-05-01",
+        "oni": 0.49
+      },
+      {
+        "date": "2024-06-01",
+        "oni": 0.22
+      },
+      {
+        "date": "2024-07-01",
+        "oni": 0.08
+      },
+      {
+        "date": "2024-08-01",
+        "oni": -0.07
+      },
+      {
+        "date": "2024-09-01",
+        "oni": -0.17
+      },
+      {
+        "date": "2024-10-01",
+        "oni": -0.21
+      },
+      {
+        "date": "2024-11-01",
+        "oni": -0.3
+      },
+      {
+        "date": "2024-12-01",
+        "oni": -0.42
+      },
+      {
+        "date": "2025-01-01",
+        "oni": -0.45
+      },
+      {
+        "date": "2025-02-01",
+        "oni": -0.24
+      },
+      {
+        "date": "2025-03-01",
+        "oni": -0.06
+      },
+      {
+        "date": "2025-04-01",
+        "oni": 0.02
+      },
+      {
+        "date": "2025-05-01",
+        "oni": -0.02
+      },
+      {
+        "date": "2025-06-01",
+        "oni": -0.04
+      },
+      {
+        "date": "2025-07-01",
+        "oni": -0.14
+      },
+      {
+        "date": "2025-08-01",
+        "oni": -0.28
+      },
+      {
+        "date": "2025-09-01",
+        "oni": -0.4
+      },
+      {
+        "date": "2025-10-01",
+        "oni": -0.51
+      },
+      {
+        "date": "2025-11-01",
+        "oni": -0.55
+      },
+      {
+        "date": "2025-12-01",
+        "oni": -0.54
+      },
+      {
+        "date": "2026-01-01",
+        "oni": -0.37
+      },
+      {
+        "date": "2026-02-01",
+        "oni": -0.15
+      },
+      {
+        "date": "2026-03-01",
+        "oni": 0.11
+      }
+    ],
+    "latest_oni": 0.11,
+    "state": "Nøytral",
+    "strength": "",
+    "trend": "stigende"
+  },
+  "cycle": {
+    "timeline": [
+      {
+        "month": 1,
+        "phase": "Vekst (regnsesong)",
+        "color": "#22c55e"
+      },
+      {
+        "month": 2,
+        "phase": "Vekst (regnsesong)",
+        "color": "#22c55e"
+      },
+      {
+        "month": 3,
+        "phase": "Vekst (regnsesong)",
+        "color": "#22c55e"
+      },
+      {
+        "month": 4,
+        "phase": "Modning",
+        "color": "#eab308"
+      },
+      {
+        "month": 5,
+        "phase": "Høsting (safra)",
+        "color": "#f59e0b"
+      },
+      {
+        "month": 6,
+        "phase": "Høsting (safra)",
+        "color": "#f59e0b"
+      },
+      {
+        "month": 7,
+        "phase": "Høsting (safra)",
+        "color": "#f59e0b"
+      },
+      {
+        "month": 8,
+        "phase": "Høsting (safra)",
+        "color": "#f59e0b"
+      },
+      {
+        "month": 9,
+        "phase": "Høsting (safra)",
+        "color": "#f59e0b"
+      },
+      {
+        "month": 10,
+        "phase": "Høsting (safra)",
+        "color": "#f59e0b"
+      },
+      {
+        "month": 11,
+        "phase": "Vekst (regnsesong)",
+        "color": "#22c55e"
+      },
+      {
+        "month": 12,
+        "phase": "Vekst (regnsesong)",
+        "color": "#22c55e"
+      }
+    ],
+    "current": {
+      "phase": "Høsting (safra)",
+      "color": "#f59e0b",
+      "month_in_phase": 1,
+      "phase_length": 6
+    },
+    "today_month": 5,
+    "today_fraction": 0.414,
+    "phases": [
+      {
+        "name": "Vekst (regnsesong)",
+        "color": "#22c55e"
+      },
+      {
+        "name": "Modning",
+        "color": "#eab308"
+      },
+      {
+        "name": "Høsting (safra)",
+        "color": "#f59e0b"
+      }
+    ]
+  },
   "areas": {
     "ribeirao_preto": {
       "area_id": "ribeirao_preto",
@@ -7132,7 +7370,7 @@
     }
   },
   "last_run": {
-    "ndvi": "2026-05-31T11:33:48.187416",
-    "weather": "2026-05-31T11:33:52.020904"
+    "ndvi": "2026-05-31T11:47:29.052848",
+    "weather": "2026-05-31T11:47:30.426167"
   }
 }
