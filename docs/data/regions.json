@@ -1,0 +1,27 @@
+[
+  {
+    "id": "brazil_sugar",
+    "name": "Brasil – sukkerrør",
+    "commodity": "sukker",
+    "areas": [
+      {
+        "id": "ribeirao_preto",
+        "name": "Ribeirão Preto (São Paulo)",
+        "lat": -21.17,
+        "lon": -47.81
+      },
+      {
+        "id": "piracicaba",
+        "name": "Piracicaba (São Paulo)",
+        "lat": -22.73,
+        "lon": -47.65
+      },
+      {
+        "id": "goiania",
+        "name": "Goiânia (Goiás)",
+        "lat": -16.68,
+        "lon": -49.25
+      }
+    ]
+  }
+]

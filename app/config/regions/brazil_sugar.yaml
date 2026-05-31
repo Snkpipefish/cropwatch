@@ -1,0 +1,44 @@
+# ---------------------------------------------------------------------------
+# CropWatch regionkonfigurasjon
+#
+# Vil du legge til en ny region (f.eks. kakao i Elfenbenskysten)?
+# Kopier denne filen, gi den et nytt navn (f.eks. ivorycoast_cocoa.yaml),
+# endre verdiene under, og start appen på nytt. INGEN kodeendring trengs.
+# ---------------------------------------------------------------------------
+
+# Unik id (kun små bokstaver, tall og understrek). Brukes internt og i URLer.
+id: brazil_sugar
+
+# Visningsnavn i dashbordet.
+name: "Brasil – sukkerrør"
+
+# Råvaren denne regionen overvåker.
+commodity: "sukker"
+
+# Hvilke datakilder som gjelder for denne regionen.
+# (Connector-navnene må matche filene i app/connectors/.)
+sources:
+  ndvi: nasa_modis      # vegetasjonshelse, oppdateres hver ~16. dag
+  weather: open_meteo   # vær, kan hentes daglig
+
+# Vekstsesong og en basistemperatur (°C) for growing degree days.
+# Sukkerrør vokser over ca. 18 °C.
+growing:
+  base_temp_c: 18
+  heat_stress_temp_c: 35     # over dette regnes som varmestress
+
+# Dyrkingsområder i regionen. Hvert område har et senterpunkt (lat/lon)
+# som brukes til å hente NDVI og vær. Legg til så mange du vil.
+areas:
+  - id: ribeirao_preto
+    name: "Ribeirão Preto (São Paulo)"
+    lat: -21.17
+    lon: -47.81
+  - id: piracicaba
+    name: "Piracicaba (São Paulo)"
+    lat: -22.73
+    lon: -47.65
+  - id: goiania
+    name: "Goiânia (Goiás)"
+    lat: -16.68
+    lon: -49.25

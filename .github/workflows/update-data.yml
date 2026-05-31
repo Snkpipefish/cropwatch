@@ -1,0 +1,40 @@
+name: Oppdater CropWatch-data
+
+# Holder den publiserte siden fersk: henter nye data og oppdaterer docs/.
+on:
+  workflow_dispatch:        # lar deg kjøre den manuelt med ett klikk
+  schedule:
+    - cron: "0 5 */3 * *"   # automatisk hver 3. dag kl 05:00 UTC
+
+permissions:
+  contents: write           # trengs for å committe de oppdaterte datafilene
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hent koden
+        uses: actions/checkout@v4
+
+      - name: Sett opp Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer avhengigheter
+        run: pip install -r requirements.txt
+
+      - name: Hent ferske data og bygg statisk side
+        run: python scripts/export_static.py
+
+      - name: Commit oppdaterte data (hvis noe endret seg)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          if git diff --staged --quiet; then
+            echo "Ingen endringer å committe."
+          else
+            git commit -m "Oppdater CropWatch-data $(date -u +%Y-%m-%d)"
+            git push
+          fi
