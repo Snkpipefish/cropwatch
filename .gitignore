@@ -1,6 +1,10 @@
 .venv/
 __pycache__/
 *.pyc
-data/
 .DS_Store
 .claude/scheduled_tasks.lock
+
+# Databasen følger med i repoet så CI bare henter ferske data inkrementelt
+# (ikke full historikk hver gang). WAL-sidefilene skal derimot ikke spores.
+data/*.db-wal
+data/*.db-shm

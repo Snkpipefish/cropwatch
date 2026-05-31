@@ -22,8 +22,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
+from sqlalchemy import text                   # noqa: E402
+
 from app import service                      # noqa: E402
 from app.config_loader import load_regions   # noqa: E402
+from app.storage.db import _engine           # noqa: E402
 
 DOCS = ROOT / "docs"
 DATA = DOCS / "data"
@@ -40,11 +43,16 @@ def main() -> None:
     regions = load_regions()
     print(f"Fant {len(regions)} region(er): {', '.join(regions)}")
 
-    # 1) Hent ferske data for hver region.
+    # 1) Hent ferske data for hver region. Databasen følger med i repoet, så
+    #    dette henter bare det nye siden sist – ikke hele historikken på nytt.
     for region_id in regions:
         print(f"Henter data for {region_id} ...")
         counts = service.refresh_region(region_id)
         print(f"  hentet {counts}")
+        # Skriv WAL inn i hovedfila så den committede databasen er komplett.
+        with _engine(region_id).connect() as c:
+            c.execute(text("PRAGMA wal_checkpoint(TRUNCATE)"))
+            c.commit()
 
     # 2) Skriv regionliste + status per region som statiske JSON-filer.
     print("Skriver JSON ...")

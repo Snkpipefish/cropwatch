@@ -16,6 +16,20 @@ from datetime import date, datetime
 
 import httpx
 
+
+def _get_with_retry(client: httpx.Client, url: str, params: dict, attempts: int = 4):
+    """GET med noen gjenforsøk – MODIS-tjenesten har av og til korte blipp."""
+    last_error: Exception | None = None
+    for i in range(attempts):
+        try:
+            r = client.get(url, params=params, headers={"Accept": "application/json"})
+            r.raise_for_status()
+            return r
+        except (httpx.HTTPError, httpx.TransportError) as e:
+            last_error = e
+            time.sleep(2 * (i + 1))  # vent litt lenger for hvert forsøk
+    raise last_error
+
 from .base import NdviObservation
 
 
@@ -49,12 +63,11 @@ class NasaModisNdvi(NdviConnector):
 
     def _available_dates(self, client: httpx.Client, lat: float, lon: float) -> list[dict]:
         """Henter alle tilgjengelige MODIS-datoer for punktet."""
-        r = client.get(
+        r = _get_with_retry(
+            client,
             f"{self.BASE_URL}/{self.PRODUCT}/dates",
-            params={"latitude": lat, "longitude": lon},
-            headers={"Accept": "application/json"},
+            {"latitude": lat, "longitude": lon},
         )
-        r.raise_for_status()
         return r.json().get("dates", [])
 
     def fetch(self, lat: float, lon: float, start: date, end: date) -> list[NdviObservation]:
@@ -82,9 +95,10 @@ class NasaModisNdvi(NdviConnector):
     def _fetch_chunk(
         self, client: httpx.Client, lat: float, lon: float, start_modis: str, end_modis: str
     ) -> list[NdviObservation]:
-        r = client.get(
+        r = _get_with_retry(
+            client,
             f"{self.BASE_URL}/{self.PRODUCT}/subset",
-            params={
+            {
                 "latitude": lat,
                 "longitude": lon,
                 "band": self.BAND,
@@ -93,9 +107,7 @@ class NasaModisNdvi(NdviConnector):
                 "kmAboveBelow": 0,
                 "kmLeftRight": 0,
             },
-            headers={"Accept": "application/json"},
         )
-        r.raise_for_status()
         payload = r.json()
 
         out: list[NdviObservation] = []
