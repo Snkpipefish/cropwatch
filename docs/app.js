@@ -1,4 +1,4 @@
-// CropWatch – mørkt kontrollrom. Region-agnostisk: alt drives av data fra API/JSON.
+// CropWatch – mørkt kontrollrom. Region-agnostisk. Viser alt som "mot normalt".
 
 const $ = (id) => document.getElementById(id);
 const regionSel = $("region");
@@ -9,33 +9,29 @@ let currentStatus = null;
 let map, markerLayer;
 let charts = {};
 
-const COLOR = { green:"#22c55e", yellow:"#eab308", red:"#ef4444", unknown:"#64748b",
-                blue:"#38bdf8", cyan:"#22d3ee", amber:"#f59e0b", grey:"#64748b" };
-const STATUS_TEXT = { green:"Normalt / bra", yellow:"Følg med", red:"Avvik", unknown:"Ingen data" };
-
-// ---- datakilde: statiske filer (GitHub Pages) først, ellers levende API ----
 async function loadJson(staticPath, apiPath) {
-  try { const r = await fetch(staticPath, { cache:"no-store" }); if (r.ok) return await r.json(); }
-  catch (e) {}
+  try { const r = await fetch(staticPath, { cache:"no-store" }); if (r.ok) return await r.json(); } catch (e) {}
   return fetch(apiPath).then((r) => r.json());
 }
 const getRegions = () => loadJson("data/regions.json", "/api/regions");
 const getStatus = (id) => loadJson(`data/${id}.json`, `/api/regions/${id}/status`);
 
-// ---- Chart.js mørkt tema + glød-plugin -------------------------------------
 Chart.defaults.color = "#8b9bb4";
 Chart.defaults.font.family = "ui-sans-serif, system-ui, sans-serif";
+
+// Fargede soner bak El Niño-grafen (rød = El Niño, blå = La Niña).
 Chart.register({
-  id: "glow",
-  beforeDatasetDraw(c, args) {
-    if (args.meta.dataset && c.data.datasets[args.index]?.glow) {
-      const ctx = c.ctx; ctx.save();
-      ctx.shadowColor = c.data.datasets[args.index].borderColor;
-      ctx.shadowBlur = 12;
-    }
-  },
-  afterDatasetDraw(c, args) {
-    if (c.data.datasets[args.index]?.glow) c.ctx.restore();
+  id:"ensoZones",
+  beforeDatasetsDraw(c) {
+    if (c.canvas.id !== "ensoChart") return;
+    const { ctx, chartArea:a, scales:{ y } } = c;
+    const yhi = y.getPixelForValue(0.5), ylo = y.getPixelForValue(-0.5);
+    ctx.save();
+    ctx.fillStyle = "rgba(239,68,68,.12)";
+    ctx.fillRect(a.left, a.top, a.right-a.left, yhi-a.top);
+    ctx.fillStyle = "rgba(56,189,248,.12)";
+    ctx.fillRect(a.left, ylo, a.right-a.left, a.bottom-ylo);
+    ctx.restore();
   },
 });
 
@@ -54,7 +50,6 @@ async function init() {
 async function onRegionChange() {
   const region = regions.find((r) => r.id === regionSel.value);
   areaSel.innerHTML = region.areas.map((a) => `<option value="${a.id}">${a.name}</option>`).join("");
-
   markerLayer.clearLayers();
   const pts = [];
   region.areas.forEach((a) => {
@@ -67,9 +62,7 @@ async function onRegionChange() {
 
   currentStatus = await getStatus(region.id);
   const lr = currentStatus.last_run || {};
-  $("meta").innerHTML = lr.ndvi
-    ? `NDVI: ${fmtDate(lr.ndvi)}<br>vær: ${fmtDate(lr.weather)}`
-    : "Data fylles inn …";
+  $("meta").innerHTML = lr.ndvi ? `oppdatert ${fmtDate(lr.ndvi)}` : "data fylles inn …";
   render();
 }
 
@@ -77,113 +70,115 @@ function render() {
   if (!currentStatus) return;
   const a = currentStatus.areas[areaSel.value];
   if (!a) return;
-  const enso = currentStatus.enso || {};
-  const cycle = currentStatus.cycle || {};
-  renderNarrative(a, enso, cycle);
-  renderHero(a, enso, cycle);
-  renderCycle(cycle);
-  renderNdviChart(a.ndvi);
-  renderEnsoChart(enso);
+  renderVegTile(a.ndvi);
+  renderCycleTile(currentStatus.cycle || {});
+  renderEnsoTile(currentStatus.enso || {});
+  renderCycle(currentStatus.cycle || {});
+  renderDeviationChart(a.ndvi);
+  renderEnsoChart(currentStatus.enso || {});
   renderRainChart(a.rainfall);
-  renderGddChart(a.gdd);
   renderStress(a);
 }
 
-// ---- Fortelling: "hva har skjedd" -----------------------------------------
-function renderNarrative(a, enso, cycle) {
-  const veg = { green:"normal eller bedre enn", yellow:"litt svakere enn", red:"klart svakere enn",
-                unknown:"ukjent mot" }[a.ndvi.status] || "ukjent mot";
-  const ndvi = a.ndvi.latest;
-  const ndviTxt = ndvi ? `NDVI ${ndvi.value.toFixed(2)}, ${signed(ndvi.anomaly)} mot snittet` : "uten data";
-  let cycleTxt = "";
-  if (cycle.current) cycleTxt = ` Vi er i fasen <b>${cycle.current.phase}</b> (måned ${cycle.current.month_in_phase} av ${cycle.current.phase_length}).`;
-  let ensoTxt = "";
-  if (enso.state && enso.state !== "Ukjent") {
-    const s = enso.strength ? ` ${enso.strength}` : "";
-    ensoTxt = ` El Niño/La Niña er <b>${enso.state}${s}</b> (ONI ${signed(enso.latest_oni)}, ${enso.trend}) – det påvirker nedbøren her.`;
+const clamp = (v,lo,hi) => Math.max(lo, Math.min(hi, v));
+
+// ---- Hero-fliser med målere -----------------------------------------------
+function renderVegTile(ndvi) {
+  const an = ndvi.latest ? ndvi.latest.anomaly : null;
+  let word = "Ukjent", color = "#64748b", pos = 50;
+  if (an != null) {
+    pos = 50 + clamp(an/0.15, -1, 1) * 50;
+    if (an >= 0.05) { word = "Sterk"; color = "#22c55e"; }
+    else if (an > -0.05) { word = "Normal"; color = "#22c55e"; }
+    else if (an > -0.12) { word = "Litt svak"; color = "#eab308"; }
+    else { word = "Svak"; color = "#ef4444"; }
   }
-  $("narrative").innerHTML =
-    `Vegetasjonen er <b>${veg} normalt</b> for årstiden (${ndviTxt}).${cycleTxt}${ensoTxt}`;
+  $("tileVeg").style.setProperty("--c", color);
+  $("tileVeg").innerHTML =
+    `<div class="label">Plantehelse</div>
+     <div class="bigword">${word}</div>
+     <div class="gauge" style="--gl:#ef4444;--gm:#334155;--gr:#22c55e">
+       <div class="tick"></div><div class="marker" style="left:${pos}%"></div></div>
+     <div class="ends"><span>svakere</span><span>normalt</span><span>sterkere</span></div>`;
 }
 
-// ---- Hero-fliser -----------------------------------------------------------
-function tile(el, color, label, value, stateText, sub) {
-  el.style.setProperty("--c", color);
-  el.innerHTML =
-    `<div class="label">${label}</div>
-     <div class="value">${value}</div>
-     <div class="state"><span class="led"></span>${stateText}</div>
-     <div class="sub">${sub}</div>`;
+function renderEnsoTile(enso) {
+  const oni = enso.latest_oni;
+  const color = enso.state==="El Niño" ? "#ef4444" : enso.state==="La Niña" ? "#38bdf8" : "#22c55e";
+  const pos = oni!=null ? 50 + clamp(oni/2.0, -1, 1) * 50 : 50;
+  $("tileEnso").style.setProperty("--c", color);
+  $("tileEnso").innerHTML =
+    `<div class="label">El Niño / La Niña</div>
+     <div class="bigword">${enso.state || "Ukjent"}</div>
+     <div class="gauge" style="--gl:#38bdf8;--gm:#334155;--gr:#f59e0b">
+       <div class="tick"></div><div class="marker" style="left:${pos}%"></div></div>
+     <div class="ends"><span>La Niña</span><span>nøytral</span><span>El Niño</span></div>`;
 }
-function renderHero(a, enso, cycle) {
-  const ndvi = a.ndvi.latest;
-  tile($("tileVeg"), COLOR[a.ndvi.status] || COLOR.unknown, "Vegetasjon",
-    ndvi ? ndvi.value.toFixed(2) : "–", STATUS_TEXT[a.ndvi.status],
-    ndvi && ndvi.anomaly!=null ? `avvik ${signed(ndvi.anomaly)} mot normalt` : "—");
 
+function renderCycleTile(cycle) {
   const c = cycle.current;
-  tile($("tileCycle"), c ? c.color : COLOR.unknown, "Syklus",
-    c ? `${c.month_in_phase} / ${c.phase_length}` : "–",
-    c ? c.phase : "ukjent", c ? "måned i fasen" : "—");
-
-  const ensoColor = enso.state==="El Niño" ? COLOR.red : enso.state==="La Niña" ? COLOR.blue : COLOR.green;
-  tile($("tileEnso"), ensoColor, "El Niño / La Niña",
-    enso.latest_oni!=null ? signed(enso.latest_oni) : "–",
-    enso.state || "ukjent", enso.strength ? `${enso.strength}, ${enso.trend}` : `trend: ${enso.trend||"—"}`);
+  const color = c ? c.color : "#64748b";
+  const segs = (cycle.timeline||[]).map(t => `<div class="seg" style="background:${t.color}"></div>`).join("");
+  const now = cycle.today_fraction!=null ? `<div class="now" style="left:${cycle.today_fraction*100}%"></div>` : "";
+  $("tileCycle").style.setProperty("--c", color);
+  $("tileCycle").innerHTML =
+    `<div class="label">Vekstsyklus</div>
+     <div class="bigword">${c ? c.phase.replace(/\s*\(.*\)/,"") : "–"}</div>
+     <div class="phasebar">${segs}${now}</div>
+     <div class="ends"><span>jan</span><span>i dag</span><span>des</span></div>`;
 }
 
-// ---- Syklus-tidslinje ------------------------------------------------------
+// ---- Syklus-tidslinje (full) ----------------------------------------------
 function renderCycle(cycle) {
   const letters = ["J","F","M","A","M","J","J","A","S","O","N","D"];
   const bar = $("cycleBar");
   bar.innerHTML = (cycle.timeline||[]).map((t,i) =>
     `<div class="mon" style="background:${t.color}" title="${t.phase}">${letters[i]}</div>`).join("");
   if (cycle.today_fraction!=null) {
-    const mark = document.createElement("div");
-    mark.className = "today"; mark.style.left = (cycle.today_fraction*100)+"%";
-    bar.appendChild(mark);
+    const m = document.createElement("div"); m.className="today";
+    m.style.left=(cycle.today_fraction*100)+"%"; bar.appendChild(m);
   }
-  $("cycleLegend").innerHTML = (cycle.phases||[]).map((p) =>
+  $("cycleLegend").innerHTML = (cycle.phases||[]).map(p =>
     `<span><i style="background:${p.color}"></i>${p.name}</span>`).join("");
-  if (cycle.current) $("cycleTitle").textContent = `Nå: ${cycle.current.phase}`;
+  if (cycle.current) $("cycleTitle").textContent = `Vekstsyklus — nå: ${cycle.current.phase}`;
 }
 
 // ---- Grafer ----------------------------------------------------------------
 function destroy(k){ if (charts[k]){ charts[k].destroy(); delete charts[k]; } }
 const GRID = { color:"rgba(255,255,255,.05)" };
 
-function renderNdviChart(ndvi) {
+// Plantehelse som AVVIK mot normalt: søyler opp (grønn) = friskere enn vanlig.
+function renderDeviationChart(ndvi) {
   destroy("ndvi");
+  const s = (ndvi.series||[]).filter(p => p.anomaly!=null).slice(-26);
   charts.ndvi = new Chart($("ndviChart"), {
-    type:"line",
-    data:{ labels: ndvi.series.map(p=>p.date),
-      datasets:[
-        { label:"Historisk snitt", data:ndvi.series.map(p=>p.baseline),
-          borderColor:"#64748b", borderDash:[6,4], borderWidth:1.5, pointRadius:0, tension:.3 },
-        { label:"Målt NDVI", data:ndvi.series.map(p=>p.value), glow:true,
-          borderColor:"#22d3ee", borderWidth:2.5, pointRadius:0, tension:.3,
-          fill:"-1", backgroundColor:"rgba(34,211,238,.10)" },
-      ]},
-    options: baseOpts("NDVI"),
+    type:"bar",
+    data:{ labels: s.map(p=>p.date),
+      datasets:[{ data: s.map(p=>p.anomaly),
+        backgroundColor: s.map(p => p.anomaly>=0 ? "rgba(34,197,94,.85)" : "rgba(239,68,68,.85)"),
+        borderRadius:3 }]},
+    options:{ responsive:true,
+      scales:{ x:{ grid:{display:false}, ticks:{ maxTicksLimit:6 } },
+               y:{ grid:GRID, ticks:{ callback:v => v>0?"over":v<0?"under":"normalt" } } },
+      plugins:{ legend:{display:false},
+        tooltip:{ callbacks:{ label:(c)=> (c.raw>=0?"+":"")+c.raw.toFixed(2)+" mot normalt" } } } },
   });
 }
 
-function flat(val, n){ return new Array(n).fill(val); }
 function renderEnsoChart(enso) {
   destroy("enso");
-  const s = enso.series||[]; const n = s.length;
-  $("ensoTitle").textContent = `ONI-indeks – nå: ${enso.state||"–"} (${signed(enso.latest_oni||0)})`;
+  const s = enso.series||[];
+  $("ensoTitle").textContent = `El Niño gjennom tiden — nå: ${enso.state||"–"}`;
   charts.enso = new Chart($("ensoChart"), {
     type:"line",
     data:{ labels: s.map(p=>p.date),
-      datasets:[
-        { label:"El Niño-grense", data:flat(0.5,n), borderColor:"rgba(239,68,68,.6)", borderDash:[5,4], borderWidth:1, pointRadius:0 },
-        { label:"La Niña-grense", data:flat(-0.5,n), borderColor:"rgba(56,189,248,.6)", borderDash:[5,4], borderWidth:1, pointRadius:0 },
-        { label:"ONI", data:s.map(p=>p.oni), glow:true, borderColor:"#f8fafc", borderWidth:2.5,
-          pointRadius:0, tension:.3, fill:"origin", backgroundColor:"rgba(248,250,252,.06)" },
-      ]},
-    options: { ...baseOpts("ONI"), scales:{ x:{ grid:GRID, ticks:{ maxTicksLimit:6 } },
-      y:{ grid:GRID, suggestedMin:-2.5, suggestedMax:2.5, title:{display:true,text:"ONI"} } } },
+      datasets:[{ data: s.map(p=>p.oni), borderColor:"#f8fafc", borderWidth:2.5,
+        pointRadius:0, tension:.3 }]},
+    options:{ responsive:true, interaction:{mode:"index",intersect:false},
+      scales:{ x:{ grid:GRID, ticks:{ maxTicksLimit:6 } },
+               y:{ grid:GRID, suggestedMin:-2.5, suggestedMax:2.5,
+                   ticks:{ callback:v => v>=0.5?"El Niño":v<=-0.5?"La Niña":v===0?"nøytral":"" } } },
+      plugins:{ legend:{display:false} } },
   });
 }
 
@@ -193,47 +188,30 @@ function renderRainChart(rain) {
     type:"line",
     data:{ labels: rain.series.map(p=>p.doy),
       datasets:[
-        { label:"Normal", data:rain.series.map(p=>p.baseline_mm), borderColor:"#64748b",
+        { label:"normalt", data:rain.series.map(p=>p.baseline_mm), borderColor:"#64748b",
           borderDash:[6,4], borderWidth:1.5, pointRadius:0, tension:.2 },
-        { label:"I år", data:rain.series.map(p=>p.cumulative_mm), glow:true, borderColor:"#38bdf8",
+        { label:"i år", data:rain.series.map(p=>p.cumulative_mm), borderColor:"#38bdf8",
           borderWidth:2.5, pointRadius:0, tension:.2, fill:"-1", backgroundColor:"rgba(56,189,248,.10)" },
       ]},
-    options: baseOpts("mm", "Dag i året"),
+    options:{ responsive:true, interaction:{mode:"index",intersect:false},
+      scales:{ x:{ grid:GRID, display:false, ticks:{display:false} }, y:{ grid:GRID } },
+      plugins:{ legend:{ position:"bottom", labels:{ boxWidth:12, usePointStyle:true } } } },
   });
 }
 
-function renderGddChart(gdd) {
-  destroy("gdd");
-  charts.gdd = new Chart($("gddChart"), {
-    type:"line",
-    data:{ labels: gdd.series.map(p=>p.date),
-      datasets:[{ label:`GDD ${gdd.year}`, data:gdd.series.map(p=>p.gdd_cumulative), glow:true,
-        borderColor:"#22c55e", borderWidth:2.5, pointRadius:0, tension:.2, fill:"origin",
-        backgroundColor:"rgba(34,197,94,.08)" }]},
-    options: baseOpts("GDD"),
-  });
-}
-
-function baseOpts(yTitle, xTitle) {
-  return { responsive:true, interaction:{ mode:"index", intersect:false },
-    scales:{ x:{ grid:GRID, title:{ display:!!xTitle, text:xTitle||"" }, ticks:{ maxTicksLimit:8 } },
-             y:{ grid:GRID, title:{ display:true, text:yTitle } } },
-    plugins:{ legend:{ position:"bottom", labels:{ boxWidth:12, usePointStyle:true } } } };
-}
-
-// ---- Stress-fliser ---------------------------------------------------------
-function mini(color, label, value, sub) {
-  return `<div class="mini" style="--c:${color}"><div class="l">${label}</div>
-          <div class="v">${value}</div><div class="s">${sub}</div></div>`;
+// ---- Stress-brikker --------------------------------------------------------
+const STATUS_COLOR = { green:"#22c55e", yellow:"#eab308", red:"#ef4444", unknown:"#64748b" };
+function chip(color, icon, big, lbl) {
+  return `<div class="chip" style="--c:${color}"><div class="ic">${icon}</div>
+    <div><div class="big">${big}</div><div class="lbl">${lbl}</div></div></div>`;
 }
 function renderStress(a) {
   $("stress").innerHTML =
-    mini(COLOR[a.heat_stress.status], "Varmedager", `${a.heat_stress.hot_days}`, `over ${a.heat_stress.threshold_c}°C`) +
-    mini(COLOR[a.drought_stress.status], "Tørke-rekke", `${a.drought_stress.longest_dry_streak} dg`, "lengste tørre periode") +
-    mini(COLOR.green, "Varmesum", `${Math.round(a.gdd.total_gdd)}`, `GDD i ${a.gdd.year}`);
+    chip(STATUS_COLOR[a.heat_stress.status], "🔥",
+      `${a.heat_stress.hot_days} dager`, `med ekstrem varme (over ${a.heat_stress.threshold_c}°C)`) +
+    chip(STATUS_COLOR[a.drought_stress.status], "💧",
+      `${a.drought_stress.longest_dry_streak} dager`, "lengste periode uten regn");
 }
 
-const signed = (n) => (n==null ? "–" : (n>=0?"+":"") + Number(n).toFixed(2));
 const fmtDate = (s) => (s ? new Date(s).toLocaleDateString("no-NO") : "–");
-
 init();

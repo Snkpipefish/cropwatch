@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CropWatch – avlingsovervåker</title>
+  <title>CropWatch</title>
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -17,96 +17,84 @@
       --blue:#38bdf8; --cyan:#22d3ee; --amber:#f59e0b;
     }
     * { box-sizing:border-box; }
-    body {
-      margin:0; background:radial-gradient(1200px 600px at 70% -10%, #16223c 0%, var(--bg) 55%);
-      color:var(--text); font-family: ui-sans-serif, system-ui, sans-serif; min-height:100vh;
-    }
-    a { color:var(--blue); }
-    .topbar {
-      display:flex; align-items:center; gap:20px; flex-wrap:wrap;
+    body { margin:0; min-height:100vh; color:var(--text);
+      background:radial-gradient(1200px 600px at 70% -10%, #16223c 0%, var(--bg) 55%);
+      font-family: ui-sans-serif, system-ui, sans-serif; }
+    .topbar { display:flex; align-items:center; gap:20px; flex-wrap:wrap;
       padding:14px 22px; border-bottom:1px solid var(--border);
-      background:rgba(10,15,28,.7); backdrop-filter:blur(6px); position:sticky; top:0; z-index:500;
-    }
+      background:rgba(10,15,28,.7); backdrop-filter:blur(6px); position:sticky; top:0; z-index:500; }
     .logo { font-weight:800; letter-spacing:.06em; font-size:1.05rem; display:flex; align-items:center; gap:9px; }
     .logo .dot { width:11px; height:11px; border-radius:50%; background:var(--green);
-                 box-shadow:0 0 12px var(--green), 0 0 4px var(--green); animation:pulse 2.4s infinite; }
-    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.45} }
-    .selects { display:flex; gap:10px; }
-    select {
-      background:var(--panel); color:var(--text); border:1px solid var(--border);
-      border-radius:9px; padding:8px 12px; font-size:.9rem; outline:none;
-    }
+                 box-shadow:0 0 12px var(--green); }
+    select { background:var(--panel); color:var(--text); border:1px solid var(--border);
+      border-radius:9px; padding:8px 12px; font-size:.9rem; outline:none; }
     select:focus { border-color:var(--blue); }
     .meta { margin-left:auto; text-align:right; font-size:.72rem; color:var(--muted); line-height:1.5; }
     main { padding:22px; max-width:1280px; margin:0 auto; }
 
-    .narrative {
-      background:linear-gradient(90deg, rgba(34,197,94,.08), rgba(56,189,248,.05));
-      border:1px solid var(--border); border-left:4px solid var(--green);
-      border-radius:12px; padding:14px 18px; font-size:1rem; line-height:1.6; margin-bottom:20px;
-    }
-    .narrative b { color:#fff; }
-
     .hero { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:20px; }
     @media (max-width:820px){ .hero{ grid-template-columns:1fr; } }
-    .tile {
-      position:relative; background:linear-gradient(180deg,var(--panel),var(--panel2));
-      border:1px solid var(--border); border-radius:16px; padding:18px 20px; overflow:hidden;
-    }
-    .tile::before { content:""; position:absolute; inset:0 0 auto 0; height:3px; background:var(--c,var(--muted)); box-shadow:0 0 16px var(--c,var(--muted)); }
+    .tile { position:relative; background:linear-gradient(180deg,var(--panel),var(--panel2));
+      border:1px solid var(--border); border-radius:16px; padding:18px 20px; overflow:hidden; }
+    .tile::before { content:""; position:absolute; inset:0 0 auto 0; height:3px;
+      background:var(--c,var(--muted)); box-shadow:0 0 16px var(--c,var(--muted)); }
     .tile .label { font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
-    .tile .value { font-size:2.3rem; font-weight:800; margin:6px 0 2px; line-height:1; }
-    .tile .state { display:inline-flex; align-items:center; gap:7px; font-weight:700; font-size:.95rem; }
-    .tile .state .led { width:10px; height:10px; border-radius:50%; background:var(--c,var(--muted)); box-shadow:0 0 10px var(--c,var(--muted)); }
-    .tile .sub { color:var(--muted); font-size:.82rem; margin-top:8px; }
+    .tile .bigword { font-size:1.9rem; font-weight:800; margin:8px 0 4px; line-height:1.05; color:var(--c,#fff); }
+
+    /* Måler: hvor ligger vi mot normalt */
+    .gauge { position:relative; height:14px; border-radius:8px; margin:6px 0 8px;
+      background:linear-gradient(90deg,var(--gl),var(--gm) 50%,var(--gr)); }
+    .gauge .tick { position:absolute; left:50%; top:-4px; bottom:-4px; width:2px;
+      background:rgba(255,255,255,.45); transform:translateX(-50%); }
+    .gauge .marker { position:absolute; top:50%; width:18px; height:18px; border-radius:50%;
+      background:#fff; box-shadow:0 0 12px #fff,0 0 4px #000; transform:translate(-50%,-50%); border:2px solid #0a0f1c; }
+    .ends { display:flex; justify-content:space-between; font-size:.66rem; color:var(--muted); }
+    .ends span:nth-child(2){ opacity:.8; }
+
+    /* Syklus-flis: fasestolpe gjennom året */
+    .phasebar { position:relative; display:flex; height:16px; border-radius:6px; overflow:hidden;
+      border:1px solid var(--border); margin:8px 0 6px; }
+    .phasebar .seg { flex:1; }
+    .phasebar .now { position:absolute; top:-4px; bottom:-4px; width:3px; background:#fff; box-shadow:0 0 10px #fff; }
 
     .panel { background:linear-gradient(180deg,var(--panel),var(--panel2));
-             border:1px solid var(--border); border-radius:16px; padding:18px; }
-    .panel h2 { margin:0 0 4px; font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
-    .panel .ptitle { font-size:1.05rem; font-weight:700; margin-bottom:14px; color:#fff; }
-    .grid2 { display:grid; grid-template-columns:1.4fr 1fr; gap:18px; margin-bottom:18px; }
+      border:1px solid var(--border); border-radius:16px; padding:18px; }
+    .panel .ptitle { font-size:.95rem; font-weight:700; margin-bottom:14px; color:#fff; }
+    .grid2 { display:grid; grid-template-columns:1.3fr 1fr; gap:18px; margin-bottom:18px; }
     .grid2b { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:18px; }
     @media (max-width:900px){ .grid2,.grid2b{ grid-template-columns:1fr; } }
-    canvas { max-height:300px; }
-    .hint { font-size:.76rem; color:var(--muted); margin-top:10px; }
+    canvas { max-height:280px; }
 
-    /* Syklus-tidslinje */
     .cyclewrap { margin-bottom:20px; }
-    .cycle { position:relative; display:flex; height:46px; border-radius:10px; overflow:hidden; border:1px solid var(--border); }
-    .cycle .mon { flex:1; display:flex; align-items:center; justify-content:center; font-size:.72rem; font-weight:700;
-                  color:rgba(0,0,0,.55); border-right:1px solid rgba(0,0,0,.18); }
+    .cycle { position:relative; display:flex; height:44px; border-radius:10px; overflow:hidden; border:1px solid var(--border); }
+    .cycle .mon { flex:1; display:flex; align-items:center; justify-content:center; font-size:.72rem;
+      font-weight:700; color:rgba(0,0,0,.55); border-right:1px solid rgba(0,0,0,.18); }
     .cycle .mon:last-child { border-right:none; }
     .today { position:absolute; top:-6px; bottom:-6px; width:3px; background:#fff; box-shadow:0 0 12px #fff; }
-    .today::after { content:"i dag"; position:absolute; top:-18px; left:50%; transform:translateX(-50%);
-                    font-size:.62rem; color:#fff; background:#000a; padding:1px 6px; border-radius:6px; white-space:nowrap; }
     .legend { display:flex; gap:16px; flex-wrap:wrap; margin-top:10px; font-size:.8rem; color:var(--muted); }
     .legend span { display:inline-flex; align-items:center; gap:6px; }
     .legend i { width:11px; height:11px; border-radius:3px; display:inline-block; }
 
-    .ministats { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-    @media (max-width:700px){ .ministats{ grid-template-columns:1fr; } }
-    .mini { background:var(--panel2); border:1px solid var(--border); border-radius:12px; padding:14px; border-left:4px solid var(--c,var(--muted)); }
-    .mini .l { font-size:.7rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); }
-    .mini .v { font-size:1.5rem; font-weight:800; margin-top:3px; }
-    .mini .s { font-size:.76rem; color:var(--muted); margin-top:2px; }
+    .chips { display:flex; flex-direction:column; gap:14px; }
+    .chip { display:flex; align-items:center; gap:14px; background:var(--panel2);
+      border:1px solid var(--border); border-radius:12px; padding:14px 16px; border-left:5px solid var(--c,var(--muted)); }
+    .chip .ic { font-size:1.6rem; }
+    .chip .big { font-size:1.5rem; font-weight:800; }
+    .chip .lbl { font-size:.82rem; color:var(--muted); }
 
-    #map { height:330px; border-radius:12px; filter:saturate(1.05); }
+    #map { height:330px; border-radius:12px; }
     .leaflet-tooltip { background:#0e1626; border:1px solid var(--border); color:var(--text); }
   </style>
 </head>
 <body>
   <div class="topbar">
     <div class="logo"><span class="dot"></span> CROPWATCH</div>
-    <div class="selects">
-      <select id="region"></select>
-      <select id="area"></select>
-    </div>
+    <select id="region"></select>
+    <select id="area"></select>
     <div class="meta" id="meta"></div>
   </div>
 
   <main>
-    <div class="narrative" id="narrative">Laster …</div>
-
     <div class="hero">
       <div class="tile" id="tileVeg"></div>
       <div class="tile" id="tileCycle"></div>
@@ -114,54 +102,36 @@
     </div>
 
     <div class="panel cyclewrap">
-      <h2>Hvor i syklusen er vi?</h2>
-      <div class="ptitle" id="cycleTitle">Vekstsyklus gjennom året</div>
+      <div class="ptitle" id="cycleTitle">Vekstsyklus</div>
       <div class="cycle" id="cycleBar"></div>
       <div class="legend" id="cycleLegend"></div>
     </div>
 
     <div class="grid2">
       <div class="panel">
-        <h2>Hva har skjedd</h2>
-        <div class="ptitle">Vegetasjon (NDVI) mot normalt</div>
+        <div class="ptitle">Plantehelse mot normalt</div>
         <canvas id="ndviChart"></canvas>
-        <p class="hint">Lys linje = målt vegetasjon. Stiplet = historisk snitt for årstiden. Skravert = avvik.</p>
       </div>
       <div class="panel">
-        <h2>Hvor er El Niño?</h2>
-        <div class="ptitle" id="ensoTitle">ONI-indeks (siste 3 år)</div>
+        <div class="ptitle" id="ensoTitle">El Niño gjennom tiden</div>
         <canvas id="ensoChart"></canvas>
-        <p class="hint">Over <b>+0.5</b> = El Niño (rød sone). Under <b>−0.5</b> = La Niña (blå sone).</p>
       </div>
     </div>
 
     <div class="grid2b">
       <div class="panel">
-        <h2>Vann</h2>
-        <div class="ptitle">Akkumulert nedbør mot normalt</div>
+        <div class="ptitle">Nedbør mot normalt</div>
         <canvas id="rainChart"></canvas>
-        <p class="hint">Under stiplet linje = tørrere enn normalt hittil i år.</p>
       </div>
       <div class="panel">
-        <h2>Varme</h2>
-        <div class="ptitle">Varmesum for vekst (GDD)</div>
-        <canvas id="gddChart"></canvas>
-        <p class="hint">Akkumulert vekst-varme i inneværende år.</p>
+        <div class="ptitle">Stress siste 30 dager</div>
+        <div class="chips" id="stress"></div>
       </div>
     </div>
 
-    <div class="grid2b">
-      <div class="panel">
-        <h2>Stress siste 30 dager</h2>
-        <div class="ptitle">Varme- og tørkepress</div>
-        <div class="ministats" id="stress"></div>
-      </div>
-      <div class="panel">
-        <h2>Kart</h2>
-        <div class="ptitle">Dyrkingsområder</div>
-        <div id="map"></div>
-        <p class="hint">Klikk en markør for å bytte område.</p>
-      </div>
+    <div class="panel">
+      <div class="ptitle">Dyrkingsområder</div>
+      <div id="map"></div>
     </div>
   </main>
 
