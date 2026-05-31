@@ -1,0 +1,50 @@
+# ---------------------------------------------------------------------------
+# CropWatch regionkonfigurasjon – India, sukkerrør
+# Ny region = ny fil som denne. Ingen kodeendring.
+# ---------------------------------------------------------------------------
+
+id: india_sugar
+name: "India – sukkerrør"
+commodity: "sukker"
+
+sources:
+  ndvi: nasa_modis
+  weather: open_meteo
+
+growing:
+  base_temp_c: 18
+  heat_stress_temp_c: 35
+
+# Sukkerrør i India (nordlige halvkule):
+#   - Vekst (monsun): mai–sep (sterk vekst i regntiden)
+#   - Høsting (knusesesong): okt–apr (topp januar)
+# Merk: India spenner over et stort klimaspenn – Nord (Uttar Pradesh,
+# subtropisk) knuser nærmere nov–apr, Sør (Maharashtra/Karnataka) okt–mar.
+# Her brukes det nasjonale vinduet. Kilde: USDA / indisk sukkerindustri.
+cycle:
+  phases:
+    - name: "Vekst (monsun)"
+      months: [5, 6, 7, 8, 9]
+      color: "#22c55e"
+    - name: "Høsting (knusesesong)"
+      months: [10, 11, 12, 1, 2, 3, 4]
+      color: "#f59e0b"
+
+# Viktigste dyrkingsstater: Uttar Pradesh, Maharashtra, Karnataka (~80%).
+areas:
+  - id: muzaffarnagar
+    name: "Muzaffarnagar (Uttar Pradesh)"
+    lat: 29.47
+    lon: 77.70
+  - id: kolhapur
+    name: "Kolhapur (Maharashtra)"
+    lat: 16.70
+    lon: 74.24
+  - id: belagavi
+    name: "Belagavi (Karnataka)"
+    lat: 15.85
+    lon: 74.50
+  - id: mandya
+    name: "Mandya (Karnataka)"
+    lat: 12.52
+    lon: 76.90

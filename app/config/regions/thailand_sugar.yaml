@@ -1,0 +1,48 @@
+# ---------------------------------------------------------------------------
+# CropWatch regionkonfigurasjon – Thailand, sukkerrør
+# Ny region = ny fil som denne. Ingen kodeendring.
+# ---------------------------------------------------------------------------
+
+id: thailand_sugar
+name: "Thailand – sukkerrør"
+commodity: "sukker"
+
+sources:
+  ndvi: nasa_modis
+  weather: open_meteo
+
+growing:
+  base_temp_c: 18
+  heat_stress_temp_c: 35
+
+# Sukkerrør i Thailand (nordlige halvkule):
+#   - Vekst (regnsesong/monsun): mai–nov
+#   - Høsting (knusesesong): des–apr (topp jan–feb)
+# Kilde: Thai sukkerindustri / Bonsucro / S&P Global.
+cycle:
+  phases:
+    - name: "Vekst (regnsesong)"
+      months: [5, 6, 7, 8, 9, 10, 11]
+      color: "#22c55e"
+    - name: "Høsting (knusesesong)"
+      months: [12, 1, 2, 3, 4]
+      color: "#f59e0b"
+
+# Viktigste dyrkingsområder: Nordøst (Isan) og Nord.
+areas:
+  - id: udon_thani
+    name: "Udon Thani (Nordøst)"
+    lat: 17.41
+    lon: 102.79
+  - id: khon_kaen
+    name: "Khon Kaen (Nordøst)"
+    lat: 16.44
+    lon: 102.83
+  - id: nakhon_sawan
+    name: "Nakhon Sawan (Nord)"
+    lat: 15.70
+    lon: 100.12
+  - id: kamphaeng_phet
+    name: "Kamphaeng Phet (Nord)"
+    lat: 16.48
+    lon: 99.52

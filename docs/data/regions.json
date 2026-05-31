@@ -23,5 +23,67 @@
         "lon": -49.25
       }
     ]
+  },
+  {
+    "id": "india_sugar",
+    "name": "India – sukkerrør",
+    "commodity": "sukker",
+    "areas": [
+      {
+        "id": "muzaffarnagar",
+        "name": "Muzaffarnagar (Uttar Pradesh)",
+        "lat": 29.47,
+        "lon": 77.7
+      },
+      {
+        "id": "kolhapur",
+        "name": "Kolhapur (Maharashtra)",
+        "lat": 16.7,
+        "lon": 74.24
+      },
+      {
+        "id": "belagavi",
+        "name": "Belagavi (Karnataka)",
+        "lat": 15.85,
+        "lon": 74.5
+      },
+      {
+        "id": "mandya",
+        "name": "Mandya (Karnataka)",
+        "lat": 12.52,
+        "lon": 76.9
+      }
+    ]
+  },
+  {
+    "id": "thailand_sugar",
+    "name": "Thailand – sukkerrør",
+    "commodity": "sukker",
+    "areas": [
+      {
+        "id": "udon_thani",
+        "name": "Udon Thani (Nordøst)",
+        "lat": 17.41,
+        "lon": 102.79
+      },
+      {
+        "id": "khon_kaen",
+        "name": "Khon Kaen (Nordøst)",
+        "lat": 16.44,
+        "lon": 102.83
+      },
+      {
+        "id": "nakhon_sawan",
+        "name": "Nakhon Sawan (Nord)",
+        "lat": 15.7,
+        "lon": 100.12
+      },
+      {
+        "id": "kamphaeng_phet",
+        "name": "Kamphaeng Phet (Nord)",
+        "lat": 16.48,
+        "lon": 99.52
+      }
+    ]
   }
 ]
