@@ -175,8 +175,8 @@
       },
       {
         "month": 4,
-        "phase": "Modning",
-        "color": "#eab308"
+        "phase": "Høsting (safra)",
+        "color": "#f59e0b"
       },
       {
         "month": 5,
@@ -210,8 +210,8 @@
       },
       {
         "month": 11,
-        "phase": "Vekst (regnsesong)",
-        "color": "#22c55e"
+        "phase": "Høsting (safra)",
+        "color": "#f59e0b"
       },
       {
         "month": 12,
@@ -222,8 +222,8 @@
     "current": {
       "phase": "Høsting (safra)",
       "color": "#f59e0b",
-      "month_in_phase": 1,
-      "phase_length": 6
+      "month_in_phase": 2,
+      "phase_length": 8
     },
     "today_month": 5,
     "today_fraction": 0.414,
@@ -231,10 +231,6 @@
       {
         "name": "Vekst (regnsesong)",
         "color": "#22c55e"
-      },
-      {
-        "name": "Modning",
-        "color": "#eab308"
       },
       {
         "name": "Høsting (safra)",
@@ -7370,7 +7366,7 @@
     }
   },
   "last_run": {
-    "ndvi": "2026-05-31T11:54:58.075157",
-    "weather": "2026-05-31T11:55:00.202553"
+    "ndvi": "2026-05-31T11:58:16.534795",
+    "weather": "2026-05-31T11:58:19.219668"
   }
 }

@@ -28,18 +28,21 @@ growing:
   heat_stress_temp_c: 35     # over dette regnes som varmestress
 
 # Vekstsyklusen gjennom året. Hver fase lister månedene den dekker (1=jan).
-# Dashbordet viser hvor i syklusen vi er nå. (Sukkerrør i Sør-Brasil:
-# regn/vekst nov–mar, modning apr, høsting/safra mai–okt.)
+# Dashbordet viser hvor i syklusen vi er nå.
+#
+# Sukkerrør i Sør-Sentral-Brasil (São Paulo/Goiás m.fl.), basert på
+# safra-kalenderen (UNICA/CONAB/USDA):
+#   - Høsting (safra): apr–nov (tørketid; aktiv knusing topp mai–okt)
+#   - Vekst (regnsesong): des–mar (sørlig sommer, regn driver veksten)
+# Merk: sukkerrør er flerårig med forskjøvet høsting per åker, så grensene
+# er omtrentlige og kan variere litt år til år.
 cycle:
   phases:
     - name: "Vekst (regnsesong)"
-      months: [11, 12, 1, 2, 3]
+      months: [12, 1, 2, 3]
       color: "#22c55e"
-    - name: "Modning"
-      months: [4]
-      color: "#eab308"
     - name: "Høsting (safra)"
-      months: [5, 6, 7, 8, 9, 10]
+      months: [4, 5, 6, 7, 8, 9, 10, 11]
       color: "#f59e0b"
 
 # Dyrkingsområder i regionen. Hvert område har et senterpunkt (lat/lon)
