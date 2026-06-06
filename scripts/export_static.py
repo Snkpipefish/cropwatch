@@ -45,10 +45,15 @@ def main() -> None:
 
     # 1) Hent ferske data for hver region. Databasen følger med i repoet, så
     #    dette henter bare det nye siden sist – ikke hele historikken på nytt.
+    #    En region som svikter (f.eks. nettverksblipp) stopper ikke de andre –
+    #    da brukes den eksisterende historikken, og siden oppdateres likevel.
     for region_id in regions:
         print(f"Henter data for {region_id} ...")
-        counts = service.refresh_region(region_id)
-        print(f"  hentet {counts}")
+        try:
+            counts = service.refresh_region(region_id)
+            print(f"  hentet {counts}")
+        except Exception as e:
+            print(f"  ADVARSEL: henting feilet for {region_id}: {e}")
         # Skriv WAL inn i hovedfila så den committede databasen er komplett.
         with _engine(region_id).connect() as c:
             c.execute(text("PRAGMA wal_checkpoint(TRUNCATE)"))

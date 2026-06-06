@@ -4,6 +4,7 @@ Både API-et og scheduleren bruker funksjonene her, så logikken finnes ett sted
 """
 from __future__ import annotations
 
+import logging
 from datetime import date, timedelta
 
 from .config_loader import Region, get_region, load_regions
@@ -12,6 +13,8 @@ from .connectors.ndvi import get_ndvi_connector
 from .connectors.weather import get_weather_connector
 from .indicators import compute
 from .storage import db
+
+log = logging.getLogger("cropwatch.service")
 
 # ENSO er global og endrer seg sakte – hentes én gang per prosess.
 _enso_cache: dict | None = None
@@ -43,10 +46,15 @@ def refresh_ndvi(region: Region) -> int:
     connector = get_ndvi_connector(region.sources["ndvi"])
     total = 0
     for area in region.areas:
-        existing = [o.date for o in db.get_ndvi(region.id, area.id)]
-        start = _start_date(region.id, area.id, existing)
-        obs = connector.fetch(area.lat, area.lon, start, date.today())
-        total += db.save_ndvi(region.id, area.id, obs)
+        # Et nettverksblipp på ett område skal ikke stoppe resten – vi beholder
+        # da den eksisterende historikken og prøver igjen ved neste kjøring.
+        try:
+            existing = [o.date for o in db.get_ndvi(region.id, area.id)]
+            start = _start_date(region.id, area.id, existing)
+            obs = connector.fetch(area.lat, area.lon, start, date.today())
+            total += db.save_ndvi(region.id, area.id, obs)
+        except Exception:
+            log.exception("NDVI-henting feilet for %s/%s – hopper over", region.id, area.id)
     db.record_fetch(region.id, "ndvi")
     return total
 
@@ -55,10 +63,13 @@ def refresh_weather(region: Region) -> int:
     connector = get_weather_connector(region.sources["weather"])
     total = 0
     for area in region.areas:
-        existing = [o.date for o in db.get_weather(region.id, area.id)]
-        start = _start_date(region.id, area.id, existing)
-        obs = connector.fetch(area.lat, area.lon, start, date.today())
-        total += db.save_weather(region.id, area.id, obs)
+        try:
+            existing = [o.date for o in db.get_weather(region.id, area.id)]
+            start = _start_date(region.id, area.id, existing)
+            obs = connector.fetch(area.lat, area.lon, start, date.today())
+            total += db.save_weather(region.id, area.id, obs)
+        except Exception:
+            log.exception("Vær-henting feilet for %s/%s – hopper over", region.id, area.id)
     db.record_fetch(region.id, "weather")
     return total
 
