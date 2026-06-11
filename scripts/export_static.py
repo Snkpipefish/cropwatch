@@ -65,11 +65,13 @@ def main() -> None:
     for region_id in regions:
         _write(DATA / f"{region_id}.json", service.region_status(region_id))
 
-    # 3) Kopier dashbordet inn i docs/.
+    # 3) Kopier dashbordet inn i docs/. (sugar11-dataene bygges av det lokale
+    #    scripts/export_sugar11.py – her kopieres bare frontend-filene.)
     print("Kopierer frontend ...")
-    for name in ("index.html", "app.js"):
-        shutil.copy2(FRONTEND / name, DOCS / name)
-        print(f"  kopierte {name}")
+    for name in ("index.html", "app.js", "sugar11.html", "sugar11.js"):
+        if (FRONTEND / name).exists():
+            shutil.copy2(FRONTEND / name, DOCS / name)
+            print(f"  kopierte {name}")
 
     # Liten fil som forteller når siden sist ble bygget.
     _write(DATA / "built.json", {"built_utc": date.today().isoformat()})

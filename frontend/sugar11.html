@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sukker no. 11 – drivere</title>
+  <style>
+    :root {
+      --bg:#0a0f1c; --panel:#121c30; --panel2:#0e1626; --border:#243049;
+      --text:#e6edf7; --muted:#8b9bb4;
+      --green:#22c55e; --yellow:#eab308; --red:#ef4444;
+      --blue:#38bdf8; --cyan:#22d3ee; --amber:#f59e0b;
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; color:var(--text);
+      background:radial-gradient(1200px 600px at 70% -10%, #16223c 0%, var(--bg) 55%);
+      font-family: ui-sans-serif, system-ui, sans-serif; }
+    .topbar { display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+      padding:14px 22px; border-bottom:1px solid var(--border);
+      background:rgba(10,15,28,.7); backdrop-filter:blur(6px); position:sticky; top:0; z-index:500; }
+    .logo { font-weight:800; letter-spacing:.06em; font-size:1.05rem; display:flex; align-items:center; gap:9px; }
+    .logo .dot { width:11px; height:11px; border-radius:50%; background:var(--amber); box-shadow:0 0 12px var(--amber); }
+    .topbar a { color:var(--muted); text-decoration:none; font-size:.85rem; }
+    .topbar a:hover { color:var(--text); }
+    .meta { margin-left:auto; font-size:.72rem; color:var(--muted); }
+    main { padding:22px; max-width:1280px; margin:0 auto; }
+
+    /* Topp: pris + press-oversikt */
+    .hero { display:grid; grid-template-columns:1.2fr 1fr; gap:16px; margin-bottom:20px; }
+    @media (max-width:860px){ .hero{ grid-template-columns:1fr; } }
+    .panel { position:relative; background:linear-gradient(180deg,var(--panel),var(--panel2));
+      border:1px solid var(--border); border-radius:16px; padding:18px 20px; overflow:hidden; }
+    .panel::before { content:""; position:absolute; inset:0 0 auto 0; height:3px;
+      background:var(--c,var(--border)); box-shadow:0 0 14px var(--c,transparent); }
+    .label { font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+    .big { font-size:2.4rem; font-weight:800; line-height:1.05; margin:6px 0 2px; }
+    .sub { color:var(--muted); font-size:.8rem; }
+    #spark { width:100%; height:74px; margin-top:8px; }
+
+    .balance { display:flex; gap:10px; align-items:center; margin:10px 0 6px; }
+    .balance .side { font-size:1.7rem; font-weight:800; }
+    .bbar { flex:1; display:flex; height:16px; border-radius:8px; overflow:hidden; border:1px solid var(--border); }
+    .bbar div { height:100%; }
+    .pills { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
+    .pill { font-size:.72rem; font-weight:700; padding:3px 10px; border-radius:999px;
+      border:1px solid var(--border); color:var(--muted); }
+    .pill.up { color:#04110a; background:var(--green); border-color:var(--green); }
+    .pill.down { color:#160404; background:var(--red); border-color:var(--red); }
+
+    /* Driver-rutenett */
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+    .drv .name { font-size:.95rem; font-weight:700; margin:2px 0 10px; color:#fff; display:flex; align-items:center; gap:8px; }
+    .dir { font-size:.68rem; font-weight:800; padding:2px 8px; border-radius:999px; margin-left:auto; }
+    .dir.up { background:rgba(34,197,94,.18); color:var(--green); }
+    .dir.down { background:rgba(239,68,68,.18); color:var(--red); }
+    .dir.flat { background:rgba(139,155,180,.15); color:var(--muted); }
+    .word { font-size:1.45rem; font-weight:800; margin:2px 0 8px; }
+    .gauge { position:relative; height:12px; border-radius:7px; margin:6px 0 6px;
+      background:linear-gradient(90deg,var(--gl,#334155),var(--gm,#334155) 50%,var(--gr,#334155)); }
+    .gauge .tick { position:absolute; left:50%; top:-4px; bottom:-4px; width:2px;
+      background:rgba(255,255,255,.4); transform:translateX(-50%); }
+    .gauge .marker { position:absolute; top:50%; width:16px; height:16px; border-radius:50%;
+      background:#fff; box-shadow:0 0 10px #fff; transform:translate(-50%,-50%); border:2px solid #0a0f1c; }
+    .ends { display:flex; justify-content:space-between; font-size:.64rem; color:var(--muted); }
+    .facts { font-size:.8rem; color:var(--muted); margin-top:8px; line-height:1.55; }
+    .facts b { color:var(--text); }
+    .fresh { position:absolute; right:14px; bottom:10px; font-size:.64rem; color:var(--muted); }
+    .fresh.warn { color:var(--yellow); } .fresh.old { color:var(--red); }
+    .err { color:var(--red); font-size:.8rem; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="logo"><span class="dot"></span> SUKKER NO. 11 — DRIVERE</div>
+    <a href="index.html">← avlinger</a>
+    <div class="meta" id="meta"></div>
+  </div>
+  <main>
+    <div class="hero">
+      <div class="panel" id="pricePanel"></div>
+      <div class="panel" id="pressPanel"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </main>
+  <script src="sugar11.js"></script>
+</body>
+</html>
