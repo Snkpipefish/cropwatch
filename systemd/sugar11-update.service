@@ -1,0 +1,21 @@
+# Sukker no. 11-dashbord: daglig oppdatering (leser bedrock.db + CropWatch,
+# bygger docs/data/sugar11.json og pusher til GitHub Pages).
+# Følger samme konvensjoner som bedrock-fetcherne.
+[Unit]
+Description=CropWatch: oppdater sukker no. 11-driverdashbordet
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/pc/prosjekter/TS
+# Vent på DNS (maks ~60 s) – som bedrock-fetcherne.
+ExecStartPre=/bin/sh -c 'for _ in $(seq 1 30); do getent ahosts github.com >/dev/null 2>&1 && exit 0; sleep 2; done; exit 0'
+# Hent ferske data fra GitHub først (Action committer NDVI/vær-databasene).
+ExecStartPre=/usr/bin/git pull --rebase -X theirs origin main
+ExecStart=/home/pc/prosjekter/TS/.venv/bin/python scripts/export_sugar11.py --push
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target

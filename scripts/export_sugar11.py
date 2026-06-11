@@ -339,6 +339,15 @@ def main() -> None:
     if not BEDROCK_DB.exists():
         sys.exit("FEIL: bedrock.db ikke funnet – dette skriptet må kjøres lokalt.")
 
+    # Frost-vakten trenger DAGENS minimumstemperatur – hent ferskt Brasil-vær
+    # (inkrementelt, ~3 kall). Svikter det, brukes det som ligger lagret.
+    try:
+        from app import service as cw_service
+        cw_service.refresh_weather(get_region("brazil_sugar"))
+        print("Hentet ferskt Brasil-vær for frost-vakten.")
+    except Exception as e:  # noqa: BLE001
+        print(f"  ADVARSEL: vær-oppdatering feilet ({e}) – bruker lagrede data.")
+
     out = {
         "built_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "price": section(price),

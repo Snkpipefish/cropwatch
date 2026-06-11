@@ -1,5 +1,5 @@
 {
-  "built_utc": "2026-06-11T19:39:39+00:00",
+  "built_utc": "2026-06-11T19:53:43+00:00",
   "price": {
     "asof": "2026-06-11",
     "close": 14.37,
@@ -249,10 +249,10 @@
     }
   },
   "frost": {
-    "asof": "2026-06-06",
+    "asof": "2026-06-11",
     "window_active": true,
-    "min_temp_14d": 10.8,
-    "coldest_date": "2026-06-02",
+    "min_temp_14d": 9.5,
+    "coldest_date": "2026-06-07",
     "frost_days_30d": 0,
     "threshold_c": 3.0
   },

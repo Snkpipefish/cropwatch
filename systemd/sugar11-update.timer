@@ -1,0 +1,16 @@
+# Daglig kl. 07:15 (etter bedrocks morgenbatch: fundamentals 02:30,
+# vær 03:00, signals 03:30, ENSO 06:00 – alt er ferskt da).
+# RandomizedDelaySec sprer kjøringen ved oppstart så den ikke stiller
+# seg i boot-køen sammen med bedrock-timerne.
+[Unit]
+Description=CropWatch sugar11-dashbord: daglig oppdatering
+Requires=sugar11-update.service
+
+[Timer]
+OnCalendar=*-*-* 07:15:00
+RandomizedDelaySec=1200
+Persistent=true
+Unit=sugar11-update.service
+
+[Install]
+WantedBy=timers.target

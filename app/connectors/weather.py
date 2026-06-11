@@ -9,6 +9,7 @@ og slår dem sammen – så du slipper å tenke på skillet.
 """
 from __future__ import annotations
 
+import time
 from datetime import date, timedelta
 
 import httpx
@@ -77,6 +78,16 @@ class OpenMeteoWeather(WeatherConnector):
 
     @staticmethod
     def _parse(response: httpx.Response) -> list[WeatherObservation]:
+        # Open-Meteo struper av og til (429) – særlig når flere systemer på
+        # samme maskin henter samtidig. Prøv igjen med økende ventetid.
+        if response.status_code == 429:
+            url = response.request.url
+            with httpx.Client(timeout=30.0) as retry_client:
+                for attempt in range(1, 5):
+                    time.sleep(15 * attempt)
+                    response = retry_client.get(url)
+                    if response.status_code != 429:
+                        break
         response.raise_for_status()
         daily = response.json()["daily"]
         out: list[WeatherObservation] = []
