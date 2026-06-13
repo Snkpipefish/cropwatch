@@ -36,6 +36,8 @@ from app.storage import db as cw_db                 # noqa: E402
 BEDROCK_DB = Path(os.environ.get("BEDROCK_DB", "/home/pc/bedrock/bedrock.db"))
 FLOOR_JSON = Path(os.environ.get(
     "SUGAR_FLOOR_JSON", "/home/pc/bedrock/data/_meta/sugar_rolling_floor.json"))
+AGRI_SIGNALS = Path(os.environ.get(
+    "BEDROCK_AGRI_SIGNALS", "/home/pc/bedrock/data/agri_signals.json"))
 DOCS = ROOT / "docs"
 FRONTEND = ROOT / "frontend"
 
@@ -218,18 +220,32 @@ def cot():
 
 
 def bedrock_view():
-    with bcon() as c:
-        row = c.execute(
-            "SELECT ref_date, direction, score, grade, published "
-            "FROM signal_setups WHERE instrument='Sugar' "
-            "ORDER BY ref_date DESC LIMIT 1").fetchone()
+    # GJELDENDE setup leses fra bedrocks live-fil data/agri_signals.json (samme
+    # som web-UI-et og boten bruker) — IKKE signal_setups, som er backtest-data.
+    setup, asof = None, None
+    try:
+        entries = json.loads(AGRI_SIGNALS.read_text())
+        asof = datetime.fromtimestamp(AGRI_SIGNALS.stat().st_mtime, timezone.utc).date().isoformat()
+        sugar = [e for e in entries if e.get("instrument") == "Sugar"]
+        published = [e for e in sugar if e.get("published")]
+        # Vis den publiserte setupen (det boten faktisk handler på). Er ingen
+        # publisert, vis den sterkeste under terskel.
+        chosen = max(published or sugar, key=lambda e: e.get("score", 0)) if sugar else None
+        if chosen:
+            setup = {
+                "direction": chosen["direction"],
+                "score": round(chosen["score"], 2),
+                "grade": chosen.get("grade"),
+                "horizon": chosen.get("horizon"),
+                "published": bool(chosen.get("published")),
+            }
+    except Exception as e:  # noqa: BLE001
+        print(f"  ADVARSEL: kunne ikke lese agri_signals.json ({e})")
+
     floor = json.loads(FLOOR_JSON.read_text()) if FLOOR_JSON.exists() else {}
     return {
-        "asof": row[0] if row else None,
-        "latest_setup": {
-            "direction": row[1], "score": round(row[2], 2),
-            "grade": row[3], "published": bool(row[4]),
-        } if row else None,
+        "asof": asof,
+        "latest_setup": setup,
         "floor": {
             "buy": floor.get("current_yaml_buy"),
             "sell": floor.get("current_yaml_sell"),

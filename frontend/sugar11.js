@@ -180,11 +180,19 @@ function renderDrivers(d) {
   if (K && !K.error) {
     const setup = K.latest_setup;
     const fl = K.floor || {};
-    out.push(panel("bedrock", 0, setup && setup.direction === "buy" ? GREEN : RED,
-      setup ? `${setup.direction === "buy" ? "KJØP" : "SELG"} ${setup.score} (${setup.grade})` : "–",
-      "",
-      `Terskel kjøp <b>${fl.buy}</b> / selg <b>${fl.sell}</b>` +
-      (fl.pending ? ` · <b style="color:${AMBER}">anbefalt selg-terskel ${fl.recommended_sell} venter på godkjenning</b>` : ""),
+    const isBuy = setup && setup.direction === "buy";
+    const dir = setup ? (isBuy ? 1 : -1) : 0;
+    const word = setup
+      ? `${isBuy ? "KJØP" : "SELG"} ${setup.score} (${setup.grade})`
+      : "–";
+    const pubTxt = setup
+      ? (setup.published
+          ? `<b style="color:${GREEN}">publisert</b> – over terskel${setup.horizon ? ", " + setup.horizon : ""}`
+          : `under terskel – ikke handlet`)
+      : "ingen setup";
+    out.push(panel("bedrock", dir, setup ? (isBuy ? GREEN : RED) : MUTED, word, "",
+      `${pubTxt}<br>Terskel kjøp <b>${fl.buy}</b> / selg <b>${fl.sell}</b>` +
+      (fl.pending ? ` · <b style="color:${AMBER}">anbefalt selg ${fl.recommended_sell} venter</b>` : ""),
       K.asof));
   }
 
