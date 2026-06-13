@@ -29,6 +29,7 @@ sys.path.insert(0, str(ROOT))
 
 from app.config_loader import get_region            # noqa: E402
 from app.connectors import enso as enso_mod         # noqa: E402
+from app.connectors import fred as fred_mod         # noqa: E402
 from app.indicators import compute                  # noqa: E402
 from app.storage import db as cw_db                 # noqa: E402
 
@@ -91,15 +92,26 @@ def price():
 
 
 def brl():
-    with bcon() as c:
-        rows = c.execute(
-            "SELECT date, value FROM fundamentals WHERE series_id='DEXBZUS' "
-            "AND value IS NOT NULL ORDER BY date").fetchall()
-    vals = [r[1] for r in rows]
-    last_date, last = rows[-1][0], vals[-1]
+    # Hent ferskt fra FRED (DEXBZUS). Faller tilbake til bedrocks kopi hvis
+    # FRED er nede eller nøkkelen mangler.
+    source = "FRED"
+    try:
+        rows = fred_mod.fetch_series("DEXBZUS", start="2022-01-01")
+        last_date, vals = rows[-1][0], [v for _, v in rows]
+    except Exception as e:  # noqa: BLE001
+        print(f"  FRED utilgjengelig ({e}) – bruker bedrock-kopi for BRL.")
+        source = "bedrock"
+        with bcon() as c:
+            rows = c.execute(
+                "SELECT date, value FROM fundamentals WHERE series_id='DEXBZUS' "
+                "AND value IS NOT NULL ORDER BY date").fetchall()
+        last_date, vals = rows[-1][0], [r[1] for r in rows]
+
+    last = vals[-1]
     chg5 = round(100 * (last / vals[-6] - 1), 2) if len(vals) > 6 else None
     return {
         "asof": last_date,
+        "source": source,           # FRED (ferskt) eller bedrock (reserve)
         "usdbrl": round(last, 4),
         "chg_5d_pct": chg5,          # + = svakere real
         "pct_3y": percentile_of_last(vals[-756:]),
@@ -121,13 +133,19 @@ def ethanol():
         sug = dict(c.execute(
             "SELECT substr(ts,1,10), close FROM prices "
             "WHERE instrument='Sugar' AND tf='D1'").fetchall())
-        fx = c.execute(
+        fx_map = dict(c.execute(
             "SELECT date, value FROM fundamentals WHERE series_id='DEXBZUS' "
-            "AND value IS NOT NULL ORDER BY date").fetchall()
+            "AND value IS NOT NULL ORDER BY date").fetchall())
+
+    # Legg ferske FRED-kurser oppå bedrocks historikk, så de siste ukene ikke
+    # bruker en utdatert valutakurs. (Beholder dyp historikk fra bedrock.)
+    try:
+        fx_map.update(dict(fred_mod.fetch_series("DEXBZUS", start="2022-01-01")))
+    except Exception as e:  # noqa: BLE001
+        print(f"  FRED-FX utilgjengelig for etanol-paritet ({e}) – bruker bedrock.")
 
     sug_dates = sorted(sug)
-    fx_dates = [d for d, _ in fx]
-    fx_map = dict(fx)
+    fx_dates = sorted(fx_map)
 
     def nearest_before(dates: list[str], d: str) -> str | None:
         cand = [x for x in dates if x <= d]

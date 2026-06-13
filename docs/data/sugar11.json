@@ -1,12 +1,11 @@
 {
-  "built_utc": "2026-06-11T19:57:35+00:00",
+  "built_utc": "2026-06-13T11:36:17+00:00",
   "price": {
-    "asof": "2026-06-11",
-    "close": 14.37,
-    "chg_5d_pct": 0.7,
-    "pct_1y": 20.7,
+    "asof": "2026-06-12",
+    "close": 14.24,
+    "chg_5d_pct": 0.85,
+    "pct_1y": 16.7,
     "spark": [
-      14.07,
       14.3,
       14.45,
       14.55,
@@ -95,19 +94,21 @@
       14.12,
       14.08,
       13.92,
-      14.37
+      13.79,
+      14.24
     ]
   },
   "brl": {
-    "asof": "2026-04-17",
-    "usdbrl": 4.981,
-    "chg_5d_pct": -0.88,
-    "pct_3y": 23.8
+    "asof": "2026-06-05",
+    "source": "FRED",
+    "usdbrl": 5.1444,
+    "chg_5d_pct": 1.7,
+    "pct_3y": 36.3
   },
   "ethanol": {
     "asof": "2026-05-29",
     "eth_brl_liter": 4.06,
-    "ratio_pct_3y": 19.4
+    "ratio_pct_3y": 26.5
   },
   "unica": {
     "asof": "2026-06-01",
@@ -123,9 +124,9 @@
     "exports_12m_yoy_pct": 49.1
   },
   "cot": {
-    "asof": "2026-06-02",
-    "mm_net": -118732,
-    "open_interest": 979429,
+    "asof": "2026-06-09",
+    "mm_net": -123713,
+    "open_interest": 1009892,
     "pct_52w": 60.8,
     "extreme": false
   },
@@ -249,15 +250,15 @@
     }
   },
   "frost": {
-    "asof": "2026-06-11",
+    "asof": "2026-06-13",
     "window_active": true,
-    "min_temp_14d": 9.5,
+    "min_temp_14d": 9.4,
     "coldest_date": "2026-06-07",
     "frost_days_30d": 0,
     "threshold_c": 3.0
   },
   "season": {
-    "asof": "2026-06-11",
+    "asof": "2026-06-13",
     "phase": "Høsting (safra)",
     "score": 0.7,
     "month": 6
@@ -275,12 +276,12 @@
       "sell": 7.0,
       "recommended_sell": 6.0,
       "pending": true,
-      "asof": "2026-06-11"
+      "asof": "2026-06-12"
     }
   },
   "pressure": {
-    "brl": 0,
-    "ethanol": 1,
+    "brl": 1,
+    "ethanol": 0,
     "unica": -1,
     "india": -1,
     "cot": 0,

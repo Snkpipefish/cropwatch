@@ -123,7 +123,7 @@ function renderDrivers(d) {
   if (B && !B.error) out.push(panel("brl", pr.brl, dirColor(pr.brl),
     B.chg_5d_pct > 1 ? "Realen svekkes" : B.chg_5d_pct < -1 ? "Realen styrkes" : "Stabil real",
     gauge(B.pct_3y ?? 50, "sterk real", "3-års midt", "svak real", GREEN, RED),
-    `Kurs <b>${B.usdbrl}</b> · ${signed(B.chg_5d_pct)}% siste 5 dager`, B.asof));
+    `Kurs <b>${B.usdbrl}</b> · ${signed(B.chg_5d_pct)}% siste 5 dager${B.source ? ` · kilde ${B.source}` : ""}`, B.asof));
 
   const E = d.ethanol;
   if (E && !E.error) out.push(panel("ethanol", pr.ethanol, dirColor(pr.ethanol),
