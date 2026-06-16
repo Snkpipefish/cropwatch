@@ -226,7 +226,7 @@
       "phase_length": 5
     },
     "today_month": 6,
-    "today_fraction": 0.45,
+    "today_fraction": 0.4583,
     "phases": [
       {
         "name": "Vekst (monsun)",
@@ -10429,7 +10429,7 @@
     }
   },
   "last_run": {
-    "ndvi": "2026-06-13T08:27:07.327398",
-    "weather": "2026-06-13T08:29:08.643085"
+    "ndvi": "2026-06-16T10:14:58.664432",
+    "weather": "2026-06-16T10:17:05.007316"
   }
 }
