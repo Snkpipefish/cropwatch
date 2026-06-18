@@ -11,6 +11,10 @@ Type=oneshot
 WorkingDirectory=/home/pc/prosjekter/cropwatch
 # Vent på DNS (maks ~60 s) – som bedrock-fetcherne.
 ExecStartPre=/bin/sh -c 'for _ in $(seq 1 30); do getent ahosts github.com >/dev/null 2>&1 && exit 0; sleep 2; done; exit 0'
+# Forkast lokale (ulagrede) endringer i databasene før vi henter – jobben
+# skriver ferske værdata til data/*.db hver kjøring uten å committe dem, og
+# slike ulagrede endringer ville ellers blokkert git pull neste dag.
+ExecStartPre=/usr/bin/git checkout -- data/
 # Hent ferske data fra GitHub først (Action committer NDVI/vær-databasene).
 ExecStartPre=/usr/bin/git pull --rebase -X theirs origin main
 ExecStart=/home/pc/prosjekter/cropwatch/.venv/bin/python scripts/export_sugar11.py --push
