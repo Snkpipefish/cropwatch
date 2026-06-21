@@ -1,5 +1,5 @@
 {
-  "built_utc": "2026-06-20T13:02:25+00:00",
+  "built_utc": "2026-06-21T05:33:00+00:00",
   "price": {
     "asof": "2026-06-18",
     "close": 13.59,
@@ -250,7 +250,7 @@
     }
   },
   "frost": {
-    "asof": "2026-06-20",
+    "asof": "2026-06-21",
     "window_active": true,
     "min_temp_14d": 9.4,
     "coldest_date": "2026-06-07",
@@ -258,7 +258,7 @@
     "threshold_c": 3.0
   },
   "season": {
-    "asof": "2026-06-20",
+    "asof": "2026-06-21",
     "phase": "Høsting (safra)",
     "score": 0.7,
     "month": 6
