@@ -1,12 +1,11 @@
 {
-  "built_utc": "2026-06-29T07:03:53+00:00",
+  "built_utc": "2026-06-30T15:21:02+00:00",
   "price": {
-    "asof": "2026-06-26",
-    "close": 14.55,
-    "chg_5d_pct": 2.9,
-    "pct_1y": 33.9,
+    "asof": "2026-06-29",
+    "close": 14.8,
+    "chg_5d_pct": 10.86,
+    "pct_1y": 49.0,
     "spark": [
-      14.1,
       14.59,
       14.38,
       14.25,
@@ -95,15 +94,16 @@
       13.42,
       13.42,
       13.55,
-      14.55
+      13.98,
+      14.8
     ]
   },
   "brl": {
-    "asof": "2026-06-18",
+    "asof": "2026-06-26",
     "source": "FRED",
-    "usdbrl": 5.1689,
-    "chg_5d_pct": 0.44,
-    "pct_3y": 38.4
+    "usdbrl": 5.1586,
+    "chg_5d_pct": -0.2,
+    "pct_3y": 37.4
   },
   "ethanol": {
     "asof": "2026-05-29",
@@ -250,7 +250,7 @@
     }
   },
   "frost": {
-    "asof": "2026-06-29",
+    "asof": "2026-06-30",
     "window_active": true,
     "min_temp_14d": 9.6,
     "coldest_date": "2026-06-18",
@@ -258,16 +258,16 @@
     "threshold_c": 3.0
   },
   "season": {
-    "asof": "2026-06-29",
+    "asof": "2026-06-30",
     "phase": "Høsting (safra)",
     "score": 0.7,
     "month": 6
   },
   "bedrock": {
-    "asof": "2026-06-26",
+    "asof": "2026-06-29",
     "latest_setup": {
       "direction": "buy",
-      "score": 9.52,
+      "score": 9.2,
       "grade": "A",
       "horizon": "makro",
       "published": true
