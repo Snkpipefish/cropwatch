@@ -1,10 +1,10 @@
 {
-  "built_utc": "2026-06-30T17:55:17+00:00",
+  "built_utc": "2026-07-01T05:29:59+00:00",
   "price": {
     "asof": "2026-06-30",
-    "close": 14.8,
-    "chg_5d_pct": 10.28,
-    "pct_1y": 49.4,
+    "close": 14.34,
+    "chg_5d_pct": 6.86,
+    "pct_1y": 25.5,
     "spark": [
       14.38,
       14.25,
@@ -95,7 +95,7 @@
       13.55,
       13.98,
       14.29,
-      14.8
+      14.34
     ]
   },
   "brl": {
@@ -111,13 +111,13 @@
     "ratio_pct_3y": 26.5
   },
   "unica": {
-    "asof": "2026-06-16",
-    "period": "2ª quinzena de abril de 2026",
+    "asof": "2026-06-30",
+    "period": "2ª quinzena de maio de 2026",
     "crop_year": "2026/2027",
-    "mix_sugar_pct": 38.16,
-    "mix_sugar_pct_prev": 45.23,
-    "sugar_production_yoy_pct": 55.24,
-    "crush_yoy_pct": 74.58
+    "mix_sugar_pct": 41.42,
+    "mix_sugar_pct_prev": 50.09,
+    "sugar_production_yoy_pct": -1.97,
+    "crush_yoy_pct": 15.81
   },
   "india": {
     "asof": "2026-03-01",
@@ -250,7 +250,7 @@
     }
   },
   "frost": {
-    "asof": "2026-06-30",
+    "asof": "2026-07-01",
     "window_active": true,
     "min_temp_14d": 9.6,
     "coldest_date": "2026-06-18",
@@ -258,37 +258,37 @@
     "threshold_c": 3.0
   },
   "season": {
-    "asof": "2026-06-30",
+    "asof": "2026-07-01",
     "phase": "Høsting (safra)",
-    "score": 0.7,
-    "month": 6
+    "score": 0.8,
+    "month": 7
   },
   "bedrock": {
-    "asof": "2026-06-30",
+    "asof": "2026-07-01",
     "latest_setup": {
       "direction": "buy",
-      "score": 9.2,
-      "grade": "A",
+      "score": 11.79,
+      "grade": "A+",
       "horizon": "makro",
       "published": true
     },
     "floor": {
       "buy": 7.0,
       "sell": 7.0,
-      "recommended_sell": 6.5,
-      "pending": false,
-      "asof": "2026-06-17"
+      "recommended_sell": 6.0,
+      "pending": true,
+      "asof": "2026-06-30"
     }
   },
   "pressure": {
     "brl": 0,
     "ethanol": 0,
-    "unica": -1,
+    "unica": 0,
     "india": -1,
     "cot": 0,
     "enso": 0,
     "ndvi": 0,
     "frost": 0,
-    "season": -1
+    "season": 0
   }
 }
