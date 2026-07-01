@@ -222,11 +222,11 @@
     "current": {
       "phase": "Vekst (monsun)",
       "color": "#22c55e",
-      "month_in_phase": 2,
+      "month_in_phase": 3,
       "phase_length": 5
     },
-    "today_month": 6,
-    "today_fraction": 0.4917,
+    "today_month": 7,
+    "today_fraction": 0.5,
     "phases": [
       {
         "name": "Vekst (monsun)",
@@ -10795,7 +10795,7 @@
     }
   },
   "last_run": {
-    "ndvi": "2026-06-28T08:26:02.810479",
-    "weather": "2026-06-28T08:28:04.144870"
+    "ndvi": "2026-07-01T08:52:16.318658",
+    "weather": "2026-07-01T08:54:19.066870"
   }
 }
