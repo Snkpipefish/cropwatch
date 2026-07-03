@@ -1,12 +1,11 @@
 {
-  "built_utc": "2026-07-02T06:51:58+00:00",
+  "built_utc": "2026-07-03T05:21:56+00:00",
   "price": {
-    "asof": "2026-07-01",
-    "close": 14.99,
-    "chg_5d_pct": 11.7,
-    "pct_1y": 62.2,
+    "asof": "2026-07-02",
+    "close": 14.85,
+    "chg_5d_pct": 9.59,
+    "pct_1y": 54.6,
     "spark": [
-      14.25,
       14.38,
       14.37,
       14.19,
@@ -95,7 +94,8 @@
       13.98,
       14.29,
       14.34,
-      14.99
+      14.99,
+      14.85
     ]
   },
   "brl": {
@@ -250,21 +250,21 @@
     }
   },
   "frost": {
-    "asof": "2026-07-02",
+    "asof": "2026-07-03",
     "window_active": true,
-    "min_temp_14d": 9.6,
-    "coldest_date": "2026-06-18",
+    "min_temp_14d": 11.0,
+    "coldest_date": "2026-06-19",
     "frost_days_30d": 0,
     "threshold_c": 3.0
   },
   "season": {
-    "asof": "2026-07-02",
+    "asof": "2026-07-03",
     "phase": "Høsting (safra)",
     "score": 0.8,
     "month": 7
   },
   "bedrock": {
-    "asof": "2026-07-02",
+    "asof": "2026-07-03",
     "latest_setup": {
       "direction": "buy",
       "score": 11.79,
