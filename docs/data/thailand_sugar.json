@@ -7,10 +7,6 @@
   "enso": {
     "series": [
       {
-        "date": "2023-05-01",
-        "oni": 0.57
-      },
-      {
         "date": "2023-06-01",
         "oni": 0.84
       },
@@ -148,12 +144,16 @@
       },
       {
         "date": "2026-04-01",
-        "oni": 0.48
+        "oni": 0.51
+      },
+      {
+        "date": "2026-05-01",
+        "oni": 0.98
       }
     ],
-    "latest_oni": 0.48,
-    "state": "Nøytral",
-    "strength": "",
+    "latest_oni": 0.98,
+    "state": "El Niño",
+    "strength": "svak",
     "trend": "stigende"
   },
   "cycle": {
@@ -226,7 +226,7 @@
       "phase_length": 7
     },
     "today_month": 7,
-    "today_fraction": 0.5,
+    "today_fraction": 0.5081,
     "phases": [
       {
         "name": "Vekst (regnsesong)",
@@ -378,8 +378,8 @@
           {
             "date": "2019-05-25",
             "value": 0.1907,
-            "baseline": 0.2199,
-            "anomaly": -0.0292
+            "baseline": 0.2236,
+            "anomaly": -0.0329
           },
           {
             "date": "2019-06-10",
@@ -516,8 +516,8 @@
           {
             "date": "2020-05-24",
             "value": 0.1817,
-            "baseline": 0.2214,
-            "anomaly": -0.0397
+            "baseline": 0.2249,
+            "anomaly": -0.0432
           },
           {
             "date": "2020-06-09",
@@ -654,8 +654,8 @@
           {
             "date": "2021-05-25",
             "value": 0.2325,
-            "baseline": 0.2129,
-            "anomaly": 0.0196
+            "baseline": 0.2176,
+            "anomaly": 0.0149
           },
           {
             "date": "2021-06-10",
@@ -792,8 +792,8 @@
           {
             "date": "2022-05-25",
             "value": 0.2293,
-            "baseline": 0.2135,
-            "anomaly": 0.0158
+            "baseline": 0.2181,
+            "anomaly": 0.0112
           },
           {
             "date": "2022-06-10",
@@ -930,8 +930,8 @@
           {
             "date": "2023-05-25",
             "value": 0.1964,
-            "baseline": 0.2189,
-            "anomaly": -0.0225
+            "baseline": 0.2228,
+            "anomaly": -0.0264
           },
           {
             "date": "2023-06-10",
@@ -1068,8 +1068,8 @@
           {
             "date": "2024-05-24",
             "value": 0.2019,
-            "baseline": 0.218,
-            "anomaly": -0.0161
+            "baseline": 0.222,
+            "anomaly": -0.0201
           },
           {
             "date": "2024-06-09",
@@ -1206,8 +1206,8 @@
           {
             "date": "2025-05-25",
             "value": 0.2775,
-            "baseline": 0.2054,
-            "anomaly": 0.0721
+            "baseline": 0.2112,
+            "anomaly": 0.0663
           },
           {
             "date": "2025-06-10",
@@ -1340,13 +1340,19 @@
             "value": 0.3412,
             "baseline": 0.2418,
             "anomaly": 0.0994
+          },
+          {
+            "date": "2026-05-25",
+            "value": 0.2457,
+            "baseline": 0.2157,
+            "anomaly": 0.03
           }
         ],
         "latest": {
-          "date": "2026-05-09",
-          "value": 0.3412,
-          "baseline": 0.2418,
-          "anomaly": 0.0994
+          "date": "2026-05-25",
+          "value": 0.2457,
+          "baseline": 0.2157,
+          "anomaly": 0.03
         },
         "status": "green"
       },
@@ -2931,8 +2937,8 @@
           {
             "date": "2019-05-25",
             "value": 0.2552,
-            "baseline": 0.3016,
-            "anomaly": -0.0464
+            "baseline": 0.2961,
+            "anomaly": -0.0409
           },
           {
             "date": "2019-06-10",
@@ -3069,8 +3075,8 @@
           {
             "date": "2020-05-24",
             "value": 0.2735,
-            "baseline": 0.2985,
-            "anomaly": -0.025
+            "baseline": 0.2935,
+            "anomaly": -0.02
           },
           {
             "date": "2020-06-09",
@@ -3207,8 +3213,8 @@
           {
             "date": "2021-05-25",
             "value": 0.2842,
-            "baseline": 0.2968,
-            "anomaly": -0.0126
+            "baseline": 0.292,
+            "anomaly": -0.0078
           },
           {
             "date": "2021-06-10",
@@ -3345,8 +3351,8 @@
           {
             "date": "2022-05-25",
             "value": 0.29,
-            "baseline": 0.2958,
-            "anomaly": -0.0058
+            "baseline": 0.2911,
+            "anomaly": -0.0011
           },
           {
             "date": "2022-06-10",
@@ -3483,8 +3489,8 @@
           {
             "date": "2023-05-25",
             "value": 0.3301,
-            "baseline": 0.2891,
-            "anomaly": 0.041
+            "baseline": 0.2854,
+            "anomaly": 0.0447
           },
           {
             "date": "2023-06-10",
@@ -3621,8 +3627,8 @@
           {
             "date": "2024-05-24",
             "value": 0.3347,
-            "baseline": 0.2883,
-            "anomaly": 0.0464
+            "baseline": 0.2848,
+            "anomaly": 0.0499
           },
           {
             "date": "2024-06-09",
@@ -3759,8 +3765,8 @@
           {
             "date": "2025-05-25",
             "value": 0.297,
-            "baseline": 0.2946,
-            "anomaly": 0.0024
+            "baseline": 0.2901,
+            "anomaly": 0.0069
           },
           {
             "date": "2025-06-10",
@@ -3893,13 +3899,19 @@
             "value": 0.3802,
             "baseline": 0.2965,
             "anomaly": 0.0837
+          },
+          {
+            "date": "2026-05-25",
+            "value": 0.2633,
+            "baseline": 0.295,
+            "anomaly": -0.0317
           }
         ],
         "latest": {
-          "date": "2026-05-09",
-          "value": 0.3802,
-          "baseline": 0.2965,
-          "anomaly": 0.0837
+          "date": "2026-05-25",
+          "value": 0.2633,
+          "baseline": 0.295,
+          "anomaly": -0.0317
         },
         "status": "green"
       },
@@ -4612,221 +4624,236 @@
           },
           {
             "doy": 142,
-            "cumulative_mm": 238.2,
+            "cumulative_mm": 240.1,
             "baseline_mm": 266.09
           },
           {
             "doy": 143,
-            "cumulative_mm": 242.1,
+            "cumulative_mm": 241.0,
             "baseline_mm": 272.37
           },
           {
             "doy": 144,
-            "cumulative_mm": 242.4,
+            "cumulative_mm": 241.2,
             "baseline_mm": 284.09
           },
           {
             "doy": 145,
-            "cumulative_mm": 242.9,
+            "cumulative_mm": 241.2,
             "baseline_mm": 298.01
           },
           {
             "doy": 146,
-            "cumulative_mm": 243.3,
+            "cumulative_mm": 251.3,
             "baseline_mm": 308.66
           },
           {
             "doy": 147,
-            "cumulative_mm": 243.5,
+            "cumulative_mm": 251.9,
             "baseline_mm": 316.39
           },
           {
             "doy": 148,
-            "cumulative_mm": 247.2,
+            "cumulative_mm": 255.6,
             "baseline_mm": 322.17
           },
           {
             "doy": 149,
-            "cumulative_mm": 251.1,
+            "cumulative_mm": 259.5,
             "baseline_mm": 328.34
           },
           {
             "doy": 150,
-            "cumulative_mm": 258.2,
+            "cumulative_mm": 266.6,
             "baseline_mm": 331.71
           },
           {
             "doy": 151,
-            "cumulative_mm": 262.1,
+            "cumulative_mm": 270.5,
             "baseline_mm": 333.5
           },
           {
             "doy": 152,
-            "cumulative_mm": 262.1,
+            "cumulative_mm": 270.5,
             "baseline_mm": 334.76
           },
           {
             "doy": 153,
-            "cumulative_mm": 262.2,
+            "cumulative_mm": 270.6,
             "baseline_mm": 296.51
           },
           {
             "doy": 154,
-            "cumulative_mm": 263.3,
+            "cumulative_mm": 271.7,
             "baseline_mm": 298.91
           },
           {
             "doy": 155,
-            "cumulative_mm": 274.0,
+            "cumulative_mm": 282.4,
             "baseline_mm": 302.8
           },
           {
             "doy": 156,
-            "cumulative_mm": 279.7,
+            "cumulative_mm": 288.1,
             "baseline_mm": 309.82
           },
           {
             "doy": 157,
-            "cumulative_mm": 280.9,
+            "cumulative_mm": 289.3,
             "baseline_mm": 314.82
           },
           {
             "doy": 158,
-            "cumulative_mm": 281.5,
+            "cumulative_mm": 289.9,
             "baseline_mm": 319.15
           },
           {
             "doy": 159,
-            "cumulative_mm": 283.5,
+            "cumulative_mm": 291.9,
             "baseline_mm": 321.29
           },
           {
             "doy": 160,
-            "cumulative_mm": 287.9,
+            "cumulative_mm": 296.3,
             "baseline_mm": 324.62
           },
           {
             "doy": 161,
-            "cumulative_mm": 293.7,
+            "cumulative_mm": 302.1,
             "baseline_mm": 331.16
           },
           {
             "doy": 162,
-            "cumulative_mm": 304.0,
+            "cumulative_mm": 312.4,
             "baseline_mm": 336.8
           },
           {
             "doy": 163,
-            "cumulative_mm": 308.9,
+            "cumulative_mm": 317.3,
             "baseline_mm": 339.1
           },
           {
             "doy": 164,
-            "cumulative_mm": 311.7,
+            "cumulative_mm": 320.1,
             "baseline_mm": 342.99
           },
           {
             "doy": 165,
-            "cumulative_mm": 312.9,
+            "cumulative_mm": 321.3,
             "baseline_mm": 345.93
           },
           {
             "doy": 166,
-            "cumulative_mm": 313.3,
+            "cumulative_mm": 321.7,
             "baseline_mm": 349.94
           },
           {
             "doy": 167,
-            "cumulative_mm": 313.8,
+            "cumulative_mm": 322.2,
             "baseline_mm": 353.16
           },
           {
             "doy": 168,
-            "cumulative_mm": 313.8,
+            "cumulative_mm": 322.2,
             "baseline_mm": 355.93
           },
           {
             "doy": 169,
-            "cumulative_mm": 316.5,
+            "cumulative_mm": 324.9,
             "baseline_mm": 359.99
           },
           {
             "doy": 170,
-            "cumulative_mm": 317.0,
+            "cumulative_mm": 325.4,
             "baseline_mm": 361.38
           },
           {
             "doy": 171,
-            "cumulative_mm": 322.1,
+            "cumulative_mm": 330.5,
             "baseline_mm": 362.35
           },
           {
             "doy": 172,
-            "cumulative_mm": 322.9,
+            "cumulative_mm": 331.3,
             "baseline_mm": 363.21
           },
           {
             "doy": 173,
-            "cumulative_mm": 324.2,
+            "cumulative_mm": 332.6,
             "baseline_mm": 367.93
           },
           {
             "doy": 174,
-            "cumulative_mm": 324.2,
+            "cumulative_mm": 332.6,
             "baseline_mm": 372.26
           },
           {
             "doy": 175,
-            "cumulative_mm": 325.1,
+            "cumulative_mm": 333.5,
             "baseline_mm": 378.49
           },
           {
             "doy": 176,
-            "cumulative_mm": 326.3,
+            "cumulative_mm": 334.7,
             "baseline_mm": 383.15
           },
           {
             "doy": 177,
-            "cumulative_mm": 326.9,
+            "cumulative_mm": 335.3,
             "baseline_mm": 389.8
           },
           {
             "doy": 178,
-            "cumulative_mm": 328.9,
+            "cumulative_mm": 337.3,
             "baseline_mm": 396.15
           },
           {
             "doy": 179,
-            "cumulative_mm": 334.7,
+            "cumulative_mm": 343.1,
             "baseline_mm": 401.32
           },
           {
             "doy": 180,
-            "cumulative_mm": 337.2,
+            "cumulative_mm": 345.6,
             "baseline_mm": 403.4
           },
           {
             "doy": 181,
-            "cumulative_mm": 341.0,
+            "cumulative_mm": 349.4,
             "baseline_mm": 407.49
           },
           {
             "doy": 182,
-            "cumulative_mm": 343.8,
+            "cumulative_mm": 353.2,
             "baseline_mm": 410.27
+          },
+          {
+            "doy": 183,
+            "cumulative_mm": 357.0,
+            "baseline_mm": 415.5
+          },
+          {
+            "doy": 184,
+            "cumulative_mm": 361.5,
+            "baseline_mm": 420.0
+          },
+          {
+            "doy": 185,
+            "cumulative_mm": 370.3,
+            "baseline_mm": 425.16
           }
         ],
         "latest": {
-          "doy": 182,
-          "cumulative_mm": 343.8,
-          "baseline_mm": 410.27
+          "doy": 185,
+          "cumulative_mm": 370.3,
+          "baseline_mm": 425.16
         },
-        "ratio_to_normal": 0.84,
-        "status": "yellow"
+        "ratio_to_normal": 0.87,
+        "status": "green"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 1894.2,
+        "total_gdd": 1928.0,
         "series": [
           {
             "date": "2026-01-01",
@@ -5554,12 +5581,24 @@
           },
           {
             "date": "2026-07-01",
-            "gdd_cumulative": 1894.2
+            "gdd_cumulative": 1894.7
+          },
+          {
+            "date": "2026-07-02",
+            "gdd_cumulative": 1905.6
+          },
+          {
+            "date": "2026-07-03",
+            "gdd_cumulative": 1917.1
+          },
+          {
+            "date": "2026-07-04",
+            "gdd_cumulative": 1928.0
           }
         ]
       },
       "heat_stress": {
-        "hot_days": 21,
+        "hot_days": 18,
         "window_days": 30,
         "threshold_c": 35.0,
         "status": "red"
@@ -5709,8 +5748,8 @@
           {
             "date": "2019-05-25",
             "value": 0.2598,
-            "baseline": 0.2789,
-            "anomaly": -0.0191
+            "baseline": 0.2918,
+            "anomaly": -0.032
           },
           {
             "date": "2019-06-10",
@@ -5847,8 +5886,8 @@
           {
             "date": "2020-05-24",
             "value": 0.2149,
-            "baseline": 0.2864,
-            "anomaly": -0.0715
+            "baseline": 0.2982,
+            "anomaly": -0.0833
           },
           {
             "date": "2020-06-09",
@@ -5985,8 +6024,8 @@
           {
             "date": "2021-05-25",
             "value": 0.3505,
-            "baseline": 0.2638,
-            "anomaly": 0.0867
+            "baseline": 0.2789,
+            "anomaly": 0.0716
           },
           {
             "date": "2021-06-10",
@@ -6123,8 +6162,8 @@
           {
             "date": "2022-05-25",
             "value": 0.2898,
-            "baseline": 0.2739,
-            "anomaly": 0.0159
+            "baseline": 0.2875,
+            "anomaly": 0.0023
           },
           {
             "date": "2022-06-10",
@@ -6261,8 +6300,8 @@
           {
             "date": "2023-05-25",
             "value": 0.2653,
-            "baseline": 0.278,
-            "anomaly": -0.0127
+            "baseline": 0.291,
+            "anomaly": -0.0257
           },
           {
             "date": "2023-06-10",
@@ -6399,8 +6438,8 @@
           {
             "date": "2024-05-24",
             "value": 0.262,
-            "baseline": 0.2786,
-            "anomaly": -0.0166
+            "baseline": 0.2915,
+            "anomaly": -0.0295
           },
           {
             "date": "2024-06-09",
@@ -6537,8 +6576,8 @@
           {
             "date": "2025-05-25",
             "value": 0.2911,
-            "baseline": 0.2737,
-            "anomaly": 0.0174
+            "baseline": 0.2873,
+            "anomaly": 0.0038
           },
           {
             "date": "2025-06-10",
@@ -6671,15 +6710,21 @@
             "value": 0.1972,
             "baseline": 0.2631,
             "anomaly": -0.0659
+          },
+          {
+            "date": "2026-05-25",
+            "value": 0.3691,
+            "baseline": 0.2762,
+            "anomaly": 0.0929
           }
         ],
         "latest": {
-          "date": "2026-05-09",
-          "value": 0.1972,
-          "baseline": 0.2631,
-          "anomaly": -0.0659
+          "date": "2026-05-25",
+          "value": 0.3691,
+          "baseline": 0.2762,
+          "anomaly": 0.0929
         },
-        "status": "yellow"
+        "status": "green"
       },
       "rainfall": {
         "series": [
@@ -7390,221 +7435,236 @@
           },
           {
             "doy": 142,
-            "cumulative_mm": 199.0,
+            "cumulative_mm": 204.3,
             "baseline_mm": 231.2
           },
           {
             "doy": 143,
-            "cumulative_mm": 200.6,
+            "cumulative_mm": 205.7,
             "baseline_mm": 238.37
           },
           {
             "doy": 144,
-            "cumulative_mm": 201.3,
+            "cumulative_mm": 206.6,
             "baseline_mm": 245.97
           },
           {
             "doy": 145,
-            "cumulative_mm": 202.5,
+            "cumulative_mm": 208.9,
             "baseline_mm": 254.83
           },
           {
             "doy": 146,
-            "cumulative_mm": 205.7,
+            "cumulative_mm": 211.0,
             "baseline_mm": 260.26
           },
           {
             "doy": 147,
-            "cumulative_mm": 206.1,
+            "cumulative_mm": 213.2,
             "baseline_mm": 264.44
           },
           {
             "doy": 148,
-            "cumulative_mm": 214.1,
+            "cumulative_mm": 221.2,
             "baseline_mm": 271.0
           },
           {
             "doy": 149,
-            "cumulative_mm": 218.5,
+            "cumulative_mm": 225.6,
             "baseline_mm": 274.71
           },
           {
             "doy": 150,
-            "cumulative_mm": 229.0,
+            "cumulative_mm": 236.1,
             "baseline_mm": 279.43
           },
           {
             "doy": 151,
-            "cumulative_mm": 234.7,
+            "cumulative_mm": 241.8,
             "baseline_mm": 287.14
           },
           {
             "doy": 152,
-            "cumulative_mm": 240.9,
+            "cumulative_mm": 248.0,
             "baseline_mm": 295.66
           },
           {
             "doy": 153,
-            "cumulative_mm": 244.1,
+            "cumulative_mm": 251.2,
             "baseline_mm": 264.38
           },
           {
             "doy": 154,
-            "cumulative_mm": 251.6,
+            "cumulative_mm": 258.7,
             "baseline_mm": 265.95
           },
           {
             "doy": 155,
-            "cumulative_mm": 255.3,
+            "cumulative_mm": 262.4,
             "baseline_mm": 270.69
           },
           {
             "doy": 156,
-            "cumulative_mm": 261.7,
+            "cumulative_mm": 268.8,
             "baseline_mm": 276.78
           },
           {
             "doy": 157,
-            "cumulative_mm": 262.1,
+            "cumulative_mm": 269.2,
             "baseline_mm": 283.94
           },
           {
             "doy": 158,
-            "cumulative_mm": 262.3,
+            "cumulative_mm": 269.4,
             "baseline_mm": 288.16
           },
           {
             "doy": 159,
-            "cumulative_mm": 262.7,
+            "cumulative_mm": 269.8,
             "baseline_mm": 292.48
           },
           {
             "doy": 160,
-            "cumulative_mm": 271.3,
+            "cumulative_mm": 278.4,
             "baseline_mm": 297.86
           },
           {
             "doy": 161,
-            "cumulative_mm": 282.1,
+            "cumulative_mm": 289.2,
             "baseline_mm": 303.85
           },
           {
             "doy": 162,
-            "cumulative_mm": 284.8,
+            "cumulative_mm": 291.9,
             "baseline_mm": 308.41
           },
           {
             "doy": 163,
-            "cumulative_mm": 286.2,
+            "cumulative_mm": 293.3,
             "baseline_mm": 313.4
           },
           {
             "doy": 164,
-            "cumulative_mm": 289.7,
+            "cumulative_mm": 296.8,
             "baseline_mm": 316.57
           },
           {
             "doy": 165,
-            "cumulative_mm": 292.0,
+            "cumulative_mm": 299.1,
             "baseline_mm": 318.27
           },
           {
             "doy": 166,
-            "cumulative_mm": 293.8,
+            "cumulative_mm": 300.9,
             "baseline_mm": 321.54
           },
           {
             "doy": 167,
-            "cumulative_mm": 297.4,
+            "cumulative_mm": 304.5,
             "baseline_mm": 329.6
           },
           {
             "doy": 168,
-            "cumulative_mm": 297.5,
+            "cumulative_mm": 304.6,
             "baseline_mm": 334.93
           },
           {
             "doy": 169,
-            "cumulative_mm": 302.2,
+            "cumulative_mm": 309.3,
             "baseline_mm": 338.34
           },
           {
             "doy": 170,
-            "cumulative_mm": 311.5,
+            "cumulative_mm": 318.6,
             "baseline_mm": 341.76
           },
           {
             "doy": 171,
-            "cumulative_mm": 314.7,
+            "cumulative_mm": 321.8,
             "baseline_mm": 343.72
           },
           {
             "doy": 172,
-            "cumulative_mm": 317.6,
+            "cumulative_mm": 324.7,
             "baseline_mm": 347.18
           },
           {
             "doy": 173,
-            "cumulative_mm": 318.4,
+            "cumulative_mm": 325.5,
             "baseline_mm": 350.3
           },
           {
             "doy": 174,
-            "cumulative_mm": 318.8,
+            "cumulative_mm": 325.9,
             "baseline_mm": 356.25
           },
           {
             "doy": 175,
-            "cumulative_mm": 321.7,
+            "cumulative_mm": 328.8,
             "baseline_mm": 363.11
           },
           {
             "doy": 176,
-            "cumulative_mm": 323.3,
+            "cumulative_mm": 330.4,
             "baseline_mm": 369.39
           },
           {
             "doy": 177,
-            "cumulative_mm": 328.1,
+            "cumulative_mm": 335.2,
             "baseline_mm": 376.54
           },
           {
             "doy": 178,
-            "cumulative_mm": 331.0,
+            "cumulative_mm": 338.1,
             "baseline_mm": 382.84
           },
           {
             "doy": 179,
-            "cumulative_mm": 334.6,
+            "cumulative_mm": 341.7,
             "baseline_mm": 391.5
           },
           {
             "doy": 180,
-            "cumulative_mm": 338.6,
+            "cumulative_mm": 345.7,
             "baseline_mm": 398.7
           },
           {
             "doy": 181,
-            "cumulative_mm": 344.7,
+            "cumulative_mm": 351.8,
             "baseline_mm": 404.32
           },
           {
             "doy": 182,
-            "cumulative_mm": 349.0,
+            "cumulative_mm": 352.6,
             "baseline_mm": 407.55
+          },
+          {
+            "doy": 183,
+            "cumulative_mm": 361.3,
+            "baseline_mm": 414.24
+          },
+          {
+            "doy": 184,
+            "cumulative_mm": 367.1,
+            "baseline_mm": 421.54
+          },
+          {
+            "doy": 185,
+            "cumulative_mm": 386.2,
+            "baseline_mm": 429.75
           }
         ],
         "latest": {
-          "doy": 182,
-          "cumulative_mm": 349.0,
-          "baseline_mm": 407.55
+          "doy": 185,
+          "cumulative_mm": 386.2,
+          "baseline_mm": 429.75
         },
-        "ratio_to_normal": 0.86,
+        "ratio_to_normal": 0.9,
         "status": "green"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 2108.8,
+        "total_gdd": 2145.5,
         "series": [
           {
             "date": "2026-01-01",
@@ -8332,12 +8392,24 @@
           },
           {
             "date": "2026-07-01",
-            "gdd_cumulative": 2108.8
+            "gdd_cumulative": 2109.1
+          },
+          {
+            "date": "2026-07-02",
+            "gdd_cumulative": 2121.5
+          },
+          {
+            "date": "2026-07-03",
+            "gdd_cumulative": 2133.7
+          },
+          {
+            "date": "2026-07-04",
+            "gdd_cumulative": 2145.5
           }
         ]
       },
       "heat_stress": {
-        "hot_days": 24,
+        "hot_days": 22,
         "window_days": 30,
         "threshold_c": 35.0,
         "status": "red"
@@ -8487,8 +8559,8 @@
           {
             "date": "2019-05-25",
             "value": 0.292,
-            "baseline": 0.3282,
-            "anomaly": -0.0362
+            "baseline": 0.3195,
+            "anomaly": -0.0275
           },
           {
             "date": "2019-06-10",
@@ -8625,8 +8697,8 @@
           {
             "date": "2020-05-24",
             "value": 0.3423,
-            "baseline": 0.3199,
-            "anomaly": 0.0224
+            "baseline": 0.3123,
+            "anomaly": 0.03
           },
           {
             "date": "2020-06-09",
@@ -8763,8 +8835,8 @@
           {
             "date": "2021-05-25",
             "value": 0.3127,
-            "baseline": 0.3248,
-            "anomaly": -0.0121
+            "baseline": 0.3165,
+            "anomaly": -0.0038
           },
           {
             "date": "2021-06-10",
@@ -8901,8 +8973,8 @@
           {
             "date": "2022-05-25",
             "value": 0.3209,
-            "baseline": 0.3234,
-            "anomaly": -0.0025
+            "baseline": 0.3153,
+            "anomaly": 0.0056
           },
           {
             "date": "2022-06-10",
@@ -9039,8 +9111,8 @@
           {
             "date": "2023-05-25",
             "value": 0.3531,
-            "baseline": 0.3181,
-            "anomaly": 0.035
+            "baseline": 0.3107,
+            "anomaly": 0.0424
           },
           {
             "date": "2023-06-10",
@@ -9177,8 +9249,8 @@
           {
             "date": "2024-05-24",
             "value": 0.3162,
-            "baseline": 0.3242,
-            "anomaly": -0.008
+            "baseline": 0.316,
+            "anomaly": 0.0002
           },
           {
             "date": "2024-06-09",
@@ -9315,8 +9387,8 @@
           {
             "date": "2025-05-25",
             "value": 0.3243,
-            "baseline": 0.3229,
-            "anomaly": 0.0014
+            "baseline": 0.3148,
+            "anomaly": 0.0095
           },
           {
             "date": "2025-06-10",
@@ -9449,15 +9521,21 @@
             "value": 0.2394,
             "baseline": 0.2842,
             "anomaly": -0.0448
+          },
+          {
+            "date": "2026-05-25",
+            "value": 0.2667,
+            "baseline": 0.3231,
+            "anomaly": -0.0564
           }
         ],
         "latest": {
-          "date": "2026-05-09",
-          "value": 0.2394,
-          "baseline": 0.2842,
-          "anomaly": -0.0448
+          "date": "2026-05-25",
+          "value": 0.2667,
+          "baseline": 0.3231,
+          "anomaly": -0.0564
         },
-        "status": "green"
+        "status": "yellow"
       },
       "rainfall": {
         "series": [
@@ -10168,221 +10246,236 @@
           },
           {
             "doy": 142,
-            "cumulative_mm": 238.2,
+            "cumulative_mm": 247.8,
             "baseline_mm": 254.67
           },
           {
             "doy": 143,
-            "cumulative_mm": 241.2,
+            "cumulative_mm": 249.7,
             "baseline_mm": 261.6
           },
           {
             "doy": 144,
-            "cumulative_mm": 242.3,
+            "cumulative_mm": 251.2,
             "baseline_mm": 270.46
           },
           {
             "doy": 145,
-            "cumulative_mm": 244.0,
+            "cumulative_mm": 254.0,
             "baseline_mm": 277.27
           },
           {
             "doy": 146,
-            "cumulative_mm": 249.6,
+            "cumulative_mm": 258.6,
             "baseline_mm": 285.96
           },
           {
             "doy": 147,
-            "cumulative_mm": 250.5,
+            "cumulative_mm": 260.2,
             "baseline_mm": 294.9
           },
           {
             "doy": 148,
-            "cumulative_mm": 259.7,
+            "cumulative_mm": 273.2,
             "baseline_mm": 303.31
           },
           {
             "doy": 149,
-            "cumulative_mm": 260.9,
+            "cumulative_mm": 274.4,
             "baseline_mm": 318.69
           },
           {
             "doy": 150,
-            "cumulative_mm": 272.8,
+            "cumulative_mm": 286.3,
             "baseline_mm": 330.1
           },
           {
             "doy": 151,
-            "cumulative_mm": 283.6,
+            "cumulative_mm": 297.1,
             "baseline_mm": 341.34
           },
           {
             "doy": 152,
-            "cumulative_mm": 288.9,
+            "cumulative_mm": 302.4,
             "baseline_mm": 346.86
           },
           {
             "doy": 153,
-            "cumulative_mm": 289.3,
+            "cumulative_mm": 302.8,
             "baseline_mm": 307.31
           },
           {
             "doy": 154,
-            "cumulative_mm": 290.8,
+            "cumulative_mm": 304.3,
             "baseline_mm": 311.48
           },
           {
             "doy": 155,
-            "cumulative_mm": 310.8,
+            "cumulative_mm": 324.3,
             "baseline_mm": 318.14
           },
           {
             "doy": 156,
-            "cumulative_mm": 335.2,
+            "cumulative_mm": 348.7,
             "baseline_mm": 325.46
           },
           {
             "doy": 157,
-            "cumulative_mm": 337.1,
+            "cumulative_mm": 350.6,
             "baseline_mm": 336.93
           },
           {
             "doy": 158,
-            "cumulative_mm": 338.2,
+            "cumulative_mm": 351.7,
             "baseline_mm": 349.68
           },
           {
             "doy": 159,
-            "cumulative_mm": 344.2,
+            "cumulative_mm": 357.7,
             "baseline_mm": 357.11
           },
           {
             "doy": 160,
-            "cumulative_mm": 365.1,
+            "cumulative_mm": 378.6,
             "baseline_mm": 366.76
           },
           {
             "doy": 161,
-            "cumulative_mm": 390.9,
+            "cumulative_mm": 404.4,
             "baseline_mm": 376.96
           },
           {
             "doy": 162,
-            "cumulative_mm": 394.4,
+            "cumulative_mm": 407.9,
             "baseline_mm": 388.14
           },
           {
             "doy": 163,
-            "cumulative_mm": 418.7,
+            "cumulative_mm": 432.2,
             "baseline_mm": 392.51
           },
           {
             "doy": 164,
-            "cumulative_mm": 426.1,
+            "cumulative_mm": 439.6,
             "baseline_mm": 396.99
           },
           {
             "doy": 165,
-            "cumulative_mm": 433.1,
+            "cumulative_mm": 446.6,
             "baseline_mm": 403.24
           },
           {
             "doy": 166,
-            "cumulative_mm": 433.7,
+            "cumulative_mm": 447.2,
             "baseline_mm": 417.09
           },
           {
             "doy": 167,
-            "cumulative_mm": 443.7,
+            "cumulative_mm": 457.2,
             "baseline_mm": 427.7
           },
           {
             "doy": 168,
-            "cumulative_mm": 455.8,
+            "cumulative_mm": 469.3,
             "baseline_mm": 436.66
           },
           {
             "doy": 169,
-            "cumulative_mm": 460.4,
+            "cumulative_mm": 473.9,
             "baseline_mm": 446.75
           },
           {
             "doy": 170,
-            "cumulative_mm": 468.5,
+            "cumulative_mm": 482.0,
             "baseline_mm": 453.09
           },
           {
             "doy": 171,
-            "cumulative_mm": 472.7,
+            "cumulative_mm": 486.2,
             "baseline_mm": 457.1
           },
           {
             "doy": 172,
-            "cumulative_mm": 481.9,
+            "cumulative_mm": 495.4,
             "baseline_mm": 462.64
           },
           {
             "doy": 173,
-            "cumulative_mm": 482.4,
+            "cumulative_mm": 495.9,
             "baseline_mm": 468.67
           },
           {
             "doy": 174,
-            "cumulative_mm": 482.4,
+            "cumulative_mm": 495.9,
             "baseline_mm": 477.14
           },
           {
             "doy": 175,
-            "cumulative_mm": 486.5,
+            "cumulative_mm": 500.0,
             "baseline_mm": 486.05
           },
           {
             "doy": 176,
-            "cumulative_mm": 493.8,
+            "cumulative_mm": 507.3,
             "baseline_mm": 495.88
           },
           {
             "doy": 177,
-            "cumulative_mm": 498.1,
+            "cumulative_mm": 511.6,
             "baseline_mm": 506.46
           },
           {
             "doy": 178,
-            "cumulative_mm": 500.8,
+            "cumulative_mm": 514.3,
             "baseline_mm": 517.49
           },
           {
             "doy": 179,
-            "cumulative_mm": 508.2,
+            "cumulative_mm": 521.7,
             "baseline_mm": 528.99
           },
           {
             "doy": 180,
-            "cumulative_mm": 529.2,
+            "cumulative_mm": 542.7,
             "baseline_mm": 536.58
           },
           {
             "doy": 181,
-            "cumulative_mm": 547.2,
+            "cumulative_mm": 560.7,
             "baseline_mm": 541.27
           },
           {
             "doy": 182,
-            "cumulative_mm": 566.0,
+            "cumulative_mm": 575.5,
             "baseline_mm": 550.09
+          },
+          {
+            "doy": 183,
+            "cumulative_mm": 592.5,
+            "baseline_mm": 558.31
+          },
+          {
+            "doy": 184,
+            "cumulative_mm": 598.2,
+            "baseline_mm": 566.25
+          },
+          {
+            "doy": 185,
+            "cumulative_mm": 619.2,
+            "baseline_mm": 572.51
           }
         ],
         "latest": {
-          "doy": 182,
-          "cumulative_mm": 566.0,
-          "baseline_mm": 550.09
+          "doy": 185,
+          "cumulative_mm": 619.2,
+          "baseline_mm": 572.51
         },
-        "ratio_to_normal": 1.03,
+        "ratio_to_normal": 1.08,
         "status": "green"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 1815.2,
+        "total_gdd": 1846.5,
         "series": [
           {
             "date": "2026-01-01",
@@ -11110,7 +11203,19 @@
           },
           {
             "date": "2026-07-01",
-            "gdd_cumulative": 1815.2
+            "gdd_cumulative": 1815.3
+          },
+          {
+            "date": "2026-07-02",
+            "gdd_cumulative": 1826.1
+          },
+          {
+            "date": "2026-07-03",
+            "gdd_cumulative": 1836.5
+          },
+          {
+            "date": "2026-07-04",
+            "gdd_cumulative": 1846.5
           }
         ]
       },
@@ -11128,7 +11233,7 @@
     }
   },
   "last_run": {
-    "ndvi": "2026-07-01T08:54:34.002936",
-    "weather": "2026-07-01T08:55:08.813965"
+    "ndvi": "2026-07-04T07:53:25.503408",
+    "weather": "2026-07-04T07:54:01.809973"
   }
 }

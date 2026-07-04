@@ -7,10 +7,6 @@
   "enso": {
     "series": [
       {
-        "date": "2023-05-01",
-        "oni": 0.57
-      },
-      {
         "date": "2023-06-01",
         "oni": 0.84
       },
@@ -148,12 +144,16 @@
       },
       {
         "date": "2026-04-01",
-        "oni": 0.48
+        "oni": 0.51
+      },
+      {
+        "date": "2026-05-01",
+        "oni": 0.98
       }
     ],
-    "latest_oni": 0.48,
-    "state": "Nøytral",
-    "strength": "",
+    "latest_oni": 0.98,
+    "state": "El Niño",
+    "strength": "svak",
     "trend": "stigende"
   },
   "cycle": {
@@ -226,7 +226,7 @@
       "phase_length": 5
     },
     "today_month": 7,
-    "today_fraction": 0.5,
+    "today_fraction": 0.5081,
     "phases": [
       {
         "name": "Vekst (monsun)",
@@ -516,8 +516,8 @@
           {
             "date": "2020-05-24",
             "value": 0.273,
-            "baseline": 0.242,
-            "anomaly": 0.031
+            "baseline": 0.2427,
+            "anomaly": 0.0303
           },
           {
             "date": "2020-06-09",
@@ -654,8 +654,8 @@
           {
             "date": "2021-05-25",
             "value": 0.2629,
-            "baseline": 0.2437,
-            "anomaly": 0.0192
+            "baseline": 0.2442,
+            "anomaly": 0.0187
           },
           {
             "date": "2021-06-10",
@@ -792,8 +792,8 @@
           {
             "date": "2022-05-25",
             "value": 0.2625,
-            "baseline": 0.2437,
-            "anomaly": 0.0188
+            "baseline": 0.2442,
+            "anomaly": 0.0183
           },
           {
             "date": "2022-06-10",
@@ -930,8 +930,8 @@
           {
             "date": "2023-05-25",
             "value": 0.2555,
-            "baseline": 0.2449,
-            "anomaly": 0.0106
+            "baseline": 0.2452,
+            "anomaly": 0.0103
           },
           {
             "date": "2023-06-10",
@@ -1068,8 +1068,8 @@
           {
             "date": "2024-05-24",
             "value": 0.1911,
-            "baseline": 0.2556,
-            "anomaly": -0.0645
+            "baseline": 0.2544,
+            "anomaly": -0.0633
           },
           {
             "date": "2024-06-09",
@@ -1340,13 +1340,19 @@
             "value": 0.2277,
             "baseline": 0.2417,
             "anomaly": -0.014
+          },
+          {
+            "date": "2026-05-25",
+            "value": 0.2474,
+            "baseline": 0.2464,
+            "anomaly": 0.001
           }
         ],
         "latest": {
-          "date": "2026-05-09",
-          "value": 0.2277,
-          "baseline": 0.2417,
-          "anomaly": -0.014
+          "date": "2026-05-25",
+          "value": 0.2474,
+          "baseline": 0.2464,
+          "anomaly": 0.001
         },
         "status": "green"
       },
@@ -2931,8 +2937,8 @@
           {
             "date": "2019-05-25",
             "value": 0.3118,
-            "baseline": 0.3857,
-            "anomaly": -0.0739
+            "baseline": 0.3927,
+            "anomaly": -0.0809
           },
           {
             "date": "2019-06-10",
@@ -3069,8 +3075,8 @@
           {
             "date": "2020-05-24",
             "value": 0.348,
-            "baseline": 0.3797,
-            "anomaly": -0.0317
+            "baseline": 0.3875,
+            "anomaly": -0.0395
           },
           {
             "date": "2020-06-09",
@@ -3207,8 +3213,8 @@
           {
             "date": "2021-05-25",
             "value": 0.4164,
-            "baseline": 0.3683,
-            "anomaly": 0.0481
+            "baseline": 0.3777,
+            "anomaly": 0.0387
           },
           {
             "date": "2021-06-10",
@@ -3345,8 +3351,8 @@
           {
             "date": "2022-05-25",
             "value": 0.3726,
-            "baseline": 0.3756,
-            "anomaly": -0.003
+            "baseline": 0.384,
+            "anomaly": -0.0114
           },
           {
             "date": "2022-06-10",
@@ -3483,8 +3489,8 @@
           {
             "date": "2023-05-25",
             "value": 0.3693,
-            "baseline": 0.3761,
-            "anomaly": -0.0068
+            "baseline": 0.3845,
+            "anomaly": -0.0152
           },
           {
             "date": "2023-06-10",
@@ -3621,8 +3627,8 @@
           {
             "date": "2024-05-24",
             "value": 0.3829,
-            "baseline": 0.3739,
-            "anomaly": 0.009
+            "baseline": 0.3825,
+            "anomaly": 0.0004
           },
           {
             "date": "2024-06-09",
@@ -3759,8 +3765,8 @@
           {
             "date": "2025-05-25",
             "value": 0.425,
-            "baseline": 0.3668,
-            "anomaly": 0.0582
+            "baseline": 0.3765,
+            "anomaly": 0.0485
           },
           {
             "date": "2025-06-10",
@@ -3893,13 +3899,19 @@
             "value": 0.4091,
             "baseline": 0.3696,
             "anomaly": 0.0395
+          },
+          {
+            "date": "2026-05-25",
+            "value": 0.4346,
+            "baseline": 0.3751,
+            "anomaly": 0.0595
           }
         ],
         "latest": {
-          "date": "2026-05-09",
-          "value": 0.4091,
-          "baseline": 0.3696,
-          "anomaly": 0.0395
+          "date": "2026-05-25",
+          "value": 0.4346,
+          "baseline": 0.3751,
+          "anomaly": 0.0595
         },
         "status": "green"
       },
@@ -5655,8 +5667,8 @@
           {
             "date": "2019-05-25",
             "value": 0.4067,
-            "baseline": 0.4698,
-            "anomaly": -0.0631
+            "baseline": 0.4969,
+            "anomaly": -0.0902
           },
           {
             "date": "2019-06-10",
@@ -5793,8 +5805,8 @@
           {
             "date": "2020-05-24",
             "value": 0.5085,
-            "baseline": 0.4529,
-            "anomaly": 0.0556
+            "baseline": 0.4824,
+            "anomaly": 0.0261
           },
           {
             "date": "2020-06-09",
@@ -5931,8 +5943,8 @@
           {
             "date": "2021-05-25",
             "value": 0.2891,
-            "baseline": 0.4894,
-            "anomaly": -0.2003
+            "baseline": 0.5137,
+            "anomaly": -0.2246
           },
           {
             "date": "2021-06-10",
@@ -6069,8 +6081,8 @@
           {
             "date": "2022-05-25",
             "value": 0.6103,
-            "baseline": 0.4359,
-            "anomaly": 0.1744
+            "baseline": 0.4678,
+            "anomaly": 0.1425
           },
           {
             "date": "2022-06-10",
@@ -6207,8 +6219,8 @@
           {
             "date": "2023-05-25",
             "value": 0.5149,
-            "baseline": 0.4518,
-            "anomaly": 0.0631
+            "baseline": 0.4815,
+            "anomaly": 0.0334
           },
           {
             "date": "2023-06-10",
@@ -6345,8 +6357,8 @@
           {
             "date": "2024-05-24",
             "value": 0.4563,
-            "baseline": 0.4616,
-            "anomaly": -0.0053
+            "baseline": 0.4898,
+            "anomaly": -0.0335
           },
           {
             "date": "2024-06-09",
@@ -6483,8 +6495,8 @@
           {
             "date": "2025-05-25",
             "value": 0.44,
-            "baseline": 0.4643,
-            "anomaly": -0.0243
+            "baseline": 0.4922,
+            "anomaly": -0.0522
           },
           {
             "date": "2025-06-10",
@@ -6617,13 +6629,19 @@
             "value": 0.5681,
             "baseline": 0.524,
             "anomaly": 0.0441
+          },
+          {
+            "date": "2026-05-25",
+            "value": 0.6593,
+            "baseline": 0.4608,
+            "anomaly": 0.1985
           }
         ],
         "latest": {
-          "date": "2026-05-09",
-          "value": 0.5681,
-          "baseline": 0.524,
-          "anomaly": 0.0441
+          "date": "2026-05-25",
+          "value": 0.6593,
+          "baseline": 0.4608,
+          "anomaly": 0.1985
         },
         "status": "green"
       },
@@ -8379,8 +8397,8 @@
           {
             "date": "2019-05-25",
             "value": 0.4239,
-            "baseline": 0.3486,
-            "anomaly": 0.0753
+            "baseline": 0.3575,
+            "anomaly": 0.0664
           },
           {
             "date": "2019-06-10",
@@ -8517,8 +8535,8 @@
           {
             "date": "2020-05-24",
             "value": 0.3954,
-            "baseline": 0.3533,
-            "anomaly": 0.0421
+            "baseline": 0.3615,
+            "anomaly": 0.0339
           },
           {
             "date": "2020-06-09",
@@ -8655,8 +8673,8 @@
           {
             "date": "2021-05-25",
             "value": 0.4115,
-            "baseline": 0.3507,
-            "anomaly": 0.0608
+            "baseline": 0.3592,
+            "anomaly": 0.0523
           },
           {
             "date": "2021-06-10",
@@ -8793,8 +8811,8 @@
           {
             "date": "2022-05-25",
             "value": 0.3844,
-            "baseline": 0.3552,
-            "anomaly": 0.0292
+            "baseline": 0.3631,
+            "anomaly": 0.0213
           },
           {
             "date": "2022-06-10",
@@ -8931,8 +8949,8 @@
           {
             "date": "2023-05-25",
             "value": 0.3759,
-            "baseline": 0.3566,
-            "anomaly": 0.0193
+            "baseline": 0.3643,
+            "anomaly": 0.0116
           },
           {
             "date": "2023-06-10",
@@ -9069,8 +9087,8 @@
           {
             "date": "2024-05-24",
             "value": 0.3464,
-            "baseline": 0.3615,
-            "anomaly": -0.0151
+            "baseline": 0.3685,
+            "anomaly": -0.0221
           },
           {
             "date": "2024-06-09",
@@ -9207,8 +9225,8 @@
           {
             "date": "2025-05-25",
             "value": 0.178,
-            "baseline": 0.3896,
-            "anomaly": -0.2116
+            "baseline": 0.3926,
+            "anomaly": -0.2146
           },
           {
             "date": "2025-06-10",
@@ -9341,13 +9359,19 @@
             "value": 0.3458,
             "baseline": 0.378,
             "anomaly": -0.0322
+          },
+          {
+            "date": "2026-05-25",
+            "value": 0.4106,
+            "baseline": 0.3594,
+            "anomaly": 0.0512
           }
         ],
         "latest": {
-          "date": "2026-05-09",
-          "value": 0.3458,
-          "baseline": 0.378,
-          "anomaly": -0.0322
+          "date": "2026-05-25",
+          "value": 0.4106,
+          "baseline": 0.3594,
+          "anomaly": 0.0512
         },
         "status": "green"
       },
@@ -10795,7 +10819,7 @@
     }
   },
   "last_run": {
-    "ndvi": "2026-07-01T08:52:16.318658",
-    "weather": "2026-07-01T08:54:19.066870"
+    "ndvi": "2026-07-04T07:51:04.118664",
+    "weather": "2026-07-04T07:53:05.825036"
   }
 }
