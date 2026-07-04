@@ -1,5 +1,5 @@
 {
-  "built_utc": "2026-07-03T05:21:56+00:00",
+  "built_utc": "2026-07-04T06:35:20+00:00",
   "price": {
     "asof": "2026-07-02",
     "close": 14.85,
@@ -131,16 +131,12 @@
     "extreme": false
   },
   "enso": {
-    "asof": "2026-04-01",
-    "state": "Nøytral",
-    "strength": "",
-    "oni": 0.48,
+    "asof": "2026-05-01",
+    "state": "El Niño",
+    "strength": "svak",
+    "oni": 0.98,
     "trend": "stigende",
     "series": [
-      {
-        "date": "2024-05-01",
-        "oni": 0.49
-      },
       {
         "date": "2024-06-01",
         "oni": 0.22
@@ -231,7 +227,11 @@
       },
       {
         "date": "2026-04-01",
-        "oni": 0.48
+        "oni": 0.51
+      },
+      {
+        "date": "2026-05-01",
+        "oni": 0.98
       }
     ]
   },
@@ -250,15 +250,15 @@
     }
   },
   "frost": {
-    "asof": "2026-07-03",
+    "asof": "2026-07-04",
     "window_active": true,
-    "min_temp_14d": 11.0,
-    "coldest_date": "2026-06-19",
+    "min_temp_14d": 11.7,
+    "coldest_date": "2026-06-25",
     "frost_days_30d": 0,
     "threshold_c": 3.0
   },
   "season": {
-    "asof": "2026-07-03",
+    "asof": "2026-07-04",
     "phase": "Høsting (safra)",
     "score": 0.8,
     "month": 7
@@ -286,7 +286,7 @@
     "unica": 0,
     "india": -1,
     "cot": 0,
-    "enso": 0,
+    "enso": 1,
     "ndvi": 0,
     "frost": 0,
     "season": 0
