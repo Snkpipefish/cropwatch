@@ -1,5 +1,5 @@
 {
-  "built_utc": "2026-07-04T06:35:20+00:00",
+  "built_utc": "2026-07-05T05:30:56+00:00",
   "price": {
     "asof": "2026-07-02",
     "close": 14.85,
@@ -236,12 +236,12 @@
     ]
   },
   "ndvi": {
-    "asof": "2026-05-09",
-    "weighted_anomaly": -0.001,
+    "asof": "2026-05-25",
+    "weighted_anomaly": 0.0142,
     "per_country": {
-      "brazil_sugar": -0.0118,
-      "india_sugar": 0.0094,
-      "thailand_sugar": 0.0181
+      "brazil_sugar": -0.0188,
+      "india_sugar": 0.0776,
+      "thailand_sugar": 0.0087
     },
     "weights": {
       "brazil_sugar": 0.55,
@@ -250,7 +250,7 @@
     }
   },
   "frost": {
-    "asof": "2026-07-04",
+    "asof": "2026-07-05",
     "window_active": true,
     "min_temp_14d": 11.7,
     "coldest_date": "2026-06-25",
@@ -258,7 +258,7 @@
     "threshold_c": 3.0
   },
   "season": {
-    "asof": "2026-07-04",
+    "asof": "2026-07-05",
     "phase": "Høsting (safra)",
     "score": 0.8,
     "month": 7
