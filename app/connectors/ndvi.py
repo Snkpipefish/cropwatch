@@ -1,7 +1,9 @@
 """NDVI-connector (vegetasjonshelse).
 
 Standard kilde: NASA MODIS via ORNL DAAC sin gratis REST-tjeneste (ingen nøkkel).
-Produkt MOD13Q1 = 250 m oppløsning, ny verdi hver 16. dag.
+Produkter MOD13Q1 (Terra) + MYD13Q1 (Aqua), begge 250 m og 16-dagers, men
+forskjøvet 8 dager fra hverandre – flettet gir de en ny verdi ~hver 8. dag,
+og appen tåler at én av satellittene faller fra (Terra er nær pensjon).
 
 BYTTE KILDE SENERE:
   Vil du bruke Agromonitoring eller NASA Earthdata i stedet, lag en ny klasse
@@ -46,10 +48,14 @@ class NdviConnector:
 
 class NasaModisNdvi(NdviConnector):
     name = "nasa_modis"
-    cadence_days = 16
+    # Terra og Aqua er forskjøvet 8 dager, så sammen gir de en ny verdi ~hver 8. dag.
+    cadence_days = 8
 
     BASE_URL = "https://modis.ornl.gov/rst/api/v1"
-    PRODUCT = "MOD13Q1"
+    # Begge MODIS-satellittene: Terra (MOD) og Aqua (MYD). Terra er på slutten
+    # av levetiden og leverer stadig senere/sjeldnere – Aqua fyller hullene, og
+    # svikter den ene helt, fortsetter vi med den andre.
+    PRODUCTS = ("MOD13Q1", "MYD13Q1")
     BAND = "250m_16_days_NDVI"
     SCALE = 0.0001
     # MODIS bruker fyll-verdien -3000 der data mangler (skyer o.l.).
@@ -61,43 +67,61 @@ class NasaModisNdvi(NdviConnector):
         self._timeout = timeout_s
         self._delay = polite_delay_s
 
-    def _available_dates(self, client: httpx.Client, lat: float, lon: float) -> list[dict]:
+    def _available_dates(
+        self, client: httpx.Client, product: str, lat: float, lon: float
+    ) -> list[dict]:
         """Henter alle tilgjengelige MODIS-datoer for punktet."""
         r = _get_with_retry(
             client,
-            f"{self.BASE_URL}/{self.PRODUCT}/dates",
+            f"{self.BASE_URL}/{product}/dates",
             {"latitude": lat, "longitude": lon},
         )
         return r.json().get("dates", [])
 
     def fetch(self, lat: float, lon: float, start: date, end: date) -> list[NdviObservation]:
-        observations: list[NdviObservation] = []
+        by_date: dict[date, NdviObservation] = {}
+        errors: list[Exception] = []
         with httpx.Client(timeout=self._timeout) as client:
-            dates = self._available_dates(client, lat, lon)
+            for product in self.PRODUCTS:
+                try:
+                    for obs in self._fetch_product(client, product, lat, lon, start, end):
+                        by_date.setdefault(obs.date, obs)
+                except Exception as e:  # noqa: BLE001
+                    errors.append(e)
+        # Feilet begge satellittene, si fra – feilet bare én, lever vi med det.
+        if errors and not by_date:
+            raise errors[0]
+        return [by_date[d] for d in sorted(by_date)]
 
-            # Behold kun datoer innenfor det forespurte tidsrommet.
-            wanted = [
-                d for d in dates
-                if start <= datetime.strptime(d["calendar_date"], "%Y-%m-%d").date() <= end
-            ]
-            modis_dates = [d["modis_date"] for d in wanted]
+    def _fetch_product(
+        self, client: httpx.Client, product: str, lat: float, lon: float, start: date, end: date
+    ) -> list[NdviObservation]:
+        observations: list[NdviObservation] = []
+        dates = self._available_dates(client, product, lat, lon)
 
-            # Del opp i biter på maks 10 (tjenestens grense) og hent hver bit.
-            for i in range(0, len(modis_dates), self.MAX_DATES_PER_REQUEST):
-                chunk = modis_dates[i:i + self.MAX_DATES_PER_REQUEST]
-                observations.extend(self._fetch_chunk(client, lat, lon, chunk[0], chunk[-1]))
-                if self._delay:
-                    time.sleep(self._delay)
+        # Behold kun datoer innenfor det forespurte tidsrommet.
+        wanted = [
+            d for d in dates
+            if start <= datetime.strptime(d["calendar_date"], "%Y-%m-%d").date() <= end
+        ]
+        modis_dates = [d["modis_date"] for d in wanted]
 
-        observations.sort(key=lambda o: o.date)
+        # Del opp i biter på maks 10 (tjenestens grense) og hent hver bit.
+        for i in range(0, len(modis_dates), self.MAX_DATES_PER_REQUEST):
+            chunk = modis_dates[i:i + self.MAX_DATES_PER_REQUEST]
+            observations.extend(
+                self._fetch_chunk(client, product, lat, lon, chunk[0], chunk[-1]))
+            if self._delay:
+                time.sleep(self._delay)
         return observations
 
     def _fetch_chunk(
-        self, client: httpx.Client, lat: float, lon: float, start_modis: str, end_modis: str
+        self, client: httpx.Client, product: str, lat: float, lon: float,
+        start_modis: str, end_modis: str
     ) -> list[NdviObservation]:
         r = _get_with_retry(
             client,
-            f"{self.BASE_URL}/{self.PRODUCT}/subset",
+            f"{self.BASE_URL}/{product}/subset",
             {
                 "latitude": lat,
                 "longitude": lon,

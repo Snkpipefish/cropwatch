@@ -63,7 +63,7 @@ class OpenMeteoWeather(WeatherConnector):
             "start_date": start.isoformat(), "end_date": end.isoformat(),
             "daily": _DAILY_VARS, "timezone": "auto",
         }
-        return self._parse(client.get(self.ARCHIVE_URL, params=params))
+        return self._parse(self._get_with_retry(client, self.ARCHIVE_URL, params))
 
     def _forecast(self, client, lat, lon, recent_start, end, today) -> list[WeatherObservation]:
         past_days = max(1, min(92, (today - recent_start).days + 1))
@@ -73,22 +73,34 @@ class OpenMeteoWeather(WeatherConnector):
             "daily": _DAILY_VARS, "timezone": "auto",
             "past_days": past_days, "forecast_days": forecast_days,
         }
-        all_obs = self._parse(client.get(self.FORECAST_URL, params=params))
+        all_obs = self._parse(self._get_with_retry(client, self.FORECAST_URL, params))
         return [o for o in all_obs if recent_start <= o.date <= end]
 
     @staticmethod
+    def _get_with_retry(client: httpx.Client, url: str, params: dict,
+                        attempts: int = 4) -> httpx.Response:
+        """GET med gjenforsøk. Open-Meteo struper av og til (429) – særlig når
+        flere systemer på samme IP henter samtidig – og har korte blipp med
+        timeout/serverfeil. Begge deler løses ved å vente og prøve igjen."""
+        last_error: Exception | None = None
+        for attempt in range(1, attempts + 1):
+            try:
+                response = client.get(url, params=params)
+                if response.status_code == 429:
+                    time.sleep(15 * attempt)  # struping: vent lenge
+                    continue
+                response.raise_for_status()
+                return response
+            except (httpx.HTTPError, httpx.TransportError) as e:
+                last_error = e
+                time.sleep(3 * attempt)  # blipp: vent kort
+        if last_error:
+            raise last_error
+        raise httpx.HTTPStatusError("429 etter alle forsøk", request=response.request,
+                                    response=response)
+
+    @staticmethod
     def _parse(response: httpx.Response) -> list[WeatherObservation]:
-        # Open-Meteo struper av og til (429) – særlig når flere systemer på
-        # samme maskin henter samtidig. Prøv igjen med økende ventetid.
-        if response.status_code == 429:
-            url = response.request.url
-            with httpx.Client(timeout=30.0) as retry_client:
-                for attempt in range(1, 5):
-                    time.sleep(15 * attempt)
-                    response = retry_client.get(url)
-                    if response.status_code != 429:
-                        break
-        response.raise_for_status()
         daily = response.json()["daily"]
         out: list[WeatherObservation] = []
         for i, day in enumerate(daily["time"]):

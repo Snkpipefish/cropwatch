@@ -14,6 +14,7 @@ Kjør lokalt med:   python scripts/export_static.py
 from __future__ import annotations
 
 import json
+import os
 import shutil
 import sys
 from datetime import date
@@ -36,6 +37,39 @@ FRONTEND = ROOT / "frontend"
 def _write(path: Path, payload) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"  skrev {path.relative_to(ROOT)}")
+
+
+# Hvor gamle data kan være før vi roper varsku. NDVI kommer ~hver 8. dag
+# (Terra+Aqua flettet) pluss noen dagers prosessering hos NASA; vær kommer daglig.
+STALE_NDVI_DAYS = 20
+STALE_WEATHER_DAYS = 4
+
+
+def _report_freshness() -> None:
+    """Skriv siste dato per område, og flagg det som henger etter.
+
+    `::warning::`-linjene dukker opp som gule annoteringer på kjøringen i
+    GitHub Actions – da synes det at en kilde har stoppet, selv om jobben
+    ellers er grønn.
+    """
+    print("Ferskhet (siste dato per område):")
+    today = date.today()
+    from sqlalchemy import text as _text
+    for region_id in load_regions():
+        with _engine(region_id).connect() as c:
+            for table, limit in (("ndvi", STALE_NDVI_DAYS), ("weather", STALE_WEATHER_DAYS)):
+                rows = c.execute(_text(
+                    f"SELECT area_id, MAX(date) FROM {table} GROUP BY area_id")).fetchall()
+                for area_id, last in rows:
+                    age = (today - date.fromisoformat(last)).days if last else None
+                    mark = ""
+                    if age is None or age > limit:
+                        mark = "  <-- HENGER ETTER"
+                        if os.environ.get("GITHUB_ACTIONS"):
+                            print(f"::warning::{region_id}/{area_id}: siste "
+                                  f"{table}-dato er {last} ({age} dager gammel)")
+                    print(f"  {region_id:16s} {area_id:16s} {table:7s} {last}  "
+                          f"({age} dager){mark}")
 
 
 def main() -> None:
@@ -75,6 +109,8 @@ def main() -> None:
 
     # Liten fil som forteller når siden sist ble bygget.
     _write(DATA / "built.json", {"built_utc": date.today().isoformat()})
+
+    _report_freshness()
     print("Ferdig. docs/ er klar for GitHub Pages.")
 
 

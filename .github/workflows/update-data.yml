@@ -4,7 +4,7 @@ name: Oppdater CropWatch-data
 on:
   workflow_dispatch:        # lar deg kjøre den manuelt med ett klikk
   schedule:
-    - cron: "0 5 */3 * *"   # automatisk hver 3. dag kl 05:00 UTC
+    - cron: "0 5 * * *"     # automatisk hver dag kl 05:00 UTC (henter kun det nye)
 
 permissions:
   contents: write           # trengs for å committe de oppdaterte datafilene
