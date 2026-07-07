@@ -33,16 +33,19 @@ def _status_from_anomaly(anomaly: float | None, yellow: float, red: float) -> st
 def ndvi_with_baseline(observations, yellow: float = -0.05, red: float = -0.12) -> dict:
     """Lager NDVI-tidsserie med historisk normal-linje og avvik per punkt.
 
-    Normalen for en gitt dato = snittet av NDVI på samme årstid i ANDRE år.
-    Returnerer en serie til grafen + dagens status (grønn/gul/rød).
+    Normalen for en gitt dato = snittet av NDVI på samme årstid (±8 dager)
+    i ANDRE år. Vinduet trengs fordi Terra og Aqua leverer på ulike faste
+    dager i året – uten det ville en Aqua-dato aldri funnet Terra-historikk
+    å sammenligne med, og avviket ble stående tomt.
     """
-    by_doy: dict[int, list[tuple[int, float]]] = defaultdict(list)
-    for o in observations:
-        by_doy[_doy(o.date)].append((o.date.year, o.value))
+    window = 8
+    points = [(_doy(o.date), o.date.year, o.value) for o in observations]
 
     series = []
     for o in observations:
-        others = [v for (yr, v) in by_doy[_doy(o.date)] if yr != o.date.year]
+        doy, year = _doy(o.date), o.date.year
+        others = [v for (d, yr, v) in points
+                  if yr != year and min(abs(d - doy), 365 - abs(d - doy)) <= window]
         baseline = round(sum(others) / len(others), 4) if others else None
         anomaly = round(o.value - baseline, 4) if baseline is not None else None
         series.append({
