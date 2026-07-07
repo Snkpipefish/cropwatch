@@ -1,0 +1,49 @@
+name: Oppdater sukkerdashbord (sky)
+
+# Oppdaterer de åpne panelene (pris, BRL, frost, NDVI, ENSO, sesong) flere
+# ganger om dagen – uten at PC-en må være på. Bedrock-panelene beholdes fra
+# forrige publisering (PC-jobben eier dem).
+on:
+  workflow_dispatch:          # manuell kjøring med ett klikk
+  schedule:
+    # 4x daglig UTC: før/under/etter handelsdagen for sukker (ICE ~08:30-18:00 UTC)
+    - cron: "0 9,13,17,21 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hent koden
+        uses: actions/checkout@v4
+
+      - name: Sett opp Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer avhengigheter
+        run: pip install -r requirements.txt
+
+      - name: Oppdater dashbord-data fra åpne kilder
+        run: python scripts/export_sugar11_cloud.py
+
+      - name: Commit og push (hvis noe endret seg)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Kun dashbord-JSON-en committes; vær-data hentet underveis er
+          # ferskvare og hentes uansett på nytt neste kjøring.
+          git add docs/data/sugar11.json
+          if git diff --staged --quiet; then
+            echo "Ingen endringer å committe."
+          else
+            git commit -m "Oppdater sugar11-dashbord (sky) $(date -u +%Y-%m-%dT%H:%M)"
+            # Tåler at PC-en eller data-jobben pushet i mellomtiden.
+            for i in 1 2 3; do
+              git push && break
+              git pull --rebase -X theirs && sleep $((i * 5))
+            done
+          fi
