@@ -1,24 +1,11 @@
 {
-  "built_utc": "2026-07-09T11:45:19+00:00",
-  "built_by": "cloud",
+  "built_utc": "2026-07-09T13:24:16+00:00",
   "price": {
-    "asof": "2026-07-09",
-    "close": 14.94,
-    "chg_5d_pct": -0.33,
-    "pct_1y": 53.8,
+    "asof": "2026-07-08",
+    "close": 15.12,
+    "chg_5d_pct": 0.87,
+    "pct_1y": 66.5,
     "spark": [
-      13.91,
-      13.93,
-      13.73,
-      13.72,
-      14.1,
-      14.59,
-      14.38,
-      14.25,
-      14.38,
-      14.37,
-      14.19,
-      14.45,
       14.8,
       15.37,
       15.7,
@@ -66,7 +53,18 @@
       14.73,
       14.9,
       14.7,
+      14.68,
       14.54,
+      14.46,
+      14.51,
+      14.58,
+      14.53,
+      14.55,
+      14.58,
+      14.63,
+      14.57,
+      14.57,
+      14.53,
       14.14,
       13.93,
       14.06,
@@ -74,7 +72,7 @@
       14.38,
       14.24,
       14.27,
-      14.14,
+      14.12,
       14.12,
       14.08,
       13.92,
@@ -84,6 +82,7 @@
       13.82,
       13.85,
       13.59,
+      14.14,
       13.35,
       13.42,
       13.42,
@@ -93,18 +92,43 @@
       14.34,
       14.99,
       14.85,
+      14.81,
       15.22,
       15.14,
-      15.11,
-      14.94
+      15.12
     ]
   },
   "brl": {
-    "asof": "2026-07-09",
-    "source": "Yahoo",
-    "usdbrl": 5.1461,
-    "chg_5d_pct": -1.43,
-    "pct_3y": 32.5
+    "asof": "2026-07-02",
+    "source": "FRED",
+    "usdbrl": 5.2004,
+    "chg_5d_pct": 0.53,
+    "pct_3y": 40.1
+  },
+  "ethanol": {
+    "asof": "2026-05-29",
+    "eth_brl_liter": 4.06,
+    "ratio_pct_3y": 26.5
+  },
+  "unica": {
+    "asof": "2026-06-30",
+    "period": "2ª quinzena de maio de 2026",
+    "crop_year": "2026/2027",
+    "mix_sugar_pct": 41.42,
+    "mix_sugar_pct_prev": 50.09,
+    "sugar_production_yoy_pct": -1.97,
+    "crush_yoy_pct": 15.81
+  },
+  "india": {
+    "asof": "2026-03-01",
+    "exports_12m_yoy_pct": 43.7
+  },
+  "cot": {
+    "asof": "2026-06-30",
+    "mm_net": -158202,
+    "open_interest": 992340,
+    "pct_52w": 37.3,
+    "extreme": false
   },
   "enso": {
     "asof": "2026-05-01",
@@ -228,7 +252,7 @@
   "frost": {
     "asof": "2026-07-09",
     "window_active": true,
-    "min_temp_14d": 9.9,
+    "min_temp_14d": 9.5,
     "coldest_date": "2026-07-09",
     "frost_days_30d": 0,
     "threshold_c": 3.0
@@ -239,36 +263,11 @@
     "score": 0.8,
     "month": 7
   },
-  "ethanol": {
-    "asof": "2026-05-29",
-    "eth_brl_liter": 4.06,
-    "ratio_pct_3y": 26.5
-  },
-  "unica": {
-    "asof": "2026-06-30",
-    "period": "2ª quinzena de maio de 2026",
-    "crop_year": "2026/2027",
-    "mix_sugar_pct": 41.42,
-    "mix_sugar_pct_prev": 50.09,
-    "sugar_production_yoy_pct": -1.97,
-    "crush_yoy_pct": 15.81
-  },
-  "india": {
-    "asof": "2026-03-01",
-    "exports_12m_yoy_pct": 43.7
-  },
-  "cot": {
-    "asof": "2026-06-30",
-    "mm_net": -158202,
-    "open_interest": 992340,
-    "pct_52w": 37.3,
-    "extreme": false
-  },
   "bedrock": {
-    "asof": "2026-07-07",
+    "asof": "2026-07-09",
     "latest_setup": {
       "direction": "buy",
-      "score": 11.79,
+      "score": 11.77,
       "grade": "A+",
       "horizon": "makro",
       "published": true
@@ -282,7 +281,7 @@
     }
   },
   "pressure": {
-    "brl": -1,
+    "brl": 0,
     "ethanol": 0,
     "unica": 0,
     "india": -1,
