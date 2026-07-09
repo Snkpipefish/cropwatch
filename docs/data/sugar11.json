@@ -1,5 +1,5 @@
 {
-  "built_utc": "2026-07-09T15:53:05+00:00",
+  "built_utc": "2026-07-09T18:45:45+00:00",
   "built_by": "cloud",
   "price": {
     "asof": "2026-07-09",
@@ -102,8 +102,8 @@
   "brl": {
     "asof": "2026-07-09",
     "source": "Yahoo",
-    "usdbrl": 5.1205,
-    "chg_5d_pct": -1.92,
+    "usdbrl": 5.1195,
+    "chg_5d_pct": -1.94,
     "pct_3y": 30.2
   },
   "enso": {
