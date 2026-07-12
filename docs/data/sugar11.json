@@ -1,11 +1,11 @@
 {
-  "built_utc": "2026-07-11T21:39:37+00:00",
+  "built_utc": "2026-07-12T10:18:18+00:00",
   "built_by": "cloud",
   "price": {
     "asof": "2026-07-10",
-    "close": 14.88,
-    "chg_5d_pct": 0.2,
-    "pct_1y": 50.8,
+    "close": 14.86,
+    "chg_5d_pct": 0.07,
+    "pct_1y": 51.0,
     "spark": [
       13.93,
       13.73,
@@ -96,7 +96,7 @@
       15.14,
       15.11,
       15.12,
-      14.88
+      14.86
     ]
   },
   "brl": {
@@ -226,7 +226,7 @@
     }
   },
   "frost": {
-    "asof": "2026-07-11",
+    "asof": "2026-07-12",
     "window_active": true,
     "min_temp_14d": 9.5,
     "coldest_date": "2026-07-09",
@@ -234,7 +234,7 @@
     "threshold_c": 3.0
   },
   "season": {
-    "asof": "2026-07-11",
+    "asof": "2026-07-12",
     "phase": "Høsting (safra)",
     "score": 0.8,
     "month": 7
