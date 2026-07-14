@@ -1,13 +1,12 @@
 {
-  "built_utc": "2026-07-13T21:44:57+00:00",
+  "built_utc": "2026-07-14T10:29:32+00:00",
   "built_by": "cloud",
   "price": {
-    "asof": "2026-07-13",
-    "close": 14.76,
-    "chg_5d_pct": -3.02,
-    "pct_1y": 43.2,
+    "asof": "2026-07-14",
+    "close": 14.8,
+    "chg_5d_pct": -2.25,
+    "pct_1y": 45.4,
     "spark": [
-      13.73,
       13.72,
       14.1,
       14.59,
@@ -96,15 +95,16 @@
       15.11,
       15.12,
       14.88,
-      14.76
+      14.75,
+      14.8
     ]
   },
   "brl": {
-    "asof": "2026-07-13",
+    "asof": "2026-07-14",
     "source": "Yahoo",
-    "usdbrl": 5.1366,
-    "chg_5d_pct": -0.14,
-    "pct_3y": 31.4
+    "usdbrl": 5.1309,
+    "chg_5d_pct": -0.25,
+    "pct_3y": 31.0
   },
   "enso": {
     "asof": "2026-05-01",
@@ -226,15 +226,15 @@
     }
   },
   "frost": {
-    "asof": "2026-07-13",
+    "asof": "2026-07-14",
     "window_active": true,
-    "min_temp_14d": 9.5,
-    "coldest_date": "2026-07-09",
+    "min_temp_14d": 8.4,
+    "coldest_date": "2026-07-14",
     "frost_days_30d": 0,
     "threshold_c": 3.0
   },
   "season": {
-    "asof": "2026-07-13",
+    "asof": "2026-07-14",
     "phase": "Høsting (safra)",
     "score": 0.8,
     "month": 7
