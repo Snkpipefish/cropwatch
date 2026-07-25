@@ -1,11 +1,11 @@
 {
-  "built_utc": "2026-07-24T21:56:09+00:00",
+  "built_utc": "2026-07-25T10:20:32+00:00",
   "built_by": "cloud",
   "price": {
     "asof": "2026-07-24",
-    "close": 14.76,
-    "chg_5d_pct": -0.47,
-    "pct_1y": 44.6,
+    "close": 14.77,
+    "chg_5d_pct": -0.4,
+    "pct_1y": 46.0,
     "spark": [
       14.45,
       14.8,
@@ -96,15 +96,15 @@
       14.88,
       14.74,
       14.69,
-      14.76
+      14.77
     ]
   },
   "brl": {
-    "asof": "2026-07-24",
+    "asof": "2026-07-25",
     "source": "Yahoo",
-    "usdbrl": 5.087,
-    "chg_5d_pct": -0.78,
-    "pct_3y": 27.2
+    "usdbrl": 5.0751,
+    "chg_5d_pct": -1.01,
+    "pct_3y": 26.9
   },
   "enso": {
     "asof": "2026-05-01",
@@ -226,7 +226,7 @@
     }
   },
   "frost": {
-    "asof": "2026-07-24",
+    "asof": "2026-07-25",
     "window_active": true,
     "min_temp_14d": 8.1,
     "coldest_date": "2026-07-14",
@@ -234,7 +234,7 @@
     "threshold_c": 3.0
   },
   "season": {
-    "asof": "2026-07-24",
+    "asof": "2026-07-25",
     "phase": "Høsting (safra)",
     "score": 0.8,
     "month": 7
@@ -282,7 +282,7 @@
     }
   },
   "pressure": {
-    "brl": 0,
+    "brl": -1,
     "ethanol": 0,
     "unica": 0,
     "india": -1,
