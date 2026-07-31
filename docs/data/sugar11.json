@@ -1,13 +1,12 @@
 {
-  "built_utc": "2026-07-30T21:59:08+00:00",
+  "built_utc": "2026-07-31T11:20:06+00:00",
   "built_by": "cloud",
   "price": {
-    "asof": "2026-07-30",
-    "close": 14.44,
-    "chg_5d_pct": -1.7,
-    "pct_1y": 29.1,
+    "asof": "2026-07-31",
+    "close": 14.6,
+    "chg_5d_pct": -1.15,
+    "pct_1y": 37.5,
     "spark": [
-      15.52,
       15.88,
       15.55,
       15.87,
@@ -96,15 +95,16 @@
       14.58,
       14.55,
       14.5,
-      14.44
+      14.43,
+      14.6
     ]
   },
   "brl": {
-    "asof": "2026-07-30",
+    "asof": "2026-07-31",
     "source": "Yahoo",
-    "usdbrl": 5.0707,
-    "chg_5d_pct": -0.51,
-    "pct_3y": 25.8
+    "usdbrl": 5.0716,
+    "chg_5d_pct": -0.5,
+    "pct_3y": 26.0
   },
   "enso": {
     "asof": "2026-05-01",
@@ -226,15 +226,15 @@
     }
   },
   "frost": {
-    "asof": "2026-07-30",
+    "asof": "2026-07-31",
     "window_active": true,
-    "min_temp_14d": 11.1,
-    "coldest_date": "2026-07-16",
+    "min_temp_14d": 11.9,
+    "coldest_date": "2026-07-18",
     "frost_days_30d": 0,
     "threshold_c": 3.0
   },
   "season": {
-    "asof": "2026-07-30",
+    "asof": "2026-07-31",
     "phase": "Høsting (safra)",
     "score": 0.8,
     "month": 7
