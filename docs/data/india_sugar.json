@@ -226,7 +226,7 @@
       "phase_length": 5
     },
     "today_month": 8,
-    "today_fraction": 0.6183,
+    "today_fraction": 0.621,
     "phases": [
       {
         "name": "Vekst (monsun)",
@@ -2509,21 +2509,26 @@
           },
           {
             "doy": 226,
-            "cumulative_mm": 896.9,
+            "cumulative_mm": 897.2,
             "baseline_mm": 632.91
+          },
+          {
+            "doy": 227,
+            "cumulative_mm": 907.5,
+            "baseline_mm": 637.2
           }
         ],
         "latest": {
-          "doy": 226,
-          "cumulative_mm": 896.9,
-          "baseline_mm": 632.91
+          "doy": 227,
+          "cumulative_mm": 907.5,
+          "baseline_mm": 637.2
         },
         "ratio_to_normal": 1.42,
         "status": "green"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 1689.4,
+        "total_gdd": 1699.8,
         "series": [
           {
             "date": "2026-01-01",
@@ -3427,7 +3432,11 @@
           },
           {
             "date": "2026-08-14",
-            "gdd_cumulative": 1689.4
+            "gdd_cumulative": 1689.3
+          },
+          {
+            "date": "2026-08-15",
+            "gdd_cumulative": 1699.8
           }
         ]
       },
@@ -3438,7 +3447,7 @@
         "status": "green"
       },
       "drought_stress": {
-        "longest_dry_streak": 2,
+        "longest_dry_streak": 1,
         "window_days": 30,
         "status": "green"
       }
@@ -5713,21 +5722,26 @@
           },
           {
             "doy": 226,
-            "cumulative_mm": 549.8,
+            "cumulative_mm": 549.9,
             "baseline_mm": 880.92
+          },
+          {
+            "doy": 227,
+            "cumulative_mm": 552.8,
+            "baseline_mm": 886.42
           }
         ],
         "latest": {
-          "doy": 226,
-          "cumulative_mm": 549.8,
-          "baseline_mm": 880.92
+          "doy": 227,
+          "cumulative_mm": 552.8,
+          "baseline_mm": 886.42
         },
         "ratio_to_normal": 0.62,
         "status": "yellow"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 1945.4,
+        "total_gdd": 1952.0,
         "series": [
           {
             "date": "2026-01-01",
@@ -6631,7 +6645,11 @@
           },
           {
             "date": "2026-08-14",
-            "gdd_cumulative": 1945.4
+            "gdd_cumulative": 1945.8
+          },
+          {
+            "date": "2026-08-15",
+            "gdd_cumulative": 1952.0
           }
         ]
       },
@@ -8917,21 +8935,26 @@
           },
           {
             "doy": 226,
-            "cumulative_mm": 456.2,
+            "cumulative_mm": 457.5,
             "baseline_mm": 976.06
+          },
+          {
+            "doy": 227,
+            "cumulative_mm": 460.5,
+            "baseline_mm": 981.04
           }
         ],
         "latest": {
-          "doy": 226,
-          "cumulative_mm": 456.2,
-          "baseline_mm": 976.06
+          "doy": 227,
+          "cumulative_mm": 460.5,
+          "baseline_mm": 981.04
         },
         "ratio_to_normal": 0.47,
         "status": "red"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 1677.2,
+        "total_gdd": 1682.4,
         "series": [
           {
             "date": "2026-01-01",
@@ -9835,7 +9858,11 @@
           },
           {
             "date": "2026-08-14",
-            "gdd_cumulative": 1677.2
+            "gdd_cumulative": 1677.5
+          },
+          {
+            "date": "2026-08-15",
+            "gdd_cumulative": 1682.4
           }
         ]
       },
@@ -12121,21 +12148,26 @@
           },
           {
             "doy": 226,
-            "cumulative_mm": 317.4,
+            "cumulative_mm": 310.5,
             "baseline_mm": 509.78
+          },
+          {
+            "doy": 227,
+            "cumulative_mm": 310.5,
+            "baseline_mm": 512.95
           }
         ],
         "latest": {
-          "doy": 226,
-          "cumulative_mm": 317.4,
-          "baseline_mm": 509.78
+          "doy": 227,
+          "cumulative_mm": 310.5,
+          "baseline_mm": 512.95
         },
-        "ratio_to_normal": 0.62,
+        "ratio_to_normal": 0.61,
         "status": "yellow"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 1813.2,
+        "total_gdd": 1821.6,
         "series": [
           {
             "date": "2026-01-01",
@@ -13039,7 +13071,11 @@
           },
           {
             "date": "2026-08-14",
-            "gdd_cumulative": 1813.2
+            "gdd_cumulative": 1813.4
+          },
+          {
+            "date": "2026-08-15",
+            "gdd_cumulative": 1821.6
           }
         ]
       },
@@ -13050,14 +13086,14 @@
         "status": "green"
       },
       "drought_stress": {
-        "longest_dry_streak": 1,
+        "longest_dry_streak": 2,
         "window_days": 30,
         "status": "green"
       }
     }
   },
   "last_run": {
-    "ndvi": "2026-08-14T06:19:17.324709",
-    "weather": "2026-08-14T06:21:48.673917"
+    "ndvi": "2026-08-15T05:30:17.492200",
+    "weather": "2026-08-15T05:32:12.723759"
   }
 }
