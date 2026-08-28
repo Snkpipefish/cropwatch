@@ -1,10 +1,10 @@
 {
-  "built_utc": "2026-08-27T19:19:50+00:00",
+  "built_utc": "2026-08-28T05:01:22+00:00",
   "built_by": "cloud",
   "price": {
     "asof": "2026-08-27",
-    "close": 18.22,
-    "chg_5d_pct": 4.0,
+    "close": 18.19,
+    "chg_5d_pct": 3.82,
     "pct_1y": 100.0,
     "spark": [
       13.43,
@@ -96,15 +96,15 @@
       17.65,
       17.27,
       17.59,
-      18.22
+      18.19
     ]
   },
   "brl": {
-    "asof": "2026-08-27",
+    "asof": "2026-08-28",
     "source": "Yahoo",
-    "usdbrl": 5.1634,
-    "chg_5d_pct": -0.26,
-    "pct_3y": 33.1
+    "usdbrl": 5.1621,
+    "chg_5d_pct": -0.6,
+    "pct_3y": 33.0
   },
   "enso": {
     "asof": "2026-06-01",
@@ -226,7 +226,7 @@
     }
   },
   "frost": {
-    "asof": "2026-08-27",
+    "asof": "2026-08-28",
     "window_active": true,
     "min_temp_14d": 11.6,
     "coldest_date": "2026-08-23",
@@ -234,7 +234,7 @@
     "threshold_c": 3.0
   },
   "season": {
-    "asof": "2026-08-27",
+    "asof": "2026-08-28",
     "phase": "Høsting (safra)",
     "score": 0.9,
     "month": 8
