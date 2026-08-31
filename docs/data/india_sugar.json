@@ -226,7 +226,7 @@
       "phase_length": 5
     },
     "today_month": 8,
-    "today_fraction": 0.6613,
+    "today_fraction": 0.664,
     "phases": [
       {
         "name": "Vekst (monsun)",
@@ -2633,19 +2633,24 @@
             "doy": 242,
             "cumulative_mm": 971.8,
             "baseline_mm": 730.06
+          },
+          {
+            "doy": 243,
+            "cumulative_mm": 972.6,
+            "baseline_mm": 736.51
           }
         ],
         "latest": {
-          "doy": 242,
-          "cumulative_mm": 971.8,
-          "baseline_mm": 730.06
+          "doy": 243,
+          "cumulative_mm": 972.6,
+          "baseline_mm": 736.51
         },
-        "ratio_to_normal": 1.33,
+        "ratio_to_normal": 1.32,
         "status": "green"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 1864.0,
+        "total_gdd": 1875.6,
         "series": [
           {
             "date": "2026-01-01",
@@ -3613,7 +3618,11 @@
           },
           {
             "date": "2026-08-30",
-            "gdd_cumulative": 1864.0
+            "gdd_cumulative": 1864.3
+          },
+          {
+            "date": "2026-08-31",
+            "gdd_cumulative": 1875.6
           }
         ]
       },
@@ -6023,19 +6032,24 @@
             "doy": 242,
             "cumulative_mm": 596.2,
             "baseline_mm": 970.8
+          },
+          {
+            "doy": 243,
+            "cumulative_mm": 597.6,
+            "baseline_mm": 974.44
           }
         ],
         "latest": {
-          "doy": 242,
-          "cumulative_mm": 596.2,
-          "baseline_mm": 970.8
+          "doy": 243,
+          "cumulative_mm": 597.6,
+          "baseline_mm": 974.44
         },
         "ratio_to_normal": 0.61,
         "status": "yellow"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 2046.6,
+        "total_gdd": 2053.2,
         "series": [
           {
             "date": "2026-01-01",
@@ -7004,6 +7018,10 @@
           {
             "date": "2026-08-30",
             "gdd_cumulative": 2046.6
+          },
+          {
+            "date": "2026-08-31",
+            "gdd_cumulative": 2053.2
           }
         ]
       },
@@ -9411,21 +9429,26 @@
           },
           {
             "doy": 242,
-            "cumulative_mm": 498.8,
+            "cumulative_mm": 499.2,
             "baseline_mm": 1070.56
+          },
+          {
+            "doy": 243,
+            "cumulative_mm": 501.0,
+            "baseline_mm": 1076.11
           }
         ],
         "latest": {
-          "doy": 242,
-          "cumulative_mm": 498.8,
-          "baseline_mm": 1070.56
+          "doy": 243,
+          "cumulative_mm": 501.0,
+          "baseline_mm": 1076.11
         },
         "ratio_to_normal": 0.47,
         "status": "red"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 1761.9,
+        "total_gdd": 1767.2,
         "series": [
           {
             "date": "2026-01-01",
@@ -10393,7 +10416,11 @@
           },
           {
             "date": "2026-08-30",
-            "gdd_cumulative": 1761.9
+            "gdd_cumulative": 1761.8
+          },
+          {
+            "date": "2026-08-31",
+            "gdd_cumulative": 1767.2
           }
         ]
       },
@@ -12801,21 +12828,26 @@
           },
           {
             "doy": 242,
-            "cumulative_mm": 354.9,
+            "cumulative_mm": 355.5,
             "baseline_mm": 578.49
+          },
+          {
+            "doy": 243,
+            "cumulative_mm": 356.0,
+            "baseline_mm": 583.6
           }
         ],
         "latest": {
-          "doy": 242,
-          "cumulative_mm": 354.9,
-          "baseline_mm": 578.49
+          "doy": 243,
+          "cumulative_mm": 356.0,
+          "baseline_mm": 583.6
         },
         "ratio_to_normal": 0.61,
         "status": "yellow"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 1938.6,
+        "total_gdd": 1946.6,
         "series": [
           {
             "date": "2026-01-01",
@@ -13783,7 +13815,11 @@
           },
           {
             "date": "2026-08-30",
-            "gdd_cumulative": 1938.6
+            "gdd_cumulative": 1938.5
+          },
+          {
+            "date": "2026-08-31",
+            "gdd_cumulative": 1946.6
           }
         ]
       },
@@ -13801,7 +13837,7 @@
     }
   },
   "last_run": {
-    "ndvi": "2026-08-30T10:25:31.684134",
-    "weather": "2026-08-30T10:27:24.576125"
+    "ndvi": "2026-08-31T11:29:23.095849",
+    "weather": "2026-08-31T11:33:30.581819"
   }
 }
