@@ -222,11 +222,11 @@
     "current": {
       "phase": "Høsting (safra)",
       "color": "#f59e0b",
-      "month_in_phase": 5,
+      "month_in_phase": 6,
       "phase_length": 8
     },
-    "today_month": 8,
-    "today_fraction": 0.664,
+    "today_month": 9,
+    "today_fraction": 0.6667,
     "phases": [
       {
         "name": "Vekst (regnsesong)",
@@ -2282,21 +2282,26 @@
           },
           {
             "doy": 243,
-            "cumulative_mm": 784.6,
+            "cumulative_mm": 784.8,
+            "baseline_mm": 536.2
+          },
+          {
+            "doy": 244,
+            "cumulative_mm": 798.5,
             "baseline_mm": 536.2
           }
         ],
         "latest": {
-          "doy": 243,
-          "cumulative_mm": 784.6,
+          "doy": 244,
+          "cumulative_mm": 798.5,
           "baseline_mm": 536.2
         },
-        "ratio_to_normal": 1.46,
+        "ratio_to_normal": 1.49,
         "status": "green"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 1197.0,
+        "total_gdd": 1203.2,
         "series": [
           {
             "date": "2026-01-01",
@@ -3268,12 +3273,16 @@
           },
           {
             "date": "2026-08-31",
-            "gdd_cumulative": 1197.0
+            "gdd_cumulative": 1197.1
+          },
+          {
+            "date": "2026-09-01",
+            "gdd_cumulative": 1203.2
           }
         ]
       },
       "heat_stress": {
-        "hot_days": 1,
+        "hot_days": 0,
         "window_days": 30,
         "threshold_c": 35.0,
         "status": "green"
@@ -5681,21 +5690,26 @@
           },
           {
             "doy": 243,
-            "cumulative_mm": 816.6,
+            "cumulative_mm": 817.6,
             "baseline_mm": 560.51
+          },
+          {
+            "doy": 244,
+            "cumulative_mm": 835.2,
+            "baseline_mm": 562.66
           }
         ],
         "latest": {
-          "doy": 243,
-          "cumulative_mm": 816.6,
-          "baseline_mm": 560.51
+          "doy": 244,
+          "cumulative_mm": 835.2,
+          "baseline_mm": 562.66
         },
-        "ratio_to_normal": 1.46,
+        "ratio_to_normal": 1.48,
         "status": "green"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 1000.0,
+        "total_gdd": 1002.1,
         "series": [
           {
             "date": "2026-01-01",
@@ -6667,7 +6681,11 @@
           },
           {
             "date": "2026-08-31",
-            "gdd_cumulative": 1000.0
+            "gdd_cumulative": 1000.1
+          },
+          {
+            "date": "2026-09-01",
+            "gdd_cumulative": 1002.1
           }
         ]
       },
@@ -9082,19 +9100,24 @@
             "doy": 243,
             "cumulative_mm": 677.6,
             "baseline_mm": 459.25
+          },
+          {
+            "doy": 244,
+            "cumulative_mm": 678.5,
+            "baseline_mm": 459.28
           }
         ],
         "latest": {
-          "doy": 243,
-          "cumulative_mm": 677.6,
-          "baseline_mm": 459.25
+          "doy": 244,
+          "cumulative_mm": 678.5,
+          "baseline_mm": 459.28
         },
         "ratio_to_normal": 1.48,
         "status": "green"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 1632.9,
+        "total_gdd": 1643.6,
         "series": [
           {
             "date": "2026-01-01",
@@ -10066,12 +10089,16 @@
           },
           {
             "date": "2026-08-31",
-            "gdd_cumulative": 1632.9
+            "gdd_cumulative": 1632.6
+          },
+          {
+            "date": "2026-09-01",
+            "gdd_cumulative": 1643.6
           }
         ]
       },
       "heat_stress": {
-        "hot_days": 4,
+        "hot_days": 5,
         "window_days": 30,
         "threshold_c": 35.0,
         "status": "yellow"
@@ -10084,7 +10111,7 @@
     }
   },
   "last_run": {
-    "ndvi": "2026-08-31T11:28:46.990692",
-    "weather": "2026-08-31T11:28:49.556638"
+    "ndvi": "2026-09-01T09:51:23.438463",
+    "weather": "2026-09-01T09:51:28.008802"
   }
 }
