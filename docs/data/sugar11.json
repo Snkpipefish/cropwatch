@@ -1,5 +1,5 @@
 {
-  "built_utc": "2026-09-02T19:33:08+00:00",
+  "built_utc": "2026-09-02T22:54:18+00:00",
   "built_by": "cloud",
   "price": {
     "asof": "2026-09-02",
@@ -102,9 +102,9 @@
   "brl": {
     "asof": "2026-09-02",
     "source": "Yahoo",
-    "usdbrl": 5.1074,
-    "chg_5d_pct": -0.76,
-    "pct_3y": 26.0
+    "usdbrl": 5.0932,
+    "chg_5d_pct": -1.05,
+    "pct_3y": 24.8
   },
   "enso": {
     "asof": "2026-06-01",
@@ -282,7 +282,7 @@
     }
   },
   "pressure": {
-    "brl": 0,
+    "brl": -1,
     "ethanol": -1,
     "unica": 1,
     "india": -1,
