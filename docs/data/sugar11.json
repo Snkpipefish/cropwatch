@@ -1,10 +1,10 @@
 {
-  "built_utc": "2026-09-03T13:06:39+00:00",
+  "built_utc": "2026-09-03T19:29:53+00:00",
   "built_by": "cloud",
   "price": {
     "asof": "2026-09-03",
-    "close": 17.9,
-    "chg_5d_pct": -1.59,
+    "close": 17.99,
+    "chg_5d_pct": -1.1,
     "pct_1y": 98.8,
     "spark": [
       14.11,
@@ -96,27 +96,23 @@
       17.81,
       18.36,
       18.7,
-      17.9
+      17.99
     ]
   },
   "brl": {
     "asof": "2026-09-03",
     "source": "Yahoo",
-    "usdbrl": 5.0905,
-    "chg_5d_pct": -1.11,
-    "pct_3y": 24.6
+    "usdbrl": 5.1041,
+    "chg_5d_pct": -0.84,
+    "pct_3y": 25.7
   },
   "enso": {
-    "asof": "2026-06-01",
+    "asof": "2026-07-01",
     "state": "El Niño",
-    "strength": "moderat",
-    "oni": 1.39,
+    "strength": "sterk",
+    "oni": 1.8,
     "trend": "stigende",
     "series": [
-      {
-        "date": "2024-07-01",
-        "oni": 0.06
-      },
       {
         "date": "2024-08-01",
         "oni": -0.04
@@ -208,6 +204,10 @@
       {
         "date": "2026-06-01",
         "oni": 1.39
+      },
+      {
+        "date": "2026-07-01",
+        "oni": 1.8
       }
     ]
   },
@@ -282,7 +282,7 @@
     }
   },
   "pressure": {
-    "brl": -1,
+    "brl": 0,
     "ethanol": -1,
     "unica": 1,
     "india": -1,
