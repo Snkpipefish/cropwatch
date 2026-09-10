@@ -226,7 +226,7 @@
       "phase_length": 8
     },
     "today_month": 9,
-    "today_fraction": 0.6889,
+    "today_fraction": 0.6917,
     "phases": [
       {
         "name": "Vekst (regnsesong)",
@@ -2327,21 +2327,26 @@
           },
           {
             "doy": 252,
-            "cumulative_mm": 831.8,
+            "cumulative_mm": 831.6,
             "baseline_mm": 542.38
+          },
+          {
+            "doy": 253,
+            "cumulative_mm": 842.7,
+            "baseline_mm": 542.48
           }
         ],
         "latest": {
-          "doy": 252,
-          "cumulative_mm": 831.8,
-          "baseline_mm": 542.38
+          "doy": 253,
+          "cumulative_mm": 842.7,
+          "baseline_mm": 542.48
         },
-        "ratio_to_normal": 1.53,
+        "ratio_to_normal": 1.55,
         "status": "green"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 1229.7,
+        "total_gdd": 1236.1,
         "series": [
           {
             "date": "2026-01-01",
@@ -3349,7 +3354,11 @@
           },
           {
             "date": "2026-09-09",
-            "gdd_cumulative": 1229.7
+            "gdd_cumulative": 1229.9
+          },
+          {
+            "date": "2026-09-10",
+            "gdd_cumulative": 1236.1
           }
         ]
       },
@@ -3360,7 +3369,7 @@
         "status": "green"
       },
       "drought_stress": {
-        "longest_dry_streak": 15,
+        "longest_dry_streak": 14,
         "window_days": 30,
         "status": "yellow"
       }
@@ -5807,21 +5816,26 @@
           },
           {
             "doy": 252,
-            "cumulative_mm": 860.2,
+            "cumulative_mm": 853.4,
             "baseline_mm": 566.45
+          },
+          {
+            "doy": 253,
+            "cumulative_mm": 865.9,
+            "baseline_mm": 566.62
           }
         ],
         "latest": {
-          "doy": 252,
-          "cumulative_mm": 860.2,
-          "baseline_mm": 566.45
+          "doy": 253,
+          "cumulative_mm": 865.9,
+          "baseline_mm": 566.62
         },
-        "ratio_to_normal": 1.52,
+        "ratio_to_normal": 1.53,
         "status": "green"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 1016.7,
+        "total_gdd": 1022.2,
         "series": [
           {
             "date": "2026-01-01",
@@ -6829,7 +6843,11 @@
           },
           {
             "date": "2026-09-09",
-            "gdd_cumulative": 1016.7
+            "gdd_cumulative": 1018.1
+          },
+          {
+            "date": "2026-09-10",
+            "gdd_cumulative": 1022.2
           }
         ]
       },
@@ -6840,7 +6858,7 @@
         "status": "green"
       },
       "drought_stress": {
-        "longest_dry_streak": 15,
+        "longest_dry_streak": 14,
         "window_days": 30,
         "status": "yellow"
       }
@@ -9287,21 +9305,26 @@
           },
           {
             "doy": 252,
-            "cumulative_mm": 692.9,
+            "cumulative_mm": 701.2,
             "baseline_mm": 460.26
+          },
+          {
+            "doy": 253,
+            "cumulative_mm": 704.1,
+            "baseline_mm": 460.29
           }
         ],
         "latest": {
-          "doy": 252,
-          "cumulative_mm": 692.9,
-          "baseline_mm": 460.26
+          "doy": 253,
+          "cumulative_mm": 704.1,
+          "baseline_mm": 460.29
         },
-        "ratio_to_normal": 1.51,
+        "ratio_to_normal": 1.53,
         "status": "green"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 1707.6,
+        "total_gdd": 1715.4,
         "series": [
           {
             "date": "2026-01-01",
@@ -10309,7 +10332,11 @@
           },
           {
             "date": "2026-09-09",
-            "gdd_cumulative": 1707.6
+            "gdd_cumulative": 1706.5
+          },
+          {
+            "date": "2026-09-10",
+            "gdd_cumulative": 1715.4
           }
         ]
       },
@@ -10320,14 +10347,14 @@
         "status": "yellow"
       },
       "drought_stress": {
-        "longest_dry_streak": 22,
+        "longest_dry_streak": 21,
         "window_days": 30,
         "status": "red"
       }
     }
   },
   "last_run": {
-    "ndvi": "2026-09-09T09:29:11.290355",
-    "weather": "2026-09-09T09:29:14.918122"
+    "ndvi": "2026-09-10T09:28:03.909915",
+    "weather": "2026-09-10T09:28:06.200189"
   }
 }
