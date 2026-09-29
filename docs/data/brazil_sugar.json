@@ -226,7 +226,7 @@
       "phase_length": 8
     },
     "today_month": 9,
-    "today_fraction": 0.7417,
+    "today_fraction": 0.7444,
     "phases": [
       {
         "name": "Vekst (regnsesong)",
@@ -2434,21 +2434,26 @@
           },
           {
             "doy": 271,
-            "cumulative_mm": 886.9,
+            "cumulative_mm": 887.4,
             "baseline_mm": 583.06
+          },
+          {
+            "doy": 272,
+            "cumulative_mm": 899.5,
+            "baseline_mm": 583.66
           }
         ],
         "latest": {
-          "doy": 271,
-          "cumulative_mm": 886.9,
-          "baseline_mm": 583.06
+          "doy": 272,
+          "cumulative_mm": 899.5,
+          "baseline_mm": 583.66
         },
-        "ratio_to_normal": 1.52,
+        "ratio_to_normal": 1.54,
         "status": "green"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 1341.9,
+        "total_gdd": 1353.6,
         "series": [
           {
             "date": "2026-01-01",
@@ -3532,15 +3537,19 @@
           },
           {
             "date": "2026-09-28",
-            "gdd_cumulative": 1341.9
+            "gdd_cumulative": 1341.4
+          },
+          {
+            "date": "2026-09-29",
+            "gdd_cumulative": 1353.6
           }
         ]
       },
       "heat_stress": {
-        "hot_days": 2,
+        "hot_days": 3,
         "window_days": 30,
         "threshold_c": 35.0,
-        "status": "green"
+        "status": "yellow"
       },
       "drought_stress": {
         "longest_dry_streak": 6,
@@ -6097,21 +6106,26 @@
           },
           {
             "doy": 271,
-            "cumulative_mm": 969.8,
+            "cumulative_mm": 974.4,
             "baseline_mm": 592.73
+          },
+          {
+            "doy": 272,
+            "cumulative_mm": 976.9,
+            "baseline_mm": 592.8
           }
         ],
         "latest": {
-          "doy": 271,
-          "cumulative_mm": 969.8,
-          "baseline_mm": 592.73
+          "doy": 272,
+          "cumulative_mm": 976.9,
+          "baseline_mm": 592.8
         },
-        "ratio_to_normal": 1.64,
+        "ratio_to_normal": 1.65,
         "status": "green"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 1079.0,
+        "total_gdd": 1088.7,
         "series": [
           {
             "date": "2026-01-01",
@@ -7195,7 +7209,11 @@
           },
           {
             "date": "2026-09-28",
-            "gdd_cumulative": 1079.0
+            "gdd_cumulative": 1079.5
+          },
+          {
+            "date": "2026-09-29",
+            "gdd_cumulative": 1088.7
           }
         ]
       },
@@ -7206,7 +7224,7 @@
         "status": "green"
       },
       "drought_stress": {
-        "longest_dry_streak": 5,
+        "longest_dry_streak": 4,
         "window_days": 30,
         "status": "green"
       }
@@ -9762,19 +9780,24 @@
             "doy": 271,
             "cumulative_mm": 715.7,
             "baseline_mm": 474.21
+          },
+          {
+            "doy": 272,
+            "cumulative_mm": 715.7,
+            "baseline_mm": 474.93
           }
         ],
         "latest": {
-          "doy": 271,
+          "doy": 272,
           "cumulative_mm": 715.7,
-          "baseline_mm": 474.21
+          "baseline_mm": 474.93
         },
         "ratio_to_normal": 1.51,
         "status": "green"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 1897.6,
+        "total_gdd": 1909.9,
         "series": [
           {
             "date": "2026-01-01",
@@ -10858,7 +10881,11 @@
           },
           {
             "date": "2026-09-28",
-            "gdd_cumulative": 1897.6
+            "gdd_cumulative": 1897.2
+          },
+          {
+            "date": "2026-09-29",
+            "gdd_cumulative": 1909.9
           }
         ]
       },
@@ -10876,7 +10903,7 @@
     }
   },
   "last_run": {
-    "ndvi": "2026-09-28T11:34:03.591752",
-    "weather": "2026-09-28T11:34:05.451596"
+    "ndvi": "2026-09-29T11:13:08.864634",
+    "weather": "2026-09-29T11:13:12.839511"
   }
 }
