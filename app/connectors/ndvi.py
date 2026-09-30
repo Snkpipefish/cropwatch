@@ -203,7 +203,7 @@ class NasaViirsNdvi(NdviConnector):
     earliest = date(2018, 1, 1)  # NOAA-20 startet å levere 2018-01-01
     # Øk denne når tolkningen av dataene endres (f.eks. filtrering), så
     # historikken hentes på nytt med den nye tolkningen.
-    history_version = 2
+    history_version = 3
 
     BASE_URL = "https://appeears.earthdatacloud.nasa.gov/api"
     # Bare NOAA-20. NOAA-21 (VJ213A1.002) kan legges til som reserve, men
@@ -212,12 +212,14 @@ class NasaViirsNdvi(NdviConnector):
     LAYER_NDVI = "500_m_16_days_NDVI"
     LAYER_RELIABILITY = "500_m_16_days_pixel_reliability"
     SCALE = 0.0001
-    # Piksel-pålitelighet: 0 = god, 1 = brukbar, 2 = snø/is, 3 = skyet, <0 = mangler.
-    # Vi beholder alt som ikke mangler: i regntida er nesten alle kompositter
-    # flagget "skyet", og filtrerte vi dem bort, ble vekstsesongen helt tom
-    # (slik MODIS-connectoren heller ikke filtrerte). Komposittet er uansett
-    # den beste pikselen i vinduet.
-    MAX_RELIABILITY = 3
+    # Piksel-pålitelighet (rang) i VIIRS v002 går 0–11: 0 utmerket, 1 god,
+    # 2 akseptabel, 3 marginal, 4 godkjent, 5 tvilsom, 6 dårlig, 7 skyskygge,
+    # 8 snø/is, 9 sky, 10 estimert, 11 langtidssnitt; negativt = mangler.
+    # Vi filtrerer IKKE på rang (samme som MODIS-connectoren gjorde): i
+    # monsunen er nesten alle kompositter rang 4–9, og et filter tømte hele
+    # vekstsesongen for Thailand og India. Komposittet er uansett den beste
+    # pikselen i vinduet. Bare manglende verdier (fyll) hoppes over.
+    MAX_RELIABILITY = 11
     ENV_USER = "EARTHDATA_USER"
     ENV_PASS = "EARTHDATA_PASS"
 
@@ -332,7 +334,8 @@ class NasaViirsNdvi(NdviConnector):
         """Gjør AppEEARS-CSV om til observasjoner per punkt-id.
 
         Kolonnene heter f.eks. "VJ113A1_002_500_m_16_days_NDVI". Verdiene er
-        ferdig skalert (-1..1); fyll-verdi vises som -1.5 (rå -15000).
+        ferdig skalert (-1..1); fyll-verdi vises som -1.3 over land og -1.5
+        over vann (rå -13000/-15000) og faller utenfor gyldig område.
         """
         reader = csv.DictReader(io.StringIO(csv_text))
         fields = reader.fieldnames or []
