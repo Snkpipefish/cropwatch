@@ -47,6 +47,43 @@ def _start_date(region_id: str, area_id: str, existing_dates: list[date]) -> dat
 _LEGACY_NDVI_SOURCE = "nasa_modis@1"
 
 
+def _fetch_ndvi_points(region: Region, connector, points, start: date):
+    """Henter NDVI for alle punktene – og tåler at kilden jobber asynkront.
+
+    Kilder med `submit`/`collect` (AppEEARS) får oppgave-id-en lagret i
+    databasen. Rakk ikke oppgaven å bli ferdig, returneres None, og neste
+    kjøring fortsetter å vente på den samme oppgaven i stedet for å starte
+    forfra. Andre kilder hentes rett fram med `fetch_many`.
+    """
+    if not (hasattr(connector, "submit") and hasattr(connector, "collect")):
+        return connector.fetch_many(points, start, date.today())
+
+    pending = db.get_meta(region.id, "ndvi_pending_task") or ""
+    task_id, _, pending_key = pending.partition("|")
+    if task_id and pending_key == connector.history_key:
+        log.info("Fortsetter å vente på AppEEARS-oppgave %s for %s", task_id, region.id)
+        try:
+            results = connector.collect(task_id)
+        except Exception as e:  # noqa: BLE001
+            log.warning("Ventende oppgave %s kunne ikke hentes (%s) – sender inn på nytt",
+                        task_id, e)
+            results = None
+            task_id = ""
+        else:
+            if results is None:
+                return None  # fortsatt i kø – behold id-en
+            db.set_meta(region.id, "ndvi_pending_task", "")
+            return results
+
+    task_id = connector.submit(points, start, date.today())
+    db.set_meta(region.id, "ndvi_pending_task", f"{task_id}|{connector.history_key}")
+    results = connector.collect(task_id)
+    if results is None:
+        return None
+    db.set_meta(region.id, "ndvi_pending_task", "")
+    return results
+
+
 def refresh_ndvi(region: Region) -> int:
     connector = get_ndvi_connector(region.sources["ndvi"])
     problem = connector.ready()
@@ -73,10 +110,12 @@ def refresh_ndvi(region: Region) -> int:
 
     points = [(a.id, a.lat, a.lon) for a in region.areas]
     try:
-        results = connector.fetch_many(points, start, date.today())
+        results = _fetch_ndvi_points(region, connector, points, start)
     except Exception:
         log.exception("NDVI-henting feilet for %s – beholder eksisterende data", region.id)
         return 0
+    if results is None:
+        return 0  # oppgaven jobber fortsatt hos NASA – vi prøver igjen neste gang
 
     total = 0
     complete = True

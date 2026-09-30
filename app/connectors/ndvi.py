@@ -261,21 +261,50 @@ class NasaViirsNdvi(NdviConnector):
     ) -> dict[str, list[NdviObservation]]:
         if not points:
             return {}
+        task_id = self.submit(points, start, end)
+        results = self.collect(task_id)
+        if results is None:
+            raise TimeoutError(f"AppEEARS-oppgave {task_id} ble ikke ferdig innen "
+                               f"{int(self._max_wait)} s")
+        return results
+
+    # NASA sin kø kan være treg (30–60+ min per oppgave). Derfor kan appen sende
+    # inn en oppgave, huske oppgave-id-en, og hente resultatet ved en SENERE
+    # kjøring hvis den ikke rakk å bli ferdig. Tjenestelaget lagrer id-en.
+
+    def submit(self, points: list[tuple[str, float, float]], start: date, end: date) -> str:
+        """Sender inn en oppgave hos NASA og returnerer oppgave-id-en."""
         start = max(start, self.earliest)
+        with httpx.Client(timeout=self._timeout) as client:
+            headers = {"Authorization": f"Bearer {self._login(client)}"}
+            return self._submit(client, headers, points, start, end)
+
+    def collect(self, task_id: str) -> dict[str, list[NdviObservation]] | None:
+        """Venter (opptil max_wait) på oppgaven og henter resultatet.
+
+        Returnerer None hvis oppgaven fortsatt jobber når tiden er ute – da
+        lever den videre hos NASA og kan hentes ved neste kjøring. Feiler
+        oppgaven, eller finnes den ikke lenger, kastes en feil (og den bør
+        sendes inn på nytt).
+        """
         with httpx.Client(timeout=self._timeout, follow_redirects=True) as client:
-            token = self._login(client)
-            headers = {"Authorization": f"Bearer {token}"}
-            task_id = self._submit(client, headers, points, start, end)
+            headers = {"Authorization": f"Bearer {self._login(client)}"}
+            if not self._wait(client, headers, task_id):
+                log.warning("AppEEARS-oppgave %s er ikke ferdig ennå – prøver igjen neste kjøring",
+                            task_id)
+                return None
             try:
-                self._wait(client, headers, task_id)
                 csv_text = self._download_csv(client, headers, task_id)
             finally:
-                # Rydd opp hos NASA – best effort, feil her er uviktig.
-                try:
-                    client.delete(f"{self.BASE_URL}/task/{task_id}", headers=headers)
-                except Exception:  # noqa: BLE001
-                    pass
+                self._delete(client, headers, task_id)
         return self.parse_csv(csv_text)
+
+    def _delete(self, client, headers, task_id: str) -> None:
+        # Rydd opp hos NASA – best effort, feil her er uviktig.
+        try:
+            client.delete(f"{self.BASE_URL}/task/{task_id}", headers=headers)
+        except Exception:  # noqa: BLE001
+            pass
 
     def _submit(self, client, headers, points, start: date, end: date) -> str:
         layers = []
@@ -302,18 +331,25 @@ class NasaViirsNdvi(NdviConnector):
         log.info("AppEEARS-oppgave %s sendt (%d punkter, %s–%s)", task_id, len(points), start, end)
         return task_id
 
-    def _wait(self, client, headers, task_id: str) -> None:
+    def _wait(self, client, headers, task_id: str) -> bool:
+        """Sant når oppgaven er ferdig, usant hvis tiden gikk ut. Feil → unntak."""
         deadline = time.monotonic() + self._max_wait
         while True:
-            r = _get_with_retry(client, f"{self.BASE_URL}/task/{task_id}", {}, headers=headers)
+            r = client.get(f"{self.BASE_URL}/task/{task_id}", headers=headers)
+            if r.status_code == 404:
+                raise RuntimeError(f"AppEEARS-oppgave {task_id} finnes ikke (lenger) hos NASA")
+            if r.status_code >= 500 or r.status_code == 429:
+                time.sleep(self._poll)  # kortvarig blipp hos NASA – prøv igjen
+                continue
+            r.raise_for_status()
             status = r.json().get("status")
             if status == "done":
-                return
+                return True
             if status == "error":
+                self._delete(client, headers, task_id)
                 raise RuntimeError(f"AppEEARS-oppgave {task_id} feilet hos NASA")
             if time.monotonic() > deadline:
-                raise TimeoutError(f"AppEEARS-oppgave {task_id} ble ikke ferdig innen "
-                                   f"{int(self._max_wait)} s (status: {status})")
+                return False
             time.sleep(self._poll)
 
     def _download_csv(self, client, headers, task_id: str) -> str:
