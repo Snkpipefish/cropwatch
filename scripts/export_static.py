@@ -14,9 +14,11 @@ Kjør lokalt med:   python scripts/export_static.py
 from __future__ import annotations
 
 import json
+import logging
 import os
 import shutil
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from datetime import date
 from pathlib import Path
 
@@ -77,14 +79,38 @@ def main() -> None:
     regions = load_regions()
     print(f"Fant {len(regions)} region(er): {', '.join(regions)}")
 
+    # Vis fremdrift fra connectorene (NASA-oppgave sendt, ferdig, osv.) i loggen.
+    logging.basicConfig(level=logging.INFO,
+                        format="%(asctime)s %(levelname)s %(name)s: %(message)s")
+    logging.getLogger("httpx").setLevel(logging.WARNING)
+
     # 1) Hent ferske data for hver region. Databasen følger med i repoet, så
     #    dette henter bare det nye siden sist – ikke hele historikken på nytt.
     #    En region som svikter (f.eks. nettverksblipp) stopper ikke de andre –
     #    da brukes den eksisterende historikken, og siden oppdateres likevel.
+    #
+    #    NDVI hentes for alle regioner SAMTIDIG: hver region er én oppgave i kø
+    #    hos NASA (AppEEARS) som gjerne tar 10–40 min, så etter hverandre ville
+    #    det tatt timer. Hver region har sin egen databasefil, så det er trygt.
     for region_id in regions:
-        print(f"Henter data for {region_id} ...")
+        _engine(region_id)  # opprett databasekoblingene før trådene starter
+
+    def _refresh_ndvi(region_id: str) -> str:
         try:
-            counts = service.refresh_region(region_id)
+            return f"hentet {service.refresh_region(region_id, 'ndvi')}"
+        except Exception as e:  # noqa: BLE001
+            return f"ADVARSEL: NDVI-henting feilet: {e}"
+
+    print("Henter NDVI for alle regioner samtidig ...")
+    with ThreadPoolExecutor(max_workers=len(regions)) as pool:
+        for region_id, outcome in zip(regions, pool.map(_refresh_ndvi, regions)):
+            print(f"  {region_id}: {outcome}")
+
+    # Vær hentes etter tur – Open-Meteo har en grense per IP.
+    for region_id in regions:
+        print(f"Henter vær for {region_id} ...")
+        try:
+            counts = service.refresh_region(region_id, "weather")
             print(f"  hentet {counts}")
         except Exception as e:
             print(f"  ADVARSEL: henting feilet for {region_id}: {e}")

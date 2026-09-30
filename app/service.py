@@ -44,7 +44,7 @@ def _start_date(region_id: str, area_id: str, existing_dates: list[date]) -> dat
 
 # Den eneste NDVI-kilden som fantes før meta-tabellen kom. Databaser uten
 # "ndvi_source" har derfor MODIS-historikk.
-_LEGACY_NDVI_SOURCE = "nasa_modis"
+_LEGACY_NDVI_SOURCE = "nasa_modis@1"
 
 
 def refresh_ndvi(region: Region) -> int:
@@ -59,10 +59,10 @@ def refresh_ndvi(region: Region) -> int:
     # på nytt fra den nye kilden og erstatte den gamle (ulike sensorer gir
     # litt ulike tall, og normalen må bygges på én kilde).
     stored_source = db.get_meta(region.id, "ndvi_source") or _LEGACY_NDVI_SOURCE
-    switching = stored_source != connector.name
+    switching = stored_source != connector.history_key
     if switching:
         log.info("NDVI-kilde for %s byttes %s -> %s: henter %d års historikk på nytt",
-                 region.id, stored_source, connector.name, HISTORY_YEARS)
+                 region.id, stored_source, connector.history_key, HISTORY_YEARS)
         start = date.today() - timedelta(days=365 * HISTORY_YEARS)
     else:
         starts = []
@@ -91,7 +91,7 @@ def refresh_ndvi(region: Region) -> int:
         else:
             total += db.save_ndvi(region.id, area.id, obs)
     if switching and complete:
-        db.set_meta(region.id, "ndvi_source", connector.name)
+        db.set_meta(region.id, "ndvi_source", connector.history_key)
     db.record_fetch(region.id, "ndvi")
     return total
 

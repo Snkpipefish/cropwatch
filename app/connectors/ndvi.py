@@ -4,7 +4,8 @@ Standard kilde (fra 2026-09-30): NASA VIIRS på NOAA-20 via AppEEARS
 (`nasa_viirs`). Produkt VJ113A1 v002, 500 m, 16-dagers komposit, løpende fra
 2018. Krever en gratis Earthdata-konto: brukernavn og passord leses fra
 miljøvariablene EARTHDATA_USER og EARTHDATA_PASS (GitHub-secrets i Actions).
-NOAA-21 (VJ213A1) hentes samtidig som reserve hvis NOAA-20 mangler en dato.
+Produktet lages hver 8. dag (to overlappende 16-dagersvinduer), så vi får en
+ny verdi ~hver 8. dag – samme takt som Terra+Aqua ga.
 
 Gammel kilde: NASA MODIS via ORNL DAAC (`nasa_modis`, ingen nøkkel).
 Terra (MOD13Q1) + Aqua (MYD13Q1). Aqua sluttet å levere i august 2026 og
@@ -55,6 +56,13 @@ class NdviConnector:
     name: str = "base"
     # Typisk hvor ofte kilden gir en ny verdi (brukes av scheduleren).
     cadence_days: int = 16
+    # Versjon av tolkningen; endres den, hentes historikken på nytt.
+    history_version: int = 1
+
+    @property
+    def history_key(self) -> str:
+        """Identifiserer kilde+tolkning som historikken i databasen er bygget på."""
+        return f"{self.name}@{self.history_version}"
     # Første dato kilden har data for (brukes når historikk hentes på nytt).
     earliest: date = date(2000, 2, 18)
 
@@ -191,21 +199,29 @@ class NasaViirsNdvi(NdviConnector):
     """
 
     name = "nasa_viirs"
-    cadence_days = 16
+    cadence_days = 8
     earliest = date(2018, 1, 1)  # NOAA-20 startet å levere 2018-01-01
+    # Øk denne når tolkningen av dataene endres (f.eks. filtrering), så
+    # historikken hentes på nytt med den nye tolkningen.
+    history_version = 2
 
     BASE_URL = "https://appeears.earthdatacloud.nasa.gov/api"
-    # Rekkefølgen betyr noe: første produkt vinner der begge har en dato.
-    PRODUCTS = ("VJ113A1.002", "VJ213A1.002")
+    # Bare NOAA-20. NOAA-21 (VJ213A1.002) kan legges til som reserve, men
+    # dobler behandlingstiden hos NASA (første henting tok ~30 min per region).
+    PRODUCTS = ("VJ113A1.002",)
     LAYER_NDVI = "500_m_16_days_NDVI"
     LAYER_RELIABILITY = "500_m_16_days_pixel_reliability"
     SCALE = 0.0001
-    # Piksel-pålitelighet: 0 = god, 1 = brukbar, 2 = snø/is, 3 = skyet.
-    MAX_RELIABILITY = 1
+    # Piksel-pålitelighet: 0 = god, 1 = brukbar, 2 = snø/is, 3 = skyet, <0 = mangler.
+    # Vi beholder alt som ikke mangler: i regntida er nesten alle kompositter
+    # flagget "skyet", og filtrerte vi dem bort, ble vekstsesongen helt tom
+    # (slik MODIS-connectoren heller ikke filtrerte). Komposittet er uansett
+    # den beste pikselen i vinduet.
+    MAX_RELIABILITY = 3
     ENV_USER = "EARTHDATA_USER"
     ENV_PASS = "EARTHDATA_PASS"
 
-    def __init__(self, timeout_s: float = 120.0, poll_s: float = 20.0, max_wait_s: float = 1800.0):
+    def __init__(self, timeout_s: float = 120.0, poll_s: float = 30.0, max_wait_s: float = 3600.0):
         self._timeout = timeout_s
         self._poll = poll_s
         self._max_wait = max_wait_s
