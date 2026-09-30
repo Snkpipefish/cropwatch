@@ -39,9 +39,9 @@ def _write(path: Path, payload) -> None:
     print(f"  skrev {path.relative_to(ROOT)}")
 
 
-# Hvor gamle data kan være før vi roper varsku. NDVI kommer ~hver 8. dag
-# (Terra+Aqua flettet) pluss noen dagers prosessering hos NASA; vær kommer daglig.
-STALE_NDVI_DAYS = 20
+# Hvor gamle data kan være før vi roper varsku. NDVI (VIIRS) kommer hver 16.
+# dag pluss ~2 ukers prosessering hos NASA; vær kommer daglig.
+STALE_NDVI_DAYS = 35
 STALE_WEATHER_DAYS = 4
 
 

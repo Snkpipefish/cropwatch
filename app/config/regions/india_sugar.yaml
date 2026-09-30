@@ -8,7 +8,7 @@ name: "India – sukkerrør"
 commodity: "sukker"
 
 sources:
-  ndvi: nasa_modis
+  ndvi: nasa_viirs      # vegetasjonshelse (NOAA-20 VIIRS), ny verdi hver 16. dag
   weather: open_meteo
 
 growing:

@@ -1,9 +1,15 @@
 """NDVI-connector (vegetasjonshelse).
 
-Standard kilde: NASA MODIS via ORNL DAAC sin gratis REST-tjeneste (ingen nøkkel).
-Produkter MOD13Q1 (Terra) + MYD13Q1 (Aqua), begge 250 m og 16-dagers, men
-forskjøvet 8 dager fra hverandre – flettet gir de en ny verdi ~hver 8. dag,
-og appen tåler at én av satellittene faller fra (Terra er nær pensjon).
+Standard kilde (fra 2026-09-30): NASA VIIRS på NOAA-20 via AppEEARS
+(`nasa_viirs`). Produkt VJ113A1 v002, 500 m, 16-dagers komposit, løpende fra
+2018. Krever en gratis Earthdata-konto: brukernavn og passord leses fra
+miljøvariablene EARTHDATA_USER og EARTHDATA_PASS (GitHub-secrets i Actions).
+NOAA-21 (VJ213A1) hentes samtidig som reserve hvis NOAA-20 mangler en dato.
+
+Gammel kilde: NASA MODIS via ORNL DAAC (`nasa_modis`, ingen nøkkel).
+Terra (MOD13Q1) + Aqua (MYD13Q1). Aqua sluttet å levere i august 2026 og
+Terra er på slutten av levetiden, så MODIS-serien stopper 2026-08-13.
+Klassen beholdes for historikk/testing, men brukes ikke lenger av regionene.
 
 BYTTE KILDE SENERE:
   Vil du bruke Agromonitoring eller NASA Earthdata i stedet, lag en ny klasse
@@ -13,18 +19,26 @@ BYTTE KILDE SENERE:
 """
 from __future__ import annotations
 
+import csv
+import io
+import logging
+import os
 import time
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 
 import httpx
 
+log = logging.getLogger("cropwatch.ndvi")
 
-def _get_with_retry(client: httpx.Client, url: str, params: dict, attempts: int = 4):
-    """GET med noen gjenforsøk – MODIS-tjenesten har av og til korte blipp."""
+
+def _get_with_retry(client: httpx.Client, url: str, params: dict, attempts: int = 4,
+                    headers: dict | None = None):
+    """GET med noen gjenforsøk – NASA-tjenestene har av og til korte blipp."""
     last_error: Exception | None = None
     for i in range(attempts):
         try:
-            r = client.get(url, params=params, headers={"Accept": "application/json"})
+            r = client.get(url, params=params,
+                           headers={"Accept": "application/json", **(headers or {})})
             r.raise_for_status()
             return r
         except (httpx.HTTPError, httpx.TransportError) as e:
@@ -41,9 +55,32 @@ class NdviConnector:
     name: str = "base"
     # Typisk hvor ofte kilden gir en ny verdi (brukes av scheduleren).
     cadence_days: int = 16
+    # Første dato kilden har data for (brukes når historikk hentes på nytt).
+    earliest: date = date(2000, 2, 18)
+
+    def ready(self) -> str | None:
+        """None hvis kilden kan brukes nå, ellers en kort forklaring (f.eks.
+        manglende nøkkel). Da hopper appen over henting og beholder det den har."""
+        return None
 
     def fetch(self, lat: float, lon: float, start: date, end: date) -> list[NdviObservation]:
         raise NotImplementedError
+
+    def fetch_many(
+        self, points: list[tuple[str, float, float]], start: date, end: date
+    ) -> dict[str, list[NdviObservation]]:
+        """Henter flere punkter (id, lat, lon) på én gang.
+
+        Standard: ett kall per punkt, og ett punkt som feiler stopper ikke de
+        andre. Kilder som kan hente alt i én forespørsel overstyrer denne.
+        """
+        out: dict[str, list[NdviObservation]] = {}
+        for point_id, lat, lon in points:
+            try:
+                out[point_id] = self.fetch(lat, lon, start, end)
+            except Exception:  # noqa: BLE001
+                log.exception("NDVI-henting feilet for %s – hopper over", point_id)
+        return out
 
 
 class NasaModisNdvi(NdviConnector):
@@ -144,8 +181,203 @@ class NasaModisNdvi(NdviConnector):
         return out
 
 
+class NasaViirsNdvi(NdviConnector):
+    """NDVI fra VIIRS (NOAA-20, reserve NOAA-21) via NASA sin AppEEARS-tjeneste.
+
+    AppEEARS jobber asynkront: vi sender inn en "oppgave" med alle punktene i
+    regionen og hele tidsrommet, venter til den er ferdig (typisk 1–5 min), og
+    laster ned én CSV-fil med alle verdiene. Derfor hentes en hel region i ett
+    kall (`fetch_many`) i stedet for punkt for punkt.
+    """
+
+    name = "nasa_viirs"
+    cadence_days = 16
+    earliest = date(2018, 1, 1)  # NOAA-20 startet å levere 2018-01-01
+
+    BASE_URL = "https://appeears.earthdatacloud.nasa.gov/api"
+    # Rekkefølgen betyr noe: første produkt vinner der begge har en dato.
+    PRODUCTS = ("VJ113A1.002", "VJ213A1.002")
+    LAYER_NDVI = "500_m_16_days_NDVI"
+    LAYER_RELIABILITY = "500_m_16_days_pixel_reliability"
+    SCALE = 0.0001
+    # Piksel-pålitelighet: 0 = god, 1 = brukbar, 2 = snø/is, 3 = skyet.
+    MAX_RELIABILITY = 1
+    ENV_USER = "EARTHDATA_USER"
+    ENV_PASS = "EARTHDATA_PASS"
+
+    def __init__(self, timeout_s: float = 120.0, poll_s: float = 20.0, max_wait_s: float = 1800.0):
+        self._timeout = timeout_s
+        self._poll = poll_s
+        self._max_wait = max_wait_s
+
+    # -- oppsett ------------------------------------------------------------
+
+    def _credentials(self) -> tuple[str, str] | None:
+        user = os.environ.get(self.ENV_USER, "").strip()
+        password = os.environ.get(self.ENV_PASS, "").strip()
+        if user and password:
+            return user, password
+        return None
+
+    def ready(self) -> str | None:
+        if self._credentials() is None:
+            return (f"mangler Earthdata-innlogging (sett miljøvariablene "
+                    f"{self.ENV_USER} og {self.ENV_PASS})")
+        return None
+
+    def _login(self, client: httpx.Client) -> str:
+        creds = self._credentials()
+        if creds is None:
+            raise RuntimeError(self.ready())
+        r = client.post(f"{self.BASE_URL}/login", auth=creds)
+        r.raise_for_status()
+        return r.json()["token"]
+
+    # -- henting ------------------------------------------------------------
+
+    def fetch(self, lat: float, lon: float, start: date, end: date) -> list[NdviObservation]:
+        return self.fetch_many([("p", lat, lon)], start, end).get("p", [])
+
+    def fetch_many(
+        self, points: list[tuple[str, float, float]], start: date, end: date
+    ) -> dict[str, list[NdviObservation]]:
+        if not points:
+            return {}
+        start = max(start, self.earliest)
+        with httpx.Client(timeout=self._timeout, follow_redirects=True) as client:
+            token = self._login(client)
+            headers = {"Authorization": f"Bearer {token}"}
+            task_id = self._submit(client, headers, points, start, end)
+            try:
+                self._wait(client, headers, task_id)
+                csv_text = self._download_csv(client, headers, task_id)
+            finally:
+                # Rydd opp hos NASA – best effort, feil her er uviktig.
+                try:
+                    client.delete(f"{self.BASE_URL}/task/{task_id}", headers=headers)
+                except Exception:  # noqa: BLE001
+                    pass
+        return self.parse_csv(csv_text)
+
+    def _submit(self, client, headers, points, start: date, end: date) -> str:
+        layers = []
+        for product in self.PRODUCTS:
+            layers.append({"product": product, "layer": self.LAYER_NDVI})
+            layers.append({"product": product, "layer": self.LAYER_RELIABILITY})
+        body = {
+            "task_type": "point",
+            "task_name": f"cropwatch_{datetime.utcnow():%Y%m%d_%H%M%S}",
+            "params": {
+                "dates": [{"startDate": start.strftime("%m-%d-%Y"),
+                           "endDate": end.strftime("%m-%d-%Y")}],
+                "layers": layers,
+                "coordinates": [
+                    {"id": pid, "category": pid, "latitude": lat, "longitude": lon}
+                    for pid, lat, lon in points
+                ],
+            },
+        }
+        r = client.post(f"{self.BASE_URL}/task", json=body, headers=headers)
+        if r.status_code >= 400:
+            raise RuntimeError(f"AppEEARS avviste oppgaven ({r.status_code}): {r.text[:300]}")
+        task_id = r.json()["task_id"]
+        log.info("AppEEARS-oppgave %s sendt (%d punkter, %s–%s)", task_id, len(points), start, end)
+        return task_id
+
+    def _wait(self, client, headers, task_id: str) -> None:
+        deadline = time.monotonic() + self._max_wait
+        while True:
+            r = _get_with_retry(client, f"{self.BASE_URL}/task/{task_id}", {}, headers=headers)
+            status = r.json().get("status")
+            if status == "done":
+                return
+            if status == "error":
+                raise RuntimeError(f"AppEEARS-oppgave {task_id} feilet hos NASA")
+            if time.monotonic() > deadline:
+                raise TimeoutError(f"AppEEARS-oppgave {task_id} ble ikke ferdig innen "
+                                   f"{int(self._max_wait)} s (status: {status})")
+            time.sleep(self._poll)
+
+    def _download_csv(self, client, headers, task_id: str) -> str:
+        r = _get_with_retry(client, f"{self.BASE_URL}/bundle/{task_id}", {}, headers=headers)
+        files = [f for f in r.json().get("files", []) if f.get("file_type") == "csv"]
+        # Resultatfilen heter "<oppgavenavn>-results.csv"; hopp over granule-lista.
+        files.sort(key=lambda f: ("results" not in f.get("file_name", ""), f.get("file_name", "")))
+        if not files:
+            raise RuntimeError(f"AppEEARS-oppgave {task_id} ga ingen CSV-fil")
+        r = _get_with_retry(
+            client, f"{self.BASE_URL}/bundle/{task_id}/{files[0]['file_id']}", {},
+            headers=headers)
+        return r.text
+
+    # -- tolkning -----------------------------------------------------------
+
+    def parse_csv(self, csv_text: str) -> dict[str, list[NdviObservation]]:
+        """Gjør AppEEARS-CSV om til observasjoner per punkt-id.
+
+        Kolonnene heter f.eks. "VJ113A1_002_500_m_16_days_NDVI". Verdiene er
+        ferdig skalert (-1..1); fyll-verdi vises som -1.5 (rå -15000).
+        """
+        reader = csv.DictReader(io.StringIO(csv_text))
+        fields = reader.fieldnames or []
+        if not fields:
+            return {}
+        log.info("AppEEARS-CSV kolonner: %s", ", ".join(fields))
+
+        def _col(product: str, layer: str) -> str | None:
+            prefix = product.replace(".", "_")
+            for f in fields:
+                if f.startswith(prefix) and f.endswith(layer):
+                    return f
+            return None
+
+        columns = [(p, _col(p, self.LAYER_NDVI), _col(p, self.LAYER_RELIABILITY))
+                   for p in self.PRODUCTS]
+        columns = [c for c in columns if c[1]]
+        if not columns:
+            raise RuntimeError(f"Fant ingen NDVI-kolonne i AppEEARS-CSV. Kolonner: {fields}")
+
+        # {punkt: {dato: (prioritet, verdi)}} – lavest prioritet (NOAA-20) vinner.
+        best: dict[str, dict[date, tuple[int, float]]] = {}
+        for row in reader:
+            pid = row.get("ID") or row.get("Category") or ""
+            try:
+                obs_date = datetime.strptime(row["Date"], "%Y-%m-%d").date()
+            except (KeyError, ValueError):
+                continue
+            for priority, (_product, ndvi_col, rel_col) in enumerate(columns):
+                value = self._number(row.get(ndvi_col))
+                if value is None:
+                    continue
+                if abs(value) > 1.0:          # rå heltall (ikke skalert) – skaler selv
+                    value = value * self.SCALE
+                if value < -1.0 or value > 1.0:
+                    continue                  # fyll-verdi (-1.5) eller søppel
+                reliability = self._number(row.get(rel_col)) if rel_col else None
+                if reliability is not None and not (0 <= reliability <= self.MAX_RELIABILITY):
+                    continue                  # skyet/snø/mangler
+                slot = best.setdefault(pid, {})
+                if obs_date not in slot or priority < slot[obs_date][0]:
+                    slot[obs_date] = (priority, round(value, 4))
+
+        return {
+            pid: [NdviObservation(date=d, value=v) for d, (_p, v) in sorted(vals.items())]
+            for pid, vals in best.items()
+        }
+
+    @staticmethod
+    def _number(raw) -> float | None:
+        if raw is None or raw == "":
+            return None
+        try:
+            return float(raw)
+        except ValueError:
+            return None
+
+
 # Registret som kobler navn (fra YAML) til en faktisk connector.
 NDVI_CONNECTORS: dict[str, NdviConnector] = {
+    "nasa_viirs": NasaViirsNdvi(),
     "nasa_modis": NasaModisNdvi(),
 }
 

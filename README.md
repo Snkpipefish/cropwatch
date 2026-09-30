@@ -28,7 +28,7 @@ Farger: **grønn** = normalt eller bra, **gul** = følg med, **rød** = tydelig 
 
 | Hva | Kilde | Nøkkel kreves? |
 |-----|-------|----------------|
-| NDVI (vegetasjon) | NASA MODIS via ORNL DAAC | Nei |
+| NDVI (vegetasjon) | NASA VIIRS (NOAA-20) via AppEEARS | Gratis Earthdata-konto (`EARTHDATA_USER`/`EARTHDATA_PASS`) |
 | Vær (nedbør/temperatur) | Open-Meteo | Nei |
 
 NDVI oppdateres hver ~16. dag (det er så ofte satellitten gir en ny verdi).
@@ -82,7 +82,7 @@ breddegrad/lengdegrad (lat/lon).
 ```
 app/
 ├── config/regions/   ← regionene dine (YAML-filer). Ny region = ny fil her.
-├── connectors/       ← henter data: ndvi.py (NASA), weather.py (Open-Meteo)
+├── connectors/       ← henter data: ndvi.py (NASA VIIRS), weather.py (Open-Meteo)
 ├── storage/          ← lagrer dataene (én SQLite-fil per region, i data/)
 ├── indicators/       ← regner ut avvik mot normalt
 ├── scheduler.py      ← henter automatisk med riktig frekvens

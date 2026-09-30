@@ -18,7 +18,7 @@ commodity: "sukker"
 # Hvilke datakilder som gjelder for denne regionen.
 # (Connector-navnene må matche filene i app/connectors/.)
 sources:
-  ndvi: nasa_modis      # vegetasjonshelse, oppdateres hver ~16. dag
+  ndvi: nasa_viirs      # vegetasjonshelse (NOAA-20 VIIRS), ny verdi hver 16. dag
   weather: open_meteo   # vær, kan hentes daglig
 
 # Vekstsesong og en basistemperatur (°C) for growing degree days.

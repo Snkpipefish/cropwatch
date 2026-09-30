@@ -25,6 +25,10 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Hent ferske data og bygg statisk side
+        env:
+          # Gratis Earthdata-konto – trengs for NDVI (VIIRS via AppEEARS).
+          EARTHDATA_USER: ${{ secrets.EARTHDATA_USER }}
+          EARTHDATA_PASS: ${{ secrets.EARTHDATA_PASS }}
         run: python scripts/export_static.py
 
       - name: Commit oppdaterte data (hvis noe endret seg)

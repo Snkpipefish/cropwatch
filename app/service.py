@@ -42,19 +42,56 @@ def _start_date(region_id: str, area_id: str, existing_dates: list[date]) -> dat
     return date.today() - timedelta(days=365 * HISTORY_YEARS)
 
 
+# Den eneste NDVI-kilden som fantes før meta-tabellen kom. Databaser uten
+# "ndvi_source" har derfor MODIS-historikk.
+_LEGACY_NDVI_SOURCE = "nasa_modis"
+
+
 def refresh_ndvi(region: Region) -> int:
     connector = get_ndvi_connector(region.sources["ndvi"])
-    total = 0
-    for area in region.areas:
-        # Et nettverksblipp på ett område skal ikke stoppe resten – vi beholder
-        # da den eksisterende historikken og prøver igjen ved neste kjøring.
-        try:
+    problem = connector.ready()
+    if problem:
+        # Ikke registrer kjøringen – da prøver scheduleren igjen neste gang.
+        log.warning("Hopper over NDVI for %s: %s", region.id, problem)
+        return 0
+
+    # Har regionen byttet satellitt siden sist? Da må hele historikken hentes
+    # på nytt fra den nye kilden og erstatte den gamle (ulike sensorer gir
+    # litt ulike tall, og normalen må bygges på én kilde).
+    stored_source = db.get_meta(region.id, "ndvi_source") or _LEGACY_NDVI_SOURCE
+    switching = stored_source != connector.name
+    if switching:
+        log.info("NDVI-kilde for %s byttes %s -> %s: henter %d års historikk på nytt",
+                 region.id, stored_source, connector.name, HISTORY_YEARS)
+        start = date.today() - timedelta(days=365 * HISTORY_YEARS)
+    else:
+        starts = []
+        for area in region.areas:
             existing = [o.date for o in db.get_ndvi(region.id, area.id)]
-            start = _start_date(region.id, area.id, existing)
-            obs = connector.fetch(area.lat, area.lon, start, date.today())
+            starts.append(_start_date(region.id, area.id, existing))
+        start = min(starts) if starts else date.today()
+
+    points = [(a.id, a.lat, a.lon) for a in region.areas]
+    try:
+        results = connector.fetch_many(points, start, date.today())
+    except Exception:
+        log.exception("NDVI-henting feilet for %s – beholder eksisterende data", region.id)
+        return 0
+
+    total = 0
+    complete = True
+    for area in region.areas:
+        obs = results.get(area.id) or []
+        if not obs:
+            complete = False
+            log.warning("Ingen NDVI-verdier for %s/%s denne gangen", region.id, area.id)
+            continue
+        if switching:
+            total += db.replace_ndvi(region.id, area.id, obs)
+        else:
             total += db.save_ndvi(region.id, area.id, obs)
-        except Exception:
-            log.exception("NDVI-henting feilet for %s/%s – hopper over", region.id, area.id)
+    if switching and complete:
+        db.set_meta(region.id, "ndvi_source", connector.name)
     db.record_fetch(region.id, "ndvi")
     return total
 

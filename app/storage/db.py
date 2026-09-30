@@ -11,7 +11,7 @@ from __future__ import annotations
 from datetime import date, datetime
 from pathlib import Path
 
-from sqlalchemy import Date, DateTime, Float, String, create_engine, event, select
+from sqlalchemy import Date, DateTime, Float, String, create_engine, delete, event, select
 from sqlalchemy.dialects.sqlite import insert as sqlite_insert
 from sqlalchemy.orm import DeclarativeBase, Mapped, Session, mapped_column
 
@@ -43,6 +43,14 @@ class FetchLog(Base):
     __tablename__ = "fetch_log"
     source: Mapped[str] = mapped_column(String, primary_key=True)  # "ndvi" / "weather"
     last_run_at: Mapped[datetime] = mapped_column(DateTime)
+
+
+class Meta(Base):
+    """Små nøkkel/verdi-fakta om databasen, f.eks. hvilken NDVI-kilde
+    historikken kommer fra ("ndvi_source"). Brukes for å oppdage kildebytte."""
+    __tablename__ = "meta"
+    key: Mapped[str] = mapped_column(String, primary_key=True)
+    value: Mapped[str] = mapped_column(String)
 
 
 _engines: dict[str, object] = {}
@@ -115,6 +123,30 @@ def save_weather(region_id: str, area_id: str, observations) -> int:
         s.execute(stmt)
         s.commit()
     return len(rows)
+
+
+def replace_ndvi(region_id: str, area_id: str, observations) -> int:
+    """Kaster all NDVI-historikk for området og skriver den nye serien.
+
+    Brukes ved bytte av satellitt: to sensorer gir litt ulike NDVI-tall, så
+    normalen må bygges på én og samme kilde – ikke en blanding.
+    """
+    with session(region_id) as s:
+        s.execute(delete(NdviObs).where(NdviObs.area_id == area_id))
+        s.commit()
+    return save_ndvi(region_id, area_id, observations)
+
+
+def get_meta(region_id: str, key: str) -> str | None:
+    with session(region_id) as s:
+        row = s.get(Meta, key)
+        return row.value if row else None
+
+
+def set_meta(region_id: str, key: str, value: str) -> None:
+    with session(region_id) as s:
+        s.merge(Meta(key=key, value=value))
+        s.commit()
 
 
 def record_fetch(region_id: str, source: str) -> None:
