@@ -244,839 +244,1337 @@
       "ndvi": {
         "series": [
           {
-            "date": "2021-01-01",
-            "value": 0.2286,
-            "baseline": 0.3343,
-            "anomaly": -0.1057
+            "date": "2018-09-22",
+            "value": 0.2643,
+            "baseline": 0.2094,
+            "anomaly": 0.0549
           },
           {
-            "date": "2021-01-17",
-            "value": 0.3968,
-            "baseline": 0.2687,
-            "anomaly": 0.1281
+            "date": "2019-01-25",
+            "value": 0.3573,
+            "baseline": null,
+            "anomaly": null
           },
           {
-            "date": "2021-02-02",
-            "value": 0.38,
-            "baseline": 0.3077,
-            "anomaly": 0.0723
+            "date": "2019-02-02",
+            "value": 0.3573,
+            "baseline": null,
+            "anomaly": null
           },
           {
-            "date": "2021-02-18",
-            "value": 0.3022,
-            "baseline": 0.3469,
-            "anomaly": -0.0447
+            "date": "2019-03-14",
+            "value": 0.3344,
+            "baseline": 0.3066,
+            "anomaly": 0.0278
           },
           {
-            "date": "2021-03-06",
-            "value": 0.2768,
-            "baseline": 0.3373,
-            "anomaly": -0.0605
+            "date": "2019-03-22",
+            "value": 0.3344,
+            "baseline": 0.3024,
+            "anomaly": 0.032
           },
           {
-            "date": "2021-03-22",
-            "value": 0.253,
-            "baseline": 0.3411,
-            "anomaly": -0.0881
+            "date": "2019-04-07",
+            "value": 0.3115,
+            "baseline": 0.2937,
+            "anomaly": 0.0178
           },
           {
-            "date": "2021-04-07",
-            "value": 0.3478,
-            "baseline": 0.3318,
-            "anomaly": 0.016
+            "date": "2019-04-15",
+            "value": 0.3115,
+            "baseline": 0.2988,
+            "anomaly": 0.0127
           },
           {
-            "date": "2021-04-23",
-            "value": 0.2615,
-            "baseline": 0.3125,
-            "anomaly": -0.051
+            "date": "2019-04-23",
+            "value": 0.2416,
+            "baseline": 0.3001,
+            "anomaly": -0.0585
           },
           {
-            "date": "2021-05-09",
-            "value": 0.2734,
-            "baseline": 0.3013,
-            "anomaly": -0.0279
+            "date": "2019-05-09",
+            "value": 0.3215,
+            "baseline": 0.2876,
+            "anomaly": 0.0339
           },
           {
-            "date": "2021-05-25",
-            "value": 0.2644,
-            "baseline": 0.3023,
-            "anomaly": -0.0379
+            "date": "2019-05-17",
+            "value": 0.3215,
+            "baseline": 0.2798,
+            "anomaly": 0.0417
           },
           {
-            "date": "2021-06-10",
-            "value": 0.319,
-            "baseline": 0.2759,
-            "anomaly": 0.0431
-          },
-          {
-            "date": "2021-06-26",
-            "value": 0.2842,
-            "baseline": 0.2726,
-            "anomaly": 0.0116
-          },
-          {
-            "date": "2021-07-12",
-            "value": 0.2981,
-            "baseline": 0.277,
-            "anomaly": 0.0211
-          },
-          {
-            "date": "2021-07-28",
-            "value": 0.256,
-            "baseline": 0.2484,
-            "anomaly": 0.0076
-          },
-          {
-            "date": "2021-08-13",
-            "value": 0.1959,
-            "baseline": 0.2455,
-            "anomaly": -0.0496
-          },
-          {
-            "date": "2021-08-29",
-            "value": 0.1891,
-            "baseline": 0.2288,
-            "anomaly": -0.0397
-          },
-          {
-            "date": "2021-09-14",
-            "value": 0.2407,
-            "baseline": 0.2422,
-            "anomaly": -0.0015
-          },
-          {
-            "date": "2021-09-30",
-            "value": 0.247,
-            "baseline": 0.2541,
-            "anomaly": -0.0071
-          },
-          {
-            "date": "2021-10-16",
-            "value": 0.3026,
-            "baseline": 0.3422,
-            "anomaly": -0.0396
-          },
-          {
-            "date": "2021-11-01",
-            "value": 0.2896,
-            "baseline": 0.2752,
-            "anomaly": 0.0144
-          },
-          {
-            "date": "2021-11-17",
-            "value": 0.3582,
-            "baseline": 0.3131,
-            "anomaly": 0.0451
-          },
-          {
-            "date": "2021-12-03",
-            "value": 0.3016,
-            "baseline": 0.2899,
-            "anomaly": 0.0117
-          },
-          {
-            "date": "2021-12-19",
-            "value": 0.4104,
-            "baseline": 0.2609,
-            "anomaly": 0.1495
-          },
-          {
-            "date": "2022-01-01",
-            "value": 0.251,
-            "baseline": 0.3299,
-            "anomaly": -0.0789
-          },
-          {
-            "date": "2022-01-17",
-            "value": 0.2541,
-            "baseline": 0.2973,
-            "anomaly": -0.0432
-          },
-          {
-            "date": "2022-02-02",
-            "value": 0.3749,
-            "baseline": 0.3088,
-            "anomaly": 0.0661
-          },
-          {
-            "date": "2022-02-18",
-            "value": 0.394,
-            "baseline": 0.3285,
-            "anomaly": 0.0655
-          },
-          {
-            "date": "2022-03-06",
-            "value": 0.3243,
-            "baseline": 0.3278,
-            "anomaly": -0.0035
-          },
-          {
-            "date": "2022-03-22",
-            "value": 0.2925,
-            "baseline": 0.3332,
-            "anomaly": -0.0407
-          },
-          {
-            "date": "2022-04-07",
-            "value": 0.4391,
-            "baseline": 0.3165,
-            "anomaly": 0.1226
-          },
-          {
-            "date": "2022-04-23",
-            "value": 0.2816,
-            "baseline": 0.3096,
-            "anomaly": -0.028
-          },
-          {
-            "date": "2022-05-09",
-            "value": 0.312,
-            "baseline": 0.2958,
-            "anomaly": 0.0162
-          },
-          {
-            "date": "2022-05-25",
-            "value": 0.2984,
-            "baseline": 0.2975,
-            "anomaly": 0.0009
-          },
-          {
-            "date": "2022-06-10",
-            "value": 0.2581,
-            "baseline": 0.2846,
-            "anomaly": -0.0265
-          },
-          {
-            "date": "2022-06-26",
-            "value": 0.244,
-            "baseline": 0.2784,
-            "anomaly": -0.0344
-          },
-          {
-            "date": "2022-07-12",
-            "value": 0.1964,
-            "baseline": 0.2915,
-            "anomaly": -0.0951
-          },
-          {
-            "date": "2022-07-28",
-            "value": 0.224,
-            "baseline": 0.253,
-            "anomaly": -0.029
-          },
-          {
-            "date": "2022-08-13",
-            "value": 0.2276,
-            "baseline": 0.2402,
-            "anomaly": -0.0126
-          },
-          {
-            "date": "2022-08-29",
-            "value": 0.2104,
-            "baseline": 0.2235,
-            "anomaly": -0.0131
-          },
-          {
-            "date": "2022-09-14",
-            "value": 0.19,
-            "baseline": 0.2549,
-            "anomaly": -0.0649
-          },
-          {
-            "date": "2022-09-30",
-            "value": 0.264,
-            "baseline": 0.2499,
-            "anomaly": 0.0141
-          },
-          {
-            "date": "2022-10-16",
-            "value": 0.3539,
-            "baseline": 0.3294,
-            "anomaly": 0.0245
-          },
-          {
-            "date": "2022-11-01",
-            "value": 0.2765,
-            "baseline": 0.2784,
-            "anomaly": -0.0019
-          },
-          {
-            "date": "2022-11-17",
-            "value": 0.3084,
-            "baseline": 0.3256,
-            "anomaly": -0.0172
-          },
-          {
-            "date": "2022-12-03",
-            "value": 0.2282,
-            "baseline": 0.3083,
-            "anomaly": -0.0801
-          },
-          {
-            "date": "2022-12-19",
-            "value": 0.2711,
-            "baseline": 0.2957,
-            "anomaly": -0.0246
-          },
-          {
-            "date": "2023-01-01",
-            "value": 0.3447,
-            "baseline": 0.3111,
-            "anomaly": 0.0336
-          },
-          {
-            "date": "2023-01-17",
-            "value": 0.3552,
-            "baseline": 0.277,
-            "anomaly": 0.0782
-          },
-          {
-            "date": "2023-02-02",
-            "value": 0.3504,
-            "baseline": 0.3137,
-            "anomaly": 0.0367
-          },
-          {
-            "date": "2023-02-18",
-            "value": 0.4357,
-            "baseline": 0.3202,
-            "anomaly": 0.1155
-          },
-          {
-            "date": "2023-03-06",
-            "value": 0.4351,
-            "baseline": 0.3057,
-            "anomaly": 0.1294
-          },
-          {
-            "date": "2023-03-22",
-            "value": 0.378,
-            "baseline": 0.3161,
-            "anomaly": 0.0619
-          },
-          {
-            "date": "2023-04-07",
-            "value": 0.3146,
-            "baseline": 0.3373,
-            "anomaly": -0.0227
-          },
-          {
-            "date": "2023-04-23",
-            "value": 0.4453,
-            "baseline": 0.2862,
-            "anomaly": 0.1591
-          },
-          {
-            "date": "2023-05-09",
-            "value": 0.3777,
-            "baseline": 0.2864,
-            "anomaly": 0.0913
-          },
-          {
-            "date": "2023-05-25",
-            "value": 0.4113,
-            "baseline": 0.2814,
-            "anomaly": 0.1299
-          },
-          {
-            "date": "2023-06-10",
-            "value": 0.3597,
-            "baseline": 0.2701,
-            "anomaly": 0.0896
-          },
-          {
-            "date": "2023-06-26",
-            "value": 0.3568,
-            "baseline": 0.2623,
-            "anomaly": 0.0945
-          },
-          {
-            "date": "2023-07-12",
-            "value": 0.3667,
-            "baseline": 0.2672,
-            "anomaly": 0.0995
-          },
-          {
-            "date": "2023-07-28",
-            "value": 0.2441,
-            "baseline": 0.2501,
-            "anomaly": -0.006
-          },
-          {
-            "date": "2023-08-13",
-            "value": 0.2217,
-            "baseline": 0.2412,
-            "anomaly": -0.0195
-          },
-          {
-            "date": "2023-08-29",
-            "value": 0.273,
-            "baseline": 0.2079,
-            "anomaly": 0.0651
-          },
-          {
-            "date": "2023-09-14",
-            "value": 0.3125,
-            "baseline": 0.2243,
-            "anomaly": 0.0882
-          },
-          {
-            "date": "2023-09-30",
-            "value": 0.3612,
-            "baseline": 0.2256,
-            "anomaly": 0.1356
-          },
-          {
-            "date": "2023-10-16",
-            "value": 0.4127,
-            "baseline": 0.3147,
-            "anomaly": 0.098
-          },
-          {
-            "date": "2023-11-01",
-            "value": 0.2985,
-            "baseline": 0.2729,
-            "anomaly": 0.0256
-          },
-          {
-            "date": "2023-11-17",
-            "value": 0.2863,
-            "baseline": 0.3311,
-            "anomaly": -0.0448
-          },
-          {
-            "date": "2023-12-03",
-            "value": 0.2935,
-            "baseline": 0.2919,
-            "anomaly": 0.0016
-          },
-          {
-            "date": "2023-12-19",
-            "value": 0.2417,
-            "baseline": 0.3031,
-            "anomaly": -0.0614
-          },
-          {
-            "date": "2024-01-01",
-            "value": 0.2825,
-            "baseline": 0.3236,
-            "anomaly": -0.0411
-          },
-          {
-            "date": "2024-01-17",
-            "value": 0.2732,
-            "baseline": 0.2934,
-            "anomaly": -0.0202
-          },
-          {
-            "date": "2024-02-02",
-            "value": 0.3008,
-            "baseline": 0.3236,
-            "anomaly": -0.0228
-          },
-          {
-            "date": "2024-02-18",
-            "value": 0.3238,
-            "baseline": 0.3426,
-            "anomaly": -0.0188
-          },
-          {
-            "date": "2024-03-05",
-            "value": 0.3007,
-            "baseline": 0.3326,
-            "anomaly": -0.0319
-          },
-          {
-            "date": "2024-03-21",
-            "value": 0.2849,
-            "baseline": 0.3348,
-            "anomaly": -0.0499
-          },
-          {
-            "date": "2024-04-06",
-            "value": 0.3113,
-            "baseline": 0.3378,
-            "anomaly": -0.0265
-          },
-          {
-            "date": "2024-04-22",
-            "value": 0.3418,
-            "baseline": 0.301,
-            "anomaly": 0.0408
-          },
-          {
-            "date": "2024-05-08",
-            "value": 0.2599,
-            "baseline": 0.3033,
-            "anomaly": -0.0434
-          },
-          {
-            "date": "2024-05-24",
-            "value": 0.2583,
-            "baseline": 0.3032,
-            "anomaly": -0.0449
-          },
-          {
-            "date": "2024-06-09",
-            "value": 0.211,
-            "baseline": 0.2913,
-            "anomaly": -0.0803
-          },
-          {
-            "date": "2024-06-25",
-            "value": 0.2332,
-            "baseline": 0.2799,
-            "anomaly": -0.0467
-          },
-          {
-            "date": "2024-07-11",
-            "value": 0.2375,
-            "baseline": 0.2856,
-            "anomaly": -0.0481
-          },
-          {
-            "date": "2024-07-27",
-            "value": 0.1835,
-            "baseline": 0.2588,
-            "anomaly": -0.0753
-          },
-          {
-            "date": "2024-08-12",
-            "value": 0.2484,
-            "baseline": 0.2367,
-            "anomaly": 0.0117
-          },
-          {
-            "date": "2024-08-28",
-            "value": 0.2298,
-            "baseline": 0.2187,
-            "anomaly": 0.0111
-          },
-          {
-            "date": "2024-09-13",
-            "value": 0.2233,
-            "baseline": 0.2466,
-            "anomaly": -0.0233
-          },
-          {
-            "date": "2024-09-29",
-            "value": 0.1697,
-            "baseline": 0.2735,
-            "anomaly": -0.1038
-          },
-          {
-            "date": "2024-10-15",
-            "value": 0.3046,
-            "baseline": 0.3417,
-            "anomaly": -0.0371
-          },
-          {
-            "date": "2024-10-31",
-            "value": 0.2578,
-            "baseline": 0.2831,
-            "anomaly": -0.0253
-          },
-          {
-            "date": "2024-11-16",
-            "value": 0.3624,
-            "baseline": 0.3121,
-            "anomaly": 0.0503
-          },
-          {
-            "date": "2024-12-02",
-            "value": 0.2659,
-            "baseline": 0.2989,
-            "anomaly": -0.033
-          },
-          {
-            "date": "2024-12-18",
-            "value": 0.211,
-            "baseline": 0.3107,
-            "anomaly": -0.0997
-          },
-          {
-            "date": "2025-01-01",
-            "value": 0.3608,
-            "baseline": 0.3079,
-            "anomaly": 0.0529
-          },
-          {
-            "date": "2025-01-17",
-            "value": 0.2248,
-            "baseline": 0.3031,
-            "anomaly": -0.0783
-          },
-          {
-            "date": "2025-02-02",
-            "value": 0.2653,
-            "baseline": 0.3307,
-            "anomaly": -0.0654
-          },
-          {
-            "date": "2025-02-18",
-            "value": 0.3027,
-            "baseline": 0.3468,
-            "anomaly": -0.0441
-          },
-          {
-            "date": "2025-03-06",
-            "value": 0.3008,
-            "baseline": 0.3325,
-            "anomaly": -0.0317
-          },
-          {
-            "date": "2025-03-22",
-            "value": 0.3785,
-            "baseline": 0.316,
+            "date": "2019-05-25",
+            "value": 0.3358,
+            "baseline": 0.2733,
             "anomaly": 0.0625
           },
           {
-            "date": "2025-04-07",
-            "value": 0.2215,
-            "baseline": 0.3528,
-            "anomaly": -0.1313
+            "date": "2019-06-02",
+            "value": 0.3358,
+            "baseline": 0.2649,
+            "anomaly": 0.0709
           },
           {
-            "date": "2025-04-23",
-            "value": 0.2992,
-            "baseline": 0.3071,
-            "anomaly": -0.0079
+            "date": "2019-06-10",
+            "value": 0.2778,
+            "baseline": 0.2658,
+            "anomaly": 0.012
           },
           {
-            "date": "2025-05-09",
-            "value": 0.3199,
-            "baseline": 0.2947,
-            "anomaly": 0.0252
-          },
-          {
-            "date": "2025-05-25",
-            "value": 0.2983,
-            "baseline": 0.2975,
-            "anomaly": 0.0008
-          },
-          {
-            "date": "2025-06-10",
-            "value": 0.2975,
-            "baseline": 0.279,
-            "anomaly": 0.0185
-          },
-          {
-            "date": "2025-06-26",
-            "value": 0.2357,
-            "baseline": 0.2796,
-            "anomaly": -0.0439
-          },
-          {
-            "date": "2025-07-12",
-            "value": 0.2415,
-            "baseline": 0.2851,
-            "anomaly": -0.0436
-          },
-          {
-            "date": "2025-07-28",
-            "value": 0.2317,
-            "baseline": 0.2519,
-            "anomaly": -0.0202
-          },
-          {
-            "date": "2025-08-13",
-            "value": 0.2354,
-            "baseline": 0.2389,
-            "anomaly": -0.0035
-          },
-          {
-            "date": "2025-08-29",
-            "value": 0.2021,
-            "baseline": 0.2256,
-            "anomaly": -0.0235
-          },
-          {
-            "date": "2025-09-14",
-            "value": 0.2432,
-            "baseline": 0.2416,
-            "anomaly": 0.0016
-          },
-          {
-            "date": "2025-09-30",
-            "value": 0.2217,
-            "baseline": 0.2605,
-            "anomaly": -0.0388
-          },
-          {
-            "date": "2025-10-16",
-            "value": 0.2976,
-            "baseline": 0.3434,
-            "anomaly": -0.0458
-          },
-          {
-            "date": "2025-11-01",
-            "value": 0.2678,
-            "baseline": 0.2806,
-            "anomaly": -0.0128
-          },
-          {
-            "date": "2025-11-17",
-            "value": 0.2954,
-            "baseline": 0.3288,
-            "anomaly": -0.0334
-          },
-          {
-            "date": "2025-12-03",
-            "value": 0.3721,
-            "baseline": 0.2723,
-            "anomaly": 0.0998
-          },
-          {
-            "date": "2025-12-19",
-            "value": 0.3198,
-            "baseline": 0.2835,
-            "anomaly": 0.0363
-          },
-          {
-            "date": "2026-01-01",
-            "value": 0.4327,
-            "baseline": 0.2935,
-            "anomaly": 0.1392
-          },
-          {
-            "date": "2026-01-17",
-            "value": 0.2363,
-            "baseline": 0.3008,
-            "anomaly": -0.0645
-          },
-          {
-            "date": "2026-02-02",
-            "value": 0.2473,
-            "baseline": 0.3343,
-            "anomaly": -0.087
-          },
-          {
-            "date": "2026-02-18",
-            "value": 0.2782,
-            "baseline": 0.3517,
-            "anomaly": -0.0735
-          },
-          {
-            "date": "2026-03-06",
-            "value": 0.3258,
-            "baseline": 0.3275,
-            "anomaly": -0.0017
-          },
-          {
-            "date": "2026-03-22",
-            "value": 0.3718,
-            "baseline": 0.3174,
-            "anomaly": 0.0544
-          },
-          {
-            "date": "2026-04-07",
-            "value": 0.4169,
-            "baseline": 0.3269,
-            "anomaly": 0.09
-          },
-          {
-            "date": "2026-04-15",
-            "value": 0.2872,
-            "baseline": 0.3264,
-            "anomaly": -0.0392
-          },
-          {
-            "date": "2026-04-23",
-            "value": 0.3108,
-            "baseline": 0.3259,
-            "anomaly": -0.0151
-          },
-          {
-            "date": "2026-05-01",
-            "value": 0.2213,
-            "baseline": 0.3172,
-            "anomaly": -0.0959
-          },
-          {
-            "date": "2026-05-09",
-            "value": 0.2892,
-            "baseline": 0.3086,
-            "anomaly": -0.0194
-          },
-          {
-            "date": "2026-05-17",
-            "value": 0.3293,
-            "baseline": 0.3074,
-            "anomaly": 0.0219
-          },
-          {
-            "date": "2026-05-25",
-            "value": 0.2571,
-            "baseline": 0.3061,
-            "anomaly": -0.049
-          },
-          {
-            "date": "2026-06-02",
-            "value": 0.2637,
-            "baseline": 0.2976,
-            "anomaly": -0.0339
-          },
-          {
-            "date": "2026-06-10",
-            "value": 0.2595,
-            "baseline": 0.2891,
-            "anomaly": -0.0296
-          },
-          {
-            "date": "2026-06-18",
-            "value": 0.2819,
-            "baseline": 0.2799,
-            "anomaly": 0.002
-          },
-          {
-            "date": "2026-06-26",
-            "value": 0.269,
-            "baseline": 0.2708,
-            "anomaly": -0.0018
-          },
-          {
-            "date": "2026-07-04",
-            "value": 0.2878,
-            "baseline": 0.2694,
+            "date": "2019-06-18",
+            "value": 0.2818,
+            "baseline": 0.2634,
             "anomaly": 0.0184
           },
           {
-            "date": "2026-07-12",
-            "value": 0.3688,
-            "baseline": 0.268,
-            "anomaly": 0.1008
+            "date": "2019-06-26",
+            "value": 0.2818,
+            "baseline": 0.2613,
+            "anomaly": 0.0205
           },
           {
-            "date": "2026-07-20",
-            "value": 0.2401,
-            "baseline": 0.2479,
-            "anomaly": -0.0078
+            "date": "2019-07-04",
+            "value": 0.2949,
+            "baseline": 0.2538,
+            "anomaly": 0.0411
           },
           {
-            "date": "2026-07-28",
-            "value": 0.3632,
-            "baseline": 0.2279,
-            "anomaly": 0.1353
+            "date": "2019-07-12",
+            "value": 0.2949,
+            "baseline": 0.2468,
+            "anomaly": 0.0481
           },
           {
-            "date": "2026-08-05",
-            "value": 0.2523,
+            "date": "2019-07-20",
+            "value": 0.2614,
+            "baseline": 0.2424,
+            "anomaly": 0.019
+          },
+          {
+            "date": "2019-07-28",
+            "value": 0.2614,
+            "baseline": 0.2349,
+            "anomaly": 0.0265
+          },
+          {
+            "date": "2019-08-05",
+            "value": 0.238,
             "baseline": 0.2268,
+            "anomaly": 0.0112
+          },
+          {
+            "date": "2019-08-13",
+            "value": 0.2382,
+            "baseline": 0.2148,
+            "anomaly": 0.0234
+          },
+          {
+            "date": "2019-08-21",
+            "value": 0.2382,
+            "baseline": 0.2054,
+            "anomaly": 0.0328
+          },
+          {
+            "date": "2019-08-29",
+            "value": 0.2017,
+            "baseline": 0.2036,
+            "anomaly": -0.0019
+          },
+          {
+            "date": "2019-09-06",
+            "value": 0.2017,
+            "baseline": 0.2069,
+            "anomaly": -0.0052
+          },
+          {
+            "date": "2019-09-14",
+            "value": 0.2165,
+            "baseline": 0.2082,
+            "anomaly": 0.0083
+          },
+          {
+            "date": "2019-09-22",
+            "value": 0.2444,
+            "baseline": 0.2078,
+            "anomaly": 0.0366
+          },
+          {
+            "date": "2019-09-30",
+            "value": 0.2444,
+            "baseline": 0.2057,
+            "anomaly": 0.0387
+          },
+          {
+            "date": "2019-10-16",
+            "value": 0.2443,
+            "baseline": 0.211,
+            "anomaly": 0.0333
+          },
+          {
+            "date": "2019-10-24",
+            "value": 0.2443,
+            "baseline": 0.2357,
+            "anomaly": 0.0086
+          },
+          {
+            "date": "2020-03-29",
+            "value": 0.2857,
+            "baseline": 0.2953,
+            "anomaly": -0.0096
+          },
+          {
+            "date": "2020-04-06",
+            "value": 0.2857,
+            "baseline": 0.2957,
+            "anomaly": -0.01
+          },
+          {
+            "date": "2020-04-14",
+            "value": 0.3211,
+            "baseline": 0.2946,
+            "anomaly": 0.0265
+          },
+          {
+            "date": "2020-04-22",
+            "value": 0.3211,
+            "baseline": 0.2962,
+            "anomaly": 0.0249
+          },
+          {
+            "date": "2020-04-30",
+            "value": 0.2689,
+            "baseline": 0.2959,
+            "anomaly": -0.027
+          },
+          {
+            "date": "2020-05-08",
+            "value": 0.2689,
+            "baseline": 0.2956,
+            "anomaly": -0.0267
+          },
+          {
+            "date": "2020-05-16",
+            "value": 0.2559,
+            "baseline": 0.2902,
+            "anomaly": -0.0343
+          },
+          {
+            "date": "2020-05-24",
+            "value": 0.2559,
+            "baseline": 0.2859,
+            "anomaly": -0.03
+          },
+          {
+            "date": "2020-06-01",
+            "value": 0.2296,
+            "baseline": 0.2761,
+            "anomaly": -0.0465
+          },
+          {
+            "date": "2020-06-09",
+            "value": 0.2296,
+            "baseline": 0.2761,
+            "anomaly": -0.0465
+          },
+          {
+            "date": "2020-06-17",
+            "value": 0.2198,
+            "baseline": 0.2716,
+            "anomaly": -0.0518
+          },
+          {
+            "date": "2020-06-25",
+            "value": 0.2198,
+            "baseline": 0.2709,
+            "anomaly": -0.0511
+          },
+          {
+            "date": "2020-07-03",
+            "value": 0.2176,
+            "baseline": 0.2621,
+            "anomaly": -0.0445
+          },
+          {
+            "date": "2020-07-11",
+            "value": 0.2582,
+            "baseline": 0.2524,
+            "anomaly": 0.0058
+          },
+          {
+            "date": "2020-07-19",
+            "value": 0.2582,
+            "baseline": 0.2454,
+            "anomaly": 0.0128
+          },
+          {
+            "date": "2020-07-27",
+            "value": 0.2368,
+            "baseline": 0.2362,
+            "anomaly": 0.0006
+          },
+          {
+            "date": "2020-08-04",
+            "value": 0.2368,
+            "baseline": 0.2289,
+            "anomaly": 0.0079
+          },
+          {
+            "date": "2020-08-12",
+            "value": 0.2207,
+            "baseline": 0.2167,
+            "anomaly": 0.004
+          },
+          {
+            "date": "2020-08-20",
+            "value": 0.2207,
+            "baseline": 0.2061,
+            "anomaly": 0.0146
+          },
+          {
+            "date": "2020-08-28",
+            "value": 0.2245,
+            "baseline": 0.2022,
+            "anomaly": 0.0223
+          },
+          {
+            "date": "2020-09-05",
+            "value": 0.2245,
+            "baseline": 0.2058,
+            "anomaly": 0.0187
+          },
+          {
+            "date": "2020-09-13",
+            "value": 0.1934,
+            "baseline": 0.211,
+            "anomaly": -0.0176
+          },
+          {
+            "date": "2020-09-21",
+            "value": 0.1934,
+            "baseline": 0.2152,
+            "anomaly": -0.0218
+          },
+          {
+            "date": "2020-10-07",
+            "value": 0.1851,
+            "baseline": 0.2138,
+            "anomaly": -0.0287
+          },
+          {
+            "date": "2020-10-15",
+            "value": 0.1782,
+            "baseline": 0.2213,
+            "anomaly": -0.0431
+          },
+          {
+            "date": "2020-10-23",
+            "value": 0.2333,
+            "baseline": 0.2437,
+            "anomaly": -0.0104
+          },
+          {
+            "date": "2020-10-31",
+            "value": 0.2333,
+            "baseline": 0.2792,
+            "anomaly": -0.0459
+          },
+          {
+            "date": "2021-02-26",
+            "value": 0.2685,
+            "baseline": 0.309,
+            "anomaly": -0.0405
+          },
+          {
+            "date": "2021-03-06",
+            "value": 0.2685,
+            "baseline": 0.3165,
+            "anomaly": -0.048
+          },
+          {
+            "date": "2021-03-14",
+            "value": 0.3348,
+            "baseline": 0.3104,
+            "anomaly": 0.0244
+          },
+          {
+            "date": "2021-03-22",
+            "value": 0.3348,
+            "baseline": 0.3022,
+            "anomaly": 0.0326
+          },
+          {
+            "date": "2021-03-30",
+            "value": 0.304,
+            "baseline": 0.2916,
+            "anomaly": 0.0124
+          },
+          {
+            "date": "2021-04-07",
+            "value": 0.2679,
+            "baseline": 0.2999,
+            "anomaly": -0.032
+          },
+          {
+            "date": "2021-04-15",
+            "value": 0.2712,
+            "baseline": 0.3025,
+            "anomaly": -0.0313
+          },
+          {
+            "date": "2021-04-23",
+            "value": 0.2712,
+            "baseline": 0.3029,
+            "anomaly": -0.0317
+          },
+          {
+            "date": "2021-05-01",
+            "value": 0.2695,
+            "baseline": 0.3008,
+            "anomaly": -0.0313
+          },
+          {
+            "date": "2021-05-09",
+            "value": 0.2338,
+            "baseline": 0.2989,
+            "anomaly": -0.0651
+          },
+          {
+            "date": "2021-05-17",
+            "value": 0.2338,
+            "baseline": 0.292,
+            "anomaly": -0.0582
+          },
+          {
+            "date": "2021-05-25",
+            "value": 0.2785,
+            "baseline": 0.2834,
+            "anomaly": -0.0049
+          },
+          {
+            "date": "2021-06-02",
+            "value": 0.2785,
+            "baseline": 0.2717,
+            "anomaly": 0.0068
+          },
+          {
+            "date": "2021-06-10",
+            "value": 0.2494,
+            "baseline": 0.2714,
+            "anomaly": -0.022
+          },
+          {
+            "date": "2021-06-18",
+            "value": 0.2494,
+            "baseline": 0.2685,
+            "anomaly": -0.0191
+          },
+          {
+            "date": "2021-06-26",
+            "value": 0.2351,
+            "baseline": 0.2679,
+            "anomaly": -0.0328
+          },
+          {
+            "date": "2021-07-04",
+            "value": 0.2351,
+            "baseline": 0.2615,
+            "anomaly": -0.0264
+          },
+          {
+            "date": "2021-07-12",
+            "value": 0.2389,
+            "baseline": 0.2534,
+            "anomaly": -0.0145
+          },
+          {
+            "date": "2021-07-20",
+            "value": 0.2389,
+            "baseline": 0.2506,
+            "anomaly": -0.0117
+          },
+          {
+            "date": "2021-07-28",
+            "value": 0.166,
+            "baseline": 0.2417,
+            "anomaly": -0.0757
+          },
+          {
+            "date": "2021-08-05",
+            "value": 0.2121,
+            "baseline": 0.2341,
+            "anomaly": -0.022
+          },
+          {
+            "date": "2021-08-13",
+            "value": 0.2121,
+            "baseline": 0.2189,
+            "anomaly": -0.0068
+          },
+          {
+            "date": "2021-08-21",
+            "value": 0.211,
+            "baseline": 0.2077,
+            "anomaly": 0.0033
+          },
+          {
+            "date": "2021-08-29",
+            "value": 0.211,
+            "baseline": 0.2053,
+            "anomaly": 0.0057
+          },
+          {
+            "date": "2021-09-06",
+            "value": 0.1854,
+            "baseline": 0.2095,
+            "anomaly": -0.0241
+          },
+          {
+            "date": "2021-09-14",
+            "value": 0.1716,
+            "baseline": 0.2156,
+            "anomaly": -0.044
+          },
+          {
+            "date": "2021-09-22",
+            "value": 0.1716,
+            "baseline": 0.2181,
+            "anomaly": -0.0465
+          },
+          {
+            "date": "2021-10-24",
+            "value": 0.2293,
+            "baseline": 0.2384,
+            "anomaly": -0.0091
+          },
+          {
+            "date": "2021-11-01",
+            "value": 0.2293,
+            "baseline": 0.2671,
+            "anomaly": -0.0378
+          },
+          {
+            "date": "2021-11-09",
+            "value": 0.3963,
+            "baseline": 0.2746,
+            "anomaly": 0.1217
+          },
+          {
+            "date": "2021-11-17",
+            "value": 0.3963,
+            "baseline": 0.2349,
+            "anomaly": 0.1614
+          },
+          {
+            "date": "2021-11-25",
+            "value": 0.2014,
+            "baseline": 0.1865,
+            "anomaly": 0.0149
+          },
+          {
+            "date": "2021-12-11",
+            "value": 0.2836,
+            "baseline": 0.1914,
+            "anomaly": 0.0922
+          },
+          {
+            "date": "2021-12-19",
+            "value": 0.2836,
+            "baseline": 0.1994,
+            "anomaly": 0.0842
+          },
+          {
+            "date": "2022-03-14",
+            "value": 0.2636,
+            "baseline": 0.3195,
+            "anomaly": -0.0559
+          },
+          {
+            "date": "2022-03-22",
+            "value": 0.2636,
+            "baseline": 0.3153,
+            "anomaly": -0.0517
+          },
+          {
+            "date": "2022-04-07",
+            "value": 0.3527,
+            "baseline": 0.2874,
+            "anomaly": 0.0653
+          },
+          {
+            "date": "2022-04-15",
+            "value": 0.3527,
+            "baseline": 0.2824,
+            "anomaly": 0.0703
+          },
+          {
+            "date": "2022-04-23",
+            "value": 0.4055,
+            "baseline": 0.2794,
+            "anomaly": 0.1261
+          },
+          {
+            "date": "2022-05-01",
+            "value": 0.4055,
+            "baseline": 0.2833,
+            "anomaly": 0.1222
+          },
+          {
+            "date": "2022-05-09",
+            "value": 0.2611,
+            "baseline": 0.2877,
+            "anomaly": -0.0266
+          },
+          {
+            "date": "2022-05-17",
+            "value": 0.2611,
+            "baseline": 0.292,
+            "anomaly": -0.0309
+          },
+          {
+            "date": "2022-05-25",
+            "value": 0.2249,
+            "baseline": 0.2872,
+            "anomaly": -0.0623
+          },
+          {
+            "date": "2022-06-02",
+            "value": 0.2294,
+            "baseline": 0.2775,
+            "anomaly": -0.0481
+          },
+          {
+            "date": "2022-06-10",
+            "value": 0.2304,
+            "baseline": 0.2756,
+            "anomaly": -0.0452
+          },
+          {
+            "date": "2022-06-18",
+            "value": 0.2304,
+            "baseline": 0.2711,
+            "anomaly": -0.0407
+          },
+          {
+            "date": "2022-06-26",
+            "value": 0.2185,
+            "baseline": 0.2706,
+            "anomaly": -0.0521
+          },
+          {
+            "date": "2022-07-04",
+            "value": 0.215,
+            "baseline": 0.2641,
+            "anomaly": -0.0491
+          },
+          {
+            "date": "2022-07-12",
+            "value": 0.2212,
+            "baseline": 0.2561,
+            "anomaly": -0.0349
+          },
+          {
+            "date": "2022-07-20",
+            "value": 0.2212,
+            "baseline": 0.2503,
+            "anomaly": -0.0291
+          },
+          {
+            "date": "2022-07-28",
+            "value": 0.2084,
+            "baseline": 0.2391,
+            "anomaly": -0.0307
+          },
+          {
+            "date": "2022-08-05",
+            "value": 0.2427,
+            "baseline": 0.229,
+            "anomaly": 0.0137
+          },
+          {
+            "date": "2022-08-13",
+            "value": 0.2427,
+            "baseline": 0.217,
+            "anomaly": 0.0257
+          },
+          {
+            "date": "2022-08-21",
+            "value": 0.1868,
+            "baseline": 0.2084,
+            "anomaly": -0.0216
+          },
+          {
+            "date": "2022-08-29",
+            "value": 0.1913,
+            "baseline": 0.2072,
+            "anomaly": -0.0159
+          },
+          {
+            "date": "2022-09-06",
+            "value": 0.1913,
+            "baseline": 0.2083,
+            "anomaly": -0.017
+          },
+          {
+            "date": "2022-09-30",
+            "value": 0.2098,
+            "baseline": 0.2114,
+            "anomaly": -0.0016
+          },
+          {
+            "date": "2022-10-08",
+            "value": 0.2098,
+            "baseline": 0.2082,
+            "anomaly": 0.0016
+          },
+          {
+            "date": "2022-11-25",
+            "value": 0.1834,
+            "baseline": 0.2442,
+            "anomaly": -0.0608
+          },
+          {
+            "date": "2022-12-03",
+            "value": 0.1834,
+            "baseline": 0.2248,
+            "anomaly": -0.0414
+          },
+          {
+            "date": "2023-02-18",
+            "value": 0.3106,
+            "baseline": 0.2987,
+            "anomaly": 0.0119
+          },
+          {
+            "date": "2023-02-26",
+            "value": 0.3106,
+            "baseline": 0.3089,
+            "anomaly": 0.0017
+          },
+          {
+            "date": "2023-03-06",
+            "value": 0.226,
+            "baseline": 0.3182,
+            "anomaly": -0.0922
+          },
+          {
+            "date": "2023-03-22",
+            "value": 0.264,
+            "baseline": 0.3152,
+            "anomaly": -0.0512
+          },
+          {
+            "date": "2023-03-30",
+            "value": 0.264,
+            "baseline": 0.2989,
+            "anomaly": -0.0349
+          },
+          {
+            "date": "2023-04-23",
+            "value": 0.2713,
+            "baseline": 0.3008,
+            "anomaly": -0.0295
+          },
+          {
+            "date": "2023-05-01",
+            "value": 0.2713,
+            "baseline": 0.2959,
+            "anomaly": -0.0246
+          },
+          {
+            "date": "2023-05-09",
+            "value": 0.3149,
+            "baseline": 0.2893,
+            "anomaly": 0.0256
+          },
+          {
+            "date": "2023-05-17",
+            "value": 0.3149,
+            "baseline": 0.2807,
+            "anomaly": 0.0342
+          },
+          {
+            "date": "2023-05-25",
+            "value": 0.3317,
+            "baseline": 0.274,
+            "anomaly": 0.0577
+          },
+          {
+            "date": "2023-06-02",
+            "value": 0.3317,
+            "baseline": 0.2632,
+            "anomaly": 0.0685
+          },
+          {
+            "date": "2023-06-10",
+            "value": 0.321,
+            "baseline": 0.2618,
+            "anomaly": 0.0592
+          },
+          {
+            "date": "2023-06-18",
+            "value": 0.3262,
+            "baseline": 0.2571,
+            "anomaly": 0.0691
+          },
+          {
+            "date": "2023-06-26",
+            "value": 0.3262,
+            "baseline": 0.2587,
+            "anomaly": 0.0675
+          },
+          {
+            "date": "2023-07-04",
+            "value": 0.2619,
+            "baseline": 0.255,
+            "anomaly": 0.0069
+          },
+          {
+            "date": "2023-07-12",
+            "value": 0.2585,
+            "baseline": 0.2459,
+            "anomaly": 0.0126
+          },
+          {
+            "date": "2023-07-20",
+            "value": 0.35,
+            "baseline": 0.2357,
+            "anomaly": 0.1143
+          },
+          {
+            "date": "2023-07-28",
+            "value": 0.35,
+            "baseline": 0.2279,
+            "anomaly": 0.1221
+          },
+          {
+            "date": "2023-08-05",
+            "value": 0.2063,
+            "baseline": 0.2246,
+            "anomaly": -0.0183
+          },
+          {
+            "date": "2023-08-29",
+            "value": 0.2268,
+            "baseline": 0.2013,
             "anomaly": 0.0255
           },
           {
+            "date": "2023-09-06",
+            "value": 0.2598,
+            "baseline": 0.2006,
+            "anomaly": 0.0592
+          },
+          {
+            "date": "2023-09-14",
+            "value": 0.2598,
+            "baseline": 0.2048,
+            "anomaly": 0.055
+          },
+          {
+            "date": "2023-10-24",
+            "value": 0.2334,
+            "baseline": 0.2292,
+            "anomaly": 0.0042
+          },
+          {
+            "date": "2023-11-01",
+            "value": 0.3262,
+            "baseline": 0.2637,
+            "anomaly": 0.0625
+          },
+          {
+            "date": "2023-11-09",
+            "value": 0.3262,
+            "baseline": 0.2881,
+            "anomaly": 0.0381
+          },
+          {
+            "date": "2024-02-18",
+            "value": 0.3231,
+            "baseline": 0.2937,
+            "anomaly": 0.0294
+          },
+          {
+            "date": "2024-02-26",
+            "value": 0.3231,
+            "baseline": 0.2891,
+            "anomaly": 0.034
+          },
+          {
+            "date": "2024-03-05",
+            "value": 0.3592,
+            "baseline": 0.2995,
+            "anomaly": 0.0597
+          },
+          {
+            "date": "2024-03-13",
+            "value": 0.3592,
+            "baseline": 0.3021,
+            "anomaly": 0.0571
+          },
+          {
+            "date": "2024-04-06",
+            "value": 0.239,
+            "baseline": 0.3027,
+            "anomaly": -0.0637
+          },
+          {
+            "date": "2024-04-14",
+            "value": 0.2671,
+            "baseline": 0.3016,
+            "anomaly": -0.0345
+          },
+          {
+            "date": "2024-04-22",
+            "value": 0.3173,
+            "baseline": 0.2969,
+            "anomaly": 0.0204
+          },
+          {
+            "date": "2024-04-30",
+            "value": 0.3173,
+            "baseline": 0.292,
+            "anomaly": 0.0253
+          },
+          {
+            "date": "2024-05-08",
+            "value": 0.2891,
+            "baseline": 0.2926,
+            "anomaly": -0.0035
+          },
+          {
+            "date": "2024-05-16",
+            "value": 0.2389,
+            "baseline": 0.2903,
+            "anomaly": -0.0514
+          },
+          {
+            "date": "2024-05-24",
+            "value": 0.2508,
+            "baseline": 0.2859,
+            "anomaly": -0.0351
+          },
+          {
+            "date": "2024-06-01",
+            "value": 0.2508,
+            "baseline": 0.2739,
+            "anomaly": -0.0231
+          },
+          {
+            "date": "2024-06-09",
+            "value": 0.2586,
+            "baseline": 0.2719,
+            "anomaly": -0.0133
+          },
+          {
+            "date": "2024-06-17",
+            "value": 0.2586,
+            "baseline": 0.2696,
+            "anomaly": -0.011
+          },
+          {
+            "date": "2024-06-25",
+            "value": 0.193,
+            "baseline": 0.2694,
+            "anomaly": -0.0764
+          },
+          {
+            "date": "2024-07-03",
+            "value": 0.2382,
+            "baseline": 0.2634,
+            "anomaly": -0.0252
+          },
+          {
+            "date": "2024-07-11",
+            "value": 0.2382,
+            "baseline": 0.2557,
+            "anomaly": -0.0175
+          },
+          {
+            "date": "2024-07-19",
+            "value": 0.1882,
+            "baseline": 0.2503,
+            "anomaly": -0.0621
+          },
+          {
+            "date": "2024-07-27",
+            "value": 0.2254,
+            "baseline": 0.2407,
+            "anomaly": -0.0153
+          },
+          {
+            "date": "2024-08-04",
+            "value": 0.2254,
+            "baseline": 0.2306,
+            "anomaly": -0.0052
+          },
+          {
+            "date": "2024-08-12",
+            "value": 0.2112,
+            "baseline": 0.2193,
+            "anomaly": -0.0081
+          },
+          {
+            "date": "2024-08-20",
+            "value": 0.1914,
+            "baseline": 0.2099,
+            "anomaly": -0.0185
+          },
+          {
+            "date": "2024-08-28",
+            "value": 0.1914,
+            "baseline": 0.2077,
+            "anomaly": -0.0163
+          },
+          {
+            "date": "2024-09-05",
+            "value": 0.1753,
+            "baseline": 0.2118,
+            "anomaly": -0.0365
+          },
+          {
+            "date": "2024-09-13",
+            "value": 0.1555,
+            "baseline": 0.2152,
+            "anomaly": -0.0597
+          },
+          {
+            "date": "2024-09-21",
+            "value": 0.2059,
+            "baseline": 0.2177,
+            "anomaly": -0.0118
+          },
+          {
+            "date": "2024-09-29",
+            "value": 0.2059,
+            "baseline": 0.2153,
+            "anomaly": -0.0094
+          },
+          {
+            "date": "2024-10-07",
+            "value": 0.1768,
+            "baseline": 0.2157,
+            "anomaly": -0.0389
+          },
+          {
+            "date": "2024-10-15",
+            "value": 0.1768,
+            "baseline": 0.2233,
+            "anomaly": -0.0465
+          },
+          {
+            "date": "2025-03-30",
+            "value": 0.3036,
+            "baseline": 0.2923,
+            "anomaly": 0.0113
+          },
+          {
+            "date": "2025-04-07",
+            "value": 0.3036,
+            "baseline": 0.2949,
+            "anomaly": 0.0087
+          },
+          {
+            "date": "2025-05-09",
+            "value": 0.368,
+            "baseline": 0.2824,
+            "anomaly": 0.0856
+          },
+          {
+            "date": "2025-05-17",
+            "value": 0.368,
+            "baseline": 0.2775,
+            "anomaly": 0.0905
+          },
+          {
+            "date": "2025-05-25",
+            "value": 0.2854,
+            "baseline": 0.276,
+            "anomaly": 0.0094
+          },
+          {
+            "date": "2025-06-02",
+            "value": 0.2854,
+            "baseline": 0.2705,
+            "anomaly": 0.0149
+          },
+          {
+            "date": "2025-06-10",
+            "value": 0.2604,
+            "baseline": 0.2664,
+            "anomaly": -0.006
+          },
+          {
+            "date": "2025-06-18",
+            "value": 0.3361,
+            "baseline": 0.259,
+            "anomaly": 0.0771
+          },
+          {
+            "date": "2025-06-26",
+            "value": 0.3361,
+            "baseline": 0.257,
+            "anomaly": 0.0791
+          },
+          {
+            "date": "2025-07-04",
+            "value": 0.2772,
+            "baseline": 0.2532,
+            "anomaly": 0.024
+          },
+          {
+            "date": "2025-07-12",
+            "value": 0.27,
+            "baseline": 0.2498,
+            "anomaly": 0.0202
+          },
+          {
+            "date": "2025-07-20",
+            "value": 0.2415,
+            "baseline": 0.2448,
+            "anomaly": -0.0033
+          },
+          {
+            "date": "2025-07-28",
+            "value": 0.2556,
+            "baseline": 0.2352,
+            "anomaly": 0.0204
+          },
+          {
+            "date": "2025-08-05",
+            "value": 0.2556,
+            "baseline": 0.2293,
+            "anomaly": 0.0263
+          },
+          {
+            "date": "2025-08-13",
+            "value": 0.1751,
+            "baseline": 0.2213,
+            "anomaly": -0.0462
+          },
+          {
+            "date": "2025-08-21",
+            "value": 0.1596,
+            "baseline": 0.2141,
+            "anomaly": -0.0545
+          },
+          {
+            "date": "2025-08-29",
+            "value": 0.1788,
+            "baseline": 0.2077,
+            "anomaly": -0.0289
+          },
+          {
+            "date": "2025-09-06",
+            "value": 0.2213,
+            "baseline": 0.2068,
+            "anomaly": 0.0145
+          },
+          {
+            "date": "2025-09-14",
+            "value": 0.2213,
+            "baseline": 0.2089,
+            "anomaly": 0.0124
+          },
+          {
+            "date": "2025-09-22",
+            "value": 0.207,
+            "baseline": 0.2128,
+            "anomaly": -0.0058
+          },
+          {
+            "date": "2025-09-30",
+            "value": 0.207,
+            "baseline": 0.2101,
+            "anomaly": -0.0031
+          },
+          {
+            "date": "2025-10-08",
+            "value": 0.2315,
+            "baseline": 0.2035,
+            "anomaly": 0.028
+          },
+          {
+            "date": "2025-10-16",
+            "value": 0.2315,
+            "baseline": 0.2111,
+            "anomaly": 0.0204
+          },
+          {
+            "date": "2025-10-24",
+            "value": 0.2353,
+            "baseline": 0.2328,
+            "anomaly": 0.0025
+          },
+          {
+            "date": "2025-11-01",
+            "value": 0.2861,
+            "baseline": 0.2724,
+            "anomaly": 0.0137
+          },
+          {
+            "date": "2025-11-09",
+            "value": 0.2861,
+            "baseline": 0.3179,
+            "anomaly": -0.0318
+          },
+          {
+            "date": "2025-11-17",
+            "value": 0.1895,
+            "baseline": 0.3007,
+            "anomaly": -0.1112
+          },
+          {
+            "date": "2025-11-25",
+            "value": 0.1895,
+            "baseline": 0.2411,
+            "anomaly": -0.0516
+          },
+          {
+            "date": "2025-12-19",
+            "value": 0.1994,
+            "baseline": 0.2836,
+            "anomaly": -0.0842
+          },
+          {
+            "date": "2025-12-27",
+            "value": 0.1994,
+            "baseline": 0.2836,
+            "anomaly": -0.0842
+          },
+          {
+            "date": "2026-02-18",
+            "value": 0.2894,
+            "baseline": 0.3072,
+            "anomaly": -0.0178
+          },
+          {
+            "date": "2026-02-26",
+            "value": 0.2894,
+            "baseline": 0.2987,
+            "anomaly": -0.0093
+          },
+          {
+            "date": "2026-03-06",
+            "value": 0.3496,
+            "baseline": 0.3048,
+            "anomaly": 0.0448
+          },
+          {
+            "date": "2026-03-14",
+            "value": 0.3496,
+            "baseline": 0.3039,
+            "anomaly": 0.0457
+          },
+          {
+            "date": "2026-04-23",
+            "value": 0.2353,
+            "baseline": 0.3053,
+            "anomaly": -0.07
+          },
+          {
+            "date": "2026-05-01",
+            "value": 0.2353,
+            "baseline": 0.301,
+            "anomaly": -0.0657
+          },
+          {
+            "date": "2026-05-25",
+            "value": 0.2802,
+            "baseline": 0.2809,
+            "anomaly": -0.0007
+          },
+          {
+            "date": "2026-06-02",
+            "value": 0.2802,
+            "baseline": 0.2729,
+            "anomaly": 0.0073
+          },
+          {
+            "date": "2026-06-10",
+            "value": 0.2208,
+            "baseline": 0.27,
+            "anomaly": -0.0492
+          },
+          {
+            "date": "2026-06-18",
+            "value": 0.3056,
+            "baseline": 0.2638,
+            "anomaly": 0.0418
+          },
+          {
+            "date": "2026-06-26",
+            "value": 0.3056,
+            "baseline": 0.2597,
+            "anomaly": 0.0459
+          },
+          {
+            "date": "2026-07-04",
+            "value": 0.2824,
+            "baseline": 0.2538,
+            "anomaly": 0.0286
+          },
+          {
+            "date": "2026-07-12",
+            "value": 0.2824,
+            "baseline": 0.2514,
+            "anomaly": 0.031
+          },
+          {
+            "date": "2026-07-20",
+            "value": 0.191,
+            "baseline": 0.2497,
+            "anomaly": -0.0587
+          },
+          {
+            "date": "2026-07-28",
+            "value": 0.191,
+            "baseline": 0.2419,
+            "anomaly": -0.0509
+          },
+          {
+            "date": "2026-08-05",
+            "value": 0.2308,
+            "baseline": 0.231,
+            "anomaly": -0.0002
+          },
+          {
             "date": "2026-08-13",
-            "value": 0.2875,
-            "baseline": 0.2258,
-            "anomaly": 0.0617
+            "value": 0.2308,
+            "baseline": 0.2171,
+            "anomaly": 0.0137
+          },
+          {
+            "date": "2026-08-21",
+            "value": 0.2086,
+            "baseline": 0.207,
+            "anomaly": 0.0016
+          },
+          {
+            "date": "2026-08-29",
+            "value": 0.2086,
+            "baseline": 0.2046,
+            "anomaly": 0.004
+          },
+          {
+            "date": "2026-09-06",
+            "value": 0.2033,
+            "baseline": 0.2051,
+            "anomaly": -0.0018
+          },
+          {
+            "date": "2026-09-14",
+            "value": 0.2429,
+            "baseline": 0.2086,
+            "anomaly": 0.0343
           }
         ],
         "latest": {
-          "date": "2026-08-13",
-          "value": 0.2875,
-          "baseline": 0.2258,
-          "anomaly": 0.0617
+          "date": "2026-09-14",
+          "value": 0.2429,
+          "baseline": 0.2086,
+          "anomaly": 0.0343
         },
         "status": "green"
       },
@@ -2444,13 +2942,13 @@
           },
           {
             "doy": 273,
-            "cumulative_mm": 889.1,
+            "cumulative_mm": 890.0,
             "baseline_mm": 584.94
           }
         ],
         "latest": {
           "doy": 273,
-          "cumulative_mm": 889.1,
+          "cumulative_mm": 890.0,
           "baseline_mm": 584.94
         },
         "ratio_to_normal": 1.52,
@@ -2458,7 +2956,7 @@
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 1362.5,
+        "total_gdd": 1362.8,
         "series": [
           {
             "date": "2026-01-01",
@@ -3550,7 +4048,7 @@
           },
           {
             "date": "2026-09-30",
-            "gdd_cumulative": 1362.5
+            "gdd_cumulative": 1362.8
           }
         ]
       },
@@ -3571,1193 +4069,1085 @@
       "ndvi": {
         "series": [
           {
-            "date": "2018-06-10",
-            "value": 0.1589,
-            "baseline": 0.1627,
-            "anomaly": -0.0038
+            "date": "2018-09-22",
+            "value": 0.1282,
+            "baseline": 0.1503,
+            "anomaly": -0.0221
           },
           {
-            "date": "2018-06-26",
-            "value": 0.1447,
-            "baseline": 0.1545,
-            "anomaly": -0.0098
-          },
-          {
-            "date": "2018-07-12",
-            "value": 0.1413,
-            "baseline": 0.1512,
-            "anomaly": -0.0099
-          },
-          {
-            "date": "2018-07-28",
-            "value": 0.1246,
-            "baseline": 0.15,
-            "anomaly": -0.0254
-          },
-          {
-            "date": "2018-08-13",
-            "value": 0.1241,
-            "baseline": 0.1383,
-            "anomaly": -0.0142
-          },
-          {
-            "date": "2018-08-29",
-            "value": 0.1498,
-            "baseline": 0.1421,
-            "anomaly": 0.0077
-          },
-          {
-            "date": "2018-09-14",
-            "value": 0.1643,
-            "baseline": 0.1551,
-            "anomaly": 0.0092
-          },
-          {
-            "date": "2018-09-30",
-            "value": 0.1971,
-            "baseline": 0.1464,
-            "anomaly": 0.0507
-          },
-          {
-            "date": "2018-10-16",
-            "value": 0.1688,
-            "baseline": 0.1473,
-            "anomaly": 0.0215
-          },
-          {
-            "date": "2018-11-01",
-            "value": 0.1661,
-            "baseline": 0.1539,
-            "anomaly": 0.0122
-          },
-          {
-            "date": "2018-11-17",
-            "value": 0.1432,
-            "baseline": 0.1606,
-            "anomaly": -0.0174
-          },
-          {
-            "date": "2018-12-03",
-            "value": 0.155,
-            "baseline": 0.1556,
-            "anomaly": -0.0006
-          },
-          {
-            "date": "2018-12-19",
-            "value": 0.1448,
-            "baseline": 0.1558,
-            "anomaly": -0.011
-          },
-          {
-            "date": "2019-01-01",
-            "value": 0.1471,
-            "baseline": 0.1961,
-            "anomaly": -0.049
-          },
-          {
-            "date": "2019-01-17",
-            "value": 0.1665,
-            "baseline": 0.189,
-            "anomaly": -0.0225
+            "date": "2019-01-25",
+            "value": 0.1898,
+            "baseline": null,
+            "anomaly": null
           },
           {
             "date": "2019-02-02",
-            "value": 0.1809,
-            "baseline": 0.1637,
-            "anomaly": 0.0172
-          },
-          {
-            "date": "2019-02-18",
-            "value": 0.1673,
-            "baseline": 0.1603,
-            "anomaly": 0.007
-          },
-          {
-            "date": "2019-03-06",
-            "value": 0.1597,
-            "baseline": 0.1798,
-            "anomaly": -0.0201
+            "value": 0.1898,
+            "baseline": 0.1505,
+            "anomaly": 0.0393
           },
           {
             "date": "2019-03-22",
-            "value": 0.1556,
-            "baseline": 0.167,
-            "anomaly": -0.0114
+            "value": 0.1662,
+            "baseline": 0.1734,
+            "anomaly": -0.0072
+          },
+          {
+            "date": "2019-03-30",
+            "value": 0.1662,
+            "baseline": 0.1723,
+            "anomaly": -0.0061
           },
           {
             "date": "2019-04-07",
-            "value": 0.1528,
-            "baseline": 0.1639,
-            "anomaly": -0.0111
+            "value": 0.1624,
+            "baseline": 0.1717,
+            "anomaly": -0.0093
           },
           {
-            "date": "2019-04-23",
-            "value": 0.1694,
-            "baseline": 0.165,
-            "anomaly": 0.0044
+            "date": "2019-04-15",
+            "value": 0.1584,
+            "baseline": 0.1677,
+            "anomaly": -0.0093
           },
           {
-            "date": "2019-05-09",
-            "value": 0.1944,
-            "baseline": 0.1598,
-            "anomaly": 0.0346
+            "date": "2019-05-17",
+            "value": 0.1544,
+            "baseline": 0.168,
+            "anomaly": -0.0136
           },
           {
             "date": "2019-05-25",
-            "value": 0.1959,
-            "baseline": 0.1618,
-            "anomaly": 0.0341
-          },
-          {
-            "date": "2019-06-10",
-            "value": 0.1598,
-            "baseline": 0.1626,
-            "anomaly": -0.0028
-          },
-          {
-            "date": "2019-06-26",
-            "value": 0.1443,
-            "baseline": 0.1545,
-            "anomaly": -0.0102
-          },
-          {
-            "date": "2019-07-12",
-            "value": 0.1373,
-            "baseline": 0.1516,
-            "anomaly": -0.0143
-          },
-          {
-            "date": "2019-07-28",
-            "value": 0.1451,
-            "baseline": 0.1479,
-            "anomaly": -0.0028
-          },
-          {
-            "date": "2019-08-13",
-            "value": 0.1454,
-            "baseline": 0.1359,
-            "anomaly": 0.0095
-          },
-          {
-            "date": "2019-08-29",
-            "value": 0.1453,
-            "baseline": 0.1427,
-            "anomaly": 0.0026
-          },
-          {
-            "date": "2019-09-14",
-            "value": 0.1505,
-            "baseline": 0.1571,
-            "anomaly": -0.0066
-          },
-          {
-            "date": "2019-09-30",
-            "value": 0.1294,
-            "baseline": 0.1561,
-            "anomaly": -0.0267
-          },
-          {
-            "date": "2019-10-16",
-            "value": 0.1326,
-            "baseline": 0.1525,
-            "anomaly": -0.0199
-          },
-          {
-            "date": "2019-11-01",
-            "value": 0.1313,
-            "baseline": 0.1589,
-            "anomaly": -0.0276
-          },
-          {
-            "date": "2019-11-17",
-            "value": 0.1479,
-            "baseline": 0.16,
-            "anomaly": -0.0121
-          },
-          {
-            "date": "2019-12-03",
-            "value": 0.1515,
-            "baseline": 0.1561,
-            "anomaly": -0.0046
-          },
-          {
-            "date": "2019-12-19",
-            "value": 0.1835,
-            "baseline": 0.1502,
-            "anomaly": 0.0333
-          },
-          {
-            "date": "2020-01-01",
-            "value": 0.2048,
-            "baseline": 0.1878,
-            "anomaly": 0.017
-          },
-          {
-            "date": "2020-01-17",
-            "value": 0.198,
-            "baseline": 0.1845,
-            "anomaly": 0.0135
-          },
-          {
-            "date": "2020-02-02",
-            "value": 0.1524,
-            "baseline": 0.1678,
-            "anomaly": -0.0154
-          },
-          {
-            "date": "2020-02-18",
-            "value": 0.1569,
-            "baseline": 0.1618,
-            "anomaly": -0.0049
-          },
-          {
-            "date": "2020-03-05",
-            "value": 0.1512,
-            "baseline": 0.181,
-            "anomaly": -0.0298
-          },
-          {
-            "date": "2020-03-21",
-            "value": 0.1601,
-            "baseline": 0.1664,
-            "anomaly": -0.0063
-          },
-          {
-            "date": "2020-04-06",
-            "value": 0.1554,
-            "baseline": 0.1635,
-            "anomaly": -0.0081
-          },
-          {
-            "date": "2020-04-22",
-            "value": 0.1636,
-            "baseline": 0.1656,
-            "anomaly": -0.002
-          },
-          {
-            "date": "2020-05-08",
-            "value": 0.1678,
-            "baseline": 0.1628,
-            "anomaly": 0.005
-          },
-          {
-            "date": "2020-05-24",
-            "value": 0.1519,
-            "baseline": 0.1667,
-            "anomaly": -0.0148
-          },
-          {
-            "date": "2020-06-09",
-            "value": 0.1615,
-            "baseline": 0.1625,
-            "anomaly": -0.001
-          },
-          {
-            "date": "2020-06-25",
-            "value": 0.1322,
-            "baseline": 0.1557,
-            "anomaly": -0.0235
-          },
-          {
-            "date": "2020-07-11",
-            "value": 0.1753,
-            "baseline": 0.1478,
-            "anomaly": 0.0275
-          },
-          {
-            "date": "2020-07-27",
-            "value": 0.1377,
-            "baseline": 0.1487,
-            "anomaly": -0.011
-          },
-          {
-            "date": "2020-08-12",
-            "value": 0.1337,
-            "baseline": 0.1372,
-            "anomaly": -0.0035
-          },
-          {
-            "date": "2020-08-28",
-            "value": 0.1385,
-            "baseline": 0.1437,
-            "anomaly": -0.0052
-          },
-          {
-            "date": "2020-09-13",
-            "value": 0.163,
-            "baseline": 0.1553,
-            "anomaly": 0.0077
-          },
-          {
-            "date": "2020-09-29",
-            "value": 0.1672,
-            "baseline": 0.1507,
-            "anomaly": 0.0165
-          },
-          {
-            "date": "2020-10-15",
-            "value": 0.1183,
-            "baseline": 0.1545,
-            "anomaly": -0.0362
-          },
-          {
-            "date": "2020-10-31",
-            "value": 0.1482,
-            "baseline": 0.1565,
-            "anomaly": -0.0083
-          },
-          {
-            "date": "2020-11-16",
-            "value": 0.1555,
-            "baseline": 0.1589,
-            "anomaly": -0.0034
-          },
-          {
-            "date": "2020-12-02",
-            "value": 0.181,
-            "baseline": 0.1519,
-            "anomaly": 0.0291
-          },
-          {
-            "date": "2020-12-18",
-            "value": 0.1482,
-            "baseline": 0.1553,
-            "anomaly": -0.0071
-          },
-          {
-            "date": "2021-01-01",
-            "value": 0.1572,
-            "baseline": 0.1946,
-            "anomaly": -0.0374
-          },
-          {
-            "date": "2021-01-17",
-            "value": 0.1767,
-            "baseline": 0.1876,
-            "anomaly": -0.0109
-          },
-          {
-            "date": "2021-02-02",
-            "value": 0.1622,
-            "baseline": 0.1664,
-            "anomaly": -0.0042
-          },
-          {
-            "date": "2021-02-18",
-            "value": 0.1439,
-            "baseline": 0.1636,
-            "anomaly": -0.0197
-          },
-          {
-            "date": "2021-03-06",
-            "value": 0.1494,
-            "baseline": 0.1813,
-            "anomaly": -0.0319
-          },
-          {
-            "date": "2021-03-22",
-            "value": 0.1829,
-            "baseline": 0.1631,
-            "anomaly": 0.0198
-          },
-          {
-            "date": "2021-04-07",
-            "value": 0.1332,
-            "baseline": 0.1663,
-            "anomaly": -0.0331
-          },
-          {
-            "date": "2021-04-23",
-            "value": 0.1797,
-            "baseline": 0.1638,
-            "anomaly": 0.0159
-          },
-          {
-            "date": "2021-05-09",
-            "value": 0.1475,
-            "baseline": 0.165,
-            "anomaly": -0.0175
-          },
-          {
-            "date": "2021-05-25",
-            "value": 0.1256,
-            "baseline": 0.1696,
-            "anomaly": -0.044
-          },
-          {
-            "date": "2021-06-10",
-            "value": 0.1657,
-            "baseline": 0.162,
-            "anomaly": 0.0037
-          },
-          {
-            "date": "2021-06-26",
-            "value": 0.1545,
-            "baseline": 0.1535,
-            "anomaly": 0.001
-          },
-          {
-            "date": "2021-07-12",
-            "value": 0.1327,
-            "baseline": 0.152,
-            "anomaly": -0.0193
-          },
-          {
-            "date": "2021-07-28",
-            "value": 0.1283,
-            "baseline": 0.1496,
-            "anomaly": -0.0213
-          },
-          {
-            "date": "2021-08-13",
-            "value": 0.13,
-            "baseline": 0.1376,
-            "anomaly": -0.0076
-          },
-          {
-            "date": "2021-08-29",
-            "value": 0.1271,
-            "baseline": 0.1453,
-            "anomaly": -0.0182
-          },
-          {
-            "date": "2021-09-14",
-            "value": 0.1808,
-            "baseline": 0.1528,
-            "anomaly": 0.028
-          },
-          {
-            "date": "2021-09-30",
-            "value": 0.1216,
-            "baseline": 0.1572,
-            "anomaly": -0.0356
-          },
-          {
-            "date": "2021-10-16",
-            "value": 0.1365,
-            "baseline": 0.1519,
-            "anomaly": -0.0154
-          },
-          {
-            "date": "2021-11-01",
-            "value": 0.1478,
-            "baseline": 0.1565,
-            "anomaly": -0.0087
-          },
-          {
-            "date": "2021-11-17",
-            "value": 0.142,
-            "baseline": 0.1608,
-            "anomaly": -0.0188
-          },
-          {
-            "date": "2021-12-03",
-            "value": 0.1462,
-            "baseline": 0.1568,
-            "anomaly": -0.0106
-          },
-          {
-            "date": "2021-12-19",
-            "value": 0.1527,
-            "baseline": 0.1546,
-            "anomaly": -0.0019
-          },
-          {
-            "date": "2022-01-01",
-            "value": 0.2123,
-            "baseline": 0.1867,
-            "anomaly": 0.0256
-          },
-          {
-            "date": "2022-01-17",
-            "value": 0.1509,
-            "baseline": 0.1913,
-            "anomaly": -0.0404
-          },
-          {
-            "date": "2022-02-02",
-            "value": 0.1962,
-            "baseline": 0.1615,
-            "anomaly": 0.0347
-          },
-          {
-            "date": "2022-02-18",
-            "value": 0.1681,
-            "baseline": 0.1602,
-            "anomaly": 0.0079
-          },
-          {
-            "date": "2022-03-06",
-            "value": 0.2767,
-            "baseline": 0.1631,
-            "anomaly": 0.1136
-          },
-          {
-            "date": "2022-03-22",
-            "value": 0.1851,
-            "baseline": 0.1628,
-            "anomaly": 0.0223
-          },
-          {
-            "date": "2022-04-07",
-            "value": 0.1966,
-            "baseline": 0.1584,
-            "anomaly": 0.0382
-          },
-          {
-            "date": "2022-04-23",
-            "value": 0.1731,
-            "baseline": 0.1646,
-            "anomaly": 0.0085
-          },
-          {
-            "date": "2022-05-09",
-            "value": 0.154,
-            "baseline": 0.1643,
-            "anomaly": -0.0103
-          },
-          {
-            "date": "2022-05-25",
-            "value": 0.1673,
-            "baseline": 0.165,
-            "anomaly": 0.0023
-          },
-          {
-            "date": "2022-06-10",
-            "value": 0.1433,
-            "baseline": 0.1643,
-            "anomaly": -0.021
-          },
-          {
-            "date": "2022-06-26",
-            "value": 0.1588,
-            "baseline": 0.1531,
-            "anomaly": 0.0057
-          },
-          {
-            "date": "2022-07-12",
-            "value": 0.1393,
-            "baseline": 0.1514,
-            "anomaly": -0.0121
-          },
-          {
-            "date": "2022-07-28",
-            "value": 0.1295,
-            "baseline": 0.1495,
-            "anomaly": -0.02
-          },
-          {
-            "date": "2022-08-13",
-            "value": 0.1317,
-            "baseline": 0.1375,
-            "anomaly": -0.0058
-          },
-          {
-            "date": "2022-08-29",
-            "value": 0.1226,
-            "baseline": 0.1459,
-            "anomaly": -0.0233
-          },
-          {
-            "date": "2022-09-14",
-            "value": 0.1481,
-            "baseline": 0.1575,
-            "anomaly": -0.0094
-          },
-          {
-            "date": "2022-09-30",
-            "value": 0.1484,
-            "baseline": 0.1534,
-            "anomaly": -0.005
-          },
-          {
-            "date": "2022-10-16",
-            "value": 0.1779,
-            "baseline": 0.146,
-            "anomaly": 0.0319
-          },
-          {
-            "date": "2022-11-01",
-            "value": 0.1687,
-            "baseline": 0.1536,
-            "anomaly": 0.0151
-          },
-          {
-            "date": "2022-11-17",
-            "value": 0.15,
-            "baseline": 0.1597,
-            "anomaly": -0.0097
-          },
-          {
-            "date": "2022-12-03",
-            "value": 0.1431,
-            "baseline": 0.1573,
-            "anomaly": -0.0142
-          },
-          {
-            "date": "2022-12-19",
-            "value": 0.175,
-            "baseline": 0.1515,
-            "anomaly": 0.0235
-          },
-          {
-            "date": "2023-01-01",
-            "value": 0.175,
-            "baseline": 0.1921,
-            "anomaly": -0.0171
-          },
-          {
-            "date": "2023-01-17",
-            "value": 0.1578,
-            "baseline": 0.1903,
-            "anomaly": -0.0325
-          },
-          {
-            "date": "2023-02-02",
-            "value": 0.1765,
-            "baseline": 0.1643,
-            "anomaly": 0.0122
-          },
-          {
-            "date": "2023-02-18",
-            "value": 0.2001,
-            "baseline": 0.1556,
-            "anomaly": 0.0445
-          },
-          {
-            "date": "2023-03-06",
-            "value": 0.192,
-            "baseline": 0.1752,
-            "anomaly": 0.0168
-          },
-          {
-            "date": "2023-03-22",
-            "value": 0.1847,
-            "baseline": 0.1629,
-            "anomaly": 0.0218
-          },
-          {
-            "date": "2023-04-07",
-            "value": 0.1664,
-            "baseline": 0.1622,
-            "anomaly": 0.0042
-          },
-          {
-            "date": "2023-04-23",
-            "value": 0.1597,
-            "baseline": 0.166,
-            "anomaly": -0.0063
-          },
-          {
-            "date": "2023-05-09",
-            "value": 0.1673,
-            "baseline": 0.1628,
-            "anomaly": 0.0045
-          },
-          {
-            "date": "2023-05-25",
-            "value": 0.1949,
-            "baseline": 0.1619,
-            "anomaly": 0.033
-          },
-          {
-            "date": "2023-06-10",
-            "value": 0.162,
-            "baseline": 0.1624,
-            "anomaly": -0.0004
-          },
-          {
-            "date": "2023-06-26",
-            "value": 0.1625,
-            "baseline": 0.1527,
-            "anomaly": 0.0098
-          },
-          {
-            "date": "2023-07-12",
-            "value": 0.148,
-            "baseline": 0.1505,
-            "anomaly": -0.0025
-          },
-          {
-            "date": "2023-07-28",
-            "value": 0.1238,
-            "baseline": 0.15,
-            "anomaly": -0.0262
-          },
-          {
-            "date": "2023-08-13",
-            "value": 0.1328,
-            "baseline": 0.1373,
-            "anomaly": -0.0045
-          },
-          {
-            "date": "2023-08-29",
-            "value": 0.1545,
-            "baseline": 0.1414,
-            "anomaly": 0.0131
-          },
-          {
-            "date": "2023-09-14",
-            "value": 0.1556,
-            "baseline": 0.1564,
-            "anomaly": -0.0008
-          },
-          {
-            "date": "2023-09-30",
-            "value": 0.155,
-            "baseline": 0.1524,
-            "anomaly": 0.0026
-          },
-          {
-            "date": "2023-10-16",
-            "value": 0.1801,
-            "baseline": 0.1457,
-            "anomaly": 0.0344
-          },
-          {
-            "date": "2023-11-01",
-            "value": 0.1758,
-            "baseline": 0.1525,
-            "anomaly": 0.0233
-          },
-          {
-            "date": "2023-11-17",
-            "value": 0.2291,
-            "baseline": 0.1484,
-            "anomaly": 0.0807
-          },
-          {
-            "date": "2023-12-03",
-            "value": 0.1789,
-            "baseline": 0.1522,
-            "anomaly": 0.0267
-          },
-          {
-            "date": "2023-12-19",
-            "value": 0.1579,
-            "baseline": 0.1539,
-            "anomaly": 0.004
-          },
-          {
-            "date": "2024-01-01",
-            "value": 0.1526,
-            "baseline": 0.1953,
-            "anomaly": -0.0427
-          },
-          {
-            "date": "2024-01-17",
-            "value": 0.2451,
-            "baseline": 0.1778,
-            "anomaly": 0.0673
-          },
-          {
-            "date": "2024-02-02",
-            "value": 0.1761,
-            "baseline": 0.1644,
-            "anomaly": 0.0117
-          },
-          {
-            "date": "2024-02-18",
-            "value": 0.1553,
-            "baseline": 0.162,
+            "value": 0.1621,
+            "baseline": 0.1688,
             "anomaly": -0.0067
           },
           {
-            "date": "2024-03-05",
-            "value": 0.1857,
-            "baseline": 0.1761,
-            "anomaly": 0.0096
+            "date": "2019-06-02",
+            "value": 0.1653,
+            "baseline": 0.1676,
+            "anomaly": -0.0023
           },
           {
-            "date": "2024-03-21",
-            "value": 0.1608,
-            "baseline": 0.1663,
-            "anomaly": -0.0055
-          },
-          {
-            "date": "2024-04-06",
-            "value": 0.1656,
-            "baseline": 0.1623,
-            "anomaly": 0.0033
-          },
-          {
-            "date": "2024-04-22",
-            "value": 0.1681,
-            "baseline": 0.1651,
-            "anomaly": 0.003
-          },
-          {
-            "date": "2024-05-08",
-            "value": 0.1618,
-            "baseline": 0.1635,
+            "date": "2019-06-10",
+            "value": 0.1653,
+            "baseline": 0.167,
             "anomaly": -0.0017
           },
           {
-            "date": "2024-05-24",
-            "value": 0.1527,
-            "baseline": 0.1666,
-            "anomaly": -0.0139
+            "date": "2019-06-18",
+            "value": 0.1675,
+            "baseline": 0.1674,
+            "anomaly": 0.0001
           },
           {
-            "date": "2024-06-09",
-            "value": 0.1517,
-            "baseline": 0.1634,
-            "anomaly": -0.0117
+            "date": "2019-06-26",
+            "value": 0.1293,
+            "baseline": 0.1668,
+            "anomaly": -0.0375
           },
           {
-            "date": "2024-06-25",
-            "value": 0.1708,
-            "baseline": 0.1519,
-            "anomaly": 0.0189
+            "date": "2019-07-04",
+            "value": 0.1507,
+            "baseline": 0.1615,
+            "anomaly": -0.0108
           },
           {
-            "date": "2024-07-11",
-            "value": 0.1603,
-            "baseline": 0.1493,
-            "anomaly": 0.011
+            "date": "2019-07-12",
+            "value": 0.1588,
+            "baseline": 0.1585,
+            "anomaly": 0.0003
           },
           {
-            "date": "2024-07-27",
-            "value": 0.1452,
-            "baseline": 0.1479,
-            "anomaly": -0.0027
+            "date": "2019-07-20",
+            "value": 0.1588,
+            "baseline": 0.1561,
+            "anomaly": 0.0027
           },
           {
-            "date": "2024-08-12",
-            "value": 0.1197,
-            "baseline": 0.1388,
-            "anomaly": -0.0191
+            "date": "2019-07-28",
+            "value": 0.1502,
+            "baseline": 0.1515,
+            "anomaly": -0.0013
           },
           {
-            "date": "2024-08-28",
-            "value": 0.1807,
-            "baseline": 0.1376,
-            "anomaly": 0.0431
+            "date": "2019-08-05",
+            "value": 0.1502,
+            "baseline": 0.147,
+            "anomaly": 0.0032
           },
           {
-            "date": "2024-09-13",
-            "value": 0.1354,
-            "baseline": 0.1593,
-            "anomaly": -0.0239
+            "date": "2019-08-13",
+            "value": 0.1779,
+            "baseline": 0.1451,
+            "anomaly": 0.0328
           },
           {
-            "date": "2024-09-29",
-            "value": 0.1602,
-            "baseline": 0.1517,
-            "anomaly": 0.0085
+            "date": "2019-08-21",
+            "value": 0.1779,
+            "baseline": 0.1473,
+            "anomaly": 0.0306
           },
           {
-            "date": "2024-10-15",
-            "value": 0.1614,
-            "baseline": 0.1484,
+            "date": "2019-08-29",
+            "value": 0.1584,
+            "baseline": 0.1458,
+            "anomaly": 0.0126
+          },
+          {
+            "date": "2019-09-06",
+            "value": 0.1584,
+            "baseline": 0.1477,
+            "anomaly": 0.0107
+          },
+          {
+            "date": "2019-09-22",
+            "value": 0.1575,
+            "baseline": 0.147,
+            "anomaly": 0.0105
+          },
+          {
+            "date": "2019-09-30",
+            "value": 0.1575,
+            "baseline": 0.1445,
             "anomaly": 0.013
           },
           {
-            "date": "2024-10-31",
-            "value": 0.1645,
-            "baseline": 0.1542,
-            "anomaly": 0.0103
+            "date": "2019-10-24",
+            "value": 0.1555,
+            "baseline": 0.1519,
+            "anomaly": 0.0036
           },
           {
-            "date": "2024-11-16",
-            "value": 0.1459,
-            "baseline": 0.1602,
-            "anomaly": -0.0143
+            "date": "2019-11-01",
+            "value": 0.1555,
+            "baseline": 0.1617,
+            "anomaly": -0.0062
           },
           {
-            "date": "2024-12-02",
-            "value": 0.1332,
-            "baseline": 0.1587,
-            "anomaly": -0.0255
+            "date": "2019-11-09",
+            "value": 0.1469,
+            "baseline": 0.1571,
+            "anomaly": -0.0102
           },
           {
-            "date": "2024-12-18",
-            "value": 0.1347,
-            "baseline": 0.1572,
-            "anomaly": -0.0225
+            "date": "2019-11-17",
+            "value": 0.1469,
+            "baseline": 0.1363,
+            "anomaly": 0.0106
           },
           {
-            "date": "2025-01-01",
-            "value": 0.2053,
-            "baseline": 0.1877,
-            "anomaly": 0.0176
+            "date": "2019-12-11",
+            "value": 0.1691,
+            "baseline": 0.1557,
+            "anomaly": 0.0134
           },
           {
-            "date": "2025-01-17",
-            "value": 0.1967,
-            "baseline": 0.1847,
-            "anomaly": 0.012
+            "date": "2019-12-19",
+            "value": 0.1691,
+            "baseline": 0.1557,
+            "anomaly": 0.0134
           },
           {
-            "date": "2025-02-02",
-            "value": 0.1448,
-            "baseline": 0.1688,
-            "anomaly": -0.024
+            "date": "2020-03-05",
+            "value": 0.1773,
+            "baseline": 0.1565,
+            "anomaly": 0.0208
           },
           {
-            "date": "2025-02-18",
-            "value": 0.1466,
-            "baseline": 0.1632,
-            "anomaly": -0.0166
-          },
-          {
-            "date": "2025-03-06",
-            "value": 0.1564,
-            "baseline": 0.1803,
-            "anomaly": -0.0239
-          },
-          {
-            "date": "2025-03-22",
-            "value": 0.1525,
-            "baseline": 0.1675,
-            "anomaly": -0.015
-          },
-          {
-            "date": "2025-04-07",
-            "value": 0.1688,
-            "baseline": 0.1619,
-            "anomaly": 0.0069
-          },
-          {
-            "date": "2025-04-23",
-            "value": 0.1477,
-            "baseline": 0.1674,
-            "anomaly": -0.0197
-          },
-          {
-            "date": "2025-05-09",
-            "value": 0.1676,
-            "baseline": 0.1628,
-            "anomaly": 0.0048
-          },
-          {
-            "date": "2025-05-25",
-            "value": 0.1741,
-            "baseline": 0.1642,
-            "anomaly": 0.0099
-          },
-          {
-            "date": "2025-06-10",
-            "value": 0.1796,
-            "baseline": 0.1607,
-            "anomaly": 0.0189
-          },
-          {
-            "date": "2025-06-26",
-            "value": 0.1156,
-            "baseline": 0.1574,
-            "anomaly": -0.0418
-          },
-          {
-            "date": "2025-07-12",
-            "value": 0.1456,
-            "baseline": 0.1507,
-            "anomaly": -0.0051
-          },
-          {
-            "date": "2025-07-28",
-            "value": 0.1633,
-            "baseline": 0.1461,
+            "date": "2020-03-13",
+            "value": 0.1773,
+            "baseline": 0.1601,
             "anomaly": 0.0172
           },
           {
-            "date": "2025-08-13",
-            "value": 0.1459,
-            "baseline": 0.1359,
-            "anomaly": 0.01
+            "date": "2020-03-21",
+            "value": 0.1935,
+            "baseline": 0.1618,
+            "anomaly": 0.0317
           },
           {
-            "date": "2025-08-29",
-            "value": 0.1257,
-            "baseline": 0.1455,
-            "anomaly": -0.0198
+            "date": "2020-03-29",
+            "value": 0.1935,
+            "baseline": 0.1628,
+            "anomaly": 0.0307
           },
           {
-            "date": "2025-09-14",
-            "value": 0.1526,
-            "baseline": 0.1568,
-            "anomaly": -0.0042
+            "date": "2020-04-06",
+            "value": 0.1834,
+            "baseline": 0.1656,
+            "anomaly": 0.0178
           },
           {
-            "date": "2025-09-30",
-            "value": 0.1432,
-            "baseline": 0.1541,
-            "anomaly": -0.0109
+            "date": "2020-04-22",
+            "value": 0.1401,
+            "baseline": 0.1661,
+            "anomaly": -0.026
           },
           {
-            "date": "2025-10-16",
-            "value": 0.1243,
-            "baseline": 0.1537,
-            "anomaly": -0.0294
+            "date": "2020-04-30",
+            "value": 0.1713,
+            "baseline": 0.1645,
+            "anomaly": 0.0068
           },
           {
-            "date": "2025-11-01",
-            "value": 0.1412,
-            "baseline": 0.1575,
-            "anomaly": -0.0163
+            "date": "2020-05-08",
+            "value": 0.1713,
+            "baseline": 0.1636,
+            "anomaly": 0.0077
           },
           {
-            "date": "2025-11-17",
-            "value": 0.154,
-            "baseline": 0.1591,
-            "anomaly": -0.0051
+            "date": "2020-05-16",
+            "value": 0.1585,
+            "baseline": 0.1671,
+            "anomaly": -0.0086
           },
           {
-            "date": "2025-12-03",
-            "value": 0.1551,
-            "baseline": 0.1556,
-            "anomaly": -0.0005
+            "date": "2020-05-24",
+            "value": 0.1692,
+            "baseline": 0.168,
+            "anomaly": 0.0012
           },
           {
-            "date": "2025-12-19",
-            "value": 0.1384,
-            "baseline": 0.1567,
-            "anomaly": -0.0183
+            "date": "2020-06-01",
+            "value": 0.1692,
+            "baseline": 0.1669,
+            "anomaly": 0.0023
           },
           {
-            "date": "2026-01-01",
-            "value": 0.2652,
-            "baseline": 0.1792,
-            "anomaly": 0.086
+            "date": "2020-06-17",
+            "value": 0.1633,
+            "baseline": 0.1646,
+            "anomaly": -0.0013
           },
           {
-            "date": "2026-01-17",
-            "value": 0.1981,
-            "baseline": 0.1845,
-            "anomaly": 0.0136
+            "date": "2020-06-25",
+            "value": 0.1873,
+            "baseline": 0.1621,
+            "anomaly": 0.0252
           },
           {
-            "date": "2026-02-02",
-            "value": 0.1376,
-            "baseline": 0.1699,
-            "anomaly": -0.0323
+            "date": "2020-07-03",
+            "value": 0.1873,
+            "baseline": 0.1564,
+            "anomaly": 0.0309
           },
           {
-            "date": "2026-02-18",
-            "value": 0.151,
-            "baseline": 0.1626,
-            "anomaly": -0.0116
+            "date": "2020-07-11",
+            "value": 0.1614,
+            "baseline": 0.1564,
+            "anomaly": 0.005
           },
           {
-            "date": "2026-03-06",
-            "value": 0.1472,
-            "baseline": 0.1816,
-            "anomaly": -0.0344
-          },
-          {
-            "date": "2026-03-22",
-            "value": 0.1431,
-            "baseline": 0.1688,
-            "anomaly": -0.0257
-          },
-          {
-            "date": "2026-04-07",
-            "value": 0.1658,
-            "baseline": 0.1627,
-            "anomaly": 0.0031
-          },
-          {
-            "date": "2026-04-15",
-            "value": 0.1591,
-            "baseline": 0.1643,
-            "anomaly": -0.0052
-          },
-          {
-            "date": "2026-04-23",
-            "value": 0.1725,
-            "baseline": 0.1659,
-            "anomaly": 0.0066
-          },
-          {
-            "date": "2026-05-01",
-            "value": 0.1612,
-            "baseline": 0.1658,
-            "anomaly": -0.0046
-          },
-          {
-            "date": "2026-05-09",
-            "value": 0.1405,
-            "baseline": 0.1658,
-            "anomaly": -0.0253
-          },
-          {
-            "date": "2026-05-17",
-            "value": 0.1708,
-            "baseline": 0.1659,
+            "date": "2020-07-19",
+            "value": 0.1614,
+            "baseline": 0.1565,
             "anomaly": 0.0049
           },
           {
-            "date": "2026-05-25",
-            "value": 0.1453,
+            "date": "2020-07-27",
+            "value": 0.1367,
+            "baseline": 0.1527,
+            "anomaly": -0.016
+          },
+          {
+            "date": "2020-08-04",
+            "value": 0.1367,
+            "baseline": 0.1496,
+            "anomaly": -0.0129
+          },
+          {
+            "date": "2020-08-12",
+            "value": 0.1549,
+            "baseline": 0.1483,
+            "anomaly": 0.0066
+          },
+          {
+            "date": "2020-08-20",
+            "value": 0.1568,
+            "baseline": 0.1508,
+            "anomaly": 0.006
+          },
+          {
+            "date": "2020-08-28",
+            "value": 0.1568,
+            "baseline": 0.1493,
+            "anomaly": 0.0075
+          },
+          {
+            "date": "2020-09-13",
+            "value": 0.1451,
+            "baseline": 0.1494,
+            "anomaly": -0.0043
+          },
+          {
+            "date": "2020-09-21",
+            "value": 0.1451,
+            "baseline": 0.1492,
+            "anomaly": -0.0041
+          },
+          {
+            "date": "2020-10-15",
+            "value": 0.1219,
+            "baseline": 0.1513,
+            "anomaly": -0.0294
+          },
+          {
+            "date": "2020-10-23",
+            "value": 0.1219,
+            "baseline": 0.1603,
+            "anomaly": -0.0384
+          },
+          {
+            "date": "2021-02-10",
+            "value": 0.1505,
+            "baseline": 0.1706,
+            "anomaly": -0.0201
+          },
+          {
+            "date": "2021-02-18",
+            "value": 0.1505,
+            "baseline": 0.1564,
+            "anomaly": -0.0059
+          },
+          {
+            "date": "2021-02-26",
+            "value": 0.1441,
+            "baseline": 0.1626,
+            "anomaly": -0.0185
+          },
+          {
+            "date": "2021-03-06",
+            "value": 0.1441,
+            "baseline": 0.166,
+            "anomaly": -0.0219
+          },
+          {
+            "date": "2021-03-30",
+            "value": 0.1556,
+            "baseline": 0.1736,
+            "anomaly": -0.018
+          },
+          {
+            "date": "2021-04-07",
+            "value": 0.1556,
+            "baseline": 0.1721,
+            "anomaly": -0.0165
+          },
+          {
+            "date": "2021-04-23",
+            "value": 0.1727,
+            "baseline": 0.1637,
+            "anomaly": 0.009
+          },
+          {
+            "date": "2021-05-01",
+            "value": 0.1727,
+            "baseline": 0.164,
+            "anomaly": 0.0087
+          },
+          {
+            "date": "2021-05-09",
+            "value": 0.1437,
+            "baseline": 0.1663,
+            "anomaly": -0.0226
+          },
+          {
+            "date": "2021-05-17",
+            "value": 0.1437,
+            "baseline": 0.1701,
+            "anomaly": -0.0264
+          },
+          {
+            "date": "2021-05-25",
+            "value": 0.1608,
+            "baseline": 0.1697,
+            "anomaly": -0.0089
+          },
+          {
+            "date": "2021-06-02",
+            "value": 0.1608,
+            "baseline": 0.1683,
+            "anomaly": -0.0075
+          },
+          {
+            "date": "2021-06-10",
+            "value": 0.1582,
+            "baseline": 0.1669,
+            "anomaly": -0.0087
+          },
+          {
+            "date": "2021-06-18",
+            "value": 0.1813,
+            "baseline": 0.1643,
+            "anomaly": 0.017
+          },
+          {
+            "date": "2021-06-26",
+            "value": 0.1813,
+            "baseline": 0.1639,
+            "anomaly": 0.0174
+          },
+          {
+            "date": "2021-07-04",
+            "value": 0.1407,
+            "baseline": 0.1584,
+            "anomaly": -0.0177
+          },
+          {
+            "date": "2021-07-12",
+            "value": 0.1769,
+            "baseline": 0.1571,
+            "anomaly": 0.0198
+          },
+          {
+            "date": "2021-07-20",
+            "value": 0.1769,
+            "baseline": 0.1541,
+            "anomaly": 0.0228
+          },
+          {
+            "date": "2021-08-05",
+            "value": 0.1408,
+            "baseline": 0.1495,
+            "anomaly": -0.0087
+          },
+          {
+            "date": "2021-08-13",
+            "value": 0.1408,
+            "baseline": 0.1498,
+            "anomaly": -0.009
+          },
+          {
+            "date": "2021-08-21",
+            "value": 0.1407,
+            "baseline": 0.1534,
+            "anomaly": -0.0127
+          },
+          {
+            "date": "2021-09-22",
+            "value": 0.1505,
+            "baseline": 0.1483,
+            "anomaly": 0.0022
+          },
+          {
+            "date": "2021-09-30",
+            "value": 0.1505,
+            "baseline": 0.1471,
+            "anomaly": 0.0034
+          },
+          {
+            "date": "2021-10-08",
+            "value": 0.1372,
+            "baseline": 0.1423,
+            "anomaly": -0.0051
+          },
+          {
+            "date": "2021-10-16",
+            "value": 0.1086,
+            "baseline": 0.1472,
+            "anomaly": -0.0386
+          },
+          {
+            "date": "2021-10-24",
+            "value": 0.1741,
+            "baseline": 0.1528,
+            "anomaly": 0.0213
+          },
+          {
+            "date": "2021-11-01",
+            "value": 0.1741,
+            "baseline": 0.1572,
+            "anomaly": 0.0169
+          },
+          {
+            "date": "2021-11-09",
+            "value": 0.1363,
+            "baseline": 0.1578,
+            "anomaly": -0.0215
+          },
+          {
+            "date": "2021-11-17",
+            "value": 0.1363,
+            "baseline": 0.1469,
+            "anomaly": -0.0106
+          },
+          {
+            "date": "2022-04-07",
+            "value": 0.1624,
+            "baseline": 0.1708,
+            "anomaly": -0.0084
+          },
+          {
+            "date": "2022-04-15",
+            "value": 0.1624,
+            "baseline": 0.1688,
+            "anomaly": -0.0064
+          },
+          {
+            "date": "2022-04-23",
+            "value": 0.1496,
+            "baseline": 0.1673,
+            "anomaly": -0.0177
+          },
+          {
+            "date": "2022-05-01",
+            "value": 0.1496,
+            "baseline": 0.165,
+            "anomaly": -0.0154
+          },
+          {
+            "date": "2022-05-09",
+            "value": 0.1761,
+            "baseline": 0.1625,
+            "anomaly": 0.0136
+          },
+          {
+            "date": "2022-05-17",
+            "value": 0.1915,
+            "baseline": 0.1636,
+            "anomaly": 0.0279
+          },
+          {
+            "date": "2022-05-25",
+            "value": 0.1915,
+            "baseline": 0.1653,
+            "anomaly": 0.0262
+          },
+          {
+            "date": "2022-06-10",
+            "value": 0.1677,
+            "baseline": 0.1663,
+            "anomaly": 0.0014
+          },
+          {
+            "date": "2022-06-18",
+            "value": 0.1763,
+            "baseline": 0.1639,
+            "anomaly": 0.0124
+          },
+          {
+            "date": "2022-06-26",
+            "value": 0.1843,
+            "baseline": 0.1617,
+            "anomaly": 0.0226
+          },
+          {
+            "date": "2022-07-04",
+            "value": 0.1843,
+            "baseline": 0.1578,
+            "anomaly": 0.0265
+          },
+          {
+            "date": "2022-07-12",
+            "value": 0.1411,
+            "baseline": 0.1567,
+            "anomaly": -0.0156
+          },
+          {
+            "date": "2022-07-20",
+            "value": 0.1786,
+            "baseline": 0.1546,
+            "anomaly": 0.024
+          },
+          {
+            "date": "2022-07-28",
+            "value": 0.1786,
+            "baseline": 0.1504,
+            "anomaly": 0.0282
+          },
+          {
+            "date": "2022-08-05",
+            "value": 0.1242,
+            "baseline": 0.1497,
+            "anomaly": -0.0255
+          },
+          {
+            "date": "2022-08-13",
+            "value": 0.1242,
+            "baseline": 0.1517,
+            "anomaly": -0.0275
+          },
+          {
+            "date": "2022-08-21",
+            "value": 0.1394,
+            "baseline": 0.1558,
+            "anomaly": -0.0164
+          },
+          {
+            "date": "2022-08-29",
+            "value": 0.1394,
+            "baseline": 0.1528,
+            "anomaly": -0.0134
+          },
+          {
+            "date": "2022-09-14",
+            "value": 0.1465,
+            "baseline": 0.1491,
+            "anomaly": -0.0026
+          },
+          {
+            "date": "2022-09-22",
+            "value": 0.1465,
+            "baseline": 0.149,
+            "anomaly": -0.0025
+          },
+          {
+            "date": "2022-10-24",
+            "value": 0.1818,
+            "baseline": 0.1453,
+            "anomaly": 0.0365
+          },
+          {
+            "date": "2022-11-01",
+            "value": 0.1818,
+            "baseline": 0.152,
+            "anomaly": 0.0298
+          },
+          {
+            "date": "2022-12-03",
+            "value": 0.1557,
+            "baseline": 0.1691,
+            "anomaly": -0.0134
+          },
+          {
+            "date": "2022-12-11",
+            "value": 0.1557,
+            "baseline": 0.1691,
+            "anomaly": -0.0134
+          },
+          {
+            "date": "2023-04-23",
+            "value": 0.1623,
+            "baseline": 0.1652,
+            "anomaly": -0.0029
+          },
+          {
+            "date": "2023-05-01",
+            "value": 0.1623,
+            "baseline": 0.164,
+            "anomaly": -0.0017
+          },
+          {
+            "date": "2023-05-17",
+            "value": 0.162,
+            "baseline": 0.1676,
+            "anomaly": -0.0056
+          },
+          {
+            "date": "2023-05-25",
+            "value": 0.162,
+            "baseline": 0.1681,
+            "anomaly": -0.0061
+          },
+          {
+            "date": "2023-06-02",
+            "value": 0.1715,
+            "baseline": 0.1669,
+            "anomaly": 0.0046
+          },
+          {
+            "date": "2023-06-10",
+            "value": 0.1715,
+            "baseline": 0.1659,
+            "anomaly": 0.0056
+          },
+          {
+            "date": "2023-06-18",
+            "value": 0.1745,
+            "baseline": 0.1643,
+            "anomaly": 0.0102
+          },
+          {
+            "date": "2023-06-26",
+            "value": 0.1745,
+            "baseline": 0.1635,
+            "anomaly": 0.011
+          },
+          {
+            "date": "2023-07-04",
+            "value": 0.1609,
+            "baseline": 0.1583,
+            "anomaly": 0.0026
+          },
+          {
+            "date": "2023-07-12",
+            "value": 0.1652,
+            "baseline": 0.1573,
+            "anomaly": 0.0079
+          },
+          {
+            "date": "2023-07-20",
+            "value": 0.1652,
+            "baseline": 0.1552,
+            "anomaly": 0.01
+          },
+          {
+            "date": "2023-07-28",
+            "value": 0.1564,
+            "baseline": 0.1513,
+            "anomaly": 0.0051
+          },
+          {
+            "date": "2023-08-05",
+            "value": 0.1413,
+            "baseline": 0.1487,
+            "anomaly": -0.0074
+          },
+          {
+            "date": "2023-09-06",
+            "value": 0.1518,
+            "baseline": 0.1494,
+            "anomaly": 0.0024
+          },
+          {
+            "date": "2023-09-14",
+            "value": 0.1518,
+            "baseline": 0.1482,
+            "anomaly": 0.0036
+          },
+          {
+            "date": "2024-02-18",
+            "value": 0.1514,
+            "baseline": 0.1529,
+            "anomaly": -0.0015
+          },
+          {
+            "date": "2024-02-26",
+            "value": 0.1514,
+            "baseline": 0.1588,
+            "anomaly": -0.0074
+          },
+          {
+            "date": "2024-04-14",
+            "value": 0.1822,
+            "baseline": 0.1643,
+            "anomaly": 0.0179
+          },
+          {
+            "date": "2024-04-22",
+            "value": 0.1822,
+            "baseline": 0.1619,
+            "anomaly": 0.0203
+          },
+          {
+            "date": "2024-04-30",
+            "value": 0.1672,
+            "baseline": 0.1622,
+            "anomaly": 0.005
+          },
+          {
+            "date": "2024-05-16",
+            "value": 0.1607,
+            "baseline": 0.1671,
+            "anomaly": -0.0064
+          },
+          {
+            "date": "2024-05-24",
+            "value": 0.1717,
+            "baseline": 0.1676,
+            "anomaly": 0.0041
+          },
+          {
+            "date": "2024-06-01",
+            "value": 0.1717,
+            "baseline": 0.1671,
+            "anomaly": 0.0046
+          },
+          {
+            "date": "2024-06-09",
+            "value": 0.1581,
+            "baseline": 0.1675,
+            "anomaly": -0.0094
+          },
+          {
+            "date": "2024-06-17",
+            "value": 0.1581,
+            "baseline": 0.1663,
+            "anomaly": -0.0082
+          },
+          {
+            "date": "2024-07-11",
+            "value": 0.1468,
+            "baseline": 0.1592,
+            "anomaly": -0.0124
+          },
+          {
+            "date": "2024-07-19",
+            "value": 0.1468,
+            "baseline": 0.1579,
+            "anomaly": -0.0111
+          },
+          {
+            "date": "2024-07-27",
+            "value": 0.1377,
+            "baseline": 0.1524,
+            "anomaly": -0.0147
+          },
+          {
+            "date": "2024-08-04",
+            "value": 0.1569,
+            "baseline": 0.1484,
+            "anomaly": 0.0085
+          },
+          {
+            "date": "2024-08-12",
+            "value": 0.1569,
+            "baseline": 0.1476,
+            "anomaly": 0.0093
+          },
+          {
+            "date": "2025-02-26",
+            "value": 0.1665,
+            "baseline": 0.1545,
+            "anomaly": 0.012
+          },
+          {
+            "date": "2025-03-06",
+            "value": 0.1665,
+            "baseline": 0.1596,
+            "anomaly": 0.0069
+          },
+          {
+            "date": "2025-05-09",
+            "value": 0.1721,
+            "baseline": 0.1632,
+            "anomaly": 0.0089
+          },
+          {
+            "date": "2025-05-17",
+            "value": 0.1721,
+            "baseline": 0.1664,
+            "anomaly": 0.0057
+          },
+          {
+            "date": "2025-05-25",
+            "value": 0.1666,
+            "baseline": 0.1675,
+            "anomaly": -0.0009
+          },
+          {
+            "date": "2025-06-10",
+            "value": 0.1441,
+            "baseline": 0.1692,
+            "anomaly": -0.0251
+          },
+          {
+            "date": "2025-06-18",
+            "value": 0.1441,
+            "baseline": 0.171,
+            "anomaly": -0.0269
+          },
+          {
+            "date": "2025-06-26",
+            "value": 0.1057,
+            "baseline": 0.1707,
+            "anomaly": -0.065
+          },
+          {
+            "date": "2025-07-04",
+            "value": 0.1232,
+            "baseline": 0.1658,
+            "anomaly": -0.0426
+          },
+          {
+            "date": "2025-07-12",
+            "value": 0.1289,
+            "baseline": 0.1619,
+            "anomaly": -0.033
+          },
+          {
+            "date": "2025-07-20",
+            "value": 0.1469,
+            "baseline": 0.1584,
+            "anomaly": -0.0115
+          },
+          {
+            "date": "2025-07-28",
+            "value": 0.1469,
+            "baseline": 0.153,
+            "anomaly": -0.0061
+          },
+          {
+            "date": "2025-08-05",
+            "value": 0.1356,
+            "baseline": 0.1493,
+            "anomaly": -0.0137
+          },
+          {
+            "date": "2025-08-13",
+            "value": 0.1522,
+            "baseline": 0.1488,
+            "anomaly": 0.0034
+          },
+          {
+            "date": "2025-08-21",
+            "value": 0.1522,
+            "baseline": 0.1517,
+            "anomaly": 0.0005
+          },
+          {
+            "date": "2025-09-06",
+            "value": 0.1293,
+            "baseline": 0.151,
+            "anomaly": -0.0217
+          },
+          {
+            "date": "2025-09-14",
+            "value": 0.1613,
+            "baseline": 0.1481,
+            "anomaly": 0.0132
+          },
+          {
+            "date": "2025-09-22",
+            "value": 0.1613,
+            "baseline": 0.1479,
+            "anomaly": 0.0134
+          },
+          {
+            "date": "2025-09-30",
+            "value": 0.1301,
+            "baseline": 0.1466,
+            "anomaly": -0.0165
+          },
+          {
+            "date": "2025-10-08",
+            "value": 0.1509,
+            "baseline": 0.1351,
+            "anomaly": 0.0158
+          },
+          {
+            "date": "2025-10-16",
+            "value": 0.1509,
+            "baseline": 0.143,
+            "anomaly": 0.0079
+          },
+          {
+            "date": "2026-03-06",
+            "value": 0.1628,
+            "baseline": 0.161,
+            "anomaly": 0.0018
+          },
+          {
+            "date": "2026-03-14",
+            "value": 0.1604,
+            "baseline": 0.1708,
+            "anomaly": -0.0104
+          },
+          {
+            "date": "2026-03-22",
+            "value": 0.1604,
+            "baseline": 0.1754,
+            "anomaly": -0.015
+          },
+          {
+            "date": "2026-04-07",
+            "value": 0.174,
+            "baseline": 0.1682,
+            "anomaly": 0.0058
+          },
+          {
+            "date": "2026-04-15",
+            "value": 0.1764,
+            "baseline": 0.1645,
+            "anomaly": 0.0119
+          },
+          {
+            "date": "2026-04-23",
+            "value": 0.1764,
+            "baseline": 0.1641,
+            "anomaly": 0.0123
+          },
+          {
+            "date": "2026-05-01",
+            "value": 0.151,
+            "baseline": 0.1638,
+            "anomaly": -0.0128
+          },
+          {
+            "date": "2026-05-17",
+            "value": 0.175,
             "baseline": 0.1661,
-            "anomaly": -0.0208
+            "anomaly": 0.0089
+          },
+          {
+            "date": "2026-05-25",
+            "value": 0.175,
+            "baseline": 0.1666,
+            "anomaly": 0.0084
           },
           {
             "date": "2026-06-02",
             "value": 0.1734,
-            "baseline": 0.163,
-            "anomaly": 0.0104
+            "baseline": 0.166,
+            "anomaly": 0.0074
           },
           {
             "date": "2026-06-10",
-            "value": 0.1351,
-            "baseline": 0.1603,
-            "anomaly": -0.0252
+            "value": 0.1734,
+            "baseline": 0.1649,
+            "anomaly": 0.0085
           },
           {
             "date": "2026-06-18",
-            "value": 0.1951,
-            "baseline": 0.1541,
-            "anomaly": 0.041
+            "value": 0.1884,
+            "baseline": 0.1628,
+            "anomaly": 0.0256
           },
           {
             "date": "2026-06-26",
-            "value": 0.1481,
-            "baseline": 0.1479,
-            "anomaly": 0.0002
+            "value": 0.1884,
+            "baseline": 0.1618,
+            "anomaly": 0.0266
           },
           {
             "date": "2026-07-04",
-            "value": 0.1629,
-            "baseline": 0.1477,
-            "anomaly": 0.0152
+            "value": 0.1656,
+            "baseline": 0.1573,
+            "anomaly": 0.0083
           },
           {
             "date": "2026-07-12",
-            "value": 0.1315,
-            "baseline": 0.1475,
-            "anomaly": -0.016
+            "value": 0.1656,
+            "baseline": 0.158,
+            "anomaly": 0.0076
           },
           {
             "date": "2026-07-20",
-            "value": 0.1789,
-            "baseline": 0.1423,
-            "anomaly": 0.0366
+            "value": 0.1453,
+            "baseline": 0.156,
+            "anomaly": -0.0107
           },
           {
             "date": "2026-07-28",
-            "value": 0.182,
-            "baseline": 0.1372,
-            "anomaly": 0.0448
+            "value": 0.1588,
+            "baseline": 0.1513,
+            "anomaly": 0.0075
           },
           {
             "date": "2026-08-05",
-            "value": 0.1659,
-            "baseline": 0.1351,
-            "anomaly": 0.0308
+            "value": 0.1588,
+            "baseline": 0.1473,
+            "anomaly": 0.0115
           },
           {
             "date": "2026-08-13",
-            "value": 0.1396,
-            "baseline": 0.1329,
-            "anomaly": 0.0067
+            "value": 0.1542,
+            "baseline": 0.1478,
+            "anomaly": 0.0064
+          },
+          {
+            "date": "2026-08-21",
+            "value": 0.1458,
+            "baseline": 0.152,
+            "anomaly": -0.0062
           }
         ],
         "latest": {
-          "date": "2026-08-13",
-          "value": 0.1396,
-          "baseline": 0.1329,
-          "anomaly": 0.0067
+          "date": "2026-08-21",
+          "value": 0.1458,
+          "baseline": 0.152,
+          "anomaly": -0.0062
         },
         "status": "green"
       },
@@ -6125,13 +6515,13 @@
           },
           {
             "doy": 273,
-            "cumulative_mm": 974.8,
+            "cumulative_mm": 974.9,
             "baseline_mm": 594.41
           }
         ],
         "latest": {
           "doy": 273,
-          "cumulative_mm": 974.8,
+          "cumulative_mm": 974.9,
           "baseline_mm": 594.41
         },
         "ratio_to_normal": 1.64,
@@ -6139,7 +6529,7 @@
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 1096.4,
+        "total_gdd": 1096.2,
         "series": [
           {
             "date": "2026-01-01",
@@ -7231,7 +7621,7 @@
           },
           {
             "date": "2026-09-30",
-            "gdd_cumulative": 1096.4
+            "gdd_cumulative": 1096.2
           }
         ]
       },
@@ -7252,1193 +7642,863 @@
       "ndvi": {
         "series": [
           {
-            "date": "2018-06-10",
-            "value": 0.2316,
-            "baseline": 0.2321,
-            "anomaly": -0.0005
-          },
-          {
-            "date": "2018-06-26",
-            "value": 0.2038,
-            "baseline": 0.2337,
-            "anomaly": -0.0299
-          },
-          {
-            "date": "2018-07-12",
-            "value": 0.1932,
-            "baseline": 0.222,
-            "anomaly": -0.0288
-          },
-          {
-            "date": "2018-07-28",
-            "value": 0.1754,
-            "baseline": 0.2152,
-            "anomaly": -0.0398
-          },
-          {
-            "date": "2018-08-13",
-            "value": 0.216,
-            "baseline": 0.1983,
-            "anomaly": 0.0177
-          },
-          {
-            "date": "2018-08-29",
-            "value": 0.1857,
-            "baseline": 0.2054,
-            "anomaly": -0.0197
-          },
-          {
-            "date": "2018-09-14",
-            "value": 0.2106,
-            "baseline": 0.2125,
-            "anomaly": -0.0019
+            "date": "2018-09-22",
+            "value": 0.2288,
+            "baseline": 0.2371,
+            "anomaly": -0.0083
           },
           {
             "date": "2018-09-30",
-            "value": 0.2297,
-            "baseline": 0.2134,
-            "anomaly": 0.0163
+            "value": 0.2288,
+            "baseline": 0.2404,
+            "anomaly": -0.0116
           },
           {
-            "date": "2018-10-16",
-            "value": 0.214,
-            "baseline": 0.2525,
-            "anomaly": -0.0385
-          },
-          {
-            "date": "2018-11-01",
-            "value": 0.1749,
-            "baseline": 0.2438,
-            "anomaly": -0.0689
-          },
-          {
-            "date": "2018-11-17",
-            "value": 0.2542,
-            "baseline": 0.2415,
-            "anomaly": 0.0127
-          },
-          {
-            "date": "2018-12-03",
-            "value": 0.1859,
-            "baseline": 0.264,
-            "anomaly": -0.0781
-          },
-          {
-            "date": "2018-12-19",
-            "value": 0.2218,
-            "baseline": 0.2466,
-            "anomaly": -0.0248
-          },
-          {
-            "date": "2019-01-01",
-            "value": 0.296,
-            "baseline": 0.2613,
-            "anomaly": 0.0347
-          },
-          {
-            "date": "2019-01-17",
-            "value": 0.2666,
-            "baseline": 0.2702,
-            "anomaly": -0.0036
-          },
-          {
-            "date": "2019-02-02",
-            "value": 0.219,
-            "baseline": 0.2573,
-            "anomaly": -0.0383
-          },
-          {
-            "date": "2019-02-18",
-            "value": 0.2776,
-            "baseline": 0.2554,
-            "anomaly": 0.0222
-          },
-          {
-            "date": "2019-03-06",
-            "value": 0.2436,
-            "baseline": 0.2691,
-            "anomaly": -0.0255
-          },
-          {
-            "date": "2019-03-22",
-            "value": 0.2256,
-            "baseline": 0.2491,
-            "anomaly": -0.0235
-          },
-          {
-            "date": "2019-04-07",
-            "value": 0.2821,
-            "baseline": 0.2463,
-            "anomaly": 0.0358
-          },
-          {
-            "date": "2019-04-23",
-            "value": 0.3009,
-            "baseline": 0.258,
-            "anomaly": 0.0429
+            "date": "2019-05-01",
+            "value": 0.2582,
+            "baseline": 0.2819,
+            "anomaly": -0.0237
           },
           {
             "date": "2019-05-09",
-            "value": 0.2529,
-            "baseline": 0.2538,
-            "anomaly": -0.0009
-          },
-          {
-            "date": "2019-05-25",
-            "value": 0.2483,
-            "baseline": 0.2367,
-            "anomaly": 0.0116
-          },
-          {
-            "date": "2019-06-10",
-            "value": 0.2108,
-            "baseline": 0.2341,
-            "anomaly": -0.0233
-          },
-          {
-            "date": "2019-06-26",
-            "value": 0.2176,
-            "baseline": 0.2323,
-            "anomaly": -0.0147
-          },
-          {
-            "date": "2019-07-12",
-            "value": 0.227,
-            "baseline": 0.2186,
-            "anomaly": 0.0084
-          },
-          {
-            "date": "2019-07-28",
-            "value": 0.2009,
-            "baseline": 0.2127,
-            "anomaly": -0.0118
-          },
-          {
-            "date": "2019-08-13",
-            "value": 0.2171,
-            "baseline": 0.1982,
-            "anomaly": 0.0189
-          },
-          {
-            "date": "2019-08-29",
-            "value": 0.2326,
-            "baseline": 0.1987,
-            "anomaly": 0.0339
-          },
-          {
-            "date": "2019-09-14",
-            "value": 0.2338,
-            "baseline": 0.2092,
-            "anomaly": 0.0246
-          },
-          {
-            "date": "2019-09-30",
-            "value": 0.2051,
-            "baseline": 0.217,
-            "anomaly": -0.0119
-          },
-          {
-            "date": "2019-10-16",
-            "value": 0.2262,
-            "baseline": 0.2508,
-            "anomaly": -0.0246
-          },
-          {
-            "date": "2019-11-01",
-            "value": 0.2627,
-            "baseline": 0.2312,
-            "anomaly": 0.0315
-          },
-          {
-            "date": "2019-11-17",
-            "value": 0.2561,
-            "baseline": 0.2412,
-            "anomaly": 0.0149
-          },
-          {
-            "date": "2019-12-03",
-            "value": 0.2658,
-            "baseline": 0.2526,
-            "anomaly": 0.0132
-          },
-          {
-            "date": "2019-12-19",
-            "value": 0.231,
-            "baseline": 0.2453,
-            "anomaly": -0.0143
-          },
-          {
-            "date": "2020-01-01",
-            "value": 0.2493,
-            "baseline": 0.268,
-            "anomaly": -0.0187
-          },
-          {
-            "date": "2020-01-17",
-            "value": 0.3142,
-            "baseline": 0.2634,
-            "anomaly": 0.0508
-          },
-          {
-            "date": "2020-02-02",
-            "value": 0.2799,
-            "baseline": 0.2486,
-            "anomaly": 0.0313
-          },
-          {
-            "date": "2020-02-18",
-            "value": 0.2998,
-            "baseline": 0.2522,
-            "anomaly": 0.0476
-          },
-          {
-            "date": "2020-03-05",
-            "value": 0.2668,
-            "baseline": 0.2658,
-            "anomaly": 0.001
-          },
-          {
-            "date": "2020-03-21",
-            "value": 0.2836,
-            "baseline": 0.2408,
-            "anomaly": 0.0428
-          },
-          {
-            "date": "2020-04-06",
-            "value": 0.2432,
-            "baseline": 0.2511,
-            "anomaly": -0.0079
-          },
-          {
-            "date": "2020-04-22",
-            "value": 0.2755,
-            "baseline": 0.2609,
-            "anomaly": 0.0146
-          },
-          {
-            "date": "2020-05-08",
-            "value": 0.2693,
-            "baseline": 0.2519,
-            "anomaly": 0.0174
-          },
-          {
-            "date": "2020-05-24",
-            "value": 0.2337,
-            "baseline": 0.2383,
-            "anomaly": -0.0046
-          },
-          {
-            "date": "2020-06-09",
-            "value": 0.2372,
-            "baseline": 0.2315,
-            "anomaly": 0.0057
-          },
-          {
-            "date": "2020-06-25",
-            "value": 0.2388,
-            "baseline": 0.2302,
-            "anomaly": 0.0086
-          },
-          {
-            "date": "2020-07-11",
-            "value": 0.2319,
-            "baseline": 0.2181,
-            "anomaly": 0.0138
-          },
-          {
-            "date": "2020-07-27",
-            "value": 0.2178,
-            "baseline": 0.211,
-            "anomaly": 0.0068
-          },
-          {
-            "date": "2020-08-12",
-            "value": 0.2025,
-            "baseline": 0.1998,
-            "anomaly": 0.0027
-          },
-          {
-            "date": "2020-08-28",
-            "value": 0.2103,
-            "baseline": 0.2019,
-            "anomaly": 0.0084
-          },
-          {
-            "date": "2020-09-13",
-            "value": 0.1981,
-            "baseline": 0.2143,
-            "anomaly": -0.0162
-          },
-          {
-            "date": "2020-09-29",
-            "value": 0.209,
-            "baseline": 0.2164,
-            "anomaly": -0.0074
-          },
-          {
-            "date": "2020-10-15",
-            "value": 0.2334,
-            "baseline": 0.2498,
-            "anomaly": -0.0164
-          },
-          {
-            "date": "2020-10-31",
-            "value": 0.2361,
-            "baseline": 0.235,
-            "anomaly": 0.0011
-          },
-          {
-            "date": "2020-11-16",
-            "value": 0.237,
-            "baseline": 0.2439,
-            "anomaly": -0.0069
-          },
-          {
-            "date": "2020-12-02",
-            "value": 0.2913,
-            "baseline": 0.249,
-            "anomaly": 0.0423
-          },
-          {
-            "date": "2020-12-18",
-            "value": 0.2417,
-            "baseline": 0.2437,
-            "anomaly": -0.002
-          },
-          {
-            "date": "2021-01-01",
-            "value": 0.2444,
-            "baseline": 0.2687,
-            "anomaly": -0.0243
-          },
-          {
-            "date": "2021-01-17",
-            "value": 0.269,
-            "baseline": 0.2699,
-            "anomaly": -0.0009
-          },
-          {
-            "date": "2021-02-02",
-            "value": 0.2517,
-            "baseline": 0.2527,
-            "anomaly": -0.001
-          },
-          {
-            "date": "2021-02-18",
-            "value": 0.2916,
-            "baseline": 0.2534,
-            "anomaly": 0.0382
-          },
-          {
-            "date": "2021-03-06",
-            "value": 0.3147,
-            "baseline": 0.259,
-            "anomaly": 0.0557
-          },
-          {
-            "date": "2021-03-22",
-            "value": 0.3118,
-            "baseline": 0.2367,
-            "anomaly": 0.0751
-          },
-          {
-            "date": "2021-04-07",
-            "value": 0.249,
-            "baseline": 0.2504,
-            "anomaly": -0.0014
-          },
-          {
-            "date": "2021-04-23",
-            "value": 0.2763,
-            "baseline": 0.2608,
-            "anomaly": 0.0155
-          },
-          {
-            "date": "2021-05-09",
-            "value": 0.2275,
-            "baseline": 0.2566,
-            "anomaly": -0.0291
-          },
-          {
-            "date": "2021-05-25",
-            "value": 0.2234,
-            "baseline": 0.2394,
-            "anomaly": -0.016
-          },
-          {
-            "date": "2021-06-10",
-            "value": 0.2427,
-            "baseline": 0.231,
-            "anomaly": 0.0117
-          },
-          {
-            "date": "2021-06-26",
-            "value": 0.2214,
-            "baseline": 0.232,
-            "anomaly": -0.0106
-          },
-          {
-            "date": "2021-07-12",
-            "value": 0.1814,
-            "baseline": 0.2231,
-            "anomaly": -0.0417
-          },
-          {
-            "date": "2021-07-28",
-            "value": 0.2036,
-            "baseline": 0.2124,
-            "anomaly": -0.0088
-          },
-          {
-            "date": "2021-08-13",
-            "value": 0.1862,
-            "baseline": 0.2016,
-            "anomaly": -0.0154
-          },
-          {
-            "date": "2021-08-29",
-            "value": 0.1985,
-            "baseline": 0.2036,
-            "anomaly": -0.0051
-          },
-          {
-            "date": "2021-09-14",
-            "value": 0.1971,
-            "baseline": 0.2144,
-            "anomaly": -0.0173
-          },
-          {
-            "date": "2021-09-30",
-            "value": 0.2151,
-            "baseline": 0.2155,
-            "anomaly": -0.0004
-          },
-          {
-            "date": "2021-10-16",
-            "value": 0.3039,
-            "baseline": 0.2397,
-            "anomaly": 0.0642
-          },
-          {
-            "date": "2021-11-01",
-            "value": 0.224,
-            "baseline": 0.2368,
-            "anomaly": -0.0128
-          },
-          {
-            "date": "2021-11-17",
-            "value": 0.2605,
-            "baseline": 0.2406,
-            "anomaly": 0.0199
-          },
-          {
-            "date": "2021-12-03",
-            "value": 0.3347,
-            "baseline": 0.2428,
-            "anomaly": 0.0919
-          },
-          {
-            "date": "2021-12-19",
-            "value": 0.2577,
-            "baseline": 0.2414,
-            "anomaly": 0.0163
-          },
-          {
-            "date": "2022-01-01",
-            "value": 0.2889,
-            "baseline": 0.2623,
-            "anomaly": 0.0266
-          },
-          {
-            "date": "2022-01-17",
-            "value": 0.2694,
-            "baseline": 0.2698,
-            "anomaly": -0.0004
-          },
-          {
-            "date": "2022-02-02",
-            "value": 0.3368,
-            "baseline": 0.2405,
-            "anomaly": 0.0963
-          },
-          {
-            "date": "2022-02-18",
-            "value": 0.2377,
-            "baseline": 0.2611,
-            "anomaly": -0.0234
-          },
-          {
-            "date": "2022-03-06",
-            "value": 0.3156,
-            "baseline": 0.2588,
-            "anomaly": 0.0568
-          },
-          {
-            "date": "2022-03-22",
-            "value": 0.2392,
-            "baseline": 0.2471,
-            "anomaly": -0.0079
-          },
-          {
-            "date": "2022-04-07",
-            "value": 0.2635,
-            "baseline": 0.2486,
-            "anomaly": 0.0149
-          },
-          {
-            "date": "2022-04-23",
-            "value": 0.2478,
-            "baseline": 0.2639,
-            "anomaly": -0.0161
-          },
-          {
-            "date": "2022-05-09",
-            "value": 0.2726,
-            "baseline": 0.2516,
-            "anomaly": 0.021
-          },
-          {
-            "date": "2022-05-25",
-            "value": 0.2508,
-            "baseline": 0.2364,
-            "anomaly": 0.0144
-          },
-          {
-            "date": "2022-06-10",
-            "value": 0.2164,
-            "baseline": 0.2336,
+            "value": 0.2582,
+            "baseline": 0.2754,
             "anomaly": -0.0172
           },
           {
-            "date": "2022-06-26",
-            "value": 0.2378,
-            "baseline": 0.2303,
-            "anomaly": 0.0075
+            "date": "2019-06-18",
+            "value": 0.2431,
+            "baseline": 0.2588,
+            "anomaly": -0.0157
           },
           {
-            "date": "2022-07-12",
-            "value": 0.2458,
-            "baseline": 0.2167,
-            "anomaly": 0.0291
+            "date": "2019-06-26",
+            "value": 0.2431,
+            "baseline": 0.2529,
+            "anomaly": -0.0098
           },
           {
-            "date": "2022-07-28",
-            "value": 0.2117,
-            "baseline": 0.2116,
-            "anomaly": 0.0001
-          },
-          {
-            "date": "2022-08-13",
-            "value": 0.1994,
-            "baseline": 0.2002,
-            "anomaly": -0.0008
-          },
-          {
-            "date": "2022-08-29",
-            "value": 0.1884,
-            "baseline": 0.205,
-            "anomaly": -0.0166
-          },
-          {
-            "date": "2022-09-14",
-            "value": 0.1864,
-            "baseline": 0.2159,
-            "anomaly": -0.0295
-          },
-          {
-            "date": "2022-09-30",
-            "value": 0.212,
-            "baseline": 0.216,
-            "anomaly": -0.004
-          },
-          {
-            "date": "2022-10-16",
-            "value": 0.2469,
-            "baseline": 0.2478,
-            "anomaly": -0.0009
-          },
-          {
-            "date": "2022-11-01",
-            "value": 0.2507,
-            "baseline": 0.2329,
-            "anomaly": 0.0178
-          },
-          {
-            "date": "2022-11-17",
-            "value": 0.2367,
-            "baseline": 0.244,
-            "anomaly": -0.0073
-          },
-          {
-            "date": "2022-12-03",
-            "value": 0.2326,
-            "baseline": 0.2573,
-            "anomaly": -0.0247
-          },
-          {
-            "date": "2022-12-19",
-            "value": 0.2805,
-            "baseline": 0.2382,
-            "anomaly": 0.0423
-          },
-          {
-            "date": "2023-01-01",
-            "value": 0.2246,
-            "baseline": 0.2715,
-            "anomaly": -0.0469
-          },
-          {
-            "date": "2023-01-17",
-            "value": 0.2264,
-            "baseline": 0.276,
-            "anomaly": -0.0496
-          },
-          {
-            "date": "2023-02-02",
-            "value": 0.2189,
-            "baseline": 0.2573,
-            "anomaly": -0.0384
-          },
-          {
-            "date": "2023-02-18",
-            "value": 0.239,
-            "baseline": 0.2609,
-            "anomaly": -0.0219
-          },
-          {
-            "date": "2023-03-06",
-            "value": 0.2619,
-            "baseline": 0.2665,
-            "anomaly": -0.0046
-          },
-          {
-            "date": "2023-03-22",
-            "value": 0.2308,
+            "date": "2019-07-04",
+            "value": 0.2386,
             "baseline": 0.2483,
-            "anomaly": -0.0175
-          },
-          {
-            "date": "2023-04-07",
-            "value": 0.2583,
-            "baseline": 0.2492,
-            "anomaly": 0.0091
-          },
-          {
-            "date": "2023-04-23",
-            "value": 0.2387,
-            "baseline": 0.2649,
-            "anomaly": -0.0262
-          },
-          {
-            "date": "2023-05-09",
-            "value": 0.2654,
-            "baseline": 0.2524,
-            "anomaly": 0.013
-          },
-          {
-            "date": "2023-05-25",
-            "value": 0.2346,
-            "baseline": 0.2382,
-            "anomaly": -0.0036
-          },
-          {
-            "date": "2023-06-10",
-            "value": 0.225,
-            "baseline": 0.2327,
-            "anomaly": -0.0077
-          },
-          {
-            "date": "2023-06-26",
-            "value": 0.2367,
-            "baseline": 0.2304,
-            "anomaly": 0.0063
-          },
-          {
-            "date": "2023-07-12",
-            "value": 0.2042,
-            "baseline": 0.2209,
-            "anomaly": -0.0167
-          },
-          {
-            "date": "2023-07-28",
-            "value": 0.1882,
-            "baseline": 0.2139,
-            "anomaly": -0.0257
-          },
-          {
-            "date": "2023-08-13",
-            "value": 0.2026,
-            "baseline": 0.1998,
-            "anomaly": 0.0028
-          },
-          {
-            "date": "2023-08-29",
-            "value": 0.2338,
-            "baseline": 0.1985,
-            "anomaly": 0.0353
-          },
-          {
-            "date": "2023-09-14",
-            "value": 0.2754,
-            "baseline": 0.2032,
-            "anomaly": 0.0722
-          },
-          {
-            "date": "2023-09-30",
-            "value": 0.2492,
-            "baseline": 0.2107,
-            "anomaly": 0.0385
-          },
-          {
-            "date": "2023-10-16",
-            "value": 0.2344,
-            "baseline": 0.2496,
-            "anomaly": -0.0152
-          },
-          {
-            "date": "2023-11-01",
-            "value": 0.2158,
-            "baseline": 0.2379,
-            "anomaly": -0.0221
-          },
-          {
-            "date": "2023-11-17",
-            "value": 0.241,
-            "baseline": 0.2434,
-            "anomaly": -0.0024
-          },
-          {
-            "date": "2023-12-03",
-            "value": 0.2474,
-            "baseline": 0.2552,
-            "anomaly": -0.0078
-          },
-          {
-            "date": "2023-12-19",
-            "value": 0.2966,
-            "baseline": 0.2359,
-            "anomaly": 0.0607
-          },
-          {
-            "date": "2024-01-01",
-            "value": 0.2955,
-            "baseline": 0.2614,
-            "anomaly": 0.0341
-          },
-          {
-            "date": "2024-01-17",
-            "value": 0.2562,
-            "baseline": 0.2717,
-            "anomaly": -0.0155
-          },
-          {
-            "date": "2024-02-02",
-            "value": 0.2078,
-            "baseline": 0.2589,
-            "anomaly": -0.0511
-          },
-          {
-            "date": "2024-02-18",
-            "value": 0.2506,
-            "baseline": 0.2593,
-            "anomaly": -0.0087
-          },
-          {
-            "date": "2024-03-05",
-            "value": 0.2652,
-            "baseline": 0.266,
-            "anomaly": -0.0008
-          },
-          {
-            "date": "2024-03-21",
-            "value": 0.2066,
-            "baseline": 0.2518,
-            "anomaly": -0.0452
-          },
-          {
-            "date": "2024-04-06",
-            "value": 0.2368,
-            "baseline": 0.2519,
-            "anomaly": -0.0151
-          },
-          {
-            "date": "2024-04-22",
-            "value": 0.2516,
-            "baseline": 0.2635,
-            "anomaly": -0.0119
-          },
-          {
-            "date": "2024-05-08",
-            "value": 0.2374,
-            "baseline": 0.2555,
-            "anomaly": -0.0181
-          },
-          {
-            "date": "2024-05-24",
-            "value": 0.2138,
-            "baseline": 0.2405,
-            "anomaly": -0.0267
-          },
-          {
-            "date": "2024-06-09",
-            "value": 0.2207,
-            "baseline": 0.2332,
-            "anomaly": -0.0125
-          },
-          {
-            "date": "2024-06-25",
-            "value": 0.2428,
-            "baseline": 0.2298,
-            "anomaly": 0.013
-          },
-          {
-            "date": "2024-07-11",
-            "value": 0.208,
-            "baseline": 0.2205,
-            "anomaly": -0.0125
-          },
-          {
-            "date": "2024-07-27",
-            "value": 0.2123,
-            "baseline": 0.2115,
-            "anomaly": 0.0008
-          },
-          {
-            "date": "2024-08-12",
-            "value": 0.2273,
-            "baseline": 0.1971,
-            "anomaly": 0.0302
-          },
-          {
-            "date": "2024-08-28",
-            "value": 0.1927,
-            "baseline": 0.2044,
-            "anomaly": -0.0117
-          },
-          {
-            "date": "2024-09-13",
-            "value": 0.1715,
-            "baseline": 0.2181,
-            "anomaly": -0.0466
-          },
-          {
-            "date": "2024-09-29",
-            "value": 0.1861,
-            "baseline": 0.2197,
-            "anomaly": -0.0336
-          },
-          {
-            "date": "2024-10-15",
-            "value": 0.3125,
-            "baseline": 0.2385,
-            "anomaly": 0.074
-          },
-          {
-            "date": "2024-10-31",
-            "value": 0.2658,
-            "baseline": 0.2308,
-            "anomaly": 0.035
-          },
-          {
-            "date": "2024-11-16",
-            "value": 0.2106,
-            "baseline": 0.2477,
-            "anomaly": -0.0371
-          },
-          {
-            "date": "2024-12-02",
-            "value": 0.2686,
-            "baseline": 0.2522,
-            "anomaly": 0.0164
-          },
-          {
-            "date": "2024-12-18",
-            "value": 0.2087,
-            "baseline": 0.2484,
-            "anomaly": -0.0397
-          },
-          {
-            "date": "2025-01-01",
-            "value": 0.2572,
-            "baseline": 0.2669,
             "anomaly": -0.0097
           },
           {
-            "date": "2025-01-17",
-            "value": 0.2738,
-            "baseline": 0.2692,
-            "anomaly": 0.0046
+            "date": "2019-07-12",
+            "value": 0.2269,
+            "baseline": 0.241,
+            "anomaly": -0.0141
           },
           {
-            "date": "2025-02-02",
-            "value": 0.2387,
-            "baseline": 0.2545,
-            "anomaly": -0.0158
+            "date": "2019-07-20",
+            "value": 0.1271,
+            "baseline": 0.2363,
+            "anomaly": -0.1092
           },
           {
-            "date": "2025-02-18",
-            "value": 0.2576,
-            "baseline": 0.2583,
-            "anomaly": -0.0007
+            "date": "2019-07-28",
+            "value": 0.2376,
+            "baseline": 0.2278,
+            "anomaly": 0.0098
           },
           {
-            "date": "2025-03-06",
-            "value": 0.2768,
-            "baseline": 0.2644,
-            "anomaly": 0.0124
+            "date": "2019-08-05",
+            "value": 0.2376,
+            "baseline": 0.2228,
+            "anomaly": 0.0148
           },
           {
-            "date": "2025-03-22",
-            "value": 0.2355,
-            "baseline": 0.2476,
-            "anomaly": -0.0121
+            "date": "2019-08-13",
+            "value": 0.2073,
+            "baseline": 0.2179,
+            "anomaly": -0.0106
           },
           {
-            "date": "2025-04-07",
-            "value": 0.2056,
-            "baseline": 0.2558,
-            "anomaly": -0.0502
+            "date": "2019-08-21",
+            "value": 0.2101,
+            "baseline": 0.2176,
+            "anomaly": -0.0075
           },
           {
-            "date": "2025-04-23",
-            "value": 0.2345,
-            "baseline": 0.2654,
-            "anomaly": -0.0309
+            "date": "2019-08-29",
+            "value": 0.2234,
+            "baseline": 0.2186,
+            "anomaly": 0.0048
           },
           {
-            "date": "2025-05-09",
-            "value": 0.2303,
-            "baseline": 0.2563,
-            "anomaly": -0.026
+            "date": "2019-09-06",
+            "value": 0.2234,
+            "baseline": 0.2256,
+            "anomaly": -0.0022
           },
           {
-            "date": "2025-05-25",
-            "value": 0.1981,
-            "baseline": 0.2423,
-            "anomaly": -0.0442
+            "date": "2019-09-14",
+            "value": 0.2149,
+            "baseline": 0.2311,
+            "anomaly": -0.0162
           },
           {
-            "date": "2025-06-10",
-            "value": 0.2156,
-            "baseline": 0.2337,
-            "anomaly": -0.0181
+            "date": "2019-12-11",
+            "value": 0.2741,
+            "baseline": null,
+            "anomaly": null
           },
           {
-            "date": "2025-06-26",
-            "value": 0.2115,
-            "baseline": 0.2329,
-            "anomaly": -0.0214
+            "date": "2019-12-19",
+            "value": 0.2741,
+            "baseline": null,
+            "anomaly": null
           },
           {
-            "date": "2025-07-12",
-            "value": 0.2096,
-            "baseline": 0.2203,
-            "anomaly": -0.0107
+            "date": "2020-04-14",
+            "value": 0.3014,
+            "baseline": 0.2766,
+            "anomaly": 0.0248
           },
           {
-            "date": "2025-07-28",
-            "value": 0.2245,
-            "baseline": 0.2103,
-            "anomaly": 0.0142
+            "date": "2020-04-22",
+            "value": 0.3014,
+            "baseline": 0.2822,
+            "anomaly": 0.0192
           },
           {
-            "date": "2025-08-13",
-            "value": 0.1448,
-            "baseline": 0.2062,
-            "anomaly": -0.0614
+            "date": "2020-04-30",
+            "value": 0.2886,
+            "baseline": 0.2765,
+            "anomaly": 0.0121
           },
           {
-            "date": "2025-08-29",
-            "value": 0.1815,
-            "baseline": 0.206,
-            "anomaly": -0.0245
+            "date": "2020-05-08",
+            "value": 0.2886,
+            "baseline": 0.2701,
+            "anomaly": 0.0185
           },
           {
-            "date": "2025-09-14",
-            "value": 0.2251,
-            "baseline": 0.2104,
-            "anomaly": 0.0147
+            "date": "2020-05-16",
+            "value": 0.2984,
+            "baseline": 0.2648,
+            "anomaly": 0.0336
           },
           {
-            "date": "2025-09-30",
-            "value": 0.2176,
-            "baseline": 0.2152,
-            "anomaly": 0.0024
+            "date": "2020-05-24",
+            "value": 0.2984,
+            "baseline": 0.2674,
+            "anomaly": 0.031
           },
           {
-            "date": "2025-10-16",
-            "value": 0.2105,
-            "baseline": 0.253,
-            "anomaly": -0.0425
-          },
-          {
-            "date": "2025-11-01",
-            "value": 0.2513,
-            "baseline": 0.2329,
-            "anomaly": 0.0184
-          },
-          {
-            "date": "2025-11-17",
-            "value": 0.2484,
-            "baseline": 0.2423,
+            "date": "2020-06-01",
+            "value": 0.2739,
+            "baseline": 0.2678,
             "anomaly": 0.0061
           },
           {
-            "date": "2025-12-03",
-            "value": 0.2077,
-            "baseline": 0.2609,
-            "anomaly": -0.0532
+            "date": "2020-06-09",
+            "value": 0.2739,
+            "baseline": 0.2636,
+            "anomaly": 0.0103
           },
           {
-            "date": "2025-12-19",
-            "value": 0.2098,
-            "baseline": 0.2483,
-            "anomaly": -0.0385
+            "date": "2020-06-17",
+            "value": 0.2619,
+            "baseline": 0.257,
+            "anomaly": 0.0049
           },
           {
-            "date": "2026-01-01",
-            "value": 0.2694,
-            "baseline": 0.2651,
-            "anomaly": 0.0043
+            "date": "2020-06-25",
+            "value": 0.2439,
+            "baseline": 0.2517,
+            "anomaly": -0.0078
           },
           {
-            "date": "2026-01-17",
-            "value": 0.2826,
-            "baseline": 0.2679,
-            "anomaly": 0.0147
+            "date": "2020-07-03",
+            "value": 0.2439,
+            "baseline": 0.2471,
+            "anomaly": -0.0032
           },
           {
-            "date": "2026-02-02",
-            "value": 0.2675,
-            "baseline": 0.2504,
-            "anomaly": 0.0171
+            "date": "2020-07-11",
+            "value": 0.2445,
+            "baseline": 0.2332,
+            "anomaly": 0.0113
           },
           {
-            "date": "2026-02-18",
-            "value": 0.2116,
-            "baseline": 0.2648,
-            "anomaly": -0.0532
+            "date": "2020-07-19",
+            "value": 0.2445,
+            "baseline": 0.2283,
+            "anomaly": 0.0162
           },
           {
-            "date": "2026-03-06",
-            "value": 0.1829,
-            "baseline": 0.2778,
-            "anomaly": -0.0949
+            "date": "2020-07-27",
+            "value": 0.2453,
+            "baseline": 0.2208,
+            "anomaly": 0.0245
           },
           {
-            "date": "2026-03-22",
-            "value": 0.2359,
-            "baseline": 0.2476,
-            "anomaly": -0.0117
+            "date": "2020-08-04",
+            "value": 0.2453,
+            "baseline": 0.2213,
+            "anomaly": 0.024
           },
           {
-            "date": "2026-04-07",
-            "value": 0.2638,
-            "baseline": 0.2484,
-            "anomaly": 0.0154
+            "date": "2020-08-12",
+            "value": 0.2229,
+            "baseline": 0.2161,
+            "anomaly": 0.0068
           },
           {
-            "date": "2026-04-15",
-            "value": 0.25,
-            "baseline": 0.2546,
-            "anomaly": -0.0046
+            "date": "2020-08-20",
+            "value": 0.2229,
+            "baseline": 0.2162,
+            "anomaly": 0.0067
           },
           {
-            "date": "2026-04-23",
-            "value": 0.2663,
-            "baseline": 0.2608,
-            "anomaly": 0.0055
+            "date": "2020-08-28",
+            "value": 0.2205,
+            "baseline": 0.2171,
+            "anomaly": 0.0034
           },
           {
-            "date": "2026-05-01",
-            "value": 0.2816,
-            "baseline": 0.2558,
-            "anomaly": 0.0258
+            "date": "2020-09-05",
+            "value": 0.2367,
+            "baseline": 0.2229,
+            "anomaly": 0.0138
           },
           {
-            "date": "2026-05-09",
-            "value": 0.2602,
-            "baseline": 0.2508,
-            "anomaly": 0.0094
-          },
-          {
-            "date": "2026-05-17",
-            "value": 0.2395,
-            "baseline": 0.2399,
-            "anomaly": -0.0004
-          },
-          {
-            "date": "2026-05-25",
-            "value": 0.2423,
-            "baseline": 0.229,
-            "anomaly": 0.0133
-          },
-          {
-            "date": "2026-06-02",
-            "value": 0.2939,
-            "baseline": 0.2268,
-            "anomaly": 0.0671
-          },
-          {
-            "date": "2026-06-10",
-            "value": 0.2224,
-            "baseline": 0.225,
-            "anomaly": -0.0026
-          },
-          {
-            "date": "2026-06-18",
-            "value": 0.236,
-            "baseline": 0.2256,
+            "date": "2020-09-13",
+            "value": 0.2367,
+            "baseline": 0.2263,
             "anomaly": 0.0104
           },
           {
+            "date": "2020-09-21",
+            "value": 0.2391,
+            "baseline": 0.233,
+            "anomaly": 0.0061
+          },
+          {
+            "date": "2020-09-29",
+            "value": 0.2391,
+            "baseline": 0.2336,
+            "anomaly": 0.0055
+          },
+          {
+            "date": "2021-02-26",
+            "value": 0.2866,
+            "baseline": null,
+            "anomaly": null
+          },
+          {
+            "date": "2021-03-06",
+            "value": 0.2866,
+            "baseline": null,
+            "anomaly": null
+          },
+          {
+            "date": "2021-04-07",
+            "value": 0.2528,
+            "baseline": 0.2868,
+            "anomaly": -0.034
+          },
+          {
+            "date": "2021-04-15",
+            "value": 0.2865,
+            "baseline": 0.2838,
+            "anomaly": 0.0027
+          },
+          {
+            "date": "2021-04-23",
+            "value": 0.297,
+            "baseline": 0.2832,
+            "anomaly": 0.0138
+          },
+          {
+            "date": "2021-05-01",
+            "value": 0.297,
+            "baseline": 0.2802,
+            "anomaly": 0.0168
+          },
+          {
+            "date": "2021-05-09",
+            "value": 0.2299,
+            "baseline": 0.2761,
+            "anomaly": -0.0462
+          },
+          {
+            "date": "2021-05-17",
+            "value": 0.2541,
+            "baseline": 0.2725,
+            "anomaly": -0.0184
+          },
+          {
+            "date": "2021-05-25",
+            "value": 0.278,
+            "baseline": 0.2712,
+            "anomaly": 0.0068
+          },
+          {
+            "date": "2021-06-02",
+            "value": 0.278,
+            "baseline": 0.2691,
+            "anomaly": 0.0089
+          },
+          {
+            "date": "2021-06-18",
+            "value": 0.2524,
+            "baseline": 0.2579,
+            "anomaly": -0.0055
+          },
+          {
+            "date": "2021-06-26",
+            "value": 0.2524,
+            "baseline": 0.2513,
+            "anomaly": 0.0011
+          },
+          {
+            "date": "2021-07-04",
+            "value": 0.2526,
+            "baseline": 0.2458,
+            "anomaly": 0.0068
+          },
+          {
+            "date": "2021-07-12",
+            "value": 0.2526,
+            "baseline": 0.2323,
+            "anomaly": 0.0203
+          },
+          {
+            "date": "2021-07-20",
+            "value": 0.2435,
+            "baseline": 0.2281,
+            "anomaly": 0.0154
+          },
+          {
+            "date": "2021-07-28",
+            "value": 0.2435,
+            "baseline": 0.2229,
+            "anomaly": 0.0206
+          },
+          {
+            "date": "2021-08-05",
+            "value": 0.2081,
+            "baseline": 0.2238,
+            "anomaly": -0.0157
+          },
+          {
+            "date": "2021-08-13",
+            "value": 0.2121,
+            "baseline": 0.2191,
+            "anomaly": -0.007
+          },
+          {
+            "date": "2021-08-21",
+            "value": 0.2121,
+            "baseline": 0.2162,
+            "anomaly": -0.0041
+          },
+          {
+            "date": "2021-08-29",
+            "value": 0.2415,
+            "baseline": 0.2157,
+            "anomaly": 0.0258
+          },
+          {
+            "date": "2021-09-06",
+            "value": 0.2496,
+            "baseline": 0.219,
+            "anomaly": 0.0306
+          },
+          {
+            "date": "2021-09-14",
+            "value": 0.2496,
+            "baseline": 0.223,
+            "anomaly": 0.0266
+          },
+          {
+            "date": "2021-09-22",
+            "value": 0.2431,
+            "baseline": 0.2312,
+            "anomaly": 0.0119
+          },
+          {
+            "date": "2021-10-16",
+            "value": 0.2836,
+            "baseline": null,
+            "anomaly": null
+          },
+          {
+            "date": "2021-10-24",
+            "value": 0.2836,
+            "baseline": null,
+            "anomaly": null
+          },
+          {
+            "date": "2022-05-09",
+            "value": 0.2562,
+            "baseline": 0.2756,
+            "anomaly": -0.0194
+          },
+          {
+            "date": "2022-05-17",
+            "value": 0.2562,
+            "baseline": 0.2729,
+            "anomaly": -0.0167
+          },
+          {
+            "date": "2022-05-25",
+            "value": 0.2442,
+            "baseline": 0.2739,
+            "anomaly": -0.0297
+          },
+          {
+            "date": "2022-06-02",
+            "value": 0.267,
+            "baseline": 0.272,
+            "anomaly": -0.005
+          },
+          {
+            "date": "2022-06-10",
+            "value": 0.267,
+            "baseline": 0.2647,
+            "anomaly": 0.0023
+          },
+          {
+            "date": "2022-06-18",
+            "value": 0.2554,
+            "baseline": 0.2571,
+            "anomaly": -0.0017
+          },
+          {
+            "date": "2022-06-26",
+            "value": 0.2554,
+            "baseline": 0.2522,
+            "anomaly": 0.0032
+          },
+          {
+            "date": "2022-07-04",
+            "value": 0.2286,
+            "baseline": 0.2481,
+            "anomaly": -0.0195
+          },
+          {
+            "date": "2022-07-12",
+            "value": 0.2286,
+            "baseline": 0.2355,
+            "anomaly": -0.0069
+          },
+          {
+            "date": "2022-08-05",
+            "value": 0.2089,
+            "baseline": 0.2244,
+            "anomaly": -0.0155
+          },
+          {
+            "date": "2022-08-13",
+            "value": 0.2178,
+            "baseline": 0.2185,
+            "anomaly": -0.0007
+          },
+          {
+            "date": "2022-08-21",
+            "value": 0.2178,
+            "baseline": 0.2167,
+            "anomaly": 0.0011
+          },
+          {
+            "date": "2022-08-29",
+            "value": 0.2205,
+            "baseline": 0.2185,
+            "anomaly": 0.002
+          },
+          {
+            "date": "2022-09-06",
+            "value": 0.2205,
+            "baseline": 0.2252,
+            "anomaly": -0.0047
+          },
+          {
+            "date": "2023-04-23",
+            "value": 0.2947,
+            "baseline": 0.2825,
+            "anomaly": 0.0122
+          },
+          {
+            "date": "2023-05-01",
+            "value": 0.3112,
+            "baseline": 0.274,
+            "anomaly": 0.0372
+          },
+          {
+            "date": "2023-05-09",
+            "value": 0.3112,
+            "baseline": 0.2677,
+            "anomaly": 0.0435
+          },
+          {
+            "date": "2023-05-17",
+            "value": 0.2928,
+            "baseline": 0.2664,
+            "anomaly": 0.0264
+          },
+          {
+            "date": "2023-05-25",
+            "value": 0.256,
+            "baseline": 0.2715,
+            "anomaly": -0.0155
+          },
+          {
+            "date": "2023-06-02",
+            "value": 0.256,
+            "baseline": 0.2725,
+            "anomaly": -0.0165
+          },
+          {
+            "date": "2023-06-10",
+            "value": 0.2585,
+            "baseline": 0.265,
+            "anomaly": -0.0065
+          },
+          {
+            "date": "2023-06-18",
+            "value": 0.269,
+            "baseline": 0.2561,
+            "anomaly": 0.0129
+          },
+          {
+            "date": "2023-06-26",
+            "value": 0.269,
+            "baseline": 0.2498,
+            "anomaly": 0.0192
+          },
+          {
+            "date": "2023-07-20",
+            "value": 0.2371,
+            "baseline": 0.2298,
+            "anomaly": 0.0073
+          },
+          {
+            "date": "2023-07-28",
+            "value": 0.2413,
+            "baseline": 0.2216,
+            "anomaly": 0.0197
+          },
+          {
+            "date": "2023-08-05",
+            "value": 0.2413,
+            "baseline": 0.2209,
+            "anomaly": 0.0204
+          },
+          {
+            "date": "2023-08-13",
+            "value": 0.2382,
+            "baseline": 0.2159,
+            "anomaly": 0.0223
+          },
+          {
+            "date": "2024-01-09",
+            "value": 0.3012,
+            "baseline": null,
+            "anomaly": null
+          },
+          {
+            "date": "2024-01-17",
+            "value": 0.3012,
+            "baseline": null,
+            "anomaly": null
+          },
+          {
+            "date": "2024-04-14",
+            "value": 0.2721,
+            "baseline": 0.2859,
+            "anomaly": -0.0138
+          },
+          {
+            "date": "2024-04-22",
+            "value": 0.2657,
+            "baseline": 0.2883,
+            "anomaly": -0.0226
+          },
+          {
+            "date": "2024-04-30",
+            "value": 0.2871,
+            "baseline": 0.2791,
+            "anomaly": 0.008
+          },
+          {
+            "date": "2024-05-08",
+            "value": 0.2871,
+            "baseline": 0.2742,
+            "anomaly": 0.0129
+          },
+          {
+            "date": "2024-05-16",
+            "value": 0.2363,
+            "baseline": 0.268,
+            "anomaly": -0.0317
+          },
+          {
+            "date": "2024-05-24",
+            "value": 0.3105,
+            "baseline": 0.2683,
+            "anomaly": 0.0422
+          },
+          {
+            "date": "2024-06-01",
+            "value": 0.3105,
+            "baseline": 0.2664,
+            "anomaly": 0.0441
+          },
+          {
+            "date": "2024-06-09",
+            "value": 0.2468,
+            "baseline": 0.2643,
+            "anomaly": -0.0175
+          },
+          {
+            "date": "2024-06-17",
+            "value": 0.2385,
+            "baseline": 0.2599,
+            "anomaly": -0.0214
+          },
+          {
+            "date": "2024-06-25",
+            "value": 0.2385,
+            "baseline": 0.2528,
+            "anomaly": -0.0143
+          },
+          {
+            "date": "2024-07-03",
+            "value": 0.2498,
+            "baseline": 0.2468,
+            "anomaly": 0.003
+          },
+          {
+            "date": "2024-07-11",
+            "value": 0.2498,
+            "baseline": 0.2342,
+            "anomaly": 0.0156
+          },
+          {
+            "date": "2024-07-19",
+            "value": 0.2165,
+            "baseline": 0.2312,
+            "anomaly": -0.0147
+          },
+          {
+            "date": "2024-07-27",
+            "value": 0.2165,
+            "baseline": 0.2257,
+            "anomaly": -0.0092
+          },
+          {
+            "date": "2024-08-04",
+            "value": 0.2088,
+            "baseline": 0.2253,
+            "anomaly": -0.0165
+          },
+          {
+            "date": "2024-08-12",
+            "value": 0.2088,
+            "baseline": 0.2197,
+            "anomaly": -0.0109
+          },
+          {
+            "date": "2024-08-20",
+            "value": 0.2014,
+            "baseline": 0.2182,
+            "anomaly": -0.0168
+          },
+          {
+            "date": "2024-08-28",
+            "value": 0.2197,
+            "baseline": 0.2196,
+            "anomaly": 0.0001
+          },
+          {
+            "date": "2024-09-05",
+            "value": 0.2197,
+            "baseline": 0.2253,
+            "anomaly": -0.0056
+          },
+          {
+            "date": "2025-05-09",
+            "value": 0.2597,
+            "baseline": 0.2752,
+            "anomaly": -0.0155
+          },
+          {
+            "date": "2025-05-17",
+            "value": 0.2597,
+            "baseline": 0.2708,
+            "anomaly": -0.0111
+          },
+          {
+            "date": "2025-06-02",
+            "value": 0.2639,
+            "baseline": 0.2708,
+            "anomaly": -0.0069
+          },
+          {
+            "date": "2025-06-10",
+            "value": 0.2639,
+            "baseline": 0.2652,
+            "anomaly": -0.0013
+          },
+          {
+            "date": "2025-06-18",
+            "value": 0.2533,
+            "baseline": 0.2581,
+            "anomaly": -0.0048
+          },
+          {
+            "date": "2025-06-26",
+            "value": 0.2414,
+            "baseline": 0.2528,
+            "anomaly": -0.0114
+          },
+          {
+            "date": "2025-07-04",
+            "value": 0.232,
+            "baseline": 0.2478,
+            "anomaly": -0.0158
+          },
+          {
+            "date": "2025-07-12",
+            "value": 0.2448,
+            "baseline": 0.2339,
+            "anomaly": 0.0109
+          },
+          {
+            "date": "2025-07-20",
+            "value": 0.2448,
+            "baseline": 0.2302,
+            "anomaly": 0.0146
+          },
+          {
+            "date": "2025-07-28",
+            "value": 0.2112,
+            "baseline": 0.2244,
+            "anomaly": -0.0132
+          },
+          {
+            "date": "2025-08-05",
+            "value": 0.2112,
+            "baseline": 0.2255,
+            "anomaly": -0.0143
+          },
+          {
+            "date": "2025-08-13",
+            "value": 0.2066,
+            "baseline": 0.2195,
+            "anomaly": -0.0129
+          },
+          {
+            "date": "2025-08-21",
+            "value": 0.205,
+            "baseline": 0.2189,
+            "anomaly": -0.0139
+          },
+          {
+            "date": "2025-08-29",
+            "value": 0.205,
+            "baseline": 0.2223,
+            "anomaly": -0.0173
+          },
+          {
+            "date": "2025-09-06",
+            "value": 0.1869,
+            "baseline": 0.229,
+            "anomaly": -0.0421
+          },
+          {
+            "date": "2026-04-23",
+            "value": 0.2674,
+            "baseline": 0.2884,
+            "anomaly": -0.021
+          },
+          {
+            "date": "2026-05-01",
+            "value": 0.2674,
+            "baseline": 0.2807,
+            "anomaly": -0.0133
+          },
+          {
+            "date": "2026-05-25",
+            "value": 0.2468,
+            "baseline": 0.2726,
+            "anomaly": -0.0258
+          },
+          {
+            "date": "2026-06-02",
+            "value": 0.2688,
+            "baseline": 0.2717,
+            "anomaly": -0.0029
+          },
+          {
+            "date": "2026-06-10",
+            "value": 0.2688,
+            "baseline": 0.2629,
+            "anomaly": 0.0059
+          },
+          {
+            "date": "2026-06-18",
+            "value": 0.2833,
+            "baseline": 0.2541,
+            "anomaly": 0.0292
+          },
+          {
             "date": "2026-06-26",
-            "value": 0.2389,
-            "baseline": 0.2263,
-            "anomaly": 0.0126
+            "value": 0.2833,
+            "baseline": 0.2481,
+            "anomaly": 0.0352
           },
           {
             "date": "2026-07-04",
-            "value": 0.2556,
-            "baseline": 0.2195,
-            "anomaly": 0.0361
+            "value": 0.2537,
+            "baseline": 0.244,
+            "anomaly": 0.0097
           },
           {
             "date": "2026-07-12",
-            "value": 0.2191,
-            "baseline": 0.2126,
-            "anomaly": 0.0065
+            "value": 0.2537,
+            "baseline": 0.2337,
+            "anomaly": 0.02
           },
           {
             "date": "2026-07-20",
-            "value": 0.237,
-            "baseline": 0.2085,
-            "anomaly": 0.0285
+            "value": 0.2174,
+            "baseline": 0.2309,
+            "anomaly": -0.0135
           },
           {
             "date": "2026-07-28",
-            "value": 0.2413,
-            "baseline": 0.2043,
-            "anomaly": 0.037
+            "value": 0.2174,
+            "baseline": 0.2247,
+            "anomaly": -0.0073
           },
           {
             "date": "2026-08-05",
-            "value": 0.2147,
-            "baseline": 0.2019,
-            "anomaly": 0.0128
+            "value": 0.2259,
+            "baseline": 0.2235,
+            "anomaly": 0.0024
           },
           {
             "date": "2026-08-13",
-            "value": 0.1903,
-            "baseline": 0.1995,
-            "anomaly": -0.0092
+            "value": 0.2259,
+            "baseline": 0.2172,
+            "anomaly": 0.0087
+          },
+          {
+            "date": "2026-08-21",
+            "value": 0.2177,
+            "baseline": 0.2165,
+            "anomaly": 0.0012
           }
         ],
         "latest": {
-          "date": "2026-08-13",
-          "value": 0.1903,
-          "baseline": 0.1995,
-          "anomaly": -0.0092
+          "date": "2026-08-21",
+          "value": 0.2177,
+          "baseline": 0.2165,
+          "anomaly": 0.0012
         },
         "status": "green"
       },
@@ -9806,13 +9866,13 @@
           },
           {
             "doy": 273,
-            "cumulative_mm": 716.1,
+            "cumulative_mm": 715.8,
             "baseline_mm": 476.11
           }
         ],
         "latest": {
           "doy": 273,
-          "cumulative_mm": 716.1,
+          "cumulative_mm": 715.8,
           "baseline_mm": 476.11
         },
         "ratio_to_normal": 1.5,
@@ -10930,7 +10990,7 @@
     }
   },
   "last_run": {
-    "ndvi": "2026-09-30T11:01:45.865275",
-    "weather": "2026-09-30T11:01:49.769404"
+    "ndvi": "2026-09-30T18:17:02.446508",
+    "weather": "2026-09-30T18:17:05.518899"
   }
 }
