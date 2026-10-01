@@ -1,13 +1,12 @@
 {
-  "built_utc": "2026-09-30T15:27:57+00:00",
+  "built_utc": "2026-10-01T15:49:06+00:00",
   "built_by": "cloud",
   "price": {
-    "asof": "2026-09-30",
-    "close": 18.72,
-    "chg_5d_pct": 5.46,
-    "pct_1y": 99.6,
+    "asof": "2026-10-01",
+    "close": 18.93,
+    "chg_5d_pct": 7.68,
+    "pct_1y": 100.0,
     "spark": [
-      14.7,
       14.54,
       14.14,
       13.93,
@@ -96,15 +95,16 @@
       17.5,
       17.46,
       17.82,
-      18.72
+      17.63,
+      18.93
     ]
   },
   "brl": {
-    "asof": "2026-09-30",
+    "asof": "2026-10-01",
     "source": "Yahoo",
-    "usdbrl": 5.1799,
-    "chg_5d_pct": 1.57,
-    "pct_3y": 34.4
+    "usdbrl": 5.2287,
+    "chg_5d_pct": 1.25,
+    "pct_3y": 40.1
   },
   "enso": {
     "asof": "2026-07-01",
@@ -212,12 +212,12 @@
     ]
   },
   "ndvi": {
-    "asof": "2026-08-13",
-    "weighted_anomaly": -0.0054,
+    "asof": "2026-09-14",
+    "weighted_anomaly": 0.0113,
     "per_country": {
-      "brazil_sugar": 0.0197,
-      "india_sugar": -0.0457,
-      "thailand_sugar": -0.0169
+      "brazil_sugar": 0.0131,
+      "india_sugar": 0.0014,
+      "thailand_sugar": 0.0245
     },
     "weights": {
       "brazil_sugar": 0.55,
@@ -226,18 +226,18 @@
     }
   },
   "frost": {
-    "asof": "2026-09-30",
+    "asof": "2026-10-01",
     "window_active": false,
-    "min_temp_14d": 12.9,
-    "coldest_date": "2026-09-16",
+    "min_temp_14d": 13.2,
+    "coldest_date": "2026-09-24",
     "frost_days_30d": 0,
     "threshold_c": 3.0
   },
   "season": {
-    "asof": "2026-09-30",
+    "asof": "2026-10-01",
     "phase": "Høsting (safra)",
-    "score": 1.0,
-    "month": 9
+    "score": 0.9,
+    "month": 10
   },
   "ethanol": {
     "asof": "2026-07-31",
