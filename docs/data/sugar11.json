@@ -1,9 +1,9 @@
 {
-  "built_utc": "2026-10-02T06:25:57+00:00",
+  "built_utc": "2026-10-02T06:38:38+00:00",
   "price": {
     "asof": "2026-10-01",
-    "close": 18.96,
-    "chg_5d_pct": 7.85,
+    "close": 18.94,
+    "chg_5d_pct": 7.74,
     "pct_1y": 100.0,
     "spark": [
       14.68,
@@ -95,7 +95,7 @@
       17.46,
       17.82,
       17.63,
-      18.96
+      18.94
     ]
   },
   "brl": {
@@ -267,7 +267,7 @@
     "asof": "2026-10-02",
     "latest_setup": {
       "direction": "buy",
-      "score": 11.84,
+      "score": 12.15,
       "grade": "A+",
       "horizon": "makro",
       "published": true
@@ -275,9 +275,9 @@
     "floor": {
       "buy": 7.0,
       "sell": 7.0,
-      "recommended_sell": 4.5,
+      "recommended_sell": 5.0,
       "pending": true,
-      "asof": "2026-09-14"
+      "asof": "2026-10-02"
     }
   },
   "pressure": {
