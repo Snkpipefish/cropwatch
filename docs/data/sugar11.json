@@ -1,5 +1,5 @@
 {
-  "built_utc": "2026-10-03T23:25:57+00:00",
+  "built_utc": "2026-10-04T14:30:10+00:00",
   "built_by": "cloud",
   "price": {
     "asof": "2026-10-02",
@@ -226,7 +226,7 @@
     }
   },
   "frost": {
-    "asof": "2026-10-03",
+    "asof": "2026-10-04",
     "window_active": false,
     "min_temp_14d": 13.2,
     "coldest_date": "2026-09-24",
@@ -234,7 +234,7 @@
     "threshold_c": 3.0
   },
   "season": {
-    "asof": "2026-10-03",
+    "asof": "2026-10-04",
     "phase": "Høsting (safra)",
     "score": 0.9,
     "month": 10
