@@ -1,5 +1,5 @@
 {
-  "built_utc": "2026-10-18T19:04:35+00:00",
+  "built_utc": "2026-10-18T22:47:38+00:00",
   "built_by": "cloud",
   "price": {
     "asof": "2026-10-16",
@@ -228,7 +228,7 @@
   "frost": {
     "asof": "2026-10-18",
     "window_active": false,
-    "min_temp_14d": 15.6,
+    "min_temp_14d": 15.4,
     "coldest_date": "2026-10-18",
     "frost_days_30d": 0,
     "threshold_c": 3.0
