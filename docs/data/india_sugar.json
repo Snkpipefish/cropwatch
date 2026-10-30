@@ -226,7 +226,7 @@
       "phase_length": 7
     },
     "today_month": 10,
-    "today_fraction": 0.8226,
+    "today_fraction": 0.828,
     "phases": [
       {
         "name": "Vekst (monsun)",
@@ -3984,19 +3984,29 @@
             "doy": 301,
             "cumulative_mm": 1150.2,
             "baseline_mm": 924.14
+          },
+          {
+            "doy": 302,
+            "cumulative_mm": 1164.5,
+            "baseline_mm": 924.14
+          },
+          {
+            "doy": 303,
+            "cumulative_mm": 1182.4,
+            "baseline_mm": 924.14
           }
         ],
         "latest": {
-          "doy": 301,
-          "cumulative_mm": 1150.2,
+          "doy": 303,
+          "cumulative_mm": 1182.4,
           "baseline_mm": 924.14
         },
-        "ratio_to_normal": 1.24,
+        "ratio_to_normal": 1.28,
         "status": "green"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 2334.2,
+        "total_gdd": 2339.8,
         "series": [
           {
             "date": "2026-01-01",
@@ -5196,11 +5206,19 @@
           },
           {
             "date": "2026-10-27",
-            "gdd_cumulative": 2330.4
+            "gdd_cumulative": 2330.5
           },
           {
             "date": "2026-10-28",
-            "gdd_cumulative": 2334.2
+            "gdd_cumulative": 2334.5
+          },
+          {
+            "date": "2026-10-29",
+            "gdd_cumulative": 2337.2
+          },
+          {
+            "date": "2026-10-30",
+            "gdd_cumulative": 2339.8
           }
         ]
       },
@@ -8961,19 +8979,29 @@
             "doy": 301,
             "cumulative_mm": 695.0,
             "baseline_mm": 1340.72
+          },
+          {
+            "doy": 302,
+            "cumulative_mm": 695.2,
+            "baseline_mm": 1341.33
+          },
+          {
+            "doy": 303,
+            "cumulative_mm": 696.0,
+            "baseline_mm": 1342.1
           }
         ],
         "latest": {
-          "doy": 301,
-          "cumulative_mm": 695.0,
-          "baseline_mm": 1340.72
+          "doy": 303,
+          "cumulative_mm": 696.0,
+          "baseline_mm": 1342.1
         },
         "ratio_to_normal": 0.52,
         "status": "red"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 2536.0,
+        "total_gdd": 2552.5,
         "series": [
           {
             "date": "2026-01-01",
@@ -10177,7 +10205,15 @@
           },
           {
             "date": "2026-10-28",
-            "gdd_cumulative": 2536.0
+            "gdd_cumulative": 2535.9
+          },
+          {
+            "date": "2026-10-29",
+            "gdd_cumulative": 2544.3
+          },
+          {
+            "date": "2026-10-30",
+            "gdd_cumulative": 2552.5
           }
         ]
       },
@@ -13938,19 +13974,29 @@
             "doy": 301,
             "cumulative_mm": 596.1,
             "baseline_mm": 1446.03
+          },
+          {
+            "doy": 302,
+            "cumulative_mm": 596.5,
+            "baseline_mm": 1446.96
+          },
+          {
+            "doy": 303,
+            "cumulative_mm": 596.5,
+            "baseline_mm": 1448.09
           }
         ],
         "latest": {
-          "doy": 301,
-          "cumulative_mm": 596.1,
-          "baseline_mm": 1446.03
+          "doy": 303,
+          "cumulative_mm": 596.5,
+          "baseline_mm": 1448.09
         },
         "ratio_to_normal": 0.41,
         "status": "red"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 2155.6,
+        "total_gdd": 2168.3,
         "series": [
           {
             "date": "2026-01-01",
@@ -15154,7 +15200,15 @@
           },
           {
             "date": "2026-10-28",
-            "gdd_cumulative": 2155.6
+            "gdd_cumulative": 2155.5
+          },
+          {
+            "date": "2026-10-29",
+            "gdd_cumulative": 2162.0
+          },
+          {
+            "date": "2026-10-30",
+            "gdd_cumulative": 2168.3
           }
         ]
       },
@@ -18910,19 +18964,34 @@
             "doy": 300,
             "cumulative_mm": 544.2,
             "baseline_mm": 942.44
+          },
+          {
+            "doy": 301,
+            "cumulative_mm": 544.2,
+            "baseline_mm": 942.94
+          },
+          {
+            "doy": 302,
+            "cumulative_mm": 544.2,
+            "baseline_mm": 946.14
+          },
+          {
+            "doy": 303,
+            "cumulative_mm": 544.2,
+            "baseline_mm": 951.19
           }
         ],
         "latest": {
-          "doy": 300,
+          "doy": 303,
           "cumulative_mm": 544.2,
-          "baseline_mm": 942.44
+          "baseline_mm": 951.19
         },
-        "ratio_to_normal": 0.58,
+        "ratio_to_normal": 0.57,
         "status": "red"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 2404.4,
+        "total_gdd": 2424.3,
         "series": [
           {
             "date": "2026-01-01",
@@ -20110,19 +20179,31 @@
           },
           {
             "date": "2026-10-24",
-            "gdd_cumulative": 2387.1
+            "gdd_cumulative": 2387.0
           },
           {
             "date": "2026-10-25",
-            "gdd_cumulative": 2393.4
+            "gdd_cumulative": 2393.3
           },
           {
             "date": "2026-10-26",
-            "gdd_cumulative": 2399.0
+            "gdd_cumulative": 2398.9
           },
           {
             "date": "2026-10-27",
             "gdd_cumulative": 2404.4
+          },
+          {
+            "date": "2026-10-28",
+            "gdd_cumulative": 2410.9
+          },
+          {
+            "date": "2026-10-29",
+            "gdd_cumulative": 2417.6
+          },
+          {
+            "date": "2026-10-30",
+            "gdd_cumulative": 2424.3
           }
         ]
       },
@@ -20140,7 +20221,7 @@
     }
   },
   "last_run": {
-    "ndvi": "2026-10-28T11:27:57.713669",
-    "weather": "2026-10-28T11:30:35.713236"
+    "ndvi": "2026-10-30T11:18:47.380895",
+    "weather": "2026-10-30T11:18:53.858491"
   }
 }
