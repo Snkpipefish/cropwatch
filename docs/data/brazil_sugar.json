@@ -226,7 +226,7 @@
       "phase_length": 8
     },
     "today_month": 11,
-    "today_fraction": 0.8333,
+    "today_fraction": 0.8361,
     "phases": [
       {
         "name": "Vekst (regnsesong)",
@@ -14046,21 +14046,26 @@
           },
           {
             "doy": 305,
-            "cumulative_mm": 873.9,
+            "cumulative_mm": 874.3,
             "baseline_mm": 573.59
+          },
+          {
+            "doy": 306,
+            "cumulative_mm": 878.6,
+            "baseline_mm": 577.69
           }
         ],
         "latest": {
-          "doy": 305,
-          "cumulative_mm": 873.9,
-          "baseline_mm": 573.59
+          "doy": 306,
+          "cumulative_mm": 878.6,
+          "baseline_mm": 577.69
         },
         "ratio_to_normal": 1.52,
         "status": "green"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 2182.7,
+        "total_gdd": 2190.6,
         "series": [
           {
             "date": "2026-01-01",
@@ -15281,6 +15286,10 @@
           {
             "date": "2026-11-01",
             "gdd_cumulative": 2182.7
+          },
+          {
+            "date": "2026-11-02",
+            "gdd_cumulative": 2190.6
           }
         ]
       },
@@ -15298,7 +15307,7 @@
     }
   },
   "last_run": {
-    "ndvi": "2026-11-01T11:59:00.296195",
-    "weather": "2026-11-01T11:59:02.174877"
+    "ndvi": "2026-11-02T13:22:32.071801",
+    "weather": "2026-11-02T13:28:09.898918"
   }
 }

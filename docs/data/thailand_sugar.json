@@ -226,7 +226,7 @@
       "phase_length": 7
     },
     "today_month": 11,
-    "today_fraction": 0.8333,
+    "today_fraction": 0.8361,
     "phases": [
       {
         "name": "Vekst (regnsesong)",
@@ -4008,21 +4008,26 @@
           },
           {
             "doy": 305,
-            "cumulative_mm": 1368.1,
+            "cumulative_mm": 1368.0,
             "baseline_mm": 1624.1
+          },
+          {
+            "doy": 306,
+            "cumulative_mm": 1370.2,
+            "baseline_mm": 1624.42
           }
         ],
         "latest": {
-          "doy": 305,
-          "cumulative_mm": 1368.1,
-          "baseline_mm": 1624.1
+          "doy": 306,
+          "cumulative_mm": 1370.2,
+          "baseline_mm": 1624.42
         },
         "ratio_to_normal": 0.84,
         "status": "yellow"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 2970.4,
+        "total_gdd": 2981.3,
         "series": [
           {
             "date": "2026-01-01",
@@ -5226,7 +5231,7 @@
           },
           {
             "date": "2026-10-28",
-            "gdd_cumulative": 2929.1
+            "gdd_cumulative": 2929.0
           },
           {
             "date": "2026-10-29",
@@ -5242,7 +5247,11 @@
           },
           {
             "date": "2026-11-01",
-            "gdd_cumulative": 2970.4
+            "gdd_cumulative": 2970.5
+          },
+          {
+            "date": "2026-11-02",
+            "gdd_cumulative": 2981.3
           }
         ]
       },
@@ -14046,21 +14055,26 @@
           },
           {
             "doy": 305,
-            "cumulative_mm": 1132.8,
+            "cumulative_mm": 1129.1,
             "baseline_mm": 1391.59
+          },
+          {
+            "doy": 306,
+            "cumulative_mm": 1129.7,
+            "baseline_mm": 1397.06
           }
         ],
         "latest": {
-          "doy": 305,
-          "cumulative_mm": 1132.8,
-          "baseline_mm": 1391.59
+          "doy": 306,
+          "cumulative_mm": 1129.7,
+          "baseline_mm": 1397.06
         },
         "ratio_to_normal": 0.81,
         "status": "yellow"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 3514.8,
+        "total_gdd": 3527.0,
         "series": [
           {
             "date": "2026-01-01",
@@ -15264,7 +15278,7 @@
           },
           {
             "date": "2026-10-28",
-            "gdd_cumulative": 3469.0
+            "gdd_cumulative": 3468.9
           },
           {
             "date": "2026-10-29",
@@ -15280,12 +15294,16 @@
           },
           {
             "date": "2026-11-01",
-            "gdd_cumulative": 3514.8
+            "gdd_cumulative": 3514.9
+          },
+          {
+            "date": "2026-11-02",
+            "gdd_cumulative": 3527.0
           }
         ]
       },
       "heat_stress": {
-        "hot_days": 0,
+        "hot_days": 1,
         "window_days": 30,
         "threshold_c": 35.0,
         "status": "green"
@@ -19065,21 +19083,26 @@
           },
           {
             "doy": 305,
-            "cumulative_mm": 1972.5,
+            "cumulative_mm": 1974.9,
             "baseline_mm": 1898.98
+          },
+          {
+            "doy": 306,
+            "cumulative_mm": 1976.1,
+            "baseline_mm": 1909.5
           }
         ],
         "latest": {
-          "doy": 305,
-          "cumulative_mm": 1972.5,
-          "baseline_mm": 1898.98
+          "doy": 306,
+          "cumulative_mm": 1976.1,
+          "baseline_mm": 1909.5
         },
-        "ratio_to_normal": 1.04,
+        "ratio_to_normal": 1.03,
         "status": "green"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 3065.5,
+        "total_gdd": 3076.5,
         "series": [
           {
             "date": "2026-01-01",
@@ -20299,12 +20322,16 @@
           },
           {
             "date": "2026-11-01",
-            "gdd_cumulative": 3065.5
+            "gdd_cumulative": 3065.4
+          },
+          {
+            "date": "2026-11-02",
+            "gdd_cumulative": 3076.5
           }
         ]
       },
       "heat_stress": {
-        "hot_days": 1,
+        "hot_days": 0,
         "window_days": 30,
         "threshold_c": 35.0,
         "status": "green"
@@ -20317,7 +20344,7 @@
     }
   },
   "last_run": {
-    "ndvi": "2026-11-01T11:55:58.652535",
-    "weather": "2026-11-01T11:59:07.621734"
+    "ndvi": "2026-11-02T13:24:33.783858",
+    "weather": "2026-11-02T13:30:47.719209"
   }
 }
