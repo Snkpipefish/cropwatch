@@ -1,5 +1,5 @@
 {
-  "built_utc": "2026-11-07T20:35:56+00:00",
+  "built_utc": "2026-11-08T00:04:15+00:00",
   "built_by": "cloud",
   "price": {
     "asof": "2026-11-06",
@@ -234,7 +234,7 @@
     "threshold_c": 3.0
   },
   "season": {
-    "asof": "2026-11-07",
+    "asof": "2026-11-08",
     "phase": "Høsting (safra)",
     "score": 0.8,
     "month": 11
