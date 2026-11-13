@@ -226,7 +226,7 @@
       "phase_length": 8
     },
     "today_month": 11,
-    "today_fraction": 0.8639,
+    "today_fraction": 0.8667,
     "phases": [
       {
         "name": "Vekst (regnsesong)",
@@ -14299,21 +14299,26 @@
           },
           {
             "doy": 316,
-            "cumulative_mm": 967.8,
+            "cumulative_mm": 969.1,
             "baseline_mm": 623.75
+          },
+          {
+            "doy": 317,
+            "cumulative_mm": 976.7,
+            "baseline_mm": 625.96
           }
         ],
         "latest": {
-          "doy": 316,
-          "cumulative_mm": 967.8,
-          "baseline_mm": 623.75
+          "doy": 317,
+          "cumulative_mm": 976.7,
+          "baseline_mm": 625.96
         },
-        "ratio_to_normal": 1.55,
+        "ratio_to_normal": 1.56,
         "status": "green"
       },
       "gdd": {
         "year": 2026,
-        "total_gdd": 2267.9,
+        "total_gdd": 2273.3,
         "series": [
           {
             "date": "2026-01-01",
@@ -15569,23 +15574,27 @@
           },
           {
             "date": "2026-11-10",
-            "gdd_cumulative": 2256.3
+            "gdd_cumulative": 2256.2
           },
           {
             "date": "2026-11-11",
-            "gdd_cumulative": 2262.0
+            "gdd_cumulative": 2261.9
           },
           {
             "date": "2026-11-12",
-            "gdd_cumulative": 2267.9
+            "gdd_cumulative": 2267.5
+          },
+          {
+            "date": "2026-11-13",
+            "gdd_cumulative": 2273.3
           }
         ]
       },
       "heat_stress": {
-        "hot_days": 3,
+        "hot_days": 2,
         "window_days": 30,
         "threshold_c": 35.0,
-        "status": "yellow"
+        "status": "green"
       },
       "drought_stress": {
         "longest_dry_streak": 4,
@@ -15596,6 +15605,6 @@
   },
   "last_run": {
     "ndvi": "2026-11-12T13:39:57.440389",
-    "weather": "2026-11-12T13:43:02.828220"
+    "weather": "2026-11-13T13:08:18.234663"
   }
 }
