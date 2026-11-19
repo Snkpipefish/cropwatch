@@ -1,5 +1,5 @@
 {
-  "built_utc": "2026-11-18T17:40:28+00:00",
+  "built_utc": "2026-11-19T02:07:28+00:00",
   "built_by": "cloud",
   "price": {
     "asof": "2026-11-18",
@@ -102,9 +102,9 @@
   "brl": {
     "asof": "2026-11-18",
     "source": "Yahoo",
-    "usdbrl": 5.8268,
-    "chg_5d_pct": 4.37,
-    "pct_3y": 92.1
+    "usdbrl": 5.7768,
+    "chg_5d_pct": 3.48,
+    "pct_3y": 89.1
   },
   "enso": {
     "asof": "2026-09-01",
@@ -234,7 +234,7 @@
     "threshold_c": 3.0
   },
   "season": {
-    "asof": "2026-11-18",
+    "asof": "2026-11-19",
     "phase": "Høsting (safra)",
     "score": 0.8,
     "month": 11
